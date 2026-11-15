@@ -1,6 +1,5 @@
 # 📰 The Daily Chronicle — Autonomous 24/7 India, Kolkata & Global E-Paper News Agent
 
-[![Daily Broadsheet E-Paper Agent](https://github.com/OWNER/REPO/actions/workflows/daily_epaper.yml/badge.svg)](https://github.com/OWNER/REPO/actions/workflows/daily_epaper.yml)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Cost: 100% Free](https://img.shields.io/badge/Cost-100%25%20Free-brightgreen.svg)]()
