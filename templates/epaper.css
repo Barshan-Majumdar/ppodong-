@@ -7,6 +7,7 @@
 @page {
     size: A4 portrait;
     margin: 12mm 10mm 14mm 10mm;
+    background-color: #f7f4ec;
 
     @top-center {
         content: "THE DAILY CHRONICLE — INDIA & BENGAL BROADSHEET";
@@ -47,11 +48,11 @@
 html, body {
     font-family: "Times New Roman", Times, "Noto Serif", "Noto Sans Telugu", "Noto Sans Bengali", "Noto Sans Devanagari", Georgia, serif !important;
     color: #111111;
-    background-color: #ffffff;
+    background-color: #f7f4ec;
     line-height: 1.35;
     font-size: 8.8pt;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
 }
 
 /* ==========================================================================
@@ -106,7 +107,7 @@ html, body {
     border-top: 1px solid #111111;
     border-bottom: 1px solid #111111;
     padding: 3px 6px;
-    background-color: #fcfcfc;
+    background-color: #eee9dc;
     font-weight: 600;
 }
 
@@ -291,7 +292,7 @@ html, body {
     font-size: 7.6pt;
     font-style: italic;
     color: #262626;
-    background-color: #fafafa;
+    background-color: #ece6d8;
 }
 
 .article-takeaway-block strong {

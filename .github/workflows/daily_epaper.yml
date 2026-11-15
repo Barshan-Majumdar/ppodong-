@@ -88,11 +88,11 @@ jobs:
             editions/**/*.html
           retention-days: 90
 
-      - name: Commit and Push Dated Editions & Deduplication Ledger
+      - name: Commit and Push Deduplication Memory Ledger
         if: ${{ inputs.dry_run != true }}
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add editions/ data/seen_urls.json
-          git commit -m "chore(epaper): archive daily edition $(date -u +'%Y-%m-%d') [skip ci]" || echo "No new files to commit"
+          git add data/seen_urls.json
+          git commit -m "chore(ledger): update seen URLs deduplication memory [skip ci]" || echo "No new seen URLs to commit"
           git push origin HEAD || echo "No changes pushed"

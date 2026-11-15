@@ -174,20 +174,20 @@ class Distributor:
             msg["To"] = ", ".join(self.gmail_recipients)
             msg["Subject"] = subject
 
-            # Email body - Styled strictly in Times New Roman
+            # Email body - Styled strictly in Times New Roman with warm off-white newsprint paper
             body_html = (
-                f'<div style="font-family: \'Times New Roman\', Times, Georgia, serif !important; color: #111111; line-height: 1.45; max-width: 680px; margin: 0 auto; padding: 15px;">'
+                f'<div style="font-family: \'Times New Roman\', Times, Georgia, serif !important; color: #111111; line-height: 1.45; max-width: 680px; margin: 0 auto; padding: 15px; background-color: #f7f4ec;">'
                 f'<div style="border-top: 3px solid #111111; border-bottom: 2px double #111111; text-align: center; padding: 8px 0; margin-bottom: 15px;">'
                 f'<h1 style="font-family: \'Times New Roman\', Times, Georgia, serif !important; font-size: 26pt; font-weight: 900; text-transform: uppercase; margin: 0; letter-spacing: -0.5px;">The Daily Chronicle</h1>'
                 f'<div style="font-family: \'Times New Roman\', Times, Georgia, serif !important; font-size: 8pt; text-transform: uppercase; letter-spacing: 2px; font-style: italic; color: #444444; margin-top: 2px;">A National &amp; Bengal Journal of Record • Autonomous Edition</div>'
-                f'<div style="border-top: 1px solid #111111; border-bottom: 1px solid #111111; padding: 3px; margin-top: 6px; font-size: 8pt; font-weight: bold; text-transform: uppercase;">'
+                f'<div style="border-top: 1px solid #111111; border-bottom: 1px solid #111111; padding: 3px; margin-top: 6px; font-size: 8pt; font-weight: bold; text-transform: uppercase; background-color: #eee9dc;">'
                 f'{edition_date} • {edition_cycle.upper()} • {total_stories} Verified Stories • Attached Broadsheet PDF'
                 f'</div>'
                 f'</div>'
                 f'<p style="font-family: \'Times New Roman\', Times, Georgia, serif !important; font-size: 10pt; line-height: 1.5;">'
                 f'Attached is your daily broadsheet newspaper edition compiled in traditional broadsheet format with multi-column layouts and Times New Roman typography.'
                 f'</p>'
-                f'<div style="margin: 15px 0; padding: 10px; border-left: 3px solid #111111; background-color: #fcfcfc;">'
+                f'<div style="margin: 15px 0; padding: 10px; border-left: 3px solid #111111; background-color: #eee9dc;">'
                 f'<strong style="font-family: \'Times New Roman\', Times, Georgia, serif !important; font-size: 9pt; text-transform: uppercase;">Executive Delivery Notice:</strong>'
                 f'<p style="font-family: \'Times New Roman\', Times, Georgia, serif !important; font-size: 9pt; margin-top: 4px;">The full newspaper edition PDF is attached below for reading and printing.</p>'
                 f'</div>'

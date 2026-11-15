@@ -49,3 +49,6 @@ Thumbs.db
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Generated newspaper editions & PDFs (delivered to Telegram/Email, not stored in Git)
+editions/
