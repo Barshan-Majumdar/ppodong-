@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Daily Chronicle — {{ edition_date }}</title>
+    <style>
+        {{ css_content | safe }}
+    </style>
+</head>
+<body>
+
+    <!-- Header & Masthead -->
+    <header class="header-wrapper">
+        <div class="top-bar">
+            <span>Vol. IV • Daily Morning Broadsheet</span>
+            <span>24/7 Autonomous News Intelligence Agent</span>
+            <span>Kolkata • New Delhi • Global</span>
+        </div>
+
+        <h1 class="masthead-title">The Daily Chronicle</h1>
+        <div class="masthead-subtitle">India, Bengal &amp; Global Autonomous Intelligence Journal</div>
+
+        <div class="sub-bar">
+            <span><strong>EDITION:</strong> {{ edition_date }} (IST)</span>
+            <span><strong>COVERAGE:</strong> Past 24 Hours Rolling Archive</span>
+            <span class="metric-pill">{{ total_stories_count }} Verified Stories • {{ total_sources_count }} Outlets</span>
+        </div>
+    </header>
+
+    <!-- SECTION 1: FRONT PAGE LEAD STORIES -->
+    {% if front_leads %}
+    <div class="section-banner">
+        <span>★ FRONT PAGE — TOP NATIONAL &amp; GLOBAL LEAD STORIES</span>
+        <span class="section-count-badge">{{ front_leads | length }} Lead Clusters</span>
+    </div>
+
+    <div class="newspaper-grid-2col" style="margin-bottom: 14px;">
+        {% for story in front_leads %}
+        <article class="story-card front-lead-container">
+            <div class="story-meta-row">
+                <span class="tag-badge 
+                    {% if story.section == 'kolkata_bengal' %}tag-kolkata
+                    {% elif story.section == 'indian_states' %}tag-state
+                    {% elif story.section == 'global' %}tag-global
+                    {% else %}tag-national{% endif %}">
+                    {% if story.state_or_region %}[{{ story.state_or_region }}]{% else %}[{{ story.category }}]{% endif %}
+                </span>
+                <span class="urgency-badge urgency-{{ story.urgency_tag | lower }}">{{ story.urgency_tag }}</span>
+                <span class="source-count-pill">{{ story.articles_count }} Outlets</span>
+            </div>
+
+            <h2 class="front-lead-title">{{ story.headline }}</h2>
+            <p class="front-lead-summary">{{ story.summary }}</p>
+
+            {% if story.key_takeaway %}
+            <div class="takeaway-box">
+                <span class="takeaway-label">Key Takeaway</span>
+                {{ story.key_takeaway }}
+            </div>
+            {% endif %}
+
+            <div class="source-footer">
+                <span>Sources: {{ story.sources | join(', ') | truncate(45) }}</span>
+                {% if story.urls and story.urls[0] %}
+                <a href="{{ story.urls[0] }}" target="_blank">Read original &rarr;</a>
+                {% endif %}
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- SECTION 2: KOLKATA & WEST BENGAL DESK -->
+    {% if sections_data.kolkata_bengal %}
+    <div class="section-banner">
+        <span>❖ KOLKATA &amp; WEST BENGAL DESK</span>
+        <span class="section-count-badge">{{ sections_data.kolkata_bengal | length }} Stories</span>
+    </div>
+
+    <div class="newspaper-grid">
+        {% for story in sections_data.kolkata_bengal %}
+        <article class="story-card">
+            <div class="story-meta-row">
+                <span class="tag-badge tag-kolkata">
+                    {% if story.state_or_region %}[{{ story.state_or_region }}]{% else %}[KOLKATA / WB]{% endif %}
+                </span>
+                <span class="urgency-badge urgency-{{ story.urgency_tag | lower }}">{{ story.urgency_tag }}</span>
+                {% if story.articles_count > 1 %}
+                <span class="source-count-pill">{{ story.articles_count }} outlets</span>
+                {% endif %}
+            </div>
+
+            <h3 class="story-headline">{{ story.headline }}</h3>
+            <p class="story-summary">{{ story.summary }}</p>
+
+            {% if story.key_takeaway %}
+            <div class="takeaway-box">
+                <span class="takeaway-label">Takeaway</span>
+                {{ story.key_takeaway }}
+            </div>
+            {% endif %}
+
+            <div class="source-footer">
+                <span>{{ story.sources | join(', ') | truncate(35) }}</span>
+                {% if story.urls and story.urls[0] %}
+                <a href="{{ story.urls[0] }}" target="_blank">&rarr;</a>
+                {% endif %}
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- SECTION 3: INDIAN STATES & UNION TERRITORIES DIGEST -->
+    {% if sections_data.indian_states %}
+    <div class="section-banner">
+        <span>❖ INDIAN STATES &amp; UNION TERRITORIES DIGEST</span>
+        <span class="section-count-badge">{{ sections_data.indian_states | length }} Stories</span>
+    </div>
+
+    <div class="newspaper-grid">
+        {% for story in sections_data.indian_states %}
+        <article class="story-card">
+            <div class="story-meta-row">
+                <span class="tag-badge tag-state">
+                    {% if story.state_tag %}[{{ story.state_tag }}]{% elif story.state_or_region %}[{{ story.state_or_region }}]{% else %}[STATE]{% endif %}
+                </span>
+                <span class="urgency-badge urgency-{{ story.urgency_tag | lower }}">{{ story.urgency_tag }}</span>
+                {% if story.articles_count > 1 %}
+                <span class="source-count-pill">{{ story.articles_count }} outlets</span>
+                {% endif %}
+            </div>
+
+            <h3 class="story-headline">{{ story.headline }}</h3>
+            <p class="story-summary">{{ story.summary }}</p>
+
+            {% if story.key_takeaway %}
+            <div class="takeaway-box">
+                <span class="takeaway-label">Takeaway</span>
+                {{ story.key_takeaway }}
+            </div>
+            {% endif %}
+
+            <div class="source-footer">
+                <span>{{ story.sources | join(', ') | truncate(35) }}</span>
+                {% if story.urls and story.urls[0] %}
+                <a href="{{ story.urls[0] }}" target="_blank">&rarr;</a>
+                {% endif %}
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- SECTION 4: NATIONAL AFFAIRS, GOVERNANCE & ECONOMY -->
+    {% if sections_data.national %}
+    <div class="section-banner">
+        <span>❖ NATIONAL AFFAIRS, GOVERNANCE &amp; ECONOMY</span>
+        <span class="section-count-badge">{{ sections_data.national | length }} Stories</span>
+    </div>
+
+    <div class="newspaper-grid">
+        {% for story in sections_data.national %}
+        <article class="story-card">
+            <div class="story-meta-row">
+                <span class="tag-badge tag-national">[INDIA NATIONAL]</span>
+                <span class="urgency-badge urgency-{{ story.urgency_tag | lower }}">{{ story.urgency_tag }}</span>
+                {% if story.articles_count > 1 %}
+                <span class="source-count-pill">{{ story.articles_count }} outlets</span>
+                {% endif %}
+            </div>
+
+            <h3 class="story-headline">{{ story.headline }}</h3>
+            <p class="story-summary">{{ story.summary }}</p>
+
+            {% if story.key_takeaway %}
+            <div class="takeaway-box">
+                <span class="takeaway-label">Takeaway</span>
+                {{ story.key_takeaway }}
+            </div>
+            {% endif %}
+
+            <div class="source-footer">
+                <span>{{ story.sources | join(', ') | truncate(35) }}</span>
+                {% if story.urls and story.urls[0] %}
+                <a href="{{ story.urls[0] }}" target="_blank">&rarr;</a>
+                {% endif %}
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- SECTION 5: WORLD & INTERNATIONAL DESK -->
+    {% if sections_data.global %}
+    <div class="section-banner">
+        <span>❖ WORLD &amp; INTERNATIONAL AFFAIRS DESK</span>
+        <span class="section-count-badge">{{ sections_data.global | length }} Stories</span>
+    </div>
+
+    <div class="newspaper-grid">
+        {% for story in sections_data.global %}
+        <article class="story-card">
+            <div class="story-meta-row">
+                <span class="tag-badge tag-global">[GLOBAL]</span>
+                <span class="urgency-badge urgency-{{ story.urgency_tag | lower }}">{{ story.urgency_tag }}</span>
+                {% if story.articles_count > 1 %}
+                <span class="source-count-pill">{{ story.articles_count }} outlets</span>
+                {% endif %}
+            </div>
+
+            <h3 class="story-headline">{{ story.headline }}</h3>
+            <p class="story-summary">{{ story.summary }}</p>
+
+            {% if story.key_takeaway %}
+            <div class="takeaway-box">
+                <span class="takeaway-label">Takeaway</span>
+                {{ story.key_takeaway }}
+            </div>
+            {% endif %}
+
+            <div class="source-footer">
+                <span>{{ story.sources | join(', ') | truncate(35) }}</span>
+                {% if story.urls and story.urls[0] %}
+                <a href="{{ story.urls[0] }}" target="_blank">&rarr;</a>
+                {% endif %}
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- SECTION 6: VIRAL TRENDS & SOCIAL RADAR -->
+    {% if sections_data.trends %}
+    <div class="section-banner">
+        <span>❖ VIRAL TRENDS &amp; SOCIAL SENTIMENT RADAR</span>
+        <span class="section-count-badge">{{ sections_data.trends | length }} Trends</span>
+    </div>
+
+    <div class="newspaper-grid">
+        {% for story in sections_data.trends %}
+        <article class="story-card">
+            <div class="story-meta-row">
+                <span class="tag-badge tag-trend">[VIRAL RADAR]</span>
+                <span class="urgency-badge urgency-trending">TRENDING</span>
+            </div>
+
+            <h3 class="story-headline">{{ story.headline }}</h3>
+            <p class="story-summary">{{ story.summary }}</p>
+
+            {% if story.key_takeaway %}
+            <div class="takeaway-box">
+                <span class="takeaway-label">Social Pulse</span>
+                {{ story.key_takeaway }}
+            </div>
+            {% endif %}
+
+            <div class="source-footer">
+                <span>{{ story.sources | join(', ') | truncate(35) }}</span>
+                {% if story.urls and story.urls[0] %}
+                <a href="{{ story.urls[0] }}" target="_blank">&rarr;</a>
+                {% endif %}
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+</body>
+</html>

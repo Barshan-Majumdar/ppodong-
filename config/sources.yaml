@@ -1,0 +1,160 @@
+# ==============================================================================
+# Autonomous 24/7 E-Paper News Agent - Central Sources & Feeds Configuration
+# ==============================================================================
+
+pipeline:
+  rolling_window_hours: 26 # 26 hours ensures zero boundary-loss between daily runs
+  deduplication_threshold: 0.80 # Cosine similarity threshold for agglomerative clustering
+  llm_batch_size: 15 # Clusters per LLM call to prevent context/token limits
+  max_text_extract_chars: 1800
+  seen_urls_ledger: "data/seen_urls.json"
+
+weights:
+  coverage_weight: 3.0 # W_coverage * ln(1 + cluster_size)
+  regional_boost:
+    kolkata_wb: 2.5
+    indian_states: 1.5
+    national: 1.5
+    global: 1.0
+    trends: 1.0
+  source_authority:
+    high: 1.5 # PIB, The Hindu, Indian Express, BBC, Reuters, PTI
+    standard: 1.0
+  recency_max_bonus: 2.0 # Linear decay from +2.0 (0-2 hrs) to +0.0 (24-26 hrs)
+
+authority_domains:
+  high:
+    - "pib.gov.in"
+    - "thehindu.com"
+    - "indianexpress.com"
+    - "bbc.co.uk"
+    - "bbc.com"
+    - "reuters.com"
+    - "aljazeera.com"
+    - "ptinews.com"
+
+sections:
+  kolkata_bengal:
+    name: "Kolkata & West Bengal Desk"
+    tag: "KOLKATA / WB"
+    default_region: "kolkata_wb"
+    feeds:
+      - name: "Google News - Kolkata City & Civic"
+        url: "https://news.google.com/rss/search?q=Kolkata+when:1d&hl=en-IN&gl=IN&ceid=IN:en"
+        type: "google_news"
+      - name: "Google News - West Bengal State Politics & Policy"
+        url: "https://news.google.com/rss/search?q=%22West+Bengal%22+when:1d&hl=en-IN&gl=IN&ceid=IN:en"
+        type: "google_news"
+      - name: "Google News - Kolkata Geo Feed"
+        url: "https://news.google.com/rss/headlines/section/geo/Kolkata?hl=en-IN&gl=IN&ceid=IN:en"
+        type: "google_news"
+      - name: "Google News - West Bengal Geo Feed"
+        url: "https://news.google.com/rss/headlines/section/geo/West%20Bengal?hl=en-IN&gl=IN&ceid=IN:en"
+        type: "google_news"
+      - name: "The Indian Express - Kolkata City Feed"
+        url: "https://indianexpress.com/section/cities/kolkata/feed/"
+        type: "rss"
+      - name: "The Hindu - West Bengal State Feed"
+        url: "https://www.thehindu.com/news/national/west-bengal/feeder/default.rss"
+        type: "rss"
+      - name: "Times of India - Kolkata Edition RSS"
+        url: "https://timesofindia.indiatimes.com/rssfeeds/-2128830821.cms"
+        type: "rss"
+      - name: "ABP Ananda - Kolkata & Bengal News"
+        url: "https://bengali.abplive.com/news/kolkata/feed"
+        type: "rss"
+
+  indian_states:
+    name: "Indian States & Union Territories Digest"
+    tag: "INDIAN STATES"
+    default_region: "indian_states"
+    feeds:
+      - name: "The Hindu - All Indian States Hub"
+        url: "https://www.thehindu.com/news/states/feeder/default.rss"
+        type: "rss"
+      - name: "Indian Express - India & Regional States"
+        url: "https://indianexpress.com/section/india/feed/"
+        type: "rss"
+      - name: "North India States (Delhi, UP, Punjab, Haryana, Rajasthan, UK, HP, J&K)"
+        url: "https://news.google.com/rss/search?q=(Delhi+OR+%22Uttar+Pradesh%22+OR+Punjab+OR+Haryana+OR+Rajasthan+OR+Uttarakhand+OR+%22Jammu+and+Kashmir%22)+when:1d&hl=en-IN&gl=IN&ceid=IN:en"
+        type: "google_news"
+      - name: "West & Central India States (Maharashtra, Gujarat, MP, Chhattisgarh, Goa)"
+        url: "https://news.google.com/rss/search?q=(Maharashtra+OR+Mumbai+OR+Gujarat+OR+%22Madhya+Pradesh%22+OR+Chhattisgarh+OR+Goa)+when:1d&hl=en-IN&gl=IN&ceid=IN:en"
+        type: "google_news"
+      - name: "South India States (Karnataka, Tamil Nadu, Telangana, AP, Kerala)"
+        url: "https://news.google.com/rss/search?q=(Karnataka+OR+Bengaluru+OR+%22Tamil+Nadu%22+OR+Chennai+OR+Telangana+OR+Hyderabad+OR+%22Andhra+Pradesh%22+OR+Kerala)+when:1d&hl=en-IN&gl=IN&ceid=IN:en"
+        type: "google_news"
+      - name: "East & North-East India States (Odisha, Bihar, Jharkhand, Assam, NE States)"
+        url: "https://news.google.com/rss/search?q=(Odisha+OR+Bihar+OR+Jharkhand+OR+Assam+OR+Manipur+OR+Meghalaya+OR+Tripura+OR+Sikkim+OR+Arunachal+OR+Nagaland+OR+Mizoram)+when:1d&hl=en-IN&gl=IN&ceid=IN:en"
+        type: "google_news"
+
+  national:
+    name: "National Affairs, Economy & Technology"
+    tag: "INDIA NATIONAL"
+    default_region: "national"
+    feeds:
+      - name: "Google News - India Top Stories"
+        url: "https://news.google.com/rss?hl=en-IN&gl=IN&ceid=IN:en"
+        type: "google_news"
+      - name: "Google News - India Nation Topic"
+        url: "https://news.google.com/rss/headlines/section/topic/NATION?hl=en-IN&gl=IN&ceid=IN:en"
+        type: "google_news"
+      - name: "The Hindu - National News"
+        url: "https://www.thehindu.com/news/national/feeder/default.rss"
+        type: "rss"
+      - name: "PIB - Official Govt of India Releases"
+        url: "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3"
+        type: "rss"
+      - name: "Indian Express - Explained & Policy Deep-Dives"
+        url: "https://indianexpress.com/section/explained/feed/"
+        type: "rss"
+      - name: "Google News - India Business & Economy"
+        url: "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=en-IN&gl=IN&ceid=IN:en"
+        type: "google_news"
+      - name: "Google News - India Science & Technology"
+        url: "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=en-IN&gl=IN&ceid=IN:en"
+        type: "google_news"
+
+  global:
+    name: "World & International Desk"
+    tag: "GLOBAL"
+    default_region: "global"
+    feeds:
+      - name: "Google News - World Breaking Headlines"
+        url: "https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-IN&gl=IN&ceid=IN:en"
+        type: "google_news"
+      - name: "BBC World News RSS"
+        url: "http://feeds.bbci.co.uk/news/world/rss.xml"
+        type: "rss"
+      - name: "Al Jazeera English - All Breaking News"
+        url: "https://www.aljazeera.com/xml/rss/all.xml"
+        type: "rss"
+      - name: "The Hindu - International Affairs"
+        url: "https://www.thehindu.com/news/international/feeder/default.rss"
+        type: "rss"
+      - name: "Indian Express - World News"
+        url: "https://indianexpress.com/section/world/feed/"
+        type: "rss"
+
+trends_sources:
+  google_trends:
+    - name: "Google Trends - Daily Trending Searches India"
+      url: "https://trends.google.com/trending/rss?geo=IN"
+      type: "xml"
+  indian_express_trends:
+    - name: "Indian Express - Trending in India"
+      url: "https://indianexpress.com/section/trending/trending-in-india/feed/"
+      type: "rss"
+  reddit_subreddits:
+    - name: "Reddit r/kolkata Top Daily"
+      url: "https://www.reddit.com/r/kolkata/top.json?t=day&limit=15"
+      subreddit: "r/kolkata"
+    - name: "Reddit r/india Top Daily"
+      url: "https://www.reddit.com/r/india/top.json?t=day&limit=15"
+      subreddit: "r/india"
+    - name: "Reddit r/IndianStockMarket Top Daily"
+      url: "https://www.reddit.com/r/IndianStockMarket/top.json?t=day&limit=10"
+      subreddit: "r/IndianStockMarket"
+    - name: "Reddit r/kolkatacity Top Daily"
+      url: "https://www.reddit.com/r/kolkatacity/top.json?t=day&limit=10"
+      subreddit: "r/kolkatacity"

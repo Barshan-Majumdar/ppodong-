@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Daily Chronicle — Sunday, November 15, 2026</title>
+    <style>
+        /* ==============================================================================
+   The Daily Chronicle - Autonomous Broadsheet Newspaper Stylesheet
+   Designed for WeasyPrint HTML-to-PDF compilation & browser rendering
+   ============================================================================== */
+
+@page {
+    size: A4 portrait;
+    margin: 12mm 10mm 14mm 10mm;
+
+    @top-left {
+        content: "THE DAILY CHRONICLE • 24/7 AUTONOMOUS NEWS DESK";
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-size: 7pt;
+        letter-spacing: 0.5px;
+        color: #6b7280;
+        border-bottom: 0.5px solid #e5e7eb;
+        padding-bottom: 2mm;
+    }
+
+    @top-right {
+        content: string(editionDate);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-size: 7pt;
+        font-weight: 600;
+        color: #374151;
+        border-bottom: 0.5px solid #e5e7eb;
+        padding-bottom: 2mm;
+    }
+
+    @bottom-left {
+        content: "Autonomous AI Intelligence System • Zero News Dropped • Verified Multi-Source Coverage";
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-size: 6.5pt;
+        color: #9ca3af;
+        border-top: 0.5px solid #e5e7eb;
+        padding-top: 2mm;
+    }
+
+    @bottom-right {
+        content: "Page " counter(page) " of " counter(pages);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-size: 7pt;
+        font-weight: bold;
+        color: #4b5563;
+        border-top: 0.5px solid #e5e7eb;
+        padding-top: 2mm;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Georgia", "Times New Roman", Times, serif;
+    color: #111827;
+    background-color: #ffffff;
+    line-height: 1.45;
+    font-size: 9pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+/* Header & Masthead */
+.header-wrapper {
+    text-align: center;
+    border-bottom: 3px double #1f2937;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 7.5pt;
+    color: #4b5563;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.masthead-title {
+    font-family: "Playfair Display", "Georgia", "Times New Roman", serif;
+    font-size: 26pt;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    line-height: 1.05;
+    color: #111827;
+    margin: 4px 0 2px 0;
+}
+
+.masthead-subtitle {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: #4b5563;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.sub-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 7.5pt;
+    color: #1f2937;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 3px 8px;
+    border-radius: 2px;
+}
+
+.metric-pill {
+    background: #1e3a8a;
+    color: #ffffff;
+    padding: 2px 6px;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: 7pt;
+    letter-spacing: 0.3px;
+}
+
+/* Front Page Banner */
+.front-lead-container {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-left: 4px solid #1e3a8a;
+    padding: 10px 12px;
+    margin-bottom: 14px;
+    border-radius: 2px;
+    break-inside: avoid;
+}
+
+.lead-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.front-lead-title {
+    font-size: 14pt;
+    font-weight: 800;
+    line-height: 1.25;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+.front-lead-summary {
+    font-size: 9.5pt;
+    color: #334155;
+    line-height: 1.5;
+    margin-bottom: 6px;
+}
+
+/* Section Dividers */
+.section-banner {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #111827;
+    color: #ffffff;
+    font-size: 9pt;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    margin: 14px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1px;
+    break-after: avoid;
+}
+
+.section-count-badge {
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 7pt;
+    padding: 1px 6px;
+    border-radius: 10px;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+/* Multi-Column Newspaper Layout */
+.newspaper-grid {
+    column-count: 3;
+    column-gap: 16px;
+    column-rule: 1px solid #e5e7eb;
+}
+
+.newspaper-grid-2col {
+    column-count: 2;
+    column-gap: 18px;
+    column-rule: 1px solid #e5e7eb;
+}
+
+/* Story Cards */
+.story-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f3f4f6;
+    text-align: justify;
+}
+
+.story-card:last-child {
+    border-bottom: none;
+}
+
+.story-meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 6.5pt;
+}
+
+/* Tags & Badges */
+.tag-badge {
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 1px 4px;
+    border-radius: 2px;
+    font-size: 6.5pt;
+}
+
+.tag-kolkata {
+    background-color: #fef2f2;
+    color: #991b1b;
+    border: 0.5px solid #fecaca;
+}
+
+.tag-state {
+    background-color: #fffbeb;
+    color: #92400e;
+    border: 0.5px solid #fde68a;
+}
+
+.tag-national {
+    background-color: #eff6ff;
+    color: #1e40af;
+    border: 0.5px solid #bfdbfe;
+}
+
+.tag-global {
+    background-color: #f5f3ff;
+    color: #5b21b6;
+    border: 0.5px solid #ddd6fe;
+}
+
+.tag-trend {
+    background-color: #ecfdf5;
+    color: #065f46;
+    border: 0.5px solid #a7f3d0;
+}
+
+.urgency-badge {
+    font-weight: 700;
+    font-size: 6pt;
+    text-transform: uppercase;
+    padding: 1px 4px;
+    border-radius: 2px;
+}
+
+.urgency-breaking {
+    background-color: #dc2626;
+    color: #ffffff;
+}
+
+.urgency-verified {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+.urgency-trending {
+    background-color: #059669;
+    color: #ffffff;
+}
+
+.source-count-pill {
+    color: #6b7280;
+    font-size: 6.5pt;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.story-headline {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 10.5pt;
+    font-weight: 800;
+    line-height: 1.25;
+    color: #111827;
+    margin: 3px 0 4px 0;
+    text-align: left;
+}
+
+.story-summary {
+    font-size: 8.5pt;
+    color: #27272a;
+    line-height: 1.42;
+    margin-bottom: 5px;
+}
+
+.takeaway-box {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f8fafc;
+    border-left: 2px solid #3b82f6;
+    padding: 3px 6px;
+    margin-bottom: 5px;
+    font-size: 7.5pt;
+    color: #1e293b;
+    border-radius: 1px;
+}
+
+.takeaway-label {
+    font-weight: bold;
+    color: #2563eb;
+    font-size: 6.5pt;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1px;
+}
+
+.source-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 6.5pt;
+    color: #6b7280;
+    border-top: 0.5px dashed #e5e7eb;
+    padding-top: 3px;
+    margin-top: 3px;
+}
+
+.source-footer a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Page Break Utility */
+.page-break {
+    break-before: page;
+    page-break-before: always;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header & Masthead -->
+    <header class="header-wrapper">
+        <div class="top-bar">
+            <span>Vol. IV • Daily Morning Broadsheet</span>
+            <span>24/7 Autonomous News Intelligence Agent</span>
+            <span>Kolkata • New Delhi • Global</span>
+        </div>
+
+        <h1 class="masthead-title">The Daily Chronicle</h1>
+        <div class="masthead-subtitle">India, Bengal &amp; Global Autonomous Intelligence Journal</div>
+
+        <div class="sub-bar">
+            <span><strong>EDITION:</strong> Sunday, November 15, 2026 (IST)</span>
+            <span><strong>COVERAGE:</strong> Past 24 Hours Rolling Archive</span>
+            <span class="metric-pill">10 Verified Stories • 5 Outlets</span>
+        </div>
+    </header>
+
+    <!-- SECTION 1: FRONT PAGE LEAD STORIES -->
+    <div class="section-banner">
+        <span>★ FRONT PAGE — TOP NATIONAL &amp; GLOBAL LEAD STORIES</span>
+        <span class="section-count-badge">6 Lead Clusters</span>
+    </div>
+
+    <div class="newspaper-grid-2col" style="margin-bottom: 14px;">
+        <article class="story-card front-lead-container">
+            <div class="story-meta-row">
+                <span class="tag-badge 
+tag-kolkata
+">
+[kolkata_wb]                </span>
+                <span class="urgency-badge urgency-verified">VERIFIED</span>
+                <span class="source-count-pill">1 Outlets</span>
+            </div>
+
+            <h2 class="front-lead-title">Indian Coast Guard to organise national-level coastal security seminar ‘Sagar Suraksha 2026’ in Kolkata</h2>
+            <p class="front-lead-summary">Indian Coast Guard to organise national-level coastal security seminar ‘Sagar Suraksha 2026’ in Kolkata ANI News</p>
+
+            <div class="takeaway-box">
+                <span class="takeaway-label">Key Takeaway</span>
+                Reported by ANI News; situation remains active.
+            </div>
+
+            <div class="source-footer">
+                <span>Sources: ANI News</span>
+                <a href="https://news.google.com/rss/articles/CBMigwJBVV95cUxPanVWVG1DR3dKdW1rZjROeXpKY3ctajNyX3FiZHFVLTR3b0JlQWk3X0ZhbnRzS3NSemY1WFFqNG9VUklfYkgzZ0c0RjVJQXMxd0ZNd2twNWV2WFJWZmVMdVBUaFcweGhNOHFWSmlHV0ZPX1liZ3U2RVhmdjFZQUFmc242ajdCMzhrb1JRVld3bklUbEpGeFNCWEJDcWFjam9WOVhZbDhKQnRweGlMWHFnZFZtVkt3dGNHS3N4OGVVeFhsakJkSEgxV1oyUTJZSWVfbGFEQXRIOUFSY3RueFVMSEFTSkFTZVlJREsyZHBlUzlNOGh5Y21DNXZJZV9Vd3pOSjBZ?oc=5" target="_blank">Read original &rarr;</a>
+            </div>
+        </article>
+        <article class="story-card front-lead-container">
+            <div class="story-meta-row">
+                <span class="tag-badge 
+tag-kolkata
+">
+[kolkata_wb]                </span>
+                <span class="urgency-badge urgency-verified">VERIFIED</span>
+                <span class="source-count-pill">1 Outlets</span>
+            </div>
+
+            <h2 class="front-lead-title">Kolkata content creator earns Rs 3.06 lakh from just 5 brand deals in October, reveals why she chose fewe</h2>
+            <p class="front-lead-summary">Kolkata content creator earns Rs 3.06 lakh from just 5 brand deals in October, reveals why she chose fewe The Times of India</p>
+
+            <div class="takeaway-box">
+                <span class="takeaway-label">Key Takeaway</span>
+                Reported by The Times of India; situation remains active.
+            </div>
+
+            <div class="source-footer">
+                <span>Sources: The Times of India</span>
+                <a href="https://news.google.com/rss/articles/CBMi6wJBVV95cUxQdHFmalNHaU1sdGgyc09qQWtsYWZDZ0tHMURvZENvTmFDOFpVSjIyQ3p6ZWR5Szg2ZTg3VFVoX3g5amFPbzdrRjVaN2h6VzBJaVBkWUE3cGtUNWd2RHVWQ2IwSVRkd3RCZFNwX1YxbVh2aUhrY2hQU3d4WU4wc0Z1WVRIQ2tTNk9VclNWeW1YZUtmYWxJaC10X0RaRWdpQ2p6d1J0TVB6TVhpUHhxWElRZk5WUjNWTXFZeUFCZUo2NGx5aWhJdjJ6bnVhQTRCYkFGZlFSVEJxUEkwRmtZR1BtWHo5SHJEbkRBdHlYTEk2aFhZeFF2UkJiN1l2ak1weFRJWFBMMlBCVEdQc05ieVg1cHhnZElKRkRzNjhSRzhlQnVsbmZrc2s3MFJfVFlZZVpIYnlXeFotR1FicDd5OXNrRUw2LWNCbVpTUHJWRXVYUGRhZnZOaGEyZkpDSzFHblJIV2lfQnE3TXZxQzDSAfACQVVfeXFMT0toc2dkOGlHZWxrVmZLcVZYWnFaM3ZKR0d1QVU5RFQ3ZXpDLW5vUjFrV0tCWmR3cnlVVFlqQTVDdVY1N25JMzBXb1d2NnMxNHpjcVgzVVhxSWg2dTFDNFN5aC1QMUtjYzJZSVZCTGlfT2FQVTZuSmVnNF9NRUtsQnpIMmlRWGQ4V1BDMjR2RUpaeGNKRzBhUzIzSTczRlp5aGJHSHRrMHBJekR6ZkRlRDJWUnhWZ3gzLUxwdmhNdjRwWmxobFVQMkx1cUVISXV1THV0NkpPSHFNQTVUVmEtWERuY3lTY0RNSHZvcllBSV9MdzdHdUhDckh0THBDbTRJTWJFWmdLVWdUcXJiQUhQM3ZqNXFaZC1lZDU5UDMxekRLU1VxWGx4VUdIOHB0d2lXQU9VZk9UeUh1b1JYOFZ1SWZ1M0pRbmRxb2FGMWhPbjh1MF9BdUE1VmdLYzB0RFBLRjJNNzVHMXNBV215QmRlYlc?oc=5" target="_blank">Read original &rarr;</a>
+            </div>
+        </article>
+        <article class="story-card front-lead-container">
+            <div class="story-meta-row">
+                <span class="tag-badge 
+tag-kolkata
+">
+[kolkata_wb]                </span>
+                <span class="urgency-badge urgency-verified">VERIFIED</span>
+                <span class="source-count-pill">1 Outlets</span>
+            </div>
+
+            <h2 class="front-lead-title">Majerhat death: Cops write to Port for repairs</h2>
+            <p class="front-lead-summary">Majerhat death: Cops write to Port for repairs The Times of India</p>
+
+            <div class="takeaway-box">
+                <span class="takeaway-label">Key Takeaway</span>
+                Reported by The Times of India; situation remains active.
+            </div>
+
+            <div class="source-footer">
+                <span>Sources: The Times of India</span>
+                <a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNUjlDaGF0VWJ3U1Nxb2tuR2xuVDBUYkFzb3VsMzlYblJsWmxCc2RiaTJzampha3ZGQUtSWmtMMURBSC0xVzkySHNXeUphb1BVTWZERW1paTVaVEVpdUV0YlVPM21WejEzMk1RSUlKdHhORlJqMFM2dHRnOHBpX01XTE5Zd29XVGdHd2RKMm9YTHB2Q2dJT2NwWDJLZDRLYzM5eEp6ci03LW9TeldNNUxieG5FaWtDSDBPanNSd9IBwgFBVV95cUxOeENfeG1iRTR6aDYxeE5uNFBjWlNXVWk1YkFMZ2luNXJfTG5JbUwzbHJvWDFZMHgyU045TEkyQzNmQUwwTk9PRnlKaXFEcXBLNzAyTWpPTFlZbkZuLVZqczZuTVByRGozX1JWa1ByRVg0ZHRNUWNzYk9XUXd4MTJMcUxWOWZDa3dYakpjZVpHWnlqTllKcTg0b1lsdHZBVmdPZjlSaFl6T19sOVhtek9id1BiYjVYTGFlb1Exb1VjM1daUQ?oc=5" target="_blank">Read original &rarr;</a>
+            </div>
+        </article>
+        <article class="story-card front-lead-container">
+            <div class="story-meta-row">
+                <span class="tag-badge 
+tag-kolkata
+">
+[kolkata_wb]                </span>
+                <span class="urgency-badge urgency-verified">VERIFIED</span>
+                <span class="source-count-pill">1 Outlets</span>
+            </div>
+
+            <h2 class="front-lead-title">Worry over state school teachers’ SSR duty in exam time</h2>
+            <p class="front-lead-summary">Worry over state school teachers’ SSR duty in exam time The Times of India</p>
+
+            <div class="takeaway-box">
+                <span class="takeaway-label">Key Takeaway</span>
+                Reported by The Times of India; situation remains active.
+            </div>
+
+            <div class="source-footer">
+                <span>Sources: The Times of India</span>
+                <a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxNWUI3S21EUVpWVkNKTmR6bDl1TjJKdHNNcWMyMTd1WExCVUhxaUk0YXFKR0pPVG9RZ2RNWHRhZmVIc3BWaGJrS1RCYVA4NzdsM0wtYzJfQzBqb2NfRUpEMVpNS182SFhfaV9kYi1TRHhlTDdYWFdKeTNQRmo4aHdMTFVtd1pFbHpYOG84X3hGQkxyaktOT1QzZlBDOXRtMVY5WXJfNlNpVG9tbkF2OFJEQ00tSlFkZUpuc0k1ck9faXJkejJwbjlYUNIBzgFBVV95cUxQRnBiQkprSVF5STZzaWlPVDFtd296QzhKd2cwVjlzZ2ppQVZYUHVTdTVVdlR4NTJ2Y0JKbGYtLXByU05KcTVpS1N3MGhOcF9XOHF6MjFHalRicGJ6MmFOb3ZPUnMyQ0RMbGNDRU1uOUFoN2tHOXlHTXFud1FxRWszMktpbWZHMm0tNWdhNXZxZ1k0VzBmR3ktOE1FRzhoU1E2cWh1Y2taQWdKdDBJN0I0MTdnUHFtVlZRbFFiRXR5bHA3enNIS2xvLUYxZHptdw?oc=5" target="_blank">Read original &rarr;</a>
+            </div>
+        </article>
+        <article class="story-card front-lead-container">
+            <div class="story-meta-row">
+                <span class="tag-badge 
+tag-kolkata
+">
+[kolkata_wb]                </span>
+                <span class="urgency-badge urgency-verified">VERIFIED</span>
+                <span class="source-count-pill">1 Outlets</span>
+            </div>
+
+            <h2 class="front-lead-title">kolkata knight riders</h2>
+            <p class="front-lead-summary">kolkata knight riders - Cricbuzz. kolkata knight riders Cricbuzz</p>
+
+            <div class="takeaway-box">
+                <span class="takeaway-label">Key Takeaway</span>
+                Reported by Cricbuzz; situation remains active.
+            </div>
+
+            <div class="source-footer">
+                <span>Sources: Cricbuzz</span>
+                <a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE9iQ2hSWkdKbUcxOFo4WTE0QWdRZWRKSEpTTXBvVno4UTVCeS1KWE1zQUxMS2RNVVBnM0cyQWNsMnJFNFoyNHE4b3Z0MWxwQ0tUZ0JwZlVFMy0tdG1lVU9yMV9WMnJtdUxFMnNSU1pNSFlQeG5DNG8wLU8yTQ?oc=5" target="_blank">Read original &rarr;</a>
+            </div>
+        </article>
+        <article class="story-card front-lead-container">
+            <div class="story-meta-row">
+                <span class="tag-badge 
+tag-kolkata
+">
+[kolkata_wb]                </span>
+                <span class="urgency-badge urgency-verified">VERIFIED</span>
+                <span class="source-count-pill">1 Outlets</span>
+            </div>
+
+            <h2 class="front-lead-title">Insulin gap puts Bengal’s diabetics at health risks</h2>
+            <p class="front-lead-summary">Insulin gap puts Bengal’s diabetics at health risks The Times of India</p>
+
+            <div class="takeaway-box">
+                <span class="takeaway-label">Key Takeaway</span>
+                Reported by The Times of India; situation remains active.
+            </div>
+
+            <div class="source-footer">
+                <span>Sources: The Times of India</span>
+                <a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxPS3QwVWRJaVRPM1lwc0ZKZUhlTGVjd2k0RHpKZ0NnbmNMeFJwNEFCeE1FYnJOSHZjZEVjLUhQS1BKWDVLaEI3Vk0zbmk3OUFQTDB6WlJKUlFIZjFJd0JLUUVGRUFSSG8wQzNsTm1RaUVhU3JoNHN5VzRCUnp1WVhJU2NqRmtXMjV0cUJCbzVzaVgtX21VazNHZS1wS2xtWkpRQ0VtX0hzdnh0Nl9KZHlUWnRYY1BTUUg1cHc2SGh5YUczQW_SAcgBQVVfeXFMTlFyTnlBQUF4NkJHWUhDaDExQ05vYkxTNHRNTVA5RVBFV2k4TUI3S0x0YUxKOG9XVFdjUkJPTW5aN2dBaW5Ia0xzLXpDN25DWXl2amI5M0VfNG1ua2llM3JzeU1aT21DaDNQUVU4b1RTUW1wc0hrd1RrdjI1WWtWRl8wa2FMT193UGFVVkVTMXZRUUZaMXBSZ2FiMUdHWDFXbVR3RE51UFpXM0J4YXlQTjRVSkprbUg3TXBucGFrTlpyd09yRGxqWEk?oc=5" target="_blank">Read original &rarr;</a>
+            </div>
+        </article>
+    </div>
+
+    <!-- SECTION 2: KOLKATA & WEST BENGAL DESK -->
+    <div class="section-banner">
+        <span>❖ KOLKATA &amp; WEST BENGAL DESK</span>
+        <span class="section-count-badge">10 Stories</span>
+    </div>
+
+    <div class="newspaper-grid">
+        <article class="story-card">
+            <div class="story-meta-row">
+                <span class="tag-badge tag-kolkata">
+[kolkata_wb]                </span>
+                <span class="urgency-badge urgency-verified">VERIFIED</span>
+            </div>
+
+            <h3 class="story-headline">Indian Coast Guard to organise national-level coastal security seminar ‘Sagar Suraksha 2026’ in Kolkata</h3>
+            <p class="story-summary">Indian Coast Guard to organise national-level coastal security seminar ‘Sagar Suraksha 2026’ in Kolkata ANI News</p>
+
+            <div class="takeaway-box">
+                <span class="takeaway-label">Takeaway</span>
+                Reported by ANI News; situation remains active.
+            </div>
+
+            <div class="source-footer">
+                <span>ANI News</span>
+                <a href="https://news.google.com/rss/articles/CBMigwJBVV95cUxPanVWVG1DR3dKdW1rZjROeXpKY3ctajNyX3FiZHFVLTR3b0JlQWk3X0ZhbnRzS3NSemY1WFFqNG9VUklfYkgzZ0c0RjVJQXMxd0ZNd2twNWV2WFJWZmVMdVBUaFcweGhNOHFWSmlHV0ZPX1liZ3U2RVhmdjFZQUFmc242ajdCMzhrb1JRVld3bklUbEpGeFNCWEJDcWFjam9WOVhZbDhKQnRweGlMWHFnZFZtVkt3dGNHS3N4OGVVeFhsakJkSEgxV1oyUTJZSWVfbGFEQXRIOUFSY3RueFVMSEFTSkFTZVlJREsyZHBlUzlNOGh5Y21DNXZJZV9Vd3pOSjBZ?oc=5" target="_blank">&rarr;</a>
+            </div>
+        </article>
+        <article class="story-card">
+            <div class="story-meta-row">
+                <span class="tag-badge tag-kolkata">
+[kolkata_wb]                </span>
+                <span class="urgency-badge urgency-verified">VERIFIED</span>
+            </div>
+
+            <h3 class="story-headline">Kolkata content creator earns Rs 3.06 lakh from just 5 brand deals in October, reveals why she chose fewe</h3>
+            <p class="story-summary">Kolkata content creator earns Rs 3.06 lakh from just 5 brand deals in October, reveals why she chose fewe The Times of India</p>
+
+            <div class="takeaway-box">
+                <span class="takeaway-label">Takeaway</span>
+                Reported by The Times of India; situation remains active.
+            </div>
+
+            <div class="source-footer">
+                <span>The Times of India</span>
+                <a href="https://news.google.com/rss/articles/CBMi6wJBVV95cUxQdHFmalNHaU1sdGgyc09qQWtsYWZDZ0tHMURvZENvTmFDOFpVSjIyQ3p6ZWR5Szg2ZTg3VFVoX3g5amFPbzdrRjVaN2h6VzBJaVBkWUE3cGtUNWd2RHVWQ2IwSVRkd3RCZFNwX1YxbVh2aUhrY2hQU3d4WU4wc0Z1WVRIQ2tTNk9VclNWeW1YZUtmYWxJaC10X0RaRWdpQ2p6d1J0TVB6TVhpUHhxWElRZk5WUjNWTXFZeUFCZUo2NGx5aWhJdjJ6bnVhQTRCYkFGZlFSVEJxUEkwRmtZR1BtWHo5SHJEbkRBdHlYTEk2aFhZeFF2UkJiN1l2ak1weFRJWFBMMlBCVEdQc05ieVg1cHhnZElKRkRzNjhSRzhlQnVsbmZrc2s3MFJfVFlZZVpIYnlXeFotR1FicDd5OXNrRUw2LWNCbVpTUHJWRXVYUGRhZnZOaGEyZkpDSzFHblJIV2lfQnE3TXZxQzDSAfACQVVfeXFMT0toc2dkOGlHZWxrVmZLcVZYWnFaM3ZKR0d1QVU5RFQ3ZXpDLW5vUjFrV0tCWmR3cnlVVFlqQTVDdVY1N25JMzBXb1d2NnMxNHpjcVgzVVhxSWg2dTFDNFN5aC1QMUtjYzJZSVZCTGlfT2FQVTZuSmVnNF9NRUtsQnpIMmlRWGQ4V1BDMjR2RUpaeGNKRzBhUzIzSTczRlp5aGJHSHRrMHBJekR6ZkRlRDJWUnhWZ3gzLUxwdmhNdjRwWmxobFVQMkx1cUVISXV1THV0NkpPSHFNQTVUVmEtWERuY3lTY0RNSHZvcllBSV9MdzdHdUhDckh0THBDbTRJTWJFWmdLVWdUcXJiQUhQM3ZqNXFaZC1lZDU5UDMxekRLU1VxWGx4VUdIOHB0d2lXQU9VZk9UeUh1b1JYOFZ1SWZ1M0pRbmRxb2FGMWhPbjh1MF9BdUE1VmdLYzB0RFBLRjJNNzVHMXNBV215QmRlYlc?oc=5" target="_blank">&rarr;</a>
+            </div>
+        </article>
+        <article class="story-card">
+            <div class="story-meta-row">
+                <span class="tag-badge tag-kolkata">
+[kolkata_wb]                </span>
+                <span class="urgency-badge urgency-verified">VERIFIED</span>
+            </div>
+
+            <h3 class="story-headline">Majerhat death: Cops write to Port for repairs</h3>
+            <p class="story-summary">Majerhat death: Cops write to Port for repairs The Times of India</p>
+
+            <div class="takeaway-box">
+                <span class="takeaway-label">Takeaway</span>
+                Reported by The Times of India; situation remains active.
+            </div>
+
+            <div class="source-footer">
+                <span>The Times of India</span>
+                <a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNUjlDaGF0VWJ3U1Nxb2tuR2xuVDBUYkFzb3VsMzlYblJsWmxCc2RiaTJzampha3ZGQUtSWmtMMURBSC0xVzkySHNXeUphb1BVTWZERW1paTVaVEVpdUV0YlVPM21WejEzMk1RSUlKdHhORlJqMFM2dHRnOHBpX01XTE5Zd29XVGdHd2RKMm9YTHB2Q2dJT2NwWDJLZDRLYzM5eEp6ci03LW9TeldNNUxieG5FaWtDSDBPanNSd9IBwgFBVV95cUxOeENfeG1iRTR6aDYxeE5uNFBjWlNXVWk1YkFMZ2luNXJfTG5JbUwzbHJvWDFZMHgyU045TEkyQzNmQUwwTk9PRnlKaXFEcXBLNzAyTWpPTFlZbkZuLVZqczZuTVByRGozX1JWa1ByRVg0ZHRNUWNzYk9XUXd4MTJMcUxWOWZDa3dYakpjZVpHWnlqTllKcTg0b1lsdHZBVmdPZjlSaFl6T19sOVhtek9id1BiYjVYTGFlb1Exb1VjM1daUQ?oc=5" target="_blank">&rarr;</a>
+            </div>
+        </article>
+        <article class="story-card">
+            <div class="story-meta-row">
+                <span class="tag-badge tag-kolkata">
+[kolkata_wb]                </span>
+                <span class="urgency-badge urgency-verified">VERIFIED</span>
+            </div>
+
+            <h3 class="story-headline">Worry over state school teachers’ SSR duty in exam time</h3>
+            <p class="story-summary">Worry over state school teachers’ SSR duty in exam time The Times of India</p>
+
+            <div class="takeaway-box">
+                <span class="takeaway-label">Takeaway</span>
+                Reported by The Times of India; situation remains active.
+            </div>
+
+            <div class="source-footer">
+                <span>The Times of India</span>
+                <a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxNWUI3S21EUVpWVkNKTmR6bDl1TjJKdHNNcWMyMTd1WExCVUhxaUk0YXFKR0pPVG9RZ2RNWHRhZmVIc3BWaGJrS1RCYVA4NzdsM0wtYzJfQzBqb2NfRUpEMVpNS182SFhfaV9kYi1TRHhlTDdYWFdKeTNQRmo4aHdMTFVtd1pFbHpYOG84X3hGQkxyaktOT1QzZlBDOXRtMVY5WXJfNlNpVG9tbkF2OFJEQ00tSlFkZUpuc0k1ck9faXJkejJwbjlYUNIBzgFBVV95cUxQRnBiQkprSVF5STZzaWlPVDFtd296QzhKd2cwVjlzZ2ppQVZYUHVTdTVVdlR4NTJ2Y0JKbGYtLXByU05KcTVpS1N3MGhOcF9XOHF6MjFHalRicGJ6MmFOb3ZPUnMyQ0RMbGNDRU1uOUFoN2tHOXlHTXFud1FxRWszMktpbWZHMm0tNWdhNXZxZ1k0VzBmR3ktOE1FRzhoU1E2cWh1Y2taQWdKdDBJN0I0MTdnUHFtVlZRbFFiRXR5bHA3enNIS2xvLUYxZHptdw?oc=5" target="_blank">&rarr;</a>
+            </div>
+        </article>
+        <article class="story-card">
+            <div class="story-meta-row">
+                <span class="tag-badge tag-kolkata">
+[kolkata_wb]                </span>
+                <span class="urgency-badge urgency-verified">VERIFIED</span>
+            </div>
+
+            <h3 class="story-headline">kolkata knight riders</h3>
+            <p class="story-summary">kolkata knight riders - Cricbuzz. kolkata knight riders Cricbuzz</p>
+
+            <div class="takeaway-box">
+                <span class="takeaway-label">Takeaway</span>
+                Reported by Cricbuzz; situation remains active.
+            </div>
+
+            <div class="source-footer">
+                <span>Cricbuzz</span>
+                <a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE9iQ2hSWkdKbUcxOFo4WTE0QWdRZWRKSEpTTXBvVno4UTVCeS1KWE1zQUxMS2RNVVBnM0cyQWNsMnJFNFoyNHE4b3Z0MWxwQ0tUZ0JwZlVFMy0tdG1lVU9yMV9WMnJtdUxFMnNSU1pNSFlQeG5DNG8wLU8yTQ?oc=5" target="_blank">&rarr;</a>
+            </div>
+        </article>
+        <article class="story-card">
+            <div class="story-meta-row">
+                <span class="tag-badge tag-kolkata">
+[kolkata_wb]                </span>
+                <span class="urgency-badge urgency-verified">VERIFIED</span>
+            </div>
+
+            <h3 class="story-headline">Insulin gap puts Bengal’s diabetics at health risks</h3>
+            <p class="story-summary">Insulin gap puts Bengal’s diabetics at health risks The Times of India</p>
+
+            <div class="takeaway-box">
+                <span class="takeaway-label">Takeaway</span>
+                Reported by The Times of India; situation remains active.
+            </div>
+
+            <div class="source-footer">
+                <span>The Times of India</span>
+                <a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxPS3QwVWRJaVRPM1lwc0ZKZUhlTGVjd2k0RHpKZ0NnbmNMeFJwNEFCeE1FYnJOSHZjZEVjLUhQS1BKWDVLaEI3Vk0zbmk3OUFQTDB6WlJKUlFIZjFJd0JLUUVGRUFSSG8wQzNsTm1RaUVhU3JoNHN5VzRCUnp1WVhJU2NqRmtXMjV0cUJCbzVzaVgtX21VazNHZS1wS2xtWkpRQ0VtX0hzdnh0Nl9KZHlUWnRYY1BTUUg1cHc2SGh5YUczQW_SAcgBQVVfeXFMTlFyTnlBQUF4NkJHWUhDaDExQ05vYkxTNHRNTVA5RVBFV2k4TUI3S0x0YUxKOG9XVFdjUkJPTW5aN2dBaW5Ia0xzLXpDN25DWXl2amI5M0VfNG1ua2llM3JzeU1aT21DaDNQUVU4b1RTUW1wc0hrd1RrdjI1WWtWRl8wa2FMT193UGFVVkVTMXZRUUZaMXBSZ2FiMUdHWDFXbVR3RE51UFpXM0J4YXlQTjRVSkprbUg3TXBucGFrTlpyd09yRGxqWEk?oc=5" target="_blank">&rarr;</a>
+            </div>
+        </article>
+        <article class="story-card">
+            <div class="story-meta-row">
+                <span class="tag-badge tag-kolkata">
+[kolkata_wb]                </span>
+                <span class="urgency-badge urgency-verified">VERIFIED</span>
+            </div>
+
+            <h3 class="story-headline">Tala crisis: Water pressure still low in N Kol wards</h3>
+            <p class="story-summary">Tala crisis: Water pressure still low in N Kol wards The Times of India</p>
+
+            <div class="takeaway-box">
+                <span class="takeaway-label">Takeaway</span>
+                Reported by The Times of India; situation remains active.
+            </div>
+
+            <div class="source-footer">
+                <span>The Times of India</span>
+                <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxQUWJ1clRuV1A2bDNSNDFTR3VFeEk4VGdRdDFuS2xGenF4OTlwMFNmbl9BbWpNQVE4UDJaZ2h6YVUyc3E4YUhjOC1WaWU1dE5ud1JkbDN5dUswSjQ0U0otZHNLYVZRN3V0Z1F0WkN3Qk5rU0h4UHh6Q0x3Tnl5YXJZNWI4NTRjTURSZWhrb0hFLWVYdFJPWVVNWjYybXJhTGlVU3ZZSVlIYzE3NkFUelJ3aEt0Qmo2eDZGRlgzZ2xNZ1BkejNl0gHKAUFVX3lxTE42dE9XSG5ocXJlRWFiYmJ2T1U1Z1B2V3N6eVFoZGE2N2FoNlFlaWNGb3BPaVc3NF9iVmxRUk52U0ZkZmZsUDBhSHRLSEU4SE9YLUg5aDlwSnNqaElHdFVZeXVhWjB1elBXYjRYa2c4dDVzdWFjbHVmcXExb3ViSzZwcXZuLTVETDNZSWMtTWR3RDhLLTBJYUUtRUFIZllpa1hrYlFKamZ2aWxwNk5yQ3dvR3hqbGJyZmJjaGp4OUU0RFdPUG51bG5aTkE?oc=5" target="_blank">&rarr;</a>
+            </div>
+        </article>
+        <article class="story-card">
+            <div class="story-meta-row">
+                <span class="tag-badge tag-kolkata">
+[kolkata_wb]                </span>
+                <span class="urgency-badge urgency-verified">VERIFIED</span>
+            </div>
+
+            <h3 class="story-headline">Jadavpur University Campus 2nd Ground, Kolkata details, matches, stats</h3>
+            <p class="story-summary">Jadavpur University Campus 2nd Ground, Kolkata details, matches, stats Cricbuzz</p>
+
+            <div class="takeaway-box">
+                <span class="takeaway-label">Takeaway</span>
+                Reported by Cricbuzz; situation remains active.
+            </div>
+
+            <div class="source-footer">
+                <span>Cricbuzz</span>
+                <a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxNeWZYMDVXOWJ4eUNBQzdaZThyOHNXdjR0Zzl1NFFHeHBVd0tHV3FScGFUb1BkN0JRaG5CMl91MjBlVkllRkdWTndEOGIwaDJPbEJ6UnNvVmJNUjhIVldzNWF0N2hsck9JMVFoazdLem9ORVQ0QUpsTFpiemhocjFJQy1jajJ0TDBoVWtud0JGZTZSMGdhVDZDNUJWZ2xzZDFDYzl6NUZBV1A4SDBpNEFpc0tfWFVlSUx1VGs3NDhDT1JxR3FiWFotVg?oc=5" target="_blank">&rarr;</a>
+            </div>
+        </article>
+        <article class="story-card">
+            <div class="story-meta-row">
+                <span class="tag-badge tag-kolkata">
+[kolkata_wb]                </span>
+                <span class="urgency-badge urgency-verified">VERIFIED</span>
+            </div>
+
+            <h3 class="story-headline">3,700 Cops Deployed As Kolkata Gears Up For Chhath Puja Across 124 Sites</h3>
+            <p class="story-summary">3,700 Cops Deployed As Kolkata Gears Up For Chhath Puja Across 124 Sites NDTV</p>
+
+            <div class="takeaway-box">
+                <span class="takeaway-label">Takeaway</span>
+                Reported by NDTV; situation remains active.
+            </div>
+
+            <div class="source-footer">
+                <span>NDTV</span>
+                <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxNemhOdldMMklsOFZ2UFZneUFKZGJySVdMTm55emVKX0FBbXVkcWxhYzV1bDRkbUhzQ0NWOXlzNFAyUi1Jd0xqbXZ4ZXRPMExPUkFtSExoNUR5ZmFGQmRleG9EOUZBQnM4ZkM4Z3k3eEhIOHk3NzItNkloUTd3SFlUdlBVWGxDbVFWYXFTcUlQX2hqdl9qOE5wMlpjSlhBZGxZNjhtUlZ0SWJhWTJodURUWW5ONNIBuwFBVV95cUxOZG8tMHZtSzc5SVBucVdPSHFLNFRoSFB4Z0hoZTlKQUZEY0p5S2RLZkxuT1JLZ0tYNHlKX3VaRi1FUXJURnRBaXdXWlFOVWRxbTFEMlNDUUswUXIwYXpyUkhZLWI3TGc1WXFhTWdfbmFvaTVJeUhQX2RaUUhfb293aDdmelNUNXV4MVNYaU9ucVZLSXk1RHl4alIyckt6UE9YeGZ4ek92R0hIODkwTnpsck9ySThpN2tmUHlv?oc=5" target="_blank">&rarr;</a>
+            </div>
+        </article>
+        <article class="story-card">
+            <div class="story-meta-row">
+                <span class="tag-badge tag-kolkata">
+[kolkata_wb]                </span>
+                <span class="urgency-badge urgency-verified">VERIFIED</span>
+            </div>
+
+            <h3 class="story-headline">Kolkata | Akashvani News</h3>
+            <p class="story-summary">Kolkata | Akashvani News News On AIR</p>
+
+            <div class="takeaway-box">
+                <span class="takeaway-label">Takeaway</span>
+                Reported by News On AIR; situation remains active.
+            </div>
+
+            <div class="source-footer">
+                <span>News On AIR</span>
+                <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxNT3dIUzdyMGxXWTZ0SlFQQXNFYmluZFVNTWtWSFQ2WWVmbW9lYmhlcnFLQ0thWHYwd2ZUNHh6REJnWDQ4RjVrQkhKSFdxZjVNckhXanVEQS1DaG11REJxWG9ENUxkTVNOcWxxalFkbzNBU3lDWWNvMlhhWXFsMDV0aVlmOG5KblBjaTJ1dg?oc=5" target="_blank">&rarr;</a>
+            </div>
+        </article>
+    </div>
+
+    <!-- SECTION 3: INDIAN STATES & UNION TERRITORIES DIGEST -->
+
+    <!-- SECTION 4: NATIONAL AFFAIRS, GOVERNANCE & ECONOMY -->
+
+    <!-- SECTION 5: WORLD & INTERNATIONAL DESK -->
+
+    <!-- SECTION 6: VIRAL TRENDS & SOCIAL RADAR -->
+
+</body>
+</html>
