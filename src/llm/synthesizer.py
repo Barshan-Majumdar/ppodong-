@@ -188,14 +188,16 @@ class LLMSynthesizer:
             return None
 
     async def _call_groq(self, prompt: str) -> Optional[str]:
-        """Execute Groq API call as secondary fallback."""
+        """Execute Groq API call as secondary fallback across candidate models."""
         client = self._get_groq_client()
         if not client:
             return None
 
-        def _sync_call():
+        groq_candidates = ["llama-3.3-70b-versatile", "openai/gpt-oss-120b", "openai/gpt-oss-20b", "qwen/qwen3.8-27b"]
+
+        def _sync_call(model_id: str):
             completion = client.chat.completions.create(
-                model="llama-3.3-70b-versatile",
+                model=model_id,
                 messages=[
                     {
                         "role": "system",
@@ -208,11 +210,14 @@ class LLMSynthesizer:
             )
             return completion.choices[0].message.content
 
-        try:
-            return await asyncio.to_thread(_sync_call)
-        except Exception as e:
-            logger.warning(f"Groq API call failed: {e}")
-            return None
+        for model_id in groq_candidates:
+            try:
+                resp = await asyncio.to_thread(_sync_call, model_id)
+                if resp:
+                    return resp
+            except Exception as e:
+                logger.debug(f"Groq ({model_id}) call failed: {e}")
+        return None
 
     def _parse_and_validate_batch_output(
         self, raw_json: str, batch: List[Dict[str, Any]]
@@ -274,40 +279,38 @@ class LLMSynthesizer:
     ) -> List[StorySummary]:
         """
         Summarize a single batch of clusters through multi-tier fallback:
-        Tier 1: Gemini 3.8 Flash
-        Tier 2: Gemini 3.5 Flash-Lite
-        Tier 3: Groq Llama-3.3-70b-versatile
-        Tier 4: High-Quality Extractive Fallback (Guarantees 100% completion)
+        Tier 1: Gemini 3.8 Flash / 3.5 Flash / 3.5 Flash-Lite
+        Tier 2: Groq (Llama-3.3 / GPT-OSS / Qwen)
+        Tier 3: High-Quality Extractive Fallback (Guarantees 100% completion)
         """
         prompt = self._build_batch_prompt(batch)
 
-        # Tier 1: Gemini 3.8 Flash
+        # Tier 1: Gemini API
         if self.gemini_api_key:
-            logger.info(f"Batch {batch_num}/{total_batches}: Querying primary model 'gemini-3.8-flash'...")
-            resp = await self._call_gemini("gemini-3.8-flash", prompt)
-            if resp:
-                validated = self._parse_and_validate_batch_output(resp, batch)
-                if validated:
-                    return validated
+            gemini_candidates = [
+                "gemini-3.8-flash",
+                "gemini-3.5-flash",
+                "gemini-3.5-flash-lite",
+                "gemini-flash-latest",
+            ]
+            for g_model in gemini_candidates:
+                logger.info(f"Batch {batch_num}/{total_batches}: Querying Gemini model '{g_model}'...")
+                resp = await self._call_gemini(g_model, prompt)
+                if resp:
+                    validated = self._parse_and_validate_batch_output(resp, batch)
+                    if validated:
+                        return validated
 
-            # Tier 2: Gemini 3.5 Flash-Lite
-            logger.info(f"Batch {batch_num}/{total_batches}: Querying fallback 'gemini-3.5-flash-lite'...")
-            resp = await self._call_gemini("gemini-3.5-flash-lite", prompt)
-            if resp:
-                validated = self._parse_and_validate_batch_output(resp, batch)
-                if validated:
-                    return validated
-
-        # Tier 3: Groq
+        # Tier 2: Groq API
         if self.groq_api_key:
-            logger.info(f"Batch {batch_num}/{total_batches}: Querying secondary fallback Groq Llama-3.3...")
+            logger.info(f"Batch {batch_num}/{total_batches}: Querying Groq fallback models...")
             resp = await self._call_groq(prompt)
             if resp:
                 validated = self._parse_and_validate_batch_output(resp, batch)
                 if validated:
                     return validated
 
-        # Tier 4: Extractive fallback
+        # Tier 3: Deterministic Extractive fallback
         logger.info(f"Batch {batch_num}/{total_batches}: Utilizing deterministic extractive summarization fallback.")
         return [generate_extractive_fallback_summary(c) for c in batch]
 
