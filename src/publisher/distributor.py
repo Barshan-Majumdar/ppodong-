@@ -228,7 +228,7 @@ class Distributor:
             logger.info(f"Connecting to Gmail SMTP to send edition to {self.gmail_recipients}...")
             with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=25) as server:
                 server.login(self.gmail_user, self.gmail_password)
-                server.send_message(msg)
+                server.send_message(msg, to_addrs=self.gmail_recipients)
             logger.info("Email delivered successfully via Gmail SMTP!")
             return True
         except Exception as e:
