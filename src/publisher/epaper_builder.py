@@ -82,10 +82,12 @@ class EPaperBuilder:
             lstrip_blocks=True,
         )
 
-    def prepare_edition_paths(self, date_str: str) -> Tuple[str, str, str, str]:
+    def prepare_edition_paths(
+        self, date_str: str, cycle: Optional[str] = None
+    ) -> Tuple[str, str, str, str]:
         """
         Creates directory structure editions/YYYY/MM/ and returns file paths
-        for PDF, Markdown, and HTML.
+        for PDF, Markdown, and HTML, named with cycle (Morning/Evening) for dual editions.
         """
         dt = datetime.strptime(date_str, "%Y-%m-%d")
         year_str = dt.strftime("%Y")
@@ -94,7 +96,12 @@ class EPaperBuilder:
         target_dir = os.path.join(self.editions_dir, year_str, month_str)
         os.makedirs(target_dir, exist_ok=True)
 
-        base_name = f"Daily_Chronicle_{date_str}"
+        if not cycle:
+            # Cutoff at 07:00 UTC (12:30 PM IST)
+            utc_now = datetime.now(timezone.utc)
+            cycle = "Morning" if utc_now.hour < 7 else "Evening"
+
+        base_name = f"Daily_Chronicle_{date_str}_{cycle}"
         pdf_path = os.path.join(target_dir, f"{base_name}.pdf")
         md_path = os.path.join(target_dir, f"{base_name}.md")
         html_path = os.path.join(target_dir, f"{base_name}.html")
@@ -151,6 +158,7 @@ class EPaperBuilder:
         stories: List[Dict[str, Any]],
         edition_date: str,
         total_sources_count: int,
+        edition_cycle: str = "Morning",
     ) -> str:
         """Renders HTML broadsheet newspaper using Jinja2 and templates/epaper.css."""
         css_file = os.path.join(self.templates_dir, "epaper.css")
@@ -168,6 +176,7 @@ class EPaperBuilder:
         rendered = template.render(
             edition_date=formatted_date,
             edition_date_iso=edition_date,
+            edition_cycle=f"{edition_cycle} Edition",
             total_stories_count=len(stories),
             total_sources_count=total_sources_count,
             front_leads=front_leads,
@@ -227,6 +236,7 @@ class EPaperBuilder:
         stories: List[Dict[str, Any]],
         edition_date: str,
         total_sources: int,
+        edition_cycle: str = "Morning",
     ) -> str:
         """Generates comprehensive, searchable Markdown edition archiving 100% of stories."""
         dt = datetime.strptime(edition_date, "%Y-%m-%d")
@@ -235,7 +245,7 @@ class EPaperBuilder:
 
         lines = [
             f"# THE DAILY CHRONICLE — INDIA & BENGAL EDITION",
-            f"**Autonomous 24/7 Intelligence Journal** | *{formatted_date}*",
+            f"**Autonomous 24/7 Intelligence Journal** | *{formatted_date} • {edition_cycle} Edition*",
             f"",
             f"> **Edition Stats:** {len(stories)} Verified Stories | {total_sources} Outlets & Media Sources | 100% Retention",
             f"",
@@ -302,13 +312,19 @@ class EPaperBuilder:
         self,
         stories: List[Dict[str, Any]],
         edition_date: Optional[str] = None,
+        edition_cycle: Optional[str] = None,
     ) -> Dict[str, Any]:
         """
         Coordinates full publishing process:
         Renders HTML, writes HTML file, compiles WeasyPrint PDF, and writes Markdown report.
+        Supports dual editions (Morning / Evening) archiving.
         """
         if not edition_date:
             edition_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+        if not edition_cycle:
+            utc_now = datetime.now(timezone.utc)
+            edition_cycle = "Morning" if utc_now.hour < 7 else "Evening"
 
         # Collect unique source count
         all_sources = set()
@@ -317,10 +333,14 @@ class EPaperBuilder:
                 all_sources.add(src)
         total_sources = len(all_sources)
 
-        target_dir, pdf_path, md_path, html_path = self.prepare_edition_paths(edition_date)
+        target_dir, pdf_path, md_path, html_path = self.prepare_edition_paths(
+            edition_date, cycle=edition_cycle
+        )
 
         # 1. Render and write HTML
-        rendered_html = self.render_html(stories, edition_date, total_sources)
+        rendered_html = self.render_html(
+            stories, edition_date, total_sources, edition_cycle=edition_cycle
+        )
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(rendered_html)
         logger.info(f"Saved HTML edition to {html_path}")
@@ -329,13 +349,26 @@ class EPaperBuilder:
         pdf_success = self.compile_pdf(html_path, rendered_html, pdf_path)
 
         # 3. Render and write Markdown archive
-        md_content = self.build_markdown_report(stories, edition_date, total_sources)
+        md_content = self.build_markdown_report(
+            stories, edition_date, total_sources, edition_cycle=edition_cycle
+        )
         with open(md_path, "w", encoding="utf-8") as f:
             f.write(md_content)
         logger.info(f"Saved Markdown archive to {md_path}")
 
+        # 4. Mirror to generic Daily_Chronicle_{edition_date}.* for latest alias
+        try:
+            generic_base = os.path.join(target_dir, f"Daily_Chronicle_{edition_date}")
+            shutil.copyfile(html_path, f"{generic_base}.html")
+            shutil.copyfile(md_path, f"{generic_base}.md")
+            if pdf_success and os.path.exists(pdf_path):
+                shutil.copyfile(pdf_path, f"{generic_base}.pdf")
+        except Exception as e:
+            logger.debug(f"Could not mirror generic edition files: {e}")
+
         return {
             "date": edition_date,
+            "cycle": edition_cycle,
             "target_dir": target_dir,
             "html_path": html_path,
             "pdf_path": pdf_path if (pdf_success and os.path.exists(pdf_path)) else None,

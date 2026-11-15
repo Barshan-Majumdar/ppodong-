@@ -23,7 +23,7 @@
         <div class="newspaper-motto">A National &amp; Bengal Journal of Record • 24/7 Autonomous Intelligence</div>
 
         <div class="dateline-bottom">
-            <span><strong>EDITION:</strong> {{ edition_date }}</span>
+            <span><strong>EDITION:</strong> {{ edition_date }}{% if edition_cycle %} • {{ edition_cycle | upper }}{% endif %}</span>
             <span><strong>CIRCULATION:</strong> Rolling 24-Hour Verified Archive</span>
             <span class="stat-highlight">{{ total_stories_count }} Stories • {{ total_sources_count }} Media Outlets</span>
             <span><strong>PRICE:</strong> Free &amp; Open Access</span>

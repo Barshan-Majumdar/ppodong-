@@ -56,8 +56,13 @@ class Distributor:
         total_stories: int,
         total_sources: int,
         stories: List[Dict[str, Any]],
+        edition_cycle: Optional[str] = None,
     ) -> str:
         """Create a clean, formatted Telegram summary of top front-page headlines."""
+        if not edition_cycle:
+            utc_now = datetime.now(timezone.utc)
+            edition_cycle = "Morning Broadsheet" if utc_now.hour < 7 else "Evening Wrap"
+
         top_leads = stories[:5]
         headlines_text = ""
         for i, story in enumerate(top_leads, start=1):
@@ -66,7 +71,7 @@ class Distributor:
 
         caption = (
             f"🗞 <b>THE DAILY CHRONICLE</b>\n"
-            f"📅 <i>{edition_date} • 24/7 Morning Broadsheet</i>\n"
+            f"📅 <i>{edition_date} • 24/7 {edition_cycle}</i>\n"
             f"📊 <b>{total_stories} Verified Stories</b> | {total_sources} Outlets\n"
             f"━━━━━━━━━━━━━━━━━━\n"
             f"<b>★ TOP HEADLINES:</b>\n"
@@ -83,6 +88,7 @@ class Distributor:
         total_stories: int,
         total_sources: int,
         stories: List[Dict[str, Any]],
+        edition_cycle: Optional[str] = None,
     ) -> bool:
         """Sends document and summary caption to Telegram chat."""
         if not self.telegram_token or not self.telegram_chat_id:
@@ -93,7 +99,7 @@ class Distributor:
             return False
 
         caption = self.format_telegram_caption(
-            edition_date, total_stories, total_sources, stories
+            edition_date, total_stories, total_sources, stories, edition_cycle=edition_cycle
         )
 
         base_url = f"https://api.telegram.org/bot{self.telegram_token}"
@@ -150,14 +156,19 @@ class Distributor:
         html_path: Optional[str],
         edition_date: str,
         total_stories: int,
+        edition_cycle: Optional[str] = None,
     ) -> bool:
         """Sends edition via Gmail SMTP (optional channel)."""
         if not self.gmail_user or not self.gmail_password or not self.gmail_recipients:
             logger.debug("Gmail SMTP credentials not configured. Skipping email delivery.")
             return False
 
+        if not edition_cycle:
+            utc_now = datetime.now(timezone.utc)
+            edition_cycle = "Morning Edition" if utc_now.hour < 7 else "Evening Edition"
+
         try:
-            subject = f"The Daily Chronicle — {edition_date} ({total_stories} Stories)"
+            subject = f"The Daily Chronicle — {edition_date} ({edition_cycle} • {total_stories} Stories)"
             msg = MIMEMultipart("mixed")
             msg["From"] = f"The Daily Chronicle <{self.gmail_user}>"
             msg["To"] = ", ".join(self.gmail_recipients)
@@ -170,7 +181,7 @@ class Distributor:
                 f'<h1 style="font-family: \'Times New Roman\', Times, Georgia, serif !important; font-size: 26pt; font-weight: 900; text-transform: uppercase; margin: 0; letter-spacing: -0.5px;">The Daily Chronicle</h1>'
                 f'<div style="font-family: \'Times New Roman\', Times, Georgia, serif !important; font-size: 8pt; text-transform: uppercase; letter-spacing: 2px; font-style: italic; color: #444444; margin-top: 2px;">A National &amp; Bengal Journal of Record • Autonomous Edition</div>'
                 f'<div style="border-top: 1px solid #111111; border-bottom: 1px solid #111111; padding: 3px; margin-top: 6px; font-size: 8pt; font-weight: bold; text-transform: uppercase;">'
-                f'{edition_date} • {total_stories} Verified Stories • Attached Broadsheet PDF'
+                f'{edition_date} • {edition_cycle.upper()} • {total_stories} Verified Stories • Attached Broadsheet PDF'
                 f'</div>'
                 f'</div>'
                 f'<p style="font-family: \'Times New Roman\', Times, Georgia, serif !important; font-size: 10pt; line-height: 1.5;">'
@@ -231,6 +242,8 @@ class Distributor:
     ) -> Dict[str, bool]:
         """Dispatches to all configured channels."""
         edition_date = publication_result.get("date", datetime.now(timezone.utc).strftime("%Y-%m-%d"))
+        cycle = publication_result.get("cycle")
+        cycle_label = f"{cycle} Edition" if cycle else None
         pdf_path = publication_result.get("pdf_path")
         md_path = publication_result.get("md_path")
         html_path = publication_result.get("html_path")
@@ -238,10 +251,10 @@ class Distributor:
         total_sources = publication_result.get("total_sources", 1)
 
         tg_ok = self.send_to_telegram(
-            pdf_path, md_path, edition_date, total_stories, total_sources, stories
+            pdf_path, md_path, edition_date, total_stories, total_sources, stories, edition_cycle=cycle_label
         )
         email_ok = self.send_to_email(
-            pdf_path, html_path, edition_date, total_stories
+            pdf_path, html_path, edition_date, total_stories, edition_cycle=cycle_label
         )
 
         return {"telegram": tg_ok, "email": email_ok}
