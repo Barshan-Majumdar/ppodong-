@@ -49,6 +49,8 @@ jobs:
             libffi-dev \
             fonts-dejavu-core \
             fonts-liberation \
+            fonts-indic \
+            fonts-noto-core \
             chromium-browser || true
 
       - name: Install Python Dependencies (Fast CPU-Optimized)

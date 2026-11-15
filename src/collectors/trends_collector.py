@@ -70,12 +70,30 @@ class TrendsCollector:
                     if not title:
                         continue
 
+                    lower_title = title.lower()
+                    # Filter out non-journalistic spam trends (horoscopes, lotteries, etc.)
+                    if any(
+                        kw in lower_title
+                        for kw in [
+                            "horoscope",
+                            "rashifal",
+                            "astrology",
+                            "zodiac",
+                            "kundali",
+                            "lottery",
+                            "satta",
+                            "lucky number",
+                        ]
+                    ):
+                        continue
+
                     traffic_elem = item.find("ht:approx_traffic", namespaces)
                     traffic = traffic_elem.text.strip() if traffic_elem is not None and traffic_elem.text else "Spike"
 
                     # Collect linked news snippets
                     news_snippets = []
                     source_names = ["Google Trends"]
+                    headline_candidate = ""
                     news_items = item.findall("ht:news_item", namespaces)
                     for n_item in news_items:
                         n_title_elem = n_item.find("ht:news_item_title", namespaces)
@@ -90,22 +108,31 @@ class TrendsCollector:
                         )
                         n_source = n_source_elem.text.strip() if n_source_elem is not None and n_source_elem.text else ""
 
+                        # Clean up HTML entities
+                        n_title = re.sub(r"&[a-zA-Z0-9#]+;", " ", n_title).strip()
+                        n_snippet = re.sub(r"&[a-zA-Z0-9#]+;", " ", n_snippet).strip()
+
+                        if n_title and not headline_candidate and len(n_title) > 10:
+                            headline_candidate = n_title
+
                         if n_title:
                             news_snippets.append(f"{n_title}: {n_snippet}")
                         if n_source and n_source not in source_names:
                             source_names.append(n_source)
 
+                    display_title = headline_candidate or f"Viral Topic: {title.title()}"
                     body_text = (
                         f"Search Volume: {traffic}. "
                         + (" | ".join(news_snippets) if news_snippets else f"Trending search in India: {title}.")
                     )
+                    body_text = re.sub(r"\s+", " ", body_text).strip()
 
                     trend_id = hashlib.sha256(f"trend_google_{title}".encode("utf-8")).hexdigest()[:16]
 
                     results.append(
                         {
                             "id": trend_id,
-                            "title": f"Trending Search ({traffic}): {title}",
+                            "title": display_title,
                             "url": f"https://www.google.com/search?q={title.replace(' ', '+')}",
                             "canonical_url": f"https://www.google.com/search?q={title.replace(' ', '+')}",
                             "source": ", ".join(source_names[:3]),

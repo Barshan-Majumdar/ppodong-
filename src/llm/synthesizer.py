@@ -41,8 +41,10 @@ def generate_extractive_fallback_summary(cluster: Dict[str, Any]) -> StorySummar
     section = cluster.get("section", "National Affairs")
     state_tag = cluster.get("state_tag", "")
 
-    # Clean text of HTML tags
+    # Clean text of HTML tags and entities
     clean_text = re.sub(r"<[^>]+>", "", primary_text or lead).strip()
+    clean_text = re.sub(r"&[a-zA-Z0-9#]+;", " ", clean_text)
+    clean_text = re.sub(r"\s+", " ", clean_text).strip()
     sentences = re.split(r"(?<=[.!?])\s+", clean_text)
     selected_sentences = [s.strip() for s in sentences if len(s.strip()) > 15][:3]
     if not selected_sentences:
@@ -51,7 +53,10 @@ def generate_extractive_fallback_summary(cluster: Dict[str, Any]) -> StorySummar
         summary_str = " ".join(selected_sentences)
 
     sources = ", ".join(cluster.get("sources", [])[:3])
-    takeaway = f"Reported by {sources or 'verified news agencies'}; situation remains active."
+    if cluster.get("is_trend"):
+        takeaway = f"Viral interest tracked across {sources or 'search engines'}; social sentiment active."
+    else:
+        takeaway = f"Reported by {sources or 'verified news agencies'}; situation remains active."
 
     tag = "TRENDING" if cluster.get("is_trend") else ("BREAKING" if cluster.get("articles_count", 1) >= 3 else "VERIFIED")
 
@@ -138,7 +143,8 @@ class LLMSynthesizer:
             f"1. Return pure valid JSON with a 'stories' list containing EXACTLY {len(batch)} items.\n"
             f"2. Each item MUST preserve its exact 'cluster_id'. ZERO omission.\n"
             f"3. Write a sharp broadsheet headline, a 2-3 sentence factual journalistic summary, and 1 'key_takeaway'.\n"
-            f"4. Assign urgency_tag: 'BREAKING', 'DEVELOPING', 'TRENDING', or 'VERIFIED'.\n\n"
+            f"4. Assign urgency_tag: 'BREAKING', 'DEVELOPING', 'TRENDING', or 'VERIFIED'.\n"
+            f"5. ALL output text must be strictly in crisp ENGLISH. If an input headline or text contains Indian regional languages (Telugu, Hindi, Bengali, Tamil, etc.), translate and summarize the core factual news accurately into English.\n\n"
             f"INPUT STORIES ({len(batch)} items):\n"
             f"{json.dumps(input_data, indent=2)}\n\n"
             f"Return JSON schema:\n"
