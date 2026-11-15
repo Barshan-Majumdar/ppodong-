@@ -10,7 +10,7 @@
 
     @top-center {
         content: "THE DAILY CHRONICLE — INDIA & BENGAL BROADSHEET";
-        font-family: "Times New Roman", Times, Georgia, serif;
+        font-family: "Times New Roman", Times, Georgia, serif !important;
         font-size: 7.5pt;
         letter-spacing: 1.5px;
         text-transform: uppercase;
@@ -20,7 +20,7 @@
 
     @bottom-left {
         content: "The Daily Chronicle • Autonomous Intelligence Journal • 24/7 Verified Edition";
-        font-family: "Times New Roman", Times, Georgia, serif;
+        font-family: "Times New Roman", Times, Georgia, serif !important;
         font-size: 7pt;
         font-style: italic;
         border-top: 0.5px solid #111827;
@@ -29,7 +29,7 @@
 
     @bottom-right {
         content: "Page " counter(page) " of " counter(pages);
-        font-family: "Times New Roman", Times, Georgia, serif;
+        font-family: "Times New Roman", Times, Georgia, serif !important;
         font-size: 7.5pt;
         font-weight: bold;
         border-top: 0.5px solid #111827;
@@ -41,10 +41,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Times New Roman", Times, Georgia, serif !important;
 }
 
-body {
-    font-family: "Times New Roman", Times, Georgia, serif;
+html, body {
+    font-family: "Times New Roman", Times, Georgia, serif !important;
     color: #111111;
     background-color: #ffffff;
     line-height: 1.35;
