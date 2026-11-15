@@ -241,11 +241,15 @@ def main():
                 limit=args.limit,
             )
         )
+        sys.stdout.flush()
+        sys.stderr.flush()
+        os._exit(0)
     except KeyboardInterrupt:
         logger.info("Pipeline cancelled by user.")
+        os._exit(0)
     except Exception as e:
         logger.exception(f"Fatal error in E-Paper pipeline: {e}")
-        sys.exit(1)
+        os._exit(1)
 
 
 if __name__ == "__main__":

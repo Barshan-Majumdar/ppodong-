@@ -161,13 +161,21 @@ class LLMSynthesizer:
         def _sync_call():
             if self._gemini_sdk_type == "google-genai":
                 from google.genai import types
+                try:
+                    cfg = types.GenerateContentConfig(
+                        response_mime_type="application/json",
+                        temperature=0.2,
+                        http_options=types.HttpOptions(timeout=22000),
+                    )
+                except Exception:
+                    cfg = types.GenerateContentConfig(
+                        response_mime_type="application/json",
+                        temperature=0.2,
+                    )
                 response = client.models.generate_content(
                     model=model_name,
                     contents=prompt,
-                    config=types.GenerateContentConfig(
-                        response_mime_type="application/json",
-                        temperature=0.2,
-                    ),
+                    config=cfg,
                 )
                 return response.text
             else:
@@ -175,7 +183,7 @@ class LLMSynthesizer:
                     model_name=model_name,
                     generation_config={"response_mime_type": "application/json", "temperature": 0.2},
                 )
-                response = model.generate_content(prompt)
+                response = model.generate_content(prompt, request_options={"timeout": 22.0})
                 return response.text
 
         try:
@@ -207,6 +215,7 @@ class LLMSynthesizer:
                 ],
                 response_format={"type": "json_object"},
                 temperature=0.2,
+                timeout=20.0,
             )
             return completion.choices[0].message.content
 
