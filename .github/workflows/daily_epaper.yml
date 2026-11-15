@@ -25,7 +25,7 @@ permissions:
 jobs:
   publish_daily_epaper:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 35
 
     steps:
       - name: Checkout Repository
@@ -39,7 +39,7 @@ jobs:
           python-version: '3.11'
           cache: 'pip'
 
-      - name: Install System Dependencies for WeasyPrint & Typography
+      - name: Install System Dependencies for Broadsheet Typography & PDF
         run: |
           sudo apt-get update -y
           sudo apt-get install -y \
@@ -48,11 +48,13 @@ jobs:
             libpangoft2-1.0-0 \
             libffi-dev \
             fonts-dejavu-core \
-            fonts-liberation
+            fonts-liberation \
+            chromium-browser || true
 
-      - name: Install Python Dependencies
+      - name: Install Python Dependencies (Fast CPU-Optimized)
         run: |
           python -m pip install --upgrade pip
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
           pip install -r requirements.txt
 
       - name: Execute Autonomous E-Paper News Agent

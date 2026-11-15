@@ -147,7 +147,7 @@ class LLMSynthesizer:
         return prompt
 
     async def _call_gemini(self, model_name: str, prompt: str) -> Optional[str]:
-        """Execute Gemini API call with structured JSON formatting."""
+        """Execute Gemini API call with strict 25s timeout and structured JSON formatting."""
         client = self._get_gemini_client()
         if not client:
             return None
@@ -173,13 +173,16 @@ class LLMSynthesizer:
                 return response.text
 
         try:
-            return await asyncio.to_thread(_sync_call)
+            return await asyncio.wait_for(asyncio.to_thread(_sync_call), timeout=25.0)
+        except asyncio.TimeoutError:
+            logger.warning(f"Gemini ({model_name}) timed out after 25s. Switching provider.")
+            return None
         except Exception as e:
             logger.warning(f"Gemini ({model_name}) call failed: {e}")
             return None
 
     async def _call_groq(self, prompt: str) -> Optional[str]:
-        """Execute Groq API call across fast open-weight models."""
+        """Execute Groq API call across fast open-weight models with 20s timeout."""
         client = self._get_groq_client()
         if not client:
             return None
@@ -203,7 +206,7 @@ class LLMSynthesizer:
 
         for model_id in groq_models:
             try:
-                resp = await asyncio.to_thread(_sync_call, model_id)
+                resp = await asyncio.wait_for(asyncio.to_thread(_sync_call, model_id), timeout=20.0)
                 if resp and len(resp) > 30:
                     return resp
             except Exception as e:
@@ -273,9 +276,9 @@ class LLMSynthesizer:
         prompt = self._build_batch_prompt(batch)
 
         if preferred_provider == "gemini":
-            # 1. Try Gemini
+            # 1. Try Gemini with fast models first
             if self.gemini_api_key:
-                for gm in ["gemini-3.8-flash", "gemini-3.5-flash", "gemini-3.5-flash-lite"]:
+                for gm in ["gemini-3.5-flash", "gemini-3.8-flash", "gemini-3.5-flash-lite"]:
                     logger.info(f"[Parallel Worker: Gemini] Batch {batch_num}/{total_batches}: Querying '{gm}'...")
                     resp = await self._call_gemini(gm, prompt)
                     if resp:

@@ -96,8 +96,9 @@ async def run_pipeline(
         f"{len(trend_articles)} Trends = {len(all_raw_articles)} Total Raw Articles."
     )
 
-    if limit > 0 and len(all_raw_articles) > limit:
-        logger.info(f"Applying balanced desk sampling for limit={limit}...")
+    effective_limit = limit if limit > 0 else config.get("pipeline", {}).get("max_daily_stories", 60)
+    if effective_limit > 0 and len(all_raw_articles) > effective_limit:
+        logger.info(f"Applying balanced desk sampling for daily edition (target: {effective_limit} stories)...")
         by_section: Dict[str, List[Dict[str, Any]]] = {}
         for a in all_raw_articles:
             s_key = a.get("section", "national")
@@ -108,16 +109,16 @@ async def run_pipeline(
             if k not in desk_keys:
                 desk_keys.append(k)
 
-        per_section_quota = max(1, limit // len(desk_keys))
+        per_section_quota = max(1, effective_limit // len(desk_keys))
         sampled_articles = []
         for dk in desk_keys:
             items = by_section.get(dk, [])
             sampled_articles.extend(items[:per_section_quota])
 
-        # Fill any remainder up to limit
-        if len(sampled_articles) < limit:
+        # Fill any remainder up to effective_limit
+        if len(sampled_articles) < effective_limit:
             remaining = [a for a in all_raw_articles if a not in sampled_articles]
-            sampled_articles.extend(remaining[: (limit - len(sampled_articles))])
+            sampled_articles.extend(remaining[: (effective_limit - len(sampled_articles))])
 
         all_raw_articles = sampled_articles
         counts_summary = [f"{k}: {len([x for x in all_raw_articles if x.get('section') == k])}" for k in desk_keys]
