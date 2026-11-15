@@ -8,6 +8,8 @@ from __future__ import annotations
 
 import logging
 import os
+import shutil
+import subprocess
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -21,6 +23,46 @@ try:
     HAS_WEASYPRINT = True
 except (ImportError, OSError):
     HAS_WEASYPRINT = False
+
+
+def find_browser_executable() -> Optional[str]:
+    """Finds available Chrome, Chromium, or Edge binary for headless PDF printing."""
+    # 1. Check PATH
+    for name in ["chrome", "google-chrome", "chromium", "chromium-browser", "msedge"]:
+        path = shutil.which(name)
+        if path:
+            return path
+
+    # 2. Check standard Windows installation directories
+    candidate_paths = [
+        r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+        r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+        r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
+        r"C:\Program Files\Microsoft\Edge\Application\msedge.exe",
+    ]
+    local_app_data = os.environ.get("LOCALAPPDATA", "")
+    if local_app_data:
+        candidate_paths.extend([
+            os.path.join(local_app_data, r"Google\Chrome\Application\chrome.exe"),
+            os.path.join(local_app_data, r"Microsoft\Edge\Application\msedge.exe"),
+        ])
+
+    for p in candidate_paths:
+        if os.path.exists(p):
+            return p
+
+    # 3. Check standard Linux/macOS paths
+    unix_paths = [
+        "/usr/bin/google-chrome",
+        "/usr/bin/chromium-browser",
+        "/usr/bin/chromium",
+        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    ]
+    for p in unix_paths:
+        if os.path.exists(p):
+            return p
+
+    return None
 
 
 class EPaperBuilder:
@@ -117,25 +159,51 @@ class EPaperBuilder:
         )
         return rendered
 
-    def compile_pdf(self, html_content: str, pdf_path: str) -> bool:
-        """Compiles rendered HTML string to PDF using WeasyPrint."""
-        if not HAS_WEASYPRINT:
-            logger.warning(
-                "WeasyPrint or required C-libraries (Pango/Cairo) not found in runtime. "
-                "Skipping direct WeasyPrint PDF compilation (HTML and Markdown preserved)."
-            )
-            return False
+    def compile_pdf(self, html_path: str, html_content: str, pdf_path: str) -> bool:
+        """
+        Compiles rendered HTML to high-resolution broadsheet PDF.
+        Supports both Headless Browser (Chrome/Edge/Chromium) and WeasyPrint engines.
+        """
+        # Engine 1: Chrome / Chromium / Edge Headless CLI
+        browser_exe = find_browser_executable()
+        if browser_exe:
+            try:
+                logger.info(f"Compiling newspaper PDF with Headless Browser ({os.path.basename(browser_exe)})...")
+                abs_html = os.path.abspath(html_path)
+                abs_pdf = os.path.abspath(pdf_path)
 
-        try:
-            logger.info(f"Compiling newspaper PDF with WeasyPrint: {pdf_path}...")
-            # WeasyPrint font & media configuration
-            wp_html = weasyprint.HTML(string=html_content, base_url=self.templates_dir)
-            wp_html.write_pdf(target=pdf_path, presentational_hints=True)
-            logger.info(f"PDF successfully generated ({os.path.getsize(pdf_path)} bytes).")
-            return True
-        except Exception as e:
-            logger.error(f"Error during WeasyPrint compilation: {e}")
-            return False
+                cmd = [
+                    browser_exe,
+                    "--headless",
+                    "--disable-gpu",
+                    "--no-sandbox",
+                    "--run-all-compositor-stages-before-draw",
+                    f"--print-to-pdf={abs_pdf}",
+                    abs_html,
+                ]
+                res = subprocess.run(cmd, capture_output=True, text=True, timeout=35)
+                if os.path.exists(abs_pdf) and os.path.getsize(abs_pdf) > 1000:
+                    logger.info(f"PDF successfully generated via Browser ({os.path.getsize(abs_pdf):,} bytes).")
+                    return True
+                else:
+                    logger.warning(f"Browser PDF failed (code {res.returncode}): {res.stderr}")
+            except Exception as e:
+                logger.warning(f"Browser PDF generation error: {e}")
+
+        # Engine 2: WeasyPrint Engine
+        if HAS_WEASYPRINT:
+            try:
+                logger.info("Attempting WeasyPrint PDF compilation...")
+                wp_html = weasyprint.HTML(string=html_content, base_url=self.templates_dir)
+                wp_html.write_pdf(target=pdf_path, presentational_hints=True)
+                if os.path.exists(pdf_path) and os.path.getsize(pdf_path) > 1000:
+                    logger.info(f"PDF successfully generated via WeasyPrint ({os.path.getsize(pdf_path):,} bytes).")
+                    return True
+            except Exception as e:
+                logger.warning(f"WeasyPrint compilation error: {e}")
+
+        logger.error("No compatible PDF engine succeeded in compiling the PDF.")
+        return False
 
     def build_markdown_report(
         self,
@@ -208,7 +276,7 @@ class EPaperBuilder:
 
         lines.extend([
             f"---",
-            f"*Generated autonomously by Antigravity News Intelligence System on {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}.*",
+            f"*Generated autonomously by Ppodong News Intelligence System on {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}.*",
         ])
 
         return "\n".join(lines)
@@ -241,7 +309,7 @@ class EPaperBuilder:
         logger.info(f"Saved HTML edition to {html_path}")
 
         # 2. Compile PDF
-        pdf_success = self.compile_pdf(rendered_html, pdf_path)
+        pdf_success = self.compile_pdf(html_path, rendered_html, pdf_path)
 
         # 3. Render and write Markdown archive
         md_content = self.build_markdown_report(stories, edition_date, total_sources)

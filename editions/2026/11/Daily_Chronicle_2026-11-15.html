@@ -5,50 +5,40 @@
     <title>The Daily Chronicle — Sunday, November 15, 2026</title>
     <style>
         /* ==============================================================================
-   The Daily Chronicle - Autonomous Broadsheet Newspaper Stylesheet
-   Designed for WeasyPrint HTML-to-PDF compilation & browser rendering
+   The Daily Chronicle - Traditional Broadsheet Newspaper Stylesheet
+   Typography: Times New Roman, Times, serif
+   Engine-agnostic: Chrome/Edge Headless & WeasyPrint compatible
    ============================================================================== */
 
 @page {
     size: A4 portrait;
     margin: 12mm 10mm 14mm 10mm;
 
-    @top-left {
-        content: "THE DAILY CHRONICLE • 24/7 AUTONOMOUS NEWS DESK";
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        font-size: 7pt;
-        letter-spacing: 0.5px;
-        color: #6b7280;
-        border-bottom: 0.5px solid #e5e7eb;
-        padding-bottom: 2mm;
-    }
-
-    @top-right {
-        content: string(editionDate);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        font-size: 7pt;
-        font-weight: 600;
-        color: #374151;
-        border-bottom: 0.5px solid #e5e7eb;
+    @top-center {
+        content: "THE DAILY CHRONICLE — INDIA & BENGAL BROADSHEET";
+        font-family: "Times New Roman", Times, Georgia, serif;
+        font-size: 7.5pt;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        border-bottom: 0.5px solid #111827;
         padding-bottom: 2mm;
     }
 
     @bottom-left {
-        content: "Autonomous AI Intelligence System • Zero News Dropped • Verified Multi-Source Coverage";
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        font-size: 6.5pt;
-        color: #9ca3af;
-        border-top: 0.5px solid #e5e7eb;
+        content: "The Daily Chronicle • Autonomous Intelligence Journal • 24/7 Verified Edition";
+        font-family: "Times New Roman", Times, Georgia, serif;
+        font-size: 7pt;
+        font-style: italic;
+        border-top: 0.5px solid #111827;
         padding-top: 2mm;
     }
 
     @bottom-right {
         content: "Page " counter(page) " of " counter(pages);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        font-size: 7pt;
+        font-family: "Times New Roman", Times, Georgia, serif;
+        font-size: 7.5pt;
         font-weight: bold;
-        color: #4b5563;
-        border-top: 0.5px solid #e5e7eb;
+        border-top: 0.5px solid #111827;
         padding-top: 2mm;
     }
 }
@@ -60,302 +50,282 @@
 }
 
 body {
-    font-family: "Georgia", "Times New Roman", Times, serif;
-    color: #111827;
+    font-family: "Times New Roman", Times, Georgia, serif;
+    color: #111111;
     background-color: #ffffff;
-    line-height: 1.45;
-    font-size: 9pt;
+    line-height: 1.35;
+    font-size: 8.8pt;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
 }
 
-/* Header & Masthead */
-.header-wrapper {
+/* ==========================================================================
+   MASTHEAD & FRONT PAGE NEWSPAPER HEADER
+   ========================================================================== */
+.newspaper-masthead {
     text-align: center;
-    border-bottom: 3px double #1f2937;
+    border-top: 4px solid #111111;
+    border-bottom: 3px double #111111;
+    padding: 6px 0 8px 0;
     margin-bottom: 12px;
-    padding-bottom: 6px;
 }
 
-.top-bar {
+.dateline-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     font-size: 7.5pt;
-    color: #4b5563;
-    border-bottom: 1px solid #e5e7eb;
-    padding-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #111111;
+    padding-bottom: 3px;
     margin-bottom: 6px;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-}
-
-.masthead-title {
-    font-family: "Playfair Display", "Georgia", "Times New Roman", serif;
-    font-size: 26pt;
-    font-weight: 900;
-    letter-spacing: -0.5px;
-    text-transform: uppercase;
-    line-height: 1.05;
-    color: #111827;
-    margin: 4px 0 2px 0;
-}
-
-.masthead-subtitle {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    font-size: 8pt;
-    font-weight: 700;
-    letter-spacing: 2.5px;
-    color: #4b5563;
-    text-transform: uppercase;
-    margin-bottom: 6px;
-}
-
-.sub-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    font-size: 7.5pt;
-    color: #1f2937;
-    background-color: #f9fafb;
-    border: 1px solid #e5e7eb;
-    padding: 3px 8px;
-    border-radius: 2px;
-}
-
-.metric-pill {
-    background: #1e3a8a;
-    color: #ffffff;
-    padding: 2px 6px;
-    border-radius: 2px;
     font-weight: 600;
-    font-size: 7pt;
-    letter-spacing: 0.3px;
 }
 
-/* Front Page Banner */
-.front-lead-container {
-    background: #f8fafc;
-    border: 1px solid #cbd5e1;
-    border-left: 4px solid #1e3a8a;
-    padding: 10px 12px;
-    margin-bottom: 14px;
-    border-radius: 2px;
-    break-inside: avoid;
+.newspaper-title {
+    font-family: "Times New Roman", Times, Georgia, serif;
+    font-size: 34pt;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    line-height: 0.95;
+    color: #000000;
+    margin: 4px 0;
 }
 
-.lead-header-row {
+.newspaper-motto {
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-style: italic;
+    color: #333333;
+    margin-bottom: 6px;
+}
+
+.dateline-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 4px;
+    font-size: 7.5pt;
+    border-top: 1px solid #111111;
+    border-bottom: 1px solid #111111;
+    padding: 3px 6px;
+    background-color: #fcfcfc;
+    font-weight: 600;
 }
 
-.front-lead-title {
-    font-size: 14pt;
-    font-weight: 800;
-    line-height: 1.25;
-    color: #0f172a;
-    margin-bottom: 6px;
-}
-
-.front-lead-summary {
-    font-size: 9.5pt;
-    color: #334155;
-    line-height: 1.5;
-    margin-bottom: 6px;
-}
-
-/* Section Dividers */
-.section-banner {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #111827;
+.stat-highlight {
+    background: #000000;
     color: #ffffff;
-    font-size: 9pt;
-    font-weight: 800;
-    letter-spacing: 1.2px;
+    padding: 1px 6px;
+    font-size: 6.8pt;
+    font-weight: bold;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
-    padding: 4px 8px;
+}
+
+/* ==========================================================================
+   SECTION BANNERS
+   ========================================================================== */
+.broadsheet-section-header {
+    border-top: 3px double #000000;
+    border-bottom: 1px solid #000000;
+    padding: 4px 2px;
     margin: 14px 0 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 1px;
     break-after: avoid;
+    page-break-after: avoid;
 }
 
-.section-count-badge {
-    background: rgba(255, 255, 255, 0.2);
+.section-title {
+    font-size: 11pt;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #000000;
+}
+
+.section-story-badge {
     font-size: 7pt;
-    padding: 1px 6px;
-    border-radius: 10px;
-    font-weight: 500;
-    letter-spacing: 0;
+    font-style: italic;
+    font-weight: bold;
+    color: #444444;
 }
 
-/* Multi-Column Newspaper Layout */
-.newspaper-grid {
-    column-count: 3;
-    column-gap: 16px;
-    column-rule: 1px solid #e5e7eb;
-}
-
-.newspaper-grid-2col {
-    column-count: 2;
-    column-gap: 18px;
-    column-rule: 1px solid #e5e7eb;
-}
-
-/* Story Cards */
-.story-card {
+/* ==========================================================================
+   FRONT PAGE LEAD BANNER (FEATURED STORY)
+   ========================================================================== */
+.front-page-lead-hero {
+    border-bottom: 2px solid #000000;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
     break-inside: avoid;
     page-break-inside: avoid;
-    margin-bottom: 12px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #f3f4f6;
-    text-align: justify;
 }
 
-.story-card:last-child {
-    border-bottom: none;
-}
-
-.story-meta-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 3px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    font-size: 6.5pt;
-}
-
-/* Tags & Badges */
-.tag-badge {
-    font-weight: 800;
-    letter-spacing: 0.5px;
+.hero-tagline {
+    font-size: 7pt;
+    font-weight: bold;
     text-transform: uppercase;
-    padding: 1px 4px;
-    border-radius: 2px;
-    font-size: 6.5pt;
-}
-
-.tag-kolkata {
-    background-color: #fef2f2;
+    letter-spacing: 1px;
     color: #991b1b;
-    border: 0.5px solid #fecaca;
+    margin-bottom: 2px;
 }
 
-.tag-state {
-    background-color: #fffbeb;
-    color: #92400e;
-    border: 0.5px solid #fde68a;
-}
-
-.tag-national {
-    background-color: #eff6ff;
-    color: #1e40af;
-    border: 0.5px solid #bfdbfe;
-}
-
-.tag-global {
-    background-color: #f5f3ff;
-    color: #5b21b6;
-    border: 0.5px solid #ddd6fe;
-}
-
-.tag-trend {
-    background-color: #ecfdf5;
-    color: #065f46;
-    border: 0.5px solid #a7f3d0;
-}
-
-.urgency-badge {
-    font-weight: 700;
-    font-size: 6pt;
-    text-transform: uppercase;
-    padding: 1px 4px;
-    border-radius: 2px;
-}
-
-.urgency-breaking {
-    background-color: #dc2626;
-    color: #ffffff;
-}
-
-.urgency-verified {
-    background-color: #e5e7eb;
-    color: #374151;
-}
-
-.urgency-trending {
-    background-color: #059669;
-    color: #ffffff;
-}
-
-.source-count-pill {
-    color: #6b7280;
-    font-size: 6.5pt;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-}
-
-.story-headline {
-    font-family: "Georgia", "Times New Roman", serif;
-    font-size: 10.5pt;
-    font-weight: 800;
-    line-height: 1.25;
-    color: #111827;
-    margin: 3px 0 4px 0;
+.hero-headline {
+    font-size: 18pt;
+    font-weight: 900;
+    line-height: 1.15;
+    color: #000000;
+    margin-bottom: 6px;
     text-align: left;
 }
 
-.story-summary {
-    font-size: 8.5pt;
-    color: #27272a;
-    line-height: 1.42;
-    margin-bottom: 5px;
+.hero-body-grid {
+    column-count: 2;
+    column-gap: 16px;
+    column-rule: 0.5px solid #d1d5db;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
-.takeaway-box {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: #f8fafc;
-    border-left: 2px solid #3b82f6;
-    padding: 3px 6px;
-    margin-bottom: 5px;
-    font-size: 7.5pt;
-    color: #1e293b;
-    border-radius: 1px;
+.hero-summary {
+    font-size: 9.5pt;
+    line-height: 1.4;
+    color: #111111;
 }
 
-.takeaway-label {
-    font-weight: bold;
-    color: #2563eb;
-    font-size: 6.5pt;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 1px;
+/* ==========================================================================
+   MULTI-COLUMN BROADSHEET GRIDS
+   ========================================================================== */
+.broadsheet-grid-3col {
+    column-count: 3;
+    column-gap: 15px;
+    column-rule: 0.6px solid #cfcfcf;
 }
 
-.source-footer {
+.broadsheet-grid-2col {
+    column-count: 2;
+    column-gap: 16px;
+    column-rule: 0.6px solid #cfcfcf;
+}
+
+/* ==========================================================================
+   STORY CARDS & NEWSPAPER ARTICLES
+   ========================================================================== */
+.broadsheet-story-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 12px;
+    padding-bottom: 9px;
+    border-bottom: 0.5px solid #dcdcdc;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.broadsheet-story-card:last-child {
+    border-bottom: none;
+}
+
+.story-header-line {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin-bottom: 2px;
     font-size: 6.5pt;
-    color: #6b7280;
-    border-top: 0.5px dashed #e5e7eb;
-    padding-top: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.story-desk-tag {
+    color: #991b1b;
+}
+
+.story-urgency-tag {
+    background: #000000;
+    color: #ffffff;
+    padding: 0 4px;
+    font-size: 6pt;
+    font-weight: bold;
+}
+
+.story-urgency-breaking {
+    background: #b91c1c;
+    color: #ffffff;
+}
+
+.story-urgency-trending {
+    background: #047857;
+    color: #ffffff;
+}
+
+.article-headline {
+    font-size: 10.5pt;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #000000;
+    margin: 2px 0 4px 0;
+    text-align: left;
+}
+
+.article-headline-secondary {
+    font-size: 9.5pt;
+    font-weight: 700;
+    line-height: 1.22;
+    color: #111111;
+    margin: 2px 0 4px 0;
+    text-align: left;
+}
+
+.article-text {
+    font-size: 8.3pt;
+    line-height: 1.34;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+/* Traditional takeaway quote block */
+.article-takeaway-block {
+    border-left: 2px solid #000000;
+    padding: 2px 0 2px 6px;
+    margin: 4px 0;
+    font-size: 7.6pt;
+    font-style: italic;
+    color: #262626;
+    background-color: #fafafa;
+}
+
+.article-takeaway-block strong {
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 6.8pt;
+    color: #000000;
+}
+
+.article-footer-sources {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 6.5pt;
+    font-style: italic;
+    color: #555555;
+    border-top: 0.5px dotted #cccccc;
+    padding-top: 2px;
     margin-top: 3px;
 }
 
-.source-footer a {
-    color: #2563eb;
+.article-footer-sources a {
+    color: #1d4ed8;
     text-decoration: none;
-    font-weight: 600;
+    font-style: normal;
+    font-weight: bold;
 }
 
-/* Page Break Utility */
+/* Page Break Helper */
 .page-break {
     break-before: page;
     page-break-before: always;
@@ -365,487 +335,510 @@ body {
 </head>
 <body>
 
-    <!-- Header & Masthead -->
-    <header class="header-wrapper">
-        <div class="top-bar">
-            <span>Vol. IV • Daily Morning Broadsheet</span>
-            <span>24/7 Autonomous News Intelligence Agent</span>
-            <span>Kolkata • New Delhi • Global</span>
+    <!-- ====================================================================
+         AUTHENTIC BROADSHEET MASTHEAD
+         ==================================================================== -->
+    <header class="newspaper-masthead">
+        <div class="dateline-top">
+            <span>Vol. IV • No. 209</span>
+            <span>The Daily Chronicle • Established 2026</span>
+            <span>Kolkata • New Delhi • Mumbai • Bengaluru • Global</span>
         </div>
 
-        <h1 class="masthead-title">The Daily Chronicle</h1>
-        <div class="masthead-subtitle">India, Bengal &amp; Global Autonomous Intelligence Journal</div>
+        <h1 class="newspaper-title">The Daily Chronicle</h1>
+        <div class="newspaper-motto">A National &amp; Bengal Journal of Record • 24/7 Autonomous Intelligence</div>
 
-        <div class="sub-bar">
-            <span><strong>EDITION:</strong> Sunday, November 15, 2026 (IST)</span>
-            <span><strong>COVERAGE:</strong> Past 24 Hours Rolling Archive</span>
-            <span class="metric-pill">15 Verified Stories • 5 Outlets</span>
+        <div class="dateline-bottom">
+            <span><strong>EDITION:</strong> Sunday, November 15, 2026</span>
+            <span><strong>CIRCULATION:</strong> Rolling 24-Hour Verified Archive</span>
+            <span class="stat-highlight">15 Stories • 3 Media Outlets</span>
+            <span><strong>PRICE:</strong> Free &amp; Open Access</span>
         </div>
     </header>
 
-    <!-- SECTION 1: FRONT PAGE LEAD STORIES -->
-    <div class="section-banner">
-        <span>★ FRONT PAGE — TOP NATIONAL &amp; GLOBAL LEAD STORIES</span>
-        <span class="section-count-badge">6 Lead Clusters</span>
+    <!-- ====================================================================
+         SECTION 1: FRONT PAGE LEAD STORIES
+         ==================================================================== -->
+    <div class="broadsheet-section-header">
+        <span class="section-title">★ Front Page — National &amp; Global Lead Dispatches</span>
+        <span class="section-story-badge">6 Lead Clusters</span>
     </div>
 
-    <div class="newspaper-grid-2col" style="margin-bottom: 14px;">
-        <article class="story-card front-lead-container">
-            <div class="story-meta-row">
-                <span class="tag-badge 
-tag-kolkata
-">
+    <!-- Top Lead Hero (if at least one story) -->
+    <section class="front-page-lead-hero">
+        <div class="hero-tagline">
+[kolkata_wb]            • DEVELOPING • 1 Media Outlets Reporting
+        </div>
+        <h2 class="hero-headline">PM Narendra Modi Likely to Visit Kolkata on Nov 21 to Launch Key Projects</h2>
+        <div class="hero-body-grid">
+            <p class="hero-summary">Prime Minister Narendra Modi is slated to visit Kolkata on November 21 to unveil a slew of critical infrastructure projects across West Bengal. The high-profile trip is expected to give a significant boost to regional connectivity and urban development initiatives. Official preparations are underway to finalize the schedule and inauguration itinerary.</p>
+            <div>
+                <div class="article-takeaway-block">
+                    <strong>Editorial Takeaway:</strong> PM Modi is expected to inaugurate several major infrastructure projects during an upcoming visit to Kolkata on November 21.
+                </div>
+                <div class="article-footer-sources">
+                    <span>Sources: MillenniumPost</span>
+                    <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxOanhoaHMxTDQwbzRqNXE5ZkRYVmtFdnpMcm1wYm5tY1I0VGJOTE1YZXVwdGlQc3UtU3ctTGw3RzI4bk01S3hUV0Z5YkFJYmstZUlRTWFETEY4SWpaM1hGUTNqWGQyN1pTMEFrU0lDWU9zRkcydnBGaFl3NXd1TmlfWWhNbGY3c2Zhbmk5M1JMdkZPSnhidklEOTlQVWxjRFRTR1RSQ2xXV29kclRpajRGZ2xLcEp6U2tP0gG-AUFVX3lxTE9Ya3YxY0FKWnRfN2Q3d2hmekJGNW5ZdUYyZkpxR2Z1WXlKMzdKRHZGVlBTdGVYZFAxaGNoMWk4bnBkR2prU0pWZ3l4aE45clk3X1JLMEVLU3EtYklLLXUxcTdNU1RxMEJlZ0tUYWdTSmFIUlJBU180RGJtb0RFbEZEemgzWmxYa0RlZy1fd29jcUdlSGM3aXlzN2FzbDhpQ1dxRy16Zmp6TlRsbHZweWZpNUpLUXVLQTN3QXktSWc?oc=5" target="_blank">Full Dispatch &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secondary Leads in 2-Column Grid -->
+    <div class="broadsheet-grid-2col" style="margin-bottom: 14px;">
+        <article class="broadsheet-story-card">
+            <div class="story-header-line">
+                <span class="story-desk-tag">
 [kolkata_wb]                </span>
-                <span class="urgency-badge urgency-verified">VERIFIED</span>
-                <span class="source-count-pill">1 Outlets</span>
+                <span class="story-urgency-tag ">
+                    VERIFIED
+                </span>
+                <span>1 Sources</span>
             </div>
 
-            <h2 class="front-lead-title">Coast Guard to Host National Coastal Security Seminar &#39;Sagar Suraksha 2026&#39; in Kolkata</h2>
-            <p class="front-lead-summary">The Indian Coast Guard is set to host a major national-level coastal security seminar titled &#39;Sagar Suraksha 2026&#39; in Kolkata. The strategic event will convene key maritime stakeholders to evaluate existing security frameworks and bolster surveillance across India&#39;s coastline. Discussions will focus on inter-agency coordination, intelligence sharing, and safeguarding critical coastal infrastructure.</p>
+            <h3 class="article-headline">Kolkata School U-19 Boys&#39; Team Triumphs at CBSE National Chess Championship</h3>
+            <p class="article-text">The Under-19 boys&#39; chess squad from a Kolkata school has clinched top honors at the CBSE National Chess Championship. The team outclassed formidable opponents across multiple rounds to secure the title. The victory highlights the city&#39;s rising bench strength in competitive school-level chess.</p>
 
-            <div class="takeaway-box">
-                <span class="takeaway-label">Key Takeaway</span>
-                The national conclave aims to tighten multi-agency maritime security protocols along India&#39;s eastern seaboard.
+            <div class="article-takeaway-block">
+                <strong>Takeaway:</strong> A Kolkata school&#39;s U-19 boys&#39; team has won the prestigious CBSE National Chess Championship.
             </div>
 
-            <div class="source-footer">
-                <span>Sources: ANI News</span>
-                <a href="https://news.google.com/rss/articles/CBMigwJBVV95cUxPanVWVG1DR3dKdW1rZjROeXpKY3ctajNyX3FiZHFVLTR3b0JlQWk3X0ZhbnRzS3NSemY1WFFqNG9VUklfYkgzZ0c0RjVJQXMxd0ZNd2twNWV2WFJWZmVMdVBUaFcweGhNOHFWSmlHV0ZPX1liZ3U2RVhmdjFZQUFmc242ajdCMzhrb1JRVld3bklUbEpGeFNCWEJDcWFjam9WOVhZbDhKQnRweGlMWHFnZFZtVkt3dGNHS3N4OGVVeFhsakJkSEgxV1oyUTJZSWVfbGFEQXRIOUFSY3RueFVMSEFTSkFTZVlJREsyZHBlUzlNOGh5Y21DNXZJZV9Vd3pOSjBZ?oc=5" target="_blank">Read original &rarr;</a>
+            <div class="article-footer-sources">
+                <span>The Times of India</span>
+                <a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxQdEozT1VZTlQ2MmV1WG54V3RDM0pWbjgyRGNEb2wxSDNSZGVfd0pQaXQzVmJ2VzcyLUJkdzlfdDNqMWJGeEpxWDQySVl2U0lfcFQzMjNUOURZMmJ6dW5vVFQ4YmR0S0VGM0RFOTJ6VFM0Um15Sk5OTXBfQ3pfbzFudVI5ZGRJby05cFNFc1BPa3ZWcmZ2YmYtbE1YTVJoUGZ1WVE3TXdxV1o1b1k3ZkVSVWVWaUlVUC05eC10WTlBVGtXT3lBWFdsV3ZPeW3SAdIBQVVfeXFMUHFNbENvOTM4X0tuUUhtM2M4RTVEZ1JfTDBlSm9FTlRtekRMbnJIZWozTHRUS3otdXlfSXFZazNIZ2xKTzdja1VWOXpCTmZIQ0tOT2dWMW1Fd00yMG9DMnZYMmdfY3JaYkUyRVRCUlkxSEc4R0ZVLS11MzJIb19JbUwyd2hjRHFTS2JlVi0wXzhBaVZmTUFuRFlsb0xfUy01dDZ2R1lhTEFERVRQYlI5SkpUTTNGMHU4dFJXYm5rMnplRnNmZkxWY2VDNjZ1Nm5hZmhB?oc=5" target="_blank">Source &rarr;</a>
             </div>
         </article>
-        <article class="story-card front-lead-container">
-            <div class="story-meta-row">
-                <span class="tag-badge 
-tag-kolkata
-">
+        <article class="broadsheet-story-card">
+            <div class="story-header-line">
+                <span class="story-desk-tag">
 [kolkata_wb]                </span>
-                <span class="urgency-badge urgency-trending">TRENDING</span>
-                <span class="source-count-pill">1 Outlets</span>
+                <span class="story-urgency-tag ">
+                    DEVELOPING
+                </span>
+                <span>1 Sources</span>
             </div>
 
-            <h2 class="front-lead-title">Selective Strategy Pays Off as Kolkata Creator Nets ₹3 Lakh from Five Brand Deals</h2>
-            <p class="front-lead-summary">A Kolkata-based digital content creator earned ₹3.06 lakh in October by executing just five highly targeted brand partnerships. The influencer highlighted the advantages of prioritizing niche authenticity over high-volume, low-paying sponsorships. The case underscores an evolving trend in regional creator economies favoring curated brand alignment.</p>
+            <h3 class="article-headline">Baranagar Murder: Police Probe Deepens Over Suspected PUBG Financial Dispute</h3>
+            <p class="article-text">Investigators probing the recent murder in Baranagar are focusing on a dispute linked to financial transactions in the online game PUBG. Preliminary inquiries suggest an altercation over money escalated into the fatal attack. Police are questioning acquaintances and reviewing digital records to reconstruct the crime.</p>
 
-            <div class="takeaway-box">
-                <span class="takeaway-label">Key Takeaway</span>
-                Targeted, high-trust creator collaborations are yielding stronger financial returns than mass-volume sponsorships.
+            <div class="article-takeaway-block">
+                <strong>Takeaway:</strong> Police in Baranagar are investigating whether a monetary feud linked to PUBG sparked a recent homicide.
             </div>
 
-            <div class="source-footer">
-                <span>Sources: The Times of India</span>
-                <a href="https://news.google.com/rss/articles/CBMi6wJBVV95cUxQdHFmalNHaU1sdGgyc09qQWtsYWZDZ0tHMURvZENvTmFDOFpVSjIyQ3p6ZWR5Szg2ZTg3VFVoX3g5amFPbzdrRjVaN2h6VzBJaVBkWUE3cGtUNWd2RHVWQ2IwSVRkd3RCZFNwX1YxbVh2aUhrY2hQU3d4WU4wc0Z1WVRIQ2tTNk9VclNWeW1YZUtmYWxJaC10X0RaRWdpQ2p6d1J0TVB6TVhpUHhxWElRZk5WUjNWTXFZeUFCZUo2NGx5aWhJdjJ6bnVhQTRCYkFGZlFSVEJxUEkwRmtZR1BtWHo5SHJEbkRBdHlYTEk2aFhZeFF2UkJiN1l2ak1weFRJWFBMMlBCVEdQc05ieVg1cHhnZElKRkRzNjhSRzhlQnVsbmZrc2s3MFJfVFlZZVpIYnlXeFotR1FicDd5OXNrRUw2LWNCbVpTUHJWRXVYUGRhZnZOaGEyZkpDSzFHblJIV2lfQnE3TXZxQzDSAfACQVVfeXFMT0toc2dkOGlHZWxrVmZLcVZYWnFaM3ZKR0d1QVU5RFQ3ZXpDLW5vUjFrV0tCWmR3cnlVVFlqQTVDdVY1N25JMzBXb1d2NnMxNHpjcVgzVVhxSWg2dTFDNFN5aC1QMUtjYzJZSVZCTGlfT2FQVTZuSmVnNF9NRUtsQnpIMmlRWGQ4V1BDMjR2RUpaeGNKRzBhUzIzSTczRlp5aGJHSHRrMHBJekR6ZkRlRDJWUnhWZ3gzLUxwdmhNdjRwWmxobFVQMkx1cUVISXV1THV0NkpPSHFNQTVUVmEtWERuY3lTY0RNSHZvcllBSV9MdzdHdUhDckh0THBDbTRJTWJFWmdLVWdUcXJiQUhQM3ZqNXFaZC1lZDU5UDMxekRLU1VxWGx4VUdIOHB0d2lXQU9VZk9UeUh1b1JYOFZ1SWZ1M0pRbmRxb2FGMWhPbjh1MF9BdUE1VmdLYzB0RFBLRjJNNzVHMXNBV215QmRlYlc?oc=5" target="_blank">Read original &rarr;</a>
+            <div class="article-footer-sources">
+                <span>The Times of India</span>
+                <a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxORWNlZHpfRlRkX2xacmQ4WnpDUG1CaTIwTGRMOUdpRGh3eU41WDUxVmZpbU5yZUNrYm1FVzVpd05hcFdTck5LSWQ3UTJqNkswRW5uMVIySGo2cERJazBWM2hnXy1tVWNKeEYwQWhmZHlKbGl0bS1VQ1hrT0p5UmdCeHNuZERkSEpLc1dyVE43YU5qMFdmTUFvMVU5VUdwV29pQkVlZ1U5bENFb1FzdzdYZXhoc0bSAboBQVVfeXFMTnZqMXh3YVRVd3h6QlBKNWVNTHc4SnB1Y2hzNGc0eFl5RlU3b0lTM0RaakozSTFiRkI3dHZRNDJPODY5MmwtU3Nad2tKNGZoWFE0a3N0WGxvU25tTDJ6RkVJX2s1T3lFQUtuQUxZNzBRZi00M2w3UWhFRFRTTjBMMjl2M1pXbW5FV0FvaG1BNmpkZjNHR3VyM1U0SW1BMEdqVEZvV21sU3QyaEFTVVBpNXdEOGktcTJtMjFR?oc=5" target="_blank">Source &rarr;</a>
             </div>
         </article>
-        <article class="story-card front-lead-container">
-            <div class="story-meta-row">
-                <span class="tag-badge 
-tag-kolkata
-">
+        <article class="broadsheet-story-card">
+            <div class="story-header-line">
+                <span class="story-desk-tag">
 [kolkata_wb]                </span>
-                <span class="urgency-badge urgency-developing">DEVELOPING</span>
-                <span class="source-count-pill">1 Outlets</span>
+                <span class="story-urgency-tag ">
+                    VERIFIED
+                </span>
+                <span>1 Sources</span>
             </div>
 
-            <h2 class="front-lead-title">Majerhat Fatality: Kolkata Police Urge Syama Prasad Mookerjee Port to Undertake Urgent Repairs</h2>
-            <p class="front-lead-summary">Following a fatal accident near Majerhat, Kolkata Police have formally petitioned port authorities to expedite structural repairs on dilapidated road and infrastructure stretches under their jurisdiction. Investigators noted that deteriorating surface conditions significantly heightened commuter hazards. The communication stresses immediate civil intervention to prevent further casualties.</p>
+            <h3 class="article-headline">Pets Struggle with Post-Festival Trauma and Noise Stress, Say Kolkata Vets</h3>
+            <p class="article-text">Veterinarians across Kolkata report a surge in domestic pets showing severe stress and behavioral trauma following recent festive celebrations. The distress is primarily attributed to continuous exposure to loud firecrackers and elevated noise levels. Vets are urging pet parents to seek therapy and provide calm environments to assist recovery.</p>
 
-            <div class="takeaway-box">
-                <span class="takeaway-label">Key Takeaway</span>
-                Police authorities have flagged hazardous port-owned infrastructure near Majerhat demanding immediate remediation.
+            <div class="article-takeaway-block">
+                <strong>Takeaway:</strong> Veterinarians warn that city pets are still recovering from noise-induced festive trauma and anxiety.
             </div>
 
-            <div class="source-footer">
-                <span>Sources: The Times of India</span>
-                <a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNUjlDaGF0VWJ3U1Nxb2tuR2xuVDBUYkFzb3VsMzlYblJsWmxCc2RiaTJzampha3ZGQUtSWmtMMURBSC0xVzkySHNXeUphb1BVTWZERW1paTVaVEVpdUV0YlVPM21WejEzMk1RSUlKdHhORlJqMFM2dHRnOHBpX01XTE5Zd29XVGdHd2RKMm9YTHB2Q2dJT2NwWDJLZDRLYzM5eEp6ci03LW9TeldNNUxieG5FaWtDSDBPanNSd9IBwgFBVV95cUxOeENfeG1iRTR6aDYxeE5uNFBjWlNXVWk1YkFMZ2luNXJfTG5JbUwzbHJvWDFZMHgyU045TEkyQzNmQUwwTk9PRnlKaXFEcXBLNzAyTWpPTFlZbkZuLVZqczZuTVByRGozX1JWa1ByRVg0ZHRNUWNzYk9XUXd4MTJMcUxWOWZDa3dYakpjZVpHWnlqTllKcTg0b1lsdHZBVmdPZjlSaFl6T19sOVhtek9id1BiYjVYTGFlb1Exb1VjM1daUQ?oc=5" target="_blank">Read original &rarr;</a>
+            <div class="article-footer-sources">
+                <span>The Times of India</span>
+                <a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxObkt1NmIyQVVZbEpfT3BibUtBclZrTG9EbS1tdjNWeEdLT251OVhPbE9jWjU4SVJuNWg4WkxZNUhuVWVLZUZFTWdQbmNkOGVyTVRJT3Q4VGVvZWp3RGJMcWQ1X29VeEtIRTcxRGtPdW1nYkx0WmRXYldYbE9VWHg4UjJVcU94eTVTN09NcEU2amxFMlJaRENsbHAweXVfXzE2NndkSEoyX19oT3ZvU3lfcdIBtgFBVV95cUxQTWg1LWRWdFdmM215V1NOMDJKZFFidk1HUG11alBoZXNGOU9GV2Rib0djOXlRcTlKR3BlOXh6aVNvWVB4T2twblpmYlRWcEJFdFZPLUlzcHdMaGo5WUF1aUM2NGZVXzZLLS1XeWVxTnlmNm1PZ0NFa3RnLXh6eFNyUkt0RUtQZWk3ODJhZ3ZVVzE4ZE9kNDVQQkxBYzhMNmpaeVJZZUhadmNmNG9vZXo0RUc0YWhmZw?oc=5" target="_blank">Source &rarr;</a>
             </div>
         </article>
-        <article class="story-card front-lead-container">
-            <div class="story-meta-row">
-                <span class="tag-badge 
-tag-kolkata
-">
+        <article class="broadsheet-story-card">
+            <div class="story-header-line">
+                <span class="story-desk-tag">
 [kolkata_wb]                </span>
-                <span class="urgency-badge urgency-verified">VERIFIED</span>
-                <span class="source-count-pill">1 Outlets</span>
+                <span class="story-urgency-tag ">
+                    VERIFIED
+                </span>
+                <span>1 Sources</span>
             </div>
 
-            <h2 class="front-lead-title">Clashing Timelines: Concern Grows Over Assigning Bengal Teachers Survey Duties During Exams</h2>
-            <p class="front-lead-summary">School educators across West Bengal have voiced severe apprehensions over being drafted for Special Summary Revision (SSR) electoral duties during crucial examination periods. Teacher associations warn that diverting staff for voter roll verification will disrupt evaluation schedules and academic oversight. Stakeholders are urging education and election authorities to reconcile the scheduling conflict.</p>
+            <h3 class="article-headline">Maidan Market Relocation Concludes Successfully After 3.5-Year Wait</h3>
+            <p class="article-text">The protracted relocation of Kolkata&#39;s historic Maidan Market has finally crossed the finish line after three and a half years. The transition clears crucial urban spaces while providing authorized stalls for displaced shopkeepers. Traders have begun settling into their allotted premises following prolonged administrative delays.</p>
 
-            <div class="takeaway-box">
-                <span class="takeaway-label">Key Takeaway</span>
-                Simultaneous exam supervision and voter roll duties threaten to strain administrative manpower in state schools.
+            <div class="article-takeaway-block">
+                <strong>Takeaway:</strong> Kolkata&#39;s Maidan Market has completed its full relocation following a 3.5-year administrative process.
             </div>
 
-            <div class="source-footer">
-                <span>Sources: The Times of India</span>
-                <a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxNWUI3S21EUVpWVkNKTmR6bDl1TjJKdHNNcWMyMTd1WExCVUhxaUk0YXFKR0pPVG9RZ2RNWHRhZmVIc3BWaGJrS1RCYVA4NzdsM0wtYzJfQzBqb2NfRUpEMVpNS182SFhfaV9kYi1TRHhlTDdYWFdKeTNQRmo4aHdMTFVtd1pFbHpYOG84X3hGQkxyaktOT1QzZlBDOXRtMVY5WXJfNlNpVG9tbkF2OFJEQ00tSlFkZUpuc0k1ck9faXJkejJwbjlYUNIBzgFBVV95cUxQRnBiQkprSVF5STZzaWlPVDFtd296QzhKd2cwVjlzZ2ppQVZYUHVTdTVVdlR4NTJ2Y0JKbGYtLXByU05KcTVpS1N3MGhOcF9XOHF6MjFHalRicGJ6MmFOb3ZPUnMyQ0RMbGNDRU1uOUFoN2tHOXlHTXFud1FxRWszMktpbWZHMm0tNWdhNXZxZ1k0VzBmR3ktOE1FRzhoU1E2cWh1Y2taQWdKdDBJN0I0MTdnUHFtVlZRbFFiRXR5bHA3enNIS2xvLUYxZHptdw?oc=5" target="_blank">Read original &rarr;</a>
+            <div class="article-footer-sources">
+                <span>The Times of India</span>
+                <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxQUUt2V0NlLU1ZNjY4NGJNVmpxSkdreU5EZlVvWWIyWU9ZUGhDbUNibVZZTUV3aGV3eDczS3c3dGw0eHFPaGFBWG5qdzhrY0h1RHd4bzA5eHI4andfUktNdXZMWE1sNjVvbzl4VWJHYzEwRWtEd0EwQnp4TThETjV6cDJid2VTb1M2VnYyVEJRb1d4QS1odHJzdDA4bVVJNGhEU2J0YnNNR0dOaFBSRVBHOW9rR0M0VEg2U2pPeW1qQVMyZ1dU0gHKAUFVX3lxTFBTdjVYZ3NwVjB1dDVlUE5GczBDdzZWemZXcWJCdTZFdGlXcFJLeTY2SWxTZkRuMGd5TU9OdTY0d082VWN5dDFCckoxbWJqWGR3M2ZNbF9BS0d6S0VVOFE1TVcxY1lYcGVnOTJMbmhvOUhEdUczY2sxbE5nNExpTG1JVWZhdXh6ZU5ZMGExRFBPYXlVX2JoUkd6MmlacXI2OHd0VGVMV051TU9WWFdsWnJzUUx1WHA4LTM5d3hnZlBndExXbGlYZkFmRmc?oc=5" target="_blank">Source &rarr;</a>
             </div>
         </article>
-        <article class="story-card front-lead-container">
-            <div class="story-meta-row">
-                <span class="tag-badge 
-tag-kolkata
-">
+        <article class="broadsheet-story-card">
+            <div class="story-header-line">
+                <span class="story-desk-tag">
 [kolkata_wb]                </span>
-                <span class="urgency-badge urgency-developing">DEVELOPING</span>
-                <span class="source-count-pill">1 Outlets</span>
+                <span class="story-urgency-tag ">
+                    VERIFIED
+                </span>
+                <span>1 Sources</span>
             </div>
 
-            <h2 class="front-lead-title">Pre-Board Selection Tests Begin Tuesday, but Final Madhyamik and HS Dates Remain Unannounced</h2>
-            <p class="front-lead-summary">Schools across Bengal are scheduled to commence selection tests for secondary and higher secondary candidates from Tuesday amidst lingering uncertainty. State education boards have yet to formally release the official timetable for the upcoming Madhyamik and Higher Secondary final examinations. The delay in final exam notification has prompted anxiety among students and school administrations alike.</p>
+            <h3 class="article-headline">Rabindra Sarobar and Subhas Sarobar Barred for Chhath as Alternative Ghats Readied</h3>
+            <p class="article-text">Authorities have enforced strict curbs barring Chhath Puja rituals at Rabindra Sarobar and Subhas Sarobar to protect delicate water bodies. In response, municipal bodies have entered the final lap of preparing designated alternative ghats and artificial water enclosures across the city. Security personnel have been deployed to ensure compliance with environmental mandates.</p>
 
-            <div class="takeaway-box">
-                <span class="takeaway-label">Key Takeaway</span>
-                Selection tests are rolling out without an official final board examination calendar from West Bengal authorities.
+            <div class="article-takeaway-block">
+                <strong>Takeaway:</strong> Both Rabindra Sarobar and Subhas Sarobar remain off-limits for Chhath Puja as alternative ghat preparations wrap up.
             </div>
 
-            <div class="source-footer">
-                <span>Sources: The Times of India</span>
-                <a href="https://news.google.com/rss/articles/CBMi4AFBVV95cUxNeDFZcS11LU82WkRqdGc5UzB3Qm5aSEtxakp3OHFnZk8zQ0QtWFNzYnZxSFNSOUJXMFJrQ3lmUjU4M194VVotWF9vREEyNGcyYllmOW1NYml1Z0pBWFlxMnFsbHB6R0lXYTlmZkhVdTNWRnFpMHlmS0JwOWp5cDItUl9WUnFtWjF0Q2hSeWNhTzFJMU9QY0NiWnMzU1VKWDY3OWhHOGRvQ0lCUXFaSE5WWnhvOUFhWjkyOU5uNDlaZ1lPcEdhR0VNWkVzUWlvZGQxUkpfNEtSQmdRZzBNTGkycdIB5gFBVV95cUxOdXl3cEFxdmRUU1pEcnpKejdTUTZjQVlibm9aSHRQZzRqR3dMVDdaamtHTFRhaV9WNF8xcXRjU1M5ei1oakJIakVXZHd4Yy03ay1jbnZESGxsNmE5eGhOQ2RIR3hBU2xHRW9mOWgtMFUzUFI1ZVB2bzlfenRLRUNSTHNRcmw3TUZWbTdxS2xscFFTMkRlOHFqQUF0cjlzU2xUMlVuX01tdGhldUt5VHl2eHJSRjVUaWpZc3ZQVUJZa19PWHZqNUtCWGh2Q1ktczNRRktoeFJMTWR4ZExrQjhpcWQ4QjZldw?oc=5" target="_blank">Read original &rarr;</a>
-            </div>
-        </article>
-        <article class="story-card front-lead-container">
-            <div class="story-meta-row">
-                <span class="tag-badge 
-tag-kolkata
-">
-[kolkata_wb]                </span>
-                <span class="urgency-badge urgency-verified">VERIFIED</span>
-                <span class="source-count-pill">1 Outlets</span>
-            </div>
-
-            <h2 class="front-lead-title">Kolkata Municipal Corporation Clears 15 Stalled Realty Projects in First Meeting in Eight Months</h2>
-            <p class="front-lead-summary">Breaking an eight-month hiatus, the Kolkata Municipal Corporation&#39;s building sanction committee met to approve 15 major real estate projects. The move addresses a substantial backlog of commercial and residential building proposals stalled across urban zones. Real estate developers welcomed the clearances, which are expected to unlock stalled investments across the city.</p>
-
-            <div class="takeaway-box">
-                <span class="takeaway-label">Key Takeaway</span>
-                KMC&#39;s sanction committee has resumed project clearances, ending a protracted eight-month municipal freeze.
-            </div>
-
-            <div class="source-footer">
-                <span>Sources: The Times of India</span>
-                <a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxQQVJrUC1wRm9ZZHk2cHE4OXNNTk16NGJ2bzQ2ZEhXZ19qVXBkT3lRbTJia0ZwVy1ITTF1ZWRZSUxoWjNzZ05FMkFqak10eGFpUWVZUl9DMUprTXB1aHNBZXhnRWViZDRnd0l0MG53Ry1PemR6eFFHUktWZzR2dkJCZE8xVFEwLXhJb21UNmRfZVlmLVRjY2dmY093cWx3X3I3N3ZCSDhOZVY0a3Z5RmlCMWtteHlhdzFQUTNSaU96TDJoVVVhQVo3Qm1lONIB0AFBVV95cUxOQWZuVnl0c2FVYmFTcTNTVGJ3N1kyalFPZDVfcVg3X3lmYU1sR2hDbkw5dlFPdVlzR2t5OFJWZTFra015ZnlwRFNYVzJacWZLZndUZVJZTC00cnI4bHFRa1dOaXJ3SlphdEpiRDZMUHk2SHZvS2c3UHFTMENOSUludWdHTGZacUZtM0xGUUl4Rms2QW10UGhOSWNTSTltTzcxZV9XbVRKVE5ydFQxdUl0ZmZfUXNKSzhSNmY0U0NhV2ZHbHE0NUtxTEd5SDNIS2Jk?oc=5" target="_blank">Read original &rarr;</a>
+            <div class="article-footer-sources">
+                <span>The Times of India</span>
+                <a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxOUTBDaFEyNnFSQVZlTmRuVkNJeHYxazlObDg5NHVpai1KckpFUjJwZlRKeHhtQVh2Ny1GMWlOVTltZVdubF9HcU0zeTBQT0xETnRteUNRRGFRZnpWMHUzbHZmNmhvM3UyWDdkZnA5bmhxenJwby10d0YtZVdPbTBlY1VjTHFpOHlRNGN6eHNxRFJSd3V3Q2R2dFdfaG83dmc1Q1BUY0JleE82cEtBNDd3VnhfVzR3UFdJbzBZUDJJZWlxbFRxM3I2YUNEdTIyUHQ4dGfSAdcBQVVfeXFMUE9jdVZfQ2luRm9lVVVjSVFEeTFJdE52WGZ3UnpnenIyQU1XdnhPcmF3cC02YXV1TnhSMzE3U0dfRUhyZ0lQZkVSZHZxTTh4eWowZGxSSzFZMUJBUHc1cUpXX2lIeGQ0YmNZNEFEeTNkY0EyYUJpYmdkeVRCbjF1RW9vc1A5NVJfMTNFQlZwRm1ocXJoTXlhYTFoMDRWV1prVTVjYjFsNThrQnBIYTYwcW82SGZlNnhIbzZLRVZOYnAycHl6VlQ5X1kxODBUY1JLcjdBZUdvUk0?oc=5" target="_blank">Source &rarr;</a>
             </div>
         </article>
     </div>
 
-    <!-- SECTION 2: KOLKATA & WEST BENGAL DESK -->
-    <div class="section-banner">
-        <span>❖ KOLKATA &amp; WEST BENGAL DESK</span>
-        <span class="section-count-badge">15 Stories</span>
+    <!-- ====================================================================
+         SECTION 2: KOLKATA & WEST BENGAL DESK
+         ==================================================================== -->
+    <div class="broadsheet-section-header">
+        <span class="section-title">❖ Kolkata &amp; West Bengal Desk</span>
+        <span class="section-story-badge">15 Verified Reports</span>
     </div>
 
-    <div class="newspaper-grid">
-        <article class="story-card">
-            <div class="story-meta-row">
-                <span class="tag-badge tag-kolkata">
+    <div class="broadsheet-grid-3col">
+        <article class="broadsheet-story-card">
+            <div class="story-header-line">
+                <span class="story-desk-tag">
 [kolkata_wb]                </span>
-                <span class="urgency-badge urgency-verified">VERIFIED</span>
+                <span class="story-urgency-tag ">
+                    DEVELOPING
+                </span>
             </div>
 
-            <h3 class="story-headline">Coast Guard to Host National Coastal Security Seminar &#39;Sagar Suraksha 2026&#39; in Kolkata</h3>
-            <p class="story-summary">The Indian Coast Guard is set to host a major national-level coastal security seminar titled &#39;Sagar Suraksha 2026&#39; in Kolkata. The strategic event will convene key maritime stakeholders to evaluate existing security frameworks and bolster surveillance across India&#39;s coastline. Discussions will focus on inter-agency coordination, intelligence sharing, and safeguarding critical coastal infrastructure.</p>
+            <h4 class="article-headline-secondary">PM Narendra Modi Likely to Visit Kolkata on Nov 21 to Launch Key Projects</h4>
+            <p class="article-text">Prime Minister Narendra Modi is slated to visit Kolkata on November 21 to unveil a slew of critical infrastructure projects across West Bengal. The high-profile trip is expected to give a significant boost to regional connectivity and urban development initiatives. Official preparations are underway to finalize the schedule and inauguration itinerary.</p>
 
-            <div class="takeaway-box">
-                <span class="takeaway-label">Takeaway</span>
-                The national conclave aims to tighten multi-agency maritime security protocols along India&#39;s eastern seaboard.
+            <div class="article-takeaway-block">
+                <strong>Key Point:</strong> PM Modi is expected to inaugurate several major infrastructure projects during an upcoming visit to Kolkata on November 21.
             </div>
 
-            <div class="source-footer">
-                <span>ANI News</span>
-                <a href="https://news.google.com/rss/articles/CBMigwJBVV95cUxPanVWVG1DR3dKdW1rZjROeXpKY3ctajNyX3FiZHFVLTR3b0JlQWk3X0ZhbnRzS3NSemY1WFFqNG9VUklfYkgzZ0c0RjVJQXMxd0ZNd2twNWV2WFJWZmVMdVBUaFcweGhNOHFWSmlHV0ZPX1liZ3U2RVhmdjFZQUFmc242ajdCMzhrb1JRVld3bklUbEpGeFNCWEJDcWFjam9WOVhZbDhKQnRweGlMWHFnZFZtVkt3dGNHS3N4OGVVeFhsakJkSEgxV1oyUTJZSWVfbGFEQXRIOUFSY3RueFVMSEFTSkFTZVlJREsyZHBlUzlNOGh5Y21DNXZJZV9Vd3pOSjBZ?oc=5" target="_blank">&rarr;</a>
+            <div class="article-footer-sources">
+                <span>MillenniumPost</span>
+                <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxOanhoaHMxTDQwbzRqNXE5ZkRYVmtFdnpMcm1wYm5tY1I0VGJOTE1YZXVwdGlQc3UtU3ctTGw3RzI4bk01S3hUV0Z5YkFJYmstZUlRTWFETEY4SWpaM1hGUTNqWGQyN1pTMEFrU0lDWU9zRkcydnBGaFl3NXd1TmlfWWhNbGY3c2Zhbmk5M1JMdkZPSnhidklEOTlQVWxjRFRTR1RSQ2xXV29kclRpajRGZ2xLcEp6U2tP0gG-AUFVX3lxTE9Ya3YxY0FKWnRfN2Q3d2hmekJGNW5ZdUYyZkpxR2Z1WXlKMzdKRHZGVlBTdGVYZFAxaGNoMWk4bnBkR2prU0pWZ3l4aE45clk3X1JLMEVLU3EtYklLLXUxcTdNU1RxMEJlZ0tUYWdTSmFIUlJBU180RGJtb0RFbEZEemgzWmxYa0RlZy1fd29jcUdlSGM3aXlzN2FzbDhpQ1dxRy16Zmp6TlRsbHZweWZpNUpLUXVLQTN3QXktSWc?oc=5" target="_blank">&rarr;</a>
             </div>
         </article>
-        <article class="story-card">
-            <div class="story-meta-row">
-                <span class="tag-badge tag-kolkata">
+        <article class="broadsheet-story-card">
+            <div class="story-header-line">
+                <span class="story-desk-tag">
 [kolkata_wb]                </span>
-                <span class="urgency-badge urgency-trending">TRENDING</span>
+                <span class="story-urgency-tag ">
+                    VERIFIED
+                </span>
             </div>
 
-            <h3 class="story-headline">Selective Strategy Pays Off as Kolkata Creator Nets ₹3 Lakh from Five Brand Deals</h3>
-            <p class="story-summary">A Kolkata-based digital content creator earned ₹3.06 lakh in October by executing just five highly targeted brand partnerships. The influencer highlighted the advantages of prioritizing niche authenticity over high-volume, low-paying sponsorships. The case underscores an evolving trend in regional creator economies favoring curated brand alignment.</p>
+            <h4 class="article-headline-secondary">Kolkata School U-19 Boys&#39; Team Triumphs at CBSE National Chess Championship</h4>
+            <p class="article-text">The Under-19 boys&#39; chess squad from a Kolkata school has clinched top honors at the CBSE National Chess Championship. The team outclassed formidable opponents across multiple rounds to secure the title. The victory highlights the city&#39;s rising bench strength in competitive school-level chess.</p>
 
-            <div class="takeaway-box">
-                <span class="takeaway-label">Takeaway</span>
-                Targeted, high-trust creator collaborations are yielding stronger financial returns than mass-volume sponsorships.
+            <div class="article-takeaway-block">
+                <strong>Key Point:</strong> A Kolkata school&#39;s U-19 boys&#39; team has won the prestigious CBSE National Chess Championship.
             </div>
 
-            <div class="source-footer">
+            <div class="article-footer-sources">
                 <span>The Times of India</span>
-                <a href="https://news.google.com/rss/articles/CBMi6wJBVV95cUxQdHFmalNHaU1sdGgyc09qQWtsYWZDZ0tHMURvZENvTmFDOFpVSjIyQ3p6ZWR5Szg2ZTg3VFVoX3g5amFPbzdrRjVaN2h6VzBJaVBkWUE3cGtUNWd2RHVWQ2IwSVRkd3RCZFNwX1YxbVh2aUhrY2hQU3d4WU4wc0Z1WVRIQ2tTNk9VclNWeW1YZUtmYWxJaC10X0RaRWdpQ2p6d1J0TVB6TVhpUHhxWElRZk5WUjNWTXFZeUFCZUo2NGx5aWhJdjJ6bnVhQTRCYkFGZlFSVEJxUEkwRmtZR1BtWHo5SHJEbkRBdHlYTEk2aFhZeFF2UkJiN1l2ak1weFRJWFBMMlBCVEdQc05ieVg1cHhnZElKRkRzNjhSRzhlQnVsbmZrc2s3MFJfVFlZZVpIYnlXeFotR1FicDd5OXNrRUw2LWNCbVpTUHJWRXVYUGRhZnZOaGEyZkpDSzFHblJIV2lfQnE3TXZxQzDSAfACQVVfeXFMT0toc2dkOGlHZWxrVmZLcVZYWnFaM3ZKR0d1QVU5RFQ3ZXpDLW5vUjFrV0tCWmR3cnlVVFlqQTVDdVY1N25JMzBXb1d2NnMxNHpjcVgzVVhxSWg2dTFDNFN5aC1QMUtjYzJZSVZCTGlfT2FQVTZuSmVnNF9NRUtsQnpIMmlRWGQ4V1BDMjR2RUpaeGNKRzBhUzIzSTczRlp5aGJHSHRrMHBJekR6ZkRlRDJWUnhWZ3gzLUxwdmhNdjRwWmxobFVQMkx1cUVISXV1THV0NkpPSHFNQTVUVmEtWERuY3lTY0RNSHZvcllBSV9MdzdHdUhDckh0THBDbTRJTWJFWmdLVWdUcXJiQUhQM3ZqNXFaZC1lZDU5UDMxekRLU1VxWGx4VUdIOHB0d2lXQU9VZk9UeUh1b1JYOFZ1SWZ1M0pRbmRxb2FGMWhPbjh1MF9BdUE1VmdLYzB0RFBLRjJNNzVHMXNBV215QmRlYlc?oc=5" target="_blank">&rarr;</a>
+                <a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxQdEozT1VZTlQ2MmV1WG54V3RDM0pWbjgyRGNEb2wxSDNSZGVfd0pQaXQzVmJ2VzcyLUJkdzlfdDNqMWJGeEpxWDQySVl2U0lfcFQzMjNUOURZMmJ6dW5vVFQ4YmR0S0VGM0RFOTJ6VFM0Um15Sk5OTXBfQ3pfbzFudVI5ZGRJby05cFNFc1BPa3ZWcmZ2YmYtbE1YTVJoUGZ1WVE3TXdxV1o1b1k3ZkVSVWVWaUlVUC05eC10WTlBVGtXT3lBWFdsV3ZPeW3SAdIBQVVfeXFMUHFNbENvOTM4X0tuUUhtM2M4RTVEZ1JfTDBlSm9FTlRtekRMbnJIZWozTHRUS3otdXlfSXFZazNIZ2xKTzdja1VWOXpCTmZIQ0tOT2dWMW1Fd00yMG9DMnZYMmdfY3JaYkUyRVRCUlkxSEc4R0ZVLS11MzJIb19JbUwyd2hjRHFTS2JlVi0wXzhBaVZmTUFuRFlsb0xfUy01dDZ2R1lhTEFERVRQYlI5SkpUTTNGMHU4dFJXYm5rMnplRnNmZkxWY2VDNjZ1Nm5hZmhB?oc=5" target="_blank">&rarr;</a>
             </div>
         </article>
-        <article class="story-card">
-            <div class="story-meta-row">
-                <span class="tag-badge tag-kolkata">
+        <article class="broadsheet-story-card">
+            <div class="story-header-line">
+                <span class="story-desk-tag">
 [kolkata_wb]                </span>
-                <span class="urgency-badge urgency-developing">DEVELOPING</span>
+                <span class="story-urgency-tag ">
+                    DEVELOPING
+                </span>
             </div>
 
-            <h3 class="story-headline">Majerhat Fatality: Kolkata Police Urge Syama Prasad Mookerjee Port to Undertake Urgent Repairs</h3>
-            <p class="story-summary">Following a fatal accident near Majerhat, Kolkata Police have formally petitioned port authorities to expedite structural repairs on dilapidated road and infrastructure stretches under their jurisdiction. Investigators noted that deteriorating surface conditions significantly heightened commuter hazards. The communication stresses immediate civil intervention to prevent further casualties.</p>
+            <h4 class="article-headline-secondary">Baranagar Murder: Police Probe Deepens Over Suspected PUBG Financial Dispute</h4>
+            <p class="article-text">Investigators probing the recent murder in Baranagar are focusing on a dispute linked to financial transactions in the online game PUBG. Preliminary inquiries suggest an altercation over money escalated into the fatal attack. Police are questioning acquaintances and reviewing digital records to reconstruct the crime.</p>
 
-            <div class="takeaway-box">
-                <span class="takeaway-label">Takeaway</span>
-                Police authorities have flagged hazardous port-owned infrastructure near Majerhat demanding immediate remediation.
+            <div class="article-takeaway-block">
+                <strong>Key Point:</strong> Police in Baranagar are investigating whether a monetary feud linked to PUBG sparked a recent homicide.
             </div>
 
-            <div class="source-footer">
+            <div class="article-footer-sources">
                 <span>The Times of India</span>
-                <a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNUjlDaGF0VWJ3U1Nxb2tuR2xuVDBUYkFzb3VsMzlYblJsWmxCc2RiaTJzampha3ZGQUtSWmtMMURBSC0xVzkySHNXeUphb1BVTWZERW1paTVaVEVpdUV0YlVPM21WejEzMk1RSUlKdHhORlJqMFM2dHRnOHBpX01XTE5Zd29XVGdHd2RKMm9YTHB2Q2dJT2NwWDJLZDRLYzM5eEp6ci03LW9TeldNNUxieG5FaWtDSDBPanNSd9IBwgFBVV95cUxOeENfeG1iRTR6aDYxeE5uNFBjWlNXVWk1YkFMZ2luNXJfTG5JbUwzbHJvWDFZMHgyU045TEkyQzNmQUwwTk9PRnlKaXFEcXBLNzAyTWpPTFlZbkZuLVZqczZuTVByRGozX1JWa1ByRVg0ZHRNUWNzYk9XUXd4MTJMcUxWOWZDa3dYakpjZVpHWnlqTllKcTg0b1lsdHZBVmdPZjlSaFl6T19sOVhtek9id1BiYjVYTGFlb1Exb1VjM1daUQ?oc=5" target="_blank">&rarr;</a>
+                <a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxORWNlZHpfRlRkX2xacmQ4WnpDUG1CaTIwTGRMOUdpRGh3eU41WDUxVmZpbU5yZUNrYm1FVzVpd05hcFdTck5LSWQ3UTJqNkswRW5uMVIySGo2cERJazBWM2hnXy1tVWNKeEYwQWhmZHlKbGl0bS1VQ1hrT0p5UmdCeHNuZERkSEpLc1dyVE43YU5qMFdmTUFvMVU5VUdwV29pQkVlZ1U5bENFb1FzdzdYZXhoc0bSAboBQVVfeXFMTnZqMXh3YVRVd3h6QlBKNWVNTHc4SnB1Y2hzNGc0eFl5RlU3b0lTM0RaakozSTFiRkI3dHZRNDJPODY5MmwtU3Nad2tKNGZoWFE0a3N0WGxvU25tTDJ6RkVJX2s1T3lFQUtuQUxZNzBRZi00M2w3UWhFRFRTTjBMMjl2M1pXbW5FV0FvaG1BNmpkZjNHR3VyM1U0SW1BMEdqVEZvV21sU3QyaEFTVVBpNXdEOGktcTJtMjFR?oc=5" target="_blank">&rarr;</a>
             </div>
         </article>
-        <article class="story-card">
-            <div class="story-meta-row">
-                <span class="tag-badge tag-kolkata">
+        <article class="broadsheet-story-card">
+            <div class="story-header-line">
+                <span class="story-desk-tag">
 [kolkata_wb]                </span>
-                <span class="urgency-badge urgency-verified">VERIFIED</span>
+                <span class="story-urgency-tag ">
+                    VERIFIED
+                </span>
             </div>
 
-            <h3 class="story-headline">Clashing Timelines: Concern Grows Over Assigning Bengal Teachers Survey Duties During Exams</h3>
-            <p class="story-summary">School educators across West Bengal have voiced severe apprehensions over being drafted for Special Summary Revision (SSR) electoral duties during crucial examination periods. Teacher associations warn that diverting staff for voter roll verification will disrupt evaluation schedules and academic oversight. Stakeholders are urging education and election authorities to reconcile the scheduling conflict.</p>
+            <h4 class="article-headline-secondary">Pets Struggle with Post-Festival Trauma and Noise Stress, Say Kolkata Vets</h4>
+            <p class="article-text">Veterinarians across Kolkata report a surge in domestic pets showing severe stress and behavioral trauma following recent festive celebrations. The distress is primarily attributed to continuous exposure to loud firecrackers and elevated noise levels. Vets are urging pet parents to seek therapy and provide calm environments to assist recovery.</p>
 
-            <div class="takeaway-box">
-                <span class="takeaway-label">Takeaway</span>
-                Simultaneous exam supervision and voter roll duties threaten to strain administrative manpower in state schools.
+            <div class="article-takeaway-block">
+                <strong>Key Point:</strong> Veterinarians warn that city pets are still recovering from noise-induced festive trauma and anxiety.
             </div>
 
-            <div class="source-footer">
+            <div class="article-footer-sources">
                 <span>The Times of India</span>
-                <a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxNWUI3S21EUVpWVkNKTmR6bDl1TjJKdHNNcWMyMTd1WExCVUhxaUk0YXFKR0pPVG9RZ2RNWHRhZmVIc3BWaGJrS1RCYVA4NzdsM0wtYzJfQzBqb2NfRUpEMVpNS182SFhfaV9kYi1TRHhlTDdYWFdKeTNQRmo4aHdMTFVtd1pFbHpYOG84X3hGQkxyaktOT1QzZlBDOXRtMVY5WXJfNlNpVG9tbkF2OFJEQ00tSlFkZUpuc0k1ck9faXJkejJwbjlYUNIBzgFBVV95cUxQRnBiQkprSVF5STZzaWlPVDFtd296QzhKd2cwVjlzZ2ppQVZYUHVTdTVVdlR4NTJ2Y0JKbGYtLXByU05KcTVpS1N3MGhOcF9XOHF6MjFHalRicGJ6MmFOb3ZPUnMyQ0RMbGNDRU1uOUFoN2tHOXlHTXFud1FxRWszMktpbWZHMm0tNWdhNXZxZ1k0VzBmR3ktOE1FRzhoU1E2cWh1Y2taQWdKdDBJN0I0MTdnUHFtVlZRbFFiRXR5bHA3enNIS2xvLUYxZHptdw?oc=5" target="_blank">&rarr;</a>
+                <a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxObkt1NmIyQVVZbEpfT3BibUtBclZrTG9EbS1tdjNWeEdLT251OVhPbE9jWjU4SVJuNWg4WkxZNUhuVWVLZUZFTWdQbmNkOGVyTVRJT3Q4VGVvZWp3RGJMcWQ1X29VeEtIRTcxRGtPdW1nYkx0WmRXYldYbE9VWHg4UjJVcU94eTVTN09NcEU2amxFMlJaRENsbHAweXVfXzE2NndkSEoyX19oT3ZvU3lfcdIBtgFBVV95cUxQTWg1LWRWdFdmM215V1NOMDJKZFFidk1HUG11alBoZXNGOU9GV2Rib0djOXlRcTlKR3BlOXh6aVNvWVB4T2twblpmYlRWcEJFdFZPLUlzcHdMaGo5WUF1aUM2NGZVXzZLLS1XeWVxTnlmNm1PZ0NFa3RnLXh6eFNyUkt0RUtQZWk3ODJhZ3ZVVzE4ZE9kNDVQQkxBYzhMNmpaeVJZZUhadmNmNG9vZXo0RUc0YWhmZw?oc=5" target="_blank">&rarr;</a>
             </div>
         </article>
-        <article class="story-card">
-            <div class="story-meta-row">
-                <span class="tag-badge tag-kolkata">
+        <article class="broadsheet-story-card">
+            <div class="story-header-line">
+                <span class="story-desk-tag">
 [kolkata_wb]                </span>
-                <span class="urgency-badge urgency-developing">DEVELOPING</span>
+                <span class="story-urgency-tag ">
+                    VERIFIED
+                </span>
             </div>
 
-            <h3 class="story-headline">Pre-Board Selection Tests Begin Tuesday, but Final Madhyamik and HS Dates Remain Unannounced</h3>
-            <p class="story-summary">Schools across Bengal are scheduled to commence selection tests for secondary and higher secondary candidates from Tuesday amidst lingering uncertainty. State education boards have yet to formally release the official timetable for the upcoming Madhyamik and Higher Secondary final examinations. The delay in final exam notification has prompted anxiety among students and school administrations alike.</p>
+            <h4 class="article-headline-secondary">Maidan Market Relocation Concludes Successfully After 3.5-Year Wait</h4>
+            <p class="article-text">The protracted relocation of Kolkata&#39;s historic Maidan Market has finally crossed the finish line after three and a half years. The transition clears crucial urban spaces while providing authorized stalls for displaced shopkeepers. Traders have begun settling into their allotted premises following prolonged administrative delays.</p>
 
-            <div class="takeaway-box">
-                <span class="takeaway-label">Takeaway</span>
-                Selection tests are rolling out without an official final board examination calendar from West Bengal authorities.
+            <div class="article-takeaway-block">
+                <strong>Key Point:</strong> Kolkata&#39;s Maidan Market has completed its full relocation following a 3.5-year administrative process.
             </div>
 
-            <div class="source-footer">
+            <div class="article-footer-sources">
                 <span>The Times of India</span>
-                <a href="https://news.google.com/rss/articles/CBMi4AFBVV95cUxNeDFZcS11LU82WkRqdGc5UzB3Qm5aSEtxakp3OHFnZk8zQ0QtWFNzYnZxSFNSOUJXMFJrQ3lmUjU4M194VVotWF9vREEyNGcyYllmOW1NYml1Z0pBWFlxMnFsbHB6R0lXYTlmZkhVdTNWRnFpMHlmS0JwOWp5cDItUl9WUnFtWjF0Q2hSeWNhTzFJMU9QY0NiWnMzU1VKWDY3OWhHOGRvQ0lCUXFaSE5WWnhvOUFhWjkyOU5uNDlaZ1lPcEdhR0VNWkVzUWlvZGQxUkpfNEtSQmdRZzBNTGkycdIB5gFBVV95cUxOdXl3cEFxdmRUU1pEcnpKejdTUTZjQVlibm9aSHRQZzRqR3dMVDdaamtHTFRhaV9WNF8xcXRjU1M5ei1oakJIakVXZHd4Yy03ay1jbnZESGxsNmE5eGhOQ2RIR3hBU2xHRW9mOWgtMFUzUFI1ZVB2bzlfenRLRUNSTHNRcmw3TUZWbTdxS2xscFFTMkRlOHFqQUF0cjlzU2xUMlVuX01tdGhldUt5VHl2eHJSRjVUaWpZc3ZQVUJZa19PWHZqNUtCWGh2Q1ktczNRRktoeFJMTWR4ZExrQjhpcWQ4QjZldw?oc=5" target="_blank">&rarr;</a>
+                <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxQUUt2V0NlLU1ZNjY4NGJNVmpxSkdreU5EZlVvWWIyWU9ZUGhDbUNibVZZTUV3aGV3eDczS3c3dGw0eHFPaGFBWG5qdzhrY0h1RHd4bzA5eHI4andfUktNdXZMWE1sNjVvbzl4VWJHYzEwRWtEd0EwQnp4TThETjV6cDJid2VTb1M2VnYyVEJRb1d4QS1odHJzdDA4bVVJNGhEU2J0YnNNR0dOaFBSRVBHOW9rR0M0VEg2U2pPeW1qQVMyZ1dU0gHKAUFVX3lxTFBTdjVYZ3NwVjB1dDVlUE5GczBDdzZWemZXcWJCdTZFdGlXcFJLeTY2SWxTZkRuMGd5TU9OdTY0d082VWN5dDFCckoxbWJqWGR3M2ZNbF9BS0d6S0VVOFE1TVcxY1lYcGVnOTJMbmhvOUhEdUczY2sxbE5nNExpTG1JVWZhdXh6ZU5ZMGExRFBPYXlVX2JoUkd6MmlacXI2OHd0VGVMV051TU9WWFdsWnJzUUx1WHA4LTM5d3hnZlBndExXbGlYZkFmRmc?oc=5" target="_blank">&rarr;</a>
             </div>
         </article>
-        <article class="story-card">
-            <div class="story-meta-row">
-                <span class="tag-badge tag-kolkata">
+        <article class="broadsheet-story-card">
+            <div class="story-header-line">
+                <span class="story-desk-tag">
 [kolkata_wb]                </span>
-                <span class="urgency-badge urgency-verified">VERIFIED</span>
+                <span class="story-urgency-tag ">
+                    VERIFIED
+                </span>
             </div>
 
-            <h3 class="story-headline">Kolkata Municipal Corporation Clears 15 Stalled Realty Projects in First Meeting in Eight Months</h3>
-            <p class="story-summary">Breaking an eight-month hiatus, the Kolkata Municipal Corporation&#39;s building sanction committee met to approve 15 major real estate projects. The move addresses a substantial backlog of commercial and residential building proposals stalled across urban zones. Real estate developers welcomed the clearances, which are expected to unlock stalled investments across the city.</p>
+            <h4 class="article-headline-secondary">Rabindra Sarobar and Subhas Sarobar Barred for Chhath as Alternative Ghats Readied</h4>
+            <p class="article-text">Authorities have enforced strict curbs barring Chhath Puja rituals at Rabindra Sarobar and Subhas Sarobar to protect delicate water bodies. In response, municipal bodies have entered the final lap of preparing designated alternative ghats and artificial water enclosures across the city. Security personnel have been deployed to ensure compliance with environmental mandates.</p>
 
-            <div class="takeaway-box">
-                <span class="takeaway-label">Takeaway</span>
-                KMC&#39;s sanction committee has resumed project clearances, ending a protracted eight-month municipal freeze.
+            <div class="article-takeaway-block">
+                <strong>Key Point:</strong> Both Rabindra Sarobar and Subhas Sarobar remain off-limits for Chhath Puja as alternative ghat preparations wrap up.
             </div>
 
-            <div class="source-footer">
+            <div class="article-footer-sources">
                 <span>The Times of India</span>
-                <a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxQQVJrUC1wRm9ZZHk2cHE4OXNNTk16NGJ2bzQ2ZEhXZ19qVXBkT3lRbTJia0ZwVy1ITTF1ZWRZSUxoWjNzZ05FMkFqak10eGFpUWVZUl9DMUprTXB1aHNBZXhnRWViZDRnd0l0MG53Ry1PemR6eFFHUktWZzR2dkJCZE8xVFEwLXhJb21UNmRfZVlmLVRjY2dmY093cWx3X3I3N3ZCSDhOZVY0a3Z5RmlCMWtteHlhdzFQUTNSaU96TDJoVVVhQVo3Qm1lONIB0AFBVV95cUxOQWZuVnl0c2FVYmFTcTNTVGJ3N1kyalFPZDVfcVg3X3lmYU1sR2hDbkw5dlFPdVlzR2t5OFJWZTFra015ZnlwRFNYVzJacWZLZndUZVJZTC00cnI4bHFRa1dOaXJ3SlphdEpiRDZMUHk2SHZvS2c3UHFTMENOSUludWdHTGZacUZtM0xGUUl4Rms2QW10UGhOSWNTSTltTzcxZV9XbVRKVE5ydFQxdUl0ZmZfUXNKSzhSNmY0U0NhV2ZHbHE0NUtxTEd5SDNIS2Jk?oc=5" target="_blank">&rarr;</a>
+                <a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxOUTBDaFEyNnFSQVZlTmRuVkNJeHYxazlObDg5NHVpai1KckpFUjJwZlRKeHhtQVh2Ny1GMWlOVTltZVdubF9HcU0zeTBQT0xETnRteUNRRGFRZnpWMHUzbHZmNmhvM3UyWDdkZnA5bmhxenJwby10d0YtZVdPbTBlY1VjTHFpOHlRNGN6eHNxRFJSd3V3Q2R2dFdfaG83dmc1Q1BUY0JleE82cEtBNDd3VnhfVzR3UFdJbzBZUDJJZWlxbFRxM3I2YUNEdTIyUHQ4dGfSAdcBQVVfeXFMUE9jdVZfQ2luRm9lVVVjSVFEeTFJdE52WGZ3UnpnenIyQU1XdnhPcmF3cC02YXV1TnhSMzE3U0dfRUhyZ0lQZkVSZHZxTTh4eWowZGxSSzFZMUJBUHc1cUpXX2lIeGQ0YmNZNEFEeTNkY0EyYUJpYmdkeVRCbjF1RW9vc1A5NVJfMTNFQlZwRm1ocXJoTXlhYTFoMDRWV1prVTVjYjFsNThrQnBIYTYwcW82SGZlNnhIbzZLRVZOYnAycHl6VlQ5X1kxODBUY1JLcjdBZUdvUk0?oc=5" target="_blank">&rarr;</a>
             </div>
         </article>
-        <article class="story-card">
-            <div class="story-meta-row">
-                <span class="tag-badge tag-kolkata">
+        <article class="broadsheet-story-card">
+            <div class="story-header-line">
+                <span class="story-desk-tag">
 [kolkata_wb]                </span>
-                <span class="urgency-badge urgency-trending">TRENDING</span>
+                <span class="story-urgency-tag ">
+                    VERIFIED
+                </span>
             </div>
 
-            <h3 class="story-headline">Kolkata Knight Riders Fine-Tune Squad Strategy Ahead of IPL Mega Auction</h3>
-            <p class="story-summary">Reigning Indian Premier League champions Kolkata Knight Riders are finalizing retention lists and tactical preparations ahead of the upcoming IPL player auction. Franchise management is weighing crucial purse constraints against the necessity of retaining their core championship unit. Analysts anticipate aggressive bidding strategies as the franchise restructures its lineup for the 2025 season.</p>
+            <h4 class="article-headline-secondary">Garia Crash: App-Cab Driver and Passenger Booked After Open Door Hits Commuter</h4>
+            <p class="article-text">Kolkata Police have initiated legal action against both an app-cab driver and a passenger following a severe door-opening accident in Garia. The passenger reportedly swung the vehicle door open carelessly, causing an oncoming two-wheeler to crash. Both individuals face charges under relevant traffic and negligence provisions.</p>
 
-            <div class="takeaway-box">
-                <span class="takeaway-label">Takeaway</span>
-                KKR&#39;s auction and retention blueprint remains central to the defending champions&#39; tactical planning.
+            <div class="article-takeaway-block">
+                <strong>Key Point:</strong> Police have booked both a ride-hailing cab driver and a passenger over a negligent door-opening accident in Garia.
             </div>
 
-            <div class="source-footer">
-                <span>Cricbuzz</span>
-                <a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE9iQ2hSWkdKbUcxOFo4WTE0QWdRZWRKSEpTTXBvVno4UTVCeS1KWE1zQUxMS2RNVVBnM0cyQWNsMnJFNFoyNHE4b3Z0MWxwQ0tUZ0JwZlVFMy0tdG1lVU9yMV9WMnJtdUxFMnNSU1pNSFlQeG5DNG8wLU8yTQ?oc=5" target="_blank">&rarr;</a>
-            </div>
-        </article>
-        <article class="story-card">
-            <div class="story-meta-row">
-                <span class="tag-badge tag-kolkata">
-[kolkata_wb]                </span>
-                <span class="urgency-badge urgency-verified">VERIFIED</span>
-            </div>
-
-            <h3 class="story-headline">Supply Gaps and Financial Hurdles for Insulin Place Bengal’s Diabetics at Severe Risk</h3>
-            <p class="story-summary">Healthcare specialists in West Bengal have raised alarms over recurring supply interruptions and affordability gaps affecting essential insulin treatments. Medical professionals caution that erratic glycemic management drastically elevates risks of acute diabetic ketoacidosis and long-term renal damage. Public health advocates are calling on state authorities to ensure uninterrupted distribution at subsidized dispensaries.</p>
-
-            <div class="takeaway-box">
-                <span class="takeaway-label">Takeaway</span>
-                Inconsistent insulin access poses serious clinical hazards for diabetic patients across Bengal.
-            </div>
-
-            <div class="source-footer">
+            <div class="article-footer-sources">
                 <span>The Times of India</span>
-                <a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxPS3QwVWRJaVRPM1lwc0ZKZUhlTGVjd2k0RHpKZ0NnbmNMeFJwNEFCeE1FYnJOSHZjZEVjLUhQS1BKWDVLaEI3Vk0zbmk3OUFQTDB6WlJKUlFIZjFJd0JLUUVGRUFSSG8wQzNsTm1RaUVhU3JoNHN5VzRCUnp1WVhJU2NqRmtXMjV0cUJCbzVzaVgtX21VazNHZS1wS2xtWkpRQ0VtX0hzdnh0Nl9KZHlUWnRYY1BTUUg1cHc2SGh5YUczQW_SAcgBQVVfeXFMTlFyTnlBQUF4NkJHWUhDaDExQ05vYkxTNHRNTVA5RVBFV2k4TUI3S0x0YUxKOG9XVFdjUkJPTW5aN2dBaW5Ia0xzLXpDN25DWXl2amI5M0VfNG1ua2llM3JzeU1aT21DaDNQUVU4b1RTUW1wc0hrd1RrdjI1WWtWRl8wa2FMT193UGFVVkVTMXZRUUZaMXBSZ2FiMUdHWDFXbVR3RE51UFpXM0J4YXlQTjRVSkprbUg3TXBucGFrTlpyd09yRGxqWEk?oc=5" target="_blank">&rarr;</a>
+                <a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxOeEtFUEkzZC1QQlpuVW1hZWlnc3FkUHBkUDFKS1lVVnp3X3lrX0R4SmR6RXI2aW5Hd3lQOUdRY2ZNTE9wTThhbnZXLUdJYzNPTHZLWm9lVThUVkZjSXdGa2pqS1Z4RElPazlZc3hKSWNkZUNHV3lvTXdlWXpJUVRvdUlxMm5jQmFadkJObWRzVHBUUnk0WElQcF9lNldaVEU2MUxFblNZNjE1S2ppVmRoUl9yamdzTWU3LUcxSU1zR2VVb3lsaURPVFBhTGPSAdIBQVVfeXFMTk9tOHNENkdJQ0ZJbF9RMVYxdjN6QnNnSWtwU3BZWWV3QU5QT3psMThvbndHVWphVDFHNFl2ekxlaTBaanhIQnB1dURKN2FHZGdLZENqWTF3d0p4UEYtWEk0YzB3cUJTcTRhU3Qtejh2YVJNZ014Qk9odkVmZUxKbFp5ZXZUNENJU2Ftb3ZTU3Q3NTQ5Z0l5UDB3RXdaOGNib0wzWHRtdkoyWmM0dUJBdEU5TklLczNkRUZXZjRsRU52SmJoeEgyZWhCLVhTZHlDdWhn?oc=5" target="_blank">&rarr;</a>
             </div>
         </article>
-        <article class="story-card">
-            <div class="story-meta-row">
-                <span class="tag-badge tag-kolkata">
+        <article class="broadsheet-story-card">
+            <div class="story-header-line">
+                <span class="story-desk-tag">
 [kolkata_wb]                </span>
-                <span class="urgency-badge urgency-developing">DEVELOPING</span>
+                <span class="story-urgency-tag ">
+                    VERIFIED
+                </span>
             </div>
 
-            <h3 class="story-headline">Chorbagan Fallout: Kolkata Police Overhaul Crowd Management Protocols for Chhath Puja</h3>
-            <p class="story-summary">In the wake of a recent stampede incident at Chorbagan, Kolkata Police have instituted stringent crowd control measures for the ongoing Chhath festivities. Specialized barricading, one-way pedestrian routing, and intensive drone monitoring are being deployed across sensitive riverbanks. Senior officers are actively inspecting ghats to preempt bottlenecking and ensure public safety during peak worship hours.</p>
+            <h4 class="article-headline-secondary">Octogenarian Defrauded in ATM Card-Swapping Scheme at Patuli Kiosk</h4>
+            <p class="article-text">An 85-year-old resident was duped and stripped of cash in an ATM card-swap fraud at a kiosk in Patuli. The fraudster offered unsolicited assistance under the pretext of helping the senior citizen before secretly swapping the debit card. Police have registered a case and are analyzing CCTV footage from the ATM booth to trace the culprit.</p>
 
-            <div class="takeaway-box">
-                <span class="takeaway-label">Takeaway</span>
-                Heightened safety restrictions and physical crowd buffers have been enforced at ghats following the Chorbagan mishap.
+            <div class="article-takeaway-block">
+                <strong>Key Point:</strong> An 85-year-old man was targeted and conned via an ATM card-swapping racket in Patuli.
             </div>
 
-            <div class="source-footer">
+            <div class="article-footer-sources">
                 <span>The Times of India</span>
-                <a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxQdVRKdmF6TGNQbmo3RDVhUExqOWp6Zk4wRG05alR0SEczM0dHanFEaktPOHY0OUlNTFJYQlZaemxOOTZtMWFUTnkyY1FFY0V0bXZmTE9fcHpqcnhlUXNZVDhJRHZLLU56SUFkNDJVSTQwcTRieDBUWHZ0WHhKQldGQU9RNnV4eVVtTXRWLU90OGVaNGJFSGlKczRBc2RuTkNXVFhlWTlQenhtUUk4Vlotb0lFalJBaFduZkQzRFVDZXVTdm85RmVnMHdqLXJvOWlvRTM1R1FB0gHbAUFVX3lxTE1NNUR2YlUta2VLcHFKZXJaVTlRUWhjNm54aXhmU1NBVkNDb2swaFotZ3lsV01kTVhiN3dGeklYV0xaVks1aEtZVFlKOWNwNnVuRnBpZ2Y0MjJLMzQwQnlTWEkxa19KX3JXTkdUcm41aDF5VGw5NnlON1VqaWNteUVDNU85ZU4yUjJfYjdDZGg1eVZxaXlMTmd2eXducnRvN0lwV1RzZURFdUo4ZW40a0g0RTlmQmFsRXdpamtrMTRUMUk1OGJ6MncyellhNGxOVmhBeHk3QlktcmR5MA?oc=5" target="_blank">&rarr;</a>
+                <a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxNRFNaUnEyZGRQWEdybFg1SVhxODRTay1JZzJwcnhvOU9qeXF0cG5HYlVqbWUyRjk4YWQzWG1Pa2FQVXlmWXo1Vk9kUXM0RjB4Q3FKS2FmRjFLQ2VGcXVkUDJjaWlHSFRCNk42NnhIa1Nud2syTTBrZENyQWJkM1JLQ1p0UGRZelN4cG96bTVNRkVfUGxQbGhtaUNzT25MX1BmcE5SQUJwYW91WmQwdl93MERneXpDb1NQOXJ4Qnc0dG5SVTNBMmZWbHhn0gHPAUFVX3lxTE4zS1lOY3htSzFDRTRSWURUSkNKYm9sMmZiSnFTMjlZTUpjVDVUQ1pydlhQal9kVGp0RDY2bFJ0MWRjWHNfSDd6cFgwRlVpNFZPcUdSNWtxZHdDTnVPNHZISklwdW1xcndhaTZMRDJoX2FUVmswRXZoWG5naHF4NTh5YjlCS1YzRzNRaVpWV2oxaVVZRHJpMlNzODRGLVRzQWRyVHpudGtieXEwcm03QW9XU1hIZl9CQVg1YjlwRGlHQzh2RG9EZ2l5V2lCTjRnTQ?oc=5" target="_blank">&rarr;</a>
             </div>
         </article>
-        <article class="story-card">
-            <div class="story-meta-row">
-                <span class="tag-badge tag-kolkata">
+        <article class="broadsheet-story-card">
+            <div class="story-header-line">
+                <span class="story-desk-tag">
 [kolkata_wb]                </span>
-                <span class="urgency-badge urgency-verified">VERIFIED</span>
+                <span class="story-urgency-tag story-urgency-breaking">
+                    BREAKING
+                </span>
             </div>
 
-            <h3 class="story-headline">Internal Rifts Surface as Rival BJP Factions Clash Over Control of Chhath Puja Ghats</h3>
-            <p class="story-summary">Simmering factional tensions within the Bharatiya Janata Party&#39;s Kolkata unit spilled into the open as rival groups clashed over managing Chhath Puja ghats. Witnesses reported heated altercations over the distribution of community assistance setups and promotional hoarding spaces. The dispute highlights ongoing leadership and grassroots organizational friction within local party ranks.</p>
+            <h4 class="article-headline-secondary">Calcutta High Court Clears Path for Reopening of 1,000 Liquor Outlets Across Bengal</h4>
+            <p class="article-text">The Calcutta High Court has cleared legal hurdles to allow the reopening of nearly 1,000 liquor shops across West Bengal. The judicial order resolves outstanding compliance challenges that had temporarily halted their commercial operations. The move is expected to restore state excise revenues and end local trade uncertainty.</p>
 
-            <div class="takeaway-box">
-                <span class="takeaway-label">Takeaway</span>
-                Factional infighting has erupted publicly within the city BJP over territorial visibility at festive riverbanks.
+            <div class="article-takeaway-block">
+                <strong>Key Point:</strong> Calcutta HC has granted approval for approximately 1,000 shuttered liquor shops to resume business in Bengal.
             </div>
 
-            <div class="source-footer">
+            <div class="article-footer-sources">
                 <span>The Times of India</span>
-                <a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxOSEhCdmZYTEVJaHQwdXFwRWFuckstMzN1T1JHY0xhMGxfREtyMmpzb2xPaG0xNjRJT1VNRGt6MUNkNFc1cXE3WUN5dEJJN280TjJNZ1VwQU5wS3JXdmREaGQyc25oLUNkZS0ydUViQ3RhcHF0TUpoRXU0eU84TjRURDhscl9ndXlwa3B6VkszR0RmQlZWUkFGOWFtVGFubVZpOHFic2oyc0FIMG43RlYtbNIBtgFBVV95cUxOeXd3X3pZMHNVQ21HeFNSQVFYZGVvbXpCUGFncUI0ZkdZdUlwNnZha2xWa1l0VXBvZ1UzS0FINzlnVXlLV20za3dDaUlUMGhQWDJkWWlESktISGRBUXdCcFQ5ZUN6VzBnUjUxS2ZEZ2pORUFOejNwaTcyNVB2UWxVVGdOM3BMYWJEN3VqdF9xaWtobHJDNndlaTQyOFhMWm84NkNLc0JPdWtrRFpKcGQybXlMXy1kQQ?oc=5" target="_blank">&rarr;</a>
+                <a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxQWkN5ZmJYNFktLUtfT3FjeGRJOXkyQ1M2ODRicFNka0J1QUJYcjJ0UzVzOE9ZbmtRUFNqRDlPMkUwb1oxMVZUM2tXWHlLbnM5cllJMUN4bU4yVkhBeEtaOXItU3d2VVdNVmtYY2lCY0ZtYkdrMUhEYUZVa202azVRQWRwT3JITEwwRGx3RlRGYURGSXQtX0pNbFk3Z1VhUWhYR1ZfSllybHZlSVR3U2JWS3ZRSUZad0dyM0s2NVpfUkpoLWpVeTZFYVc0VdIB0AFBVV95cUxNS3MzS1pKSlpmbU5RNkYwM1NQQl9ORXV2VTRFbWhsRmFrTUdoVlU0WlJldVE0UGFXYmJjYW9DX3B0TG9BRi1FQ2NvTUZKS3JtTGNkYS12VVRrU2RLalp3SmdoUFFpQklteXZBOThkalpiSVB0RFladGFHZzBock13NjdENXFlcmRIUWkyQU5kRExmYVVIeV9OeG5sNzZQTE5UanNsLUhxUWR3V1VSR2lWRUVsalNGR1NUVVJLRU1FbVlkb19yTjBBQU4tZXFudXBz?oc=5" target="_blank">&rarr;</a>
             </div>
         </article>
-        <article class="story-card">
-            <div class="story-meta-row">
-                <span class="tag-badge tag-kolkata">
+        <article class="broadsheet-story-card">
+            <div class="story-header-line">
+                <span class="story-desk-tag">
 [kolkata_wb]                </span>
-                <span class="urgency-badge urgency-developing">DEVELOPING</span>
+                <span class="story-urgency-tag ">
+                    DEVELOPING
+                </span>
             </div>
 
-            <h3 class="story-headline">Tala Reservoir Crisis Drags On as Low Water Pressure Persists Across North Kolkata Wards</h3>
-            <p class="story-summary">Residents across several North Kolkata municipal wards continue to face acute drinking water shortages as pressure levels from the Tala pumping complex remain severely depressed. Despite emergency repair interventions, tail-end municipal connections are failing to receive adequate supply during regular hours. Civic authorities stated that complete restoration is underway but will require additional engineering assessments.</p>
+            <h4 class="article-headline-secondary">CM Mamata Banerjee Visits Injured Constable, Promises Immediate Arrest of Assailant</h4>
+            <p class="article-text">Chief Minister Mamata Banerjee visited an injured police constable in hospital on Tuesday, assuring comprehensive state care and support. Addressing reporters, she declared that the attacker had been identified and would be brought to justice without delay. Police teams have expanded their search operation to apprehend the absconding suspect.</p>
 
-            <div class="takeaway-box">
-                <span class="takeaway-label">Takeaway</span>
-                Severe distribution deficits continue to hamper North Kolkata households despite ongoing civic remediation.
+            <div class="article-takeaway-block">
+                <strong>Key Point:</strong> The Chief Minister visited a wounded constable and promised the swift arrest of the perpetrator.
             </div>
 
-            <div class="source-footer">
+            <div class="article-footer-sources">
                 <span>The Times of India</span>
-                <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxQUWJ1clRuV1A2bDNSNDFTR3VFeEk4VGdRdDFuS2xGenF4OTlwMFNmbl9BbWpNQVE4UDJaZ2h6YVUyc3E4YUhjOC1WaWU1dE5ud1JkbDN5dUswSjQ0U0otZHNLYVZRN3V0Z1F0WkN3Qk5rU0h4UHh6Q0x3Tnl5YXJZNWI4NTRjTURSZWhrb0hFLWVYdFJPWVVNWjYybXJhTGlVU3ZZSVlIYzE3NkFUelJ3aEt0Qmo2eDZGRlgzZ2xNZ1BkejNl0gHKAUFVX3lxTE42dE9XSG5ocXJlRWFiYmJ2T1U1Z1B2V3N6eVFoZGE2N2FoNlFlaWNGb3BPaVc3NF9iVmxRUk52U0ZkZmZsUDBhSHRLSEU4SE9YLUg5aDlwSnNqaElHdFVZeXVhWjB1elBXYjRYa2c4dDVzdWFjbHVmcXExb3ViSzZwcXZuLTVETDNZSWMtTWR3RDhLLTBJYUUtRUFIZllpa1hrYlFKamZ2aWxwNk5yQ3dvR3hqbGJyZmJjaGp4OUU0RFdPUG51bG5aTkE?oc=5" target="_blank">&rarr;</a>
+                <a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxOeTJYbU5vMmE1S2dFUWdBVW9Wb2tEZXVkWndna0pkVEEyQm1NbEVzdTZDR2VUZTh2OER5eTNYS2pKTWtuNTRDMmN5OHRVQndYdGxDNmxRUUJjMXlIdHN1ZkdtNTRnME9qS1FJVDB4RVFONnlrbkxZQmdELXY2eGJMNGExaFNFR0tqZ09EaS0wcFpheDFKMjUxNUZJa2RlUFpZX0RPREhHMzk0bUlfWkUwWDBOblpQcVRWN3RKREVoZEJsX3g3dngxYkY1ZVhSNGxLdENYYdIB2gFBVV95cUxNMkdCclpBWW5iSjN6YWhjWkljaWtUbnI3Z2tobTJfLUVJdDNma0NUT0ZSeFBQOV9NV085c09WUFgxOHZFMTg0NjVWRlg3bWdWcWVWR2cxX2FJdVhJajQ3a2lGNDlDekNDZTFSSVBBVlI1NjRYZXgxTmEwa1AxN3R0MGdZZVFZSFQ2ZXo5NHNrM0tOazBCSzFwblNRSEVRU2RBVzJ3MUJmN2dlR055RlM4R1hCVkNLTmpzR3RIc2xDNVhDV2FXM01oZ0N2QzFWSUdvRFZPWm9MSkJ2dw?oc=5" target="_blank">&rarr;</a>
             </div>
         </article>
-        <article class="story-card">
-            <div class="story-meta-row">
-                <span class="tag-badge tag-kolkata">
+        <article class="broadsheet-story-card">
+            <div class="story-header-line">
+                <span class="story-desk-tag">
 [kolkata_wb]                </span>
-                <span class="urgency-badge urgency-verified">VERIFIED</span>
+                <span class="story-urgency-tag ">
+                    VERIFIED
+                </span>
             </div>
 
-            <h3 class="story-headline">Post-Rain Respite Evaporates as Kolkata’s Air Quality Drops Back to &#39;Moderate&#39; Bracket</h3>
-            <p class="story-summary">The brief spell of cleaner air ushered in by recent unseasonal showers has dissipated, with Kolkata&#39;s Air Quality Index deteriorating into the &#39;moderate&#39; category. Particulate matter levels climbed sharply due to increased vehicular exhaust and declining ambient night temperatures. Environmental authorities warned that seasonal atmospheric inversions could soon push pollution levels higher.</p>
+            <h4 class="article-headline-secondary">EAM S. Jaishankar Lauds Diaspora Role Ahead of 19th Pravasi Bharatiya Divas in Kolkata</h4>
+            <p class="article-text">External Affairs Minister S. Jaishankar has praised the global Indian diaspora for its pivotal role in nation-building ahead of the 19th Pravasi Bharatiya Divas convention in Kolkata. The flagship summit aims to strengthen engagement between overseas Indians and domestic development priorities. Kolkata is set to host delegations from dozens of nations for the signature event.</p>
 
-            <div class="takeaway-box">
-                <span class="takeaway-label">Takeaway</span>
-                Kolkata&#39;s clean air window has closed, signaling the typical onset of winter pollution spikes.
+            <div class="article-takeaway-block">
+                <strong>Key Point:</strong> External Affairs Minister Jaishankar emphasized diaspora contributions prior to Kolkata hosting the 19th PBD Convention.
             </div>
 
-            <div class="source-footer">
+            <div class="article-footer-sources">
+                <span>South Asian Herald</span>
+                <a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxPOG40RUpIc3RqOTNYWi13dktRYkZ3X012dl9ab3Q1ZEVSOTczbDdhZ3pGcFlCZlJHYVZlZm5BR2VmS0dpNXBVWXhlY1JhWTZnanRKb1BoSFFLWTBHWXBJYkhwMjJ4R25oVlNHRzFJQkI1MXdYRGFmOElaNzRydzRjZmlyUHpDdUdUbXQ1MGRhT2JuRVpjWGN6WFdheXliblAtbE9jT1hVYjZ1V25IZFlETGRJVUM?oc=5" target="_blank">&rarr;</a>
+            </div>
+        </article>
+        <article class="broadsheet-story-card">
+            <div class="story-header-line">
+                <span class="story-desk-tag">
+[kolkata_wb]                </span>
+                <span class="story-urgency-tag ">
+                    DEVELOPING
+                </span>
+            </div>
+
+            <h4 class="article-headline-secondary">CM Meets Bengal Governor, Schedules Comprehensive Review of Chhath Puja Preparedness</h4>
+            <p class="article-text">Chief Minister Mamata Banerjee held a meeting with the Governor before convening an administrative session to assess Chhath Puja readiness across the state. The administration is reviewing security arrangements, crowd control protocols, and civic amenities at designated water bodies. Senior departmental secretaries and municipal chiefs are slated to attend the briefing.</p>
+
+            <div class="article-takeaway-block">
+                <strong>Key Point:</strong> The Chief Minister met the Governor and is conducting an extensive review of state Chhath Puja preparations.
+            </div>
+
+            <div class="article-footer-sources">
                 <span>The Times of India</span>
-                <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxNM3dycjJXVWZEUW1VME9nak1uOUQtSE5ubEluWXQ4ZlplRmE5VUlGYnFTMU9UMnB3SjlqZG5Iclo2cnh0eFpnX1dnTjNHbk9XeGhJRVVGd2lRNk4wS0REZnk5TUJkUjF1MjlCZF90VzhzX2dqSzZXc01ud3VGT1FNck9mTzFnU0hsV3lpS1k2WXlUamsyX1BaZmEwenc0NTBPMkotNHpRdTczREUxaWFQVWd5YWgtRTN6RjlRNGwzSGPSAcYBQVVfeXFMUEJYUEhOMVVMQVF6WmRaRHhZSTFFSnZrV0E0MGM2SWQ3NVNxUllTSFBud05NejVYZExZejc2UmQzak9IVklNX3ZYSm1KMVIwZ2JhNlY1aHFjbGRDa2pDSDU0ZG1nZHEwTlNZXzhHOTJlUzlIVE9jNGdmTi1pbmhUck1IRTJDQXlCVmVvVi1ubEduZXdONjFJN0VYU3NCTDdONFJnOHN6ZG1RWmhYZGV0azFuSVJmeGJQeUlKaC15U2ZGczdySDNR?oc=5" target="_blank">&rarr;</a>
+                <a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxPOXdvM2dmMkJlS1I3eGNOaC0zZHVXY3RKQTl0Z2xDQlRCS1hXUkNEeDJaXzRiaWw3Z2hXRFdXbnFZQUVrTmFsX0tLX2FIZ0hzcVRqU0hlSjNBYzQwQUV0RnEwYVQwOFhNVnJOQUVYOHM1V2RJTkxmUUlxMEI4YjdYUEF2d1FFYWVBVEpzdzFrME1IRENBaFVyY05TYk81ZXNLN2ljZm55TVYyZzlMNWhLcUJPdXBuT2UwM2tPdll6WjFkdjVjbDhB0gHMAUFVX3lxTE42cWlNX0lza29MbEpPZ19lSkdvVlU3OElUbHBLNklCTExaQURxOTk2RlhBTGUyYlhaRUNBV2l5ZTJ2VWdEYXVTSXYzalhRT21ZRFZzcHNsS1RMcVdlMGdNOW5zTnJkUTc4WlI5N1Y4VEhDNUdHMnZzaUVTNjAxMC1aSTVnTnFnTlYzeU8zNDJDZDg1TWxHNC1Hdm9FSHdYY3k5Y3ZBS2dlZTk5YVc3VWs4S2lnc3lBaWZYcklJZWd0bFdoelU0cE9UUmZlWg?oc=5" target="_blank">&rarr;</a>
             </div>
         </article>
-        <article class="story-card">
-            <div class="story-meta-row">
-                <span class="tag-badge tag-kolkata">
+        <article class="broadsheet-story-card">
+            <div class="story-header-line">
+                <span class="story-desk-tag">
 [kolkata_wb]                </span>
-                <span class="urgency-badge urgency-verified">VERIFIED</span>
+                <span class="story-urgency-tag story-urgency-breaking">
+                    BREAKING
+                </span>
             </div>
 
-            <h3 class="story-headline">Jadavpur University Second Campus Ground Emerges as Crucial Hub for Domestic Fixtures</h3>
-            <p class="story-summary">The Jadavpur University Campus 2nd Ground in Salt Lake has cemented its standing as a premier domestic venue for Bengal cricket fixtures. Modern pitch upgrades and expanded facilities have made it a preferred site for BCCI domestic tournaments, club leagues, and high-performance training camps. Regional cricket officials noted the venue&#39;s consistent playing conditions continue to bolster state-level player development.</p>
+            <h4 class="article-headline-secondary">Abhishek Interrogated for Four Hours Over Social Media Post Targeting CEC</h4>
+            <p class="article-text">Trinamool leader Abhishek Banerjee was subjected to a four-hour interrogation by authorities regarding a controversial social media post aimed at the Chief Election Commissioner. The session examined the intent and provenance of the remarks published online. Banerjee maintained that his critique fell within legitimate democratic discourse.</p>
 
-            <div class="takeaway-box">
-                <span class="takeaway-label">Takeaway</span>
-                The Salt Lake campus ground maintains an indispensable role in hosting domestic and state-level cricket.
+            <div class="article-takeaway-block">
+                <strong>Key Point:</strong> Abhishek faced a four-hour grilling over an online post critical of the Chief Election Commissioner.
             </div>
 
-            <div class="source-footer">
-                <span>Cricbuzz</span>
-                <a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxNeWZYMDVXOWJ4eUNBQzdaZThyOHNXdjR0Zzl1NFFHeHBVd0tHV3FScGFUb1BkN0JRaG5CMl91MjBlVkllRkdWTndEOGIwaDJPbEJ6UnNvVmJNUjhIVldzNWF0N2hsck9JMVFoazdLem9ORVQ0QUpsTFpiemhocjFJQy1jajJ0TDBoVWtud0JGZTZSMGdhVDZDNUJWZ2xzZDFDYzl6NUZBV1A4SDBpNEFpc0tfWFVlSUx1VGs3NDhDT1JxR3FiWFotVg?oc=5" target="_blank">&rarr;</a>
+            <div class="article-footer-sources">
+                <span>The Times of India</span>
+                <a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxQcmdrbi10MU5NZG02aEJpOUdDYU9MQVRnZzZOckM2ZkpvLWpRWmJTWjJBSVNXdEhiVGJWT09vYTBrZFBlVWw5Z1VyMWl5OXZXX19UX1VtbTdaY3pZR08zeU1vMWhwSHpreGY5WHhqUnRvN1hlRW1iN1FOT1VDdEMxcVB1MldLNW9OcWpuZmExcjJ0WlNoSHBwTUp5QjROWWFyR0JxakdjNEZCNTRDMTY2RDNXY0N0LWRNQVBoVlAwVHlGdnNOMUs5ei1ralAzcTNTR1HSAdcBQVVfeXFMUE54YmhtUHNrTXg1ZDNfcm9jZW5hQ3Y1dW5ZVUI1ajJ1WE5GcFQzSGZabnQxNzZjWXFOUWZ5S2pIbzZ3VktORjlmbTBLalRuVUtHbmFkZktkM3RXR1ZsU3FMWlNVRm5qMlZkbWpZMlpfS0JYYld2aGY3aVVzVWtaV3RRc0llNTdTNGk1ZHg0WFNrODlIdGVrV05Memo4b055anhld1k0YktxNGdBbE1Vc2FGNEd3LTBnY1M3Yy1rSmRraTlsclRWdFVIYjRSYl9McllWVHd0T2s?oc=5" target="_blank">&rarr;</a>
             </div>
         </article>
-        <article class="story-card">
-            <div class="story-meta-row">
-                <span class="tag-badge tag-kolkata">
+        <article class="broadsheet-story-card">
+            <div class="story-header-line">
+                <span class="story-desk-tag">
 [kolkata_wb]                </span>
-                <span class="urgency-badge urgency-breaking">BREAKING</span>
+                <span class="story-urgency-tag ">
+                    VERIFIED
+                </span>
             </div>
 
-            <h3 class="story-headline">3,700 Police Personnel Mobilized Across 124 Sites in Kolkata for Seamless Chhath Observance</h3>
-            <p class="story-summary">Kolkata Police have mounted a comprehensive security deployment featuring 3,700 personnel stationed across 124 designated Chhath Puja sites and artificial water bodies. River police, quick response teams, and disaster management squads have been placed on round-the-clock vigil along the Hooghly ghats. Dedicated vehicular diversions and pedestrian corridors have also been enacted to prevent municipal gridlock.</p>
+            <h4 class="article-headline-secondary">Gangasagar Mela Infrastructure to Receive Kumbh-Style Modernization Upgrade</h4>
+            <p class="article-text">The West Bengal government is overhauling infrastructure for the annual Gangasagar Mela, modeling facilities on the Kumbh Mela template. Upgrades will include enhanced pilgrim logistics, expanded medical outposts, improved sanitation, and automated crowd monitoring networks. The initiative seeks to bolster safety and accommodate growing footfalls at Sagar Island.</p>
 
-            <div class="takeaway-box">
-                <span class="takeaway-label">Takeaway</span>
-                A massive security blanket spanning 124 designated sites has been deployed to guarantee peaceful festival proceedings.
+            <div class="article-takeaway-block">
+                <strong>Key Point:</strong> Infrastructure for the annual Gangasagar Mela will be upgraded to match standards set by the Kumbh Mela.
             </div>
 
-            <div class="source-footer">
-                <span>NDTV</span>
-                <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxNemhOdldMMklsOFZ2UFZneUFKZGJySVdMTm55emVKX0FBbXVkcWxhYzV1bDRkbUhzQ0NWOXlzNFAyUi1Jd0xqbXZ4ZXRPMExPUkFtSExoNUR5ZmFGQmRleG9EOUZBQnM4ZkM4Z3k3eEhIOHk3NzItNkloUTd3SFlUdlBVWGxDbVFWYXFTcUlQX2hqdl9qOE5wMlpjSlhBZGxZNjhtUlZ0SWJhWTJodURUWW5ONNIBuwFBVV95cUxOZG8tMHZtSzc5SVBucVdPSHFLNFRoSFB4Z0hoZTlKQUZEY0p5S2RLZkxuT1JLZ0tYNHlKX3VaRi1FUXJURnRBaXdXWlFOVWRxbTFEMlNDUUswUXIwYXpyUkhZLWI3TGc1WXFhTWdfbmFvaTVJeUhQX2RaUUhfb293aDdmelNUNXV4MVNYaU9ucVZLSXk1RHl4alIyckt6UE9YeGZ4ek92R0hIODkwTnpsck9ySThpN2tmUHlv?oc=5" target="_blank">&rarr;</a>
+            <div class="article-footer-sources">
+                <span>The Times of India</span>
+                <a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxQM3FEWjdLY2lOOUgtZUdrTm5zY2NIQWhZZXRzQXpKcDlFQkJVTmF4aGVReVFkQ3h6NW9vS2RIOTQxeHNtVFAxaW40Y2tha05OYWpGOXZGa09pelBaVmpKZ080RXYtQ3NzZ05OVTlrS3ZBUlVJemhnTExjM1hISkQtMFRrTmFQd21iNV81QWFOakh0QS0zZFVPS3lLSVp5Sm5pdGpMZGhIckdoR2NJTWFUQTFBTlgyd245MHBvdDlySGYyWHJmbEZFbEhQODUycTg5N01QWNIB2gFBVV95cUxNb09ETEwzLXplREFqR0hJWUJKNHlkMGN2cUVySERZRHdkTE9DVThTT1EtVmNhYzF1UEJsQndSUmpRVW1XT3pNR0JIb1NIdUFVZzZYS0hCWllRcWVJMkNRc0E2MWQ5X252V0ptVU56MlJXbGZPN0lZTmZxOG5xLXpvczc5SVJyeGYtMXVreHIyTm5UQ1FIM3VKa3Z1MU5ET3lYRXFsVkFiRDQ0Y1l1Rzgxak9SdTNvOFlfeThwdjQ5b0hTTGpYdGFSd2RJU29mclJFczhtZ2lURnF2QQ?oc=5" target="_blank">&rarr;</a>
             </div>
         </article>
-        <article class="story-card">
-            <div class="story-meta-row">
-                <span class="tag-badge tag-kolkata">
+        <article class="broadsheet-story-card">
+            <div class="story-header-line">
+                <span class="story-desk-tag">
 [kolkata_wb]                </span>
-                <span class="urgency-badge urgency-verified">VERIFIED</span>
+                <span class="story-urgency-tag ">
+                    VERIFIED
+                </span>
             </div>
 
-            <h3 class="story-headline">Akashvani Kolkata Broadens Regional News Bulletin Programming and Digital Reach</h3>
-            <p class="story-summary">Public broadcaster Akashvani&#39;s Kolkata station has upgraded its programming grid to deliver enhanced regional news coverage and public interest bulletins across Bengal. The public service broadcaster is simultaneously expanding its digital transmission reach to serve wider diaspora and youth demographics. Officials reiterated the station&#39;s core mandate of broadcasting verified, culturally relevant local news.</p>
+            <h4 class="article-headline-secondary">Chief Secretary Sets Firm Deadlines for Departments to Submit Cabinet Proposals</h4>
+            <p class="article-text">West Bengal&#39;s Chief Secretary has issued strict timelines for state departments to submit pending policy proposals ahead of upcoming cabinet meetings. The directive warns against last-minute filings and demands thorough inter-departmental vetting before submission. The streamlined process is aimed at expediting key governance and welfare decisions.</p>
 
-            <div class="takeaway-box">
-                <span class="takeaway-label">Takeaway</span>
-                Akashvani Kolkata continues to modernise regional broadcasts to sustain reach against digital competitors.
+            <div class="article-takeaway-block">
+                <strong>Key Point:</strong> The Chief Secretary has enforced a strict deadline for all administrative departments to file cabinet proposals.
             </div>
 
-            <div class="source-footer">
-                <span>News On AIR</span>
-                <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxNT3dIUzdyMGxXWTZ0SlFQQXNFYmluZFVNTWtWSFQ2WWVmbW9lYmhlcnFLQ0thWHYwd2ZUNHh6REJnWDQ4RjVrQkhKSFdxZjVNckhXanVEQS1DaG11REJxWG9ENUxkTVNOcWxxalFkbzNBU3lDWWNvMlhhWXFsMDV0aVlmOG5KblBjaTJ1dg?oc=5" target="_blank">&rarr;</a>
+            <div class="article-footer-sources">
+                <span>The Times of India</span>
+                <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxQYnowSlNLbmZ6WEliWVFNRTVPSUM5M2ZGTFljSWk4MDRYem13WE1nOWlaWlNtRVRhQm1YWjlVWVAzeFpMei1iWHBFTlBkdlFTOTNYaUlMS3FBMHNWcWcxeDI3UDVFc2dEcERCRDRCcm1Mal9FOUQ4NHZnVkwxMlN2VTVWWXZodG53ZE9PNk1fOWFQcS01M2ZKNS1JSUY1Q0FpWEJYOUhWRTJxVUIyRDVCUlNXTVBuQ1BSSEk1dVZvQzJWN2xK0gHKAUFVX3lxTE1oMmtidVhEMW4zaWEzeXlNSkQtaXdtbTQzYm42WU1kYzR3TVY5NEltV2xBV3ZQNVc2S25OTFFFcXBWMlFjcmJYQzg1Q3pqekMtRTBFcTVLdVpldXd4Y2dCOXFVR1EtZklOaXRsNnk4ZEo1dHVlZlNram41cTduc05TX2NRN3JaLVNWMFh1TEJmX3AzMkZMcmxqbVpQdGNWRkhNS05kSG1FeGhIdW9OaHFrSFFIYU5yeFJYTXh2a3hfTGxfUHB5dUM0Y2c?oc=5" target="_blank">&rarr;</a>
             </div>
         </article>
     </div>
 
-    <!-- SECTION 3: INDIAN STATES & UNION TERRITORIES DIGEST -->
+    <!-- ====================================================================
+         SECTION 3: ALL INDIAN STATES & UNION TERRITORIES
+         ==================================================================== -->
 
-    <!-- SECTION 4: NATIONAL AFFAIRS, GOVERNANCE & ECONOMY -->
+    <!-- ====================================================================
+         SECTION 4: NATIONAL AFFAIRS, GOVERNANCE & ECONOMY
+         ==================================================================== -->
 
-    <!-- SECTION 5: WORLD & INTERNATIONAL DESK -->
+    <!-- ====================================================================
+         SECTION 5: WORLD & INTERNATIONAL DESK
+         ==================================================================== -->
 
-    <!-- SECTION 6: VIRAL TRENDS & SOCIAL RADAR -->
+    <!-- ====================================================================
+         SECTION 6: VIRAL TRENDS & SOCIAL RADAR
+         ==================================================================== -->
 
 </body>
 </html>
