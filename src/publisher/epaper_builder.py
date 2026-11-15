@@ -105,12 +105,9 @@ class EPaperBuilder:
         self, stories: List[Dict[str, Any]]
     ) -> Tuple[List[Dict[str, Any]], Dict[str, List[Dict[str, Any]]]]:
         """
-        Groups stories into Front Page Leads and exact desk sections.
-        Ensures ZERO stories are excluded or dropped.
+        Groups stories into balanced Front Page Leads and desk sections.
+        Ensures ZERO stories are excluded or dropped, and every desk is represented.
         """
-        # Pick top 6-8 highest scoring stories for Front Page Lead
-        front_leads = stories[: min(6, len(stories))]
-
         sections_data: Dict[str, List[Dict[str, Any]]] = {
             "kolkata_bengal": [],
             "indian_states": [],
@@ -126,6 +123,26 @@ class EPaperBuilder:
             else:
                 # Fallback to national if unrecognized section key
                 sections_data["national"].append(story)
+
+        # Build balanced Front Page Leads: pick the top story from each desk
+        front_leads: List[Dict[str, Any]] = []
+        used_ids = set()
+        desk_order = ["national", "kolkata_bengal", "indian_states", "global", "trends"]
+
+        for desk in desk_order:
+            for s in sections_data.get(desk, []):
+                if s["cluster_id"] not in used_ids:
+                    front_leads.append(s)
+                    used_ids.add(s["cluster_id"])
+                    break
+
+        # Fill up to 6 front leads from remaining highest-scoring stories
+        for s in stories:
+            if len(front_leads) >= 6:
+                break
+            if s["cluster_id"] not in used_ids:
+                front_leads.append(s)
+                used_ids.add(s["cluster_id"])
 
         return front_leads, sections_data
 

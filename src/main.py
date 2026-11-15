@@ -97,8 +97,31 @@ async def run_pipeline(
     )
 
     if limit > 0 and len(all_raw_articles) > limit:
-        logger.info(f"Applying debug limit: truncating to first {limit} articles.")
-        all_raw_articles = all_raw_articles[:limit]
+        logger.info(f"Applying balanced desk sampling for limit={limit}...")
+        by_section: Dict[str, List[Dict[str, Any]]] = {}
+        for a in all_raw_articles:
+            s_key = a.get("section", "national")
+            by_section.setdefault(s_key, []).append(a)
+
+        desk_keys = ["kolkata_bengal", "indian_states", "national", "global", "trends"]
+        for k in by_section:
+            if k not in desk_keys:
+                desk_keys.append(k)
+
+        per_section_quota = max(1, limit // len(desk_keys))
+        sampled_articles = []
+        for dk in desk_keys:
+            items = by_section.get(dk, [])
+            sampled_articles.extend(items[:per_section_quota])
+
+        # Fill any remainder up to limit
+        if len(sampled_articles) < limit:
+            remaining = [a for a in all_raw_articles if a not in sampled_articles]
+            sampled_articles.extend(remaining[: (limit - len(sampled_articles))])
+
+        all_raw_articles = sampled_articles
+        counts_summary = [f"{k}: {len([x for x in all_raw_articles if x.get('section') == k])}" for k in desk_keys]
+        logger.info(f"Balanced sampling complete: {len(all_raw_articles)} articles selected across all desks: {counts_summary}.")
 
     if not all_raw_articles:
         logger.warning("No articles fetched in this rolling window. Exiting gracefully.")
