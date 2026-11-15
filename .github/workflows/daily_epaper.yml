@@ -4,8 +4,8 @@ on:
   schedule:
     # Morning Broadsheet Edition: 06:55 AM IST (01:25 UTC) - Unique off-peak minute avoids runner queue delays
     - cron: '25 1 * * *'
-    # Evening Breaking Wrap: 05:55 PM IST (12:25 UTC) - Unique off-peak minute avoids runner queue delays
-    - cron: '25 12 * * *'
+    # Evening Breaking Wrap: 04:55 PM IST (11:25 UTC) - Unique off-peak minute avoids runner queue delays
+    - cron: '25 11 * * *'
   workflow_dispatch:
     inputs:
       skip_llm:
