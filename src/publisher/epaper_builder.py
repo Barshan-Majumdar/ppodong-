@@ -183,6 +183,10 @@ class EPaperBuilder:
             sections_data=sections_data,
             css_content=css_content,
         )
+        if "/* EPAPER_BROADSHEET_STYLES_INJECTION_POINT */" in rendered:
+            rendered = rendered.replace(
+                "/* EPAPER_BROADSHEET_STYLES_INJECTION_POINT */", css_content
+            )
         return rendered
 
     def compile_pdf(self, html_path: str, html_content: str, pdf_path: str) -> bool:
