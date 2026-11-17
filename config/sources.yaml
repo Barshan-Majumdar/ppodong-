@@ -6,7 +6,7 @@ pipeline:
   rolling_window_hours: 26 # 26 hours ensures zero boundary-loss between daily runs
   deduplication_threshold: 0.80 # Cosine similarity threshold for agglomerative clustering
   llm_batch_size: 15 # Clusters per LLM call to prevent context/token limits
-  max_daily_stories: 0 # 0 = Unlimited: find and publish as many unique stories as possible
+  max_daily_stories: 100 # Balanced top stories per daily broadsheet edition (~20 per desk)
   max_text_extract_chars: 1800
   seen_urls_ledger: "data/seen_urls.json"
 

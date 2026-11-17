@@ -102,7 +102,7 @@ async def run_pipeline(
         f"{len(trend_articles)} Trends = {len(all_raw_articles)} Total Raw Articles."
     )
 
-    effective_limit = limit if limit > 0 else config.get("pipeline", {}).get("max_daily_stories", 0)
+    effective_limit = limit if limit > 0 else config.get("pipeline", {}).get("max_daily_stories", 100)
     if effective_limit > 0 and len(all_raw_articles) > effective_limit:
         logger.info(f"Applying balanced desk sampling for daily edition (target: {effective_limit} stories)...")
         by_section: Dict[str, List[Dict[str, Any]]] = {}
