@@ -74,6 +74,9 @@ async def run_pipeline(
     seen_ledger = SeenUrlLedger(
         ledger_path=config.get("pipeline", {}).get("seen_urls_ledger", "data/seen_urls.json")
     )
+    from src.storage.story_ledger import StoryLifecycleLedger
+    story_ledger = StoryLifecycleLedger()
+
     rss_collector = RSSCollector(config, seen_ledger=seen_ledger)
     trends_collector = TrendsCollector(config)
     deduplicator = DeduplicatorRanker(config)
@@ -82,6 +85,9 @@ async def run_pipeline(
     )
     builder = EPaperBuilder()
     distributor = Distributor()
+
+    utc_now = datetime.now(timezone.utc)
+    edition_cycle = "Morning" if utc_now.hour < 7 else "Evening"
 
     # 2. Ingest News and Trends concurrently
     logger.info("\n--- STEP 1 & 2: INGESTION (RSS, GOOGLE NEWS & TRENDS) ---")
@@ -148,6 +154,9 @@ async def run_pipeline(
             c_copy["headline"] = ext.headline
             c_copy["summary"] = ext.summary
             c_copy["key_takeaway"] = ext.key_takeaway
+            c_copy["why_it_matters"] = ext.why_it_matters
+            c_copy["is_good_news"] = ext.is_good_news
+            c_copy["fact_check_verdict"] = ext.fact_check_verdict
             c_copy["urgency_tag"] = ext.urgency_tag
             c_copy["category"] = ext.category
             c_copy["state_or_region"] = ext.state_or_region
@@ -155,9 +164,19 @@ async def run_pipeline(
     else:
         synthesized_stories = await synthesizer.synthesize_all_stories(ranked_clusters)
 
+    # 4.5 Time-Awareness & Story Lifecycle Processing
+    logger.info("\n--- STEP 4.5: STORY LIFECYCLE & TIME-AWARENESS AUDIT ---")
+    for s in synthesized_stories:
+        story_ledger.process_story(s, edition_cycle=edition_cycle)
+    if not dry_run:
+        story_ledger.save()
+        logger.info("Saved data/story_lifecycle.json with edition timestamps and development statuses.")
+
     # 5. Broadsheet Newspaper Publishing (HTML, PDF, Markdown)
     logger.info("\n--- STEP 5: BROADSHEET PUBLISHING & ARCHIVING ---")
-    pub_result = builder.publish_edition(synthesized_stories, edition_date=today_str)
+    pub_result = builder.publish_edition(
+        synthesized_stories, edition_date=today_str, edition_cycle=edition_cycle
+    )
 
     # 6. Mark newly published URLs in Seen Ledger
     if not dry_run:
@@ -176,6 +195,9 @@ async def run_pipeline(
         logger.info("Skipping distribution (dry-run or skip-distribute enabled).")
 
     elapsed_time = round(time.time() - start_time, 2)
+
+    if pub_result.get("quality_checklist"):
+        logger.info("\n" + pub_result["quality_checklist"] + "\n")
 
     # Print Final Execution Summary
     logger.info("\n" + "=" * 70)

@@ -245,18 +245,112 @@ html, body {
     background: #000000;
     color: #ffffff;
     padding: 0 4px;
-    font-size: 6pt;
+    font-size: 5.5pt;
     font-weight: bold;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    display: inline-block;
 }
 
+.story-urgency-official {
+    background: #1e3a8a; /* Navy Blue */
+    color: #ffffff;
+}
+
+.story-urgency-verified {
+    background: #065f46; /* Deep Emerald */
+    color: #ffffff;
+}
+
+.story-urgency-developing,
 .story-urgency-breaking {
-    background: #b91c1c;
+    background: #b91c1c; /* Crimson */
+    color: #ffffff;
+}
+
+.story-urgency-single {
+    background: #475569; /* Slate */
     color: #ffffff;
 }
 
 .story-urgency-trending {
     background: #047857;
     color: #ffffff;
+}
+
+.story-time-tag {
+    font-size: 5.5pt;
+    font-style: italic;
+    color: #555555;
+    margin-left: 3px;
+    font-weight: 600;
+}
+
+.broadsheet-nav-bar {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    background: #eee9dc;
+    padding: 3px 6px;
+    margin-bottom: 10px;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+    font-size: 7.5pt;
+    font-weight: 700;
+}
+
+.broadsheet-nav-bar a {
+    color: #111;
+    text-decoration: none;
+}
+
+.broadsheet-nav-bar a:hover {
+    text-decoration: underline;
+    color: #991b1b;
+}
+
+.why-it-matters-block {
+    background: #eef2ff;
+    border-left: 3px solid #1e3a8a;
+    padding: 3px 6px;
+    margin: 3px 0;
+    font-size: 7pt;
+    line-height: 1.25;
+    color: #1e293b;
+}
+
+.good-news-card {
+    background: #f0fdf4;
+    border: 1px solid #059669;
+    border-left: 4px solid #059669;
+    padding: 6px 8px;
+    margin: 10px 0;
+}
+
+.fact-check-badge {
+    background: #dc2626;
+    color: #ffffff;
+    font-size: 5.5pt;
+    font-weight: bold;
+    padding: 0 3px;
+    margin-left: 3px;
+    text-transform: uppercase;
+}
+
+.front-role-tag {
+    background: #111827;
+    color: #f9fafb;
+    font-size: 5.5pt;
+    font-weight: 800;
+    padding: 0 4px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+@media print {
+    .broadsheet-nav-bar {
+        display: none !important;
+    }
 }
 
 .article-headline {

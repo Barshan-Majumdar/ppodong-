@@ -210,6 +210,55 @@ class DeduplicatorRanker:
         total_score = coverage_score + region_boost + auth_score + recency_bonus
         return round(total_score, 3)
 
+    def calculate_two_dimensional_scores(
+        self, cluster: List[Dict[str, Any]], now_ts: float
+    ) -> Tuple[float, float]:
+        """
+        Calculates separate metrics:
+        1. News Importance: Public impact, governance, policy, emergencies, human significance.
+        2. Trend Momentum: Search volume surges, social virality, Reddit engagement.
+        Prevents viral internet memes from displacing major national/regional lead developments.
+        """
+        combined_text = " ".join(
+            (a.get("title", "") + " " + a.get("lead", "") + " " + a.get("text", "")[:300]).lower()
+            for a in cluster
+        )
+
+        importance_keywords = [
+            "cabinet", "parliament", "policy", "treaty", "bilateral", "budget", "tax",
+            "reserve bank", "rbi", "inflation", "gdp", "supreme court", "high court",
+            "verdict", "disaster", "cyclone", "flood", "earthquake", "fatal", "accident",
+            "isro", "drdo", "defense", "military", "border", "election", "investigation",
+            "infrastructure", "metro", "railway", "health", "hospital", "outbreak",
+            "commission", "sanction", "minister", "prime minister", "chief minister"
+        ]
+        imp_hits = sum(1 for kw in importance_keywords if kw in combined_text)
+        cluster_size = len(cluster)
+
+        has_high_auth = any(
+            a.get("is_high_authority", False) or a.get("domain", "") in self.high_auth_domains
+            for a in cluster
+        )
+
+        # Calculate News Importance (scale 1.0 to 10.0)
+        base_importance = 3.0 + min(4.0, imp_hits * 0.7) + (2.0 if has_high_auth else 0.5)
+        base_importance += min(2.0, math.log(1 + cluster_size))
+        importance_score = round(min(10.0, base_importance), 2)
+
+        # Calculate Trend Momentum
+        is_trend = any(a.get("is_trend", False) for a in cluster)
+        trend_score = 1.0
+        if is_trend:
+            trend_score = 4.0
+            if "spike" in combined_text or "search volume" in combined_text:
+                trend_score += 2.5
+            if "upvotes" in combined_text or "reddit" in combined_text:
+                trend_score += 2.0
+            trend_score += min(1.5, cluster_size * 0.5)
+        trend_score = round(min(10.0, trend_score), 2)
+
+        return importance_score, trend_score
+
     def consolidate_cluster(
         self,
         cluster: List[Dict[str, Any]],
@@ -249,25 +298,51 @@ class DeduplicatorRanker:
                 canonical_urls.append(cu)
 
         score = self.calculate_editorial_score(cluster, now_ts)
+        importance_score, trend_score = self.calculate_two_dimensional_scores(cluster, now_ts)
 
         # Region tagging
         region = primary.get("region", "national")
         section = primary.get("section", "national")
 
-        # Detect regional state if in indian_states section
+        # Detect regional state & Bengal districts
         state_tag = ""
         full_text = f"{primary.get('title', '')} {primary.get('lead', '')}"
-        states = [
-            "Delhi", "Maharashtra", "Uttar Pradesh", "Bihar", "Odisha", "Assam", 
-            "Punjab", "Haryana", "Rajasthan", "Gujarat", "Karnataka", "Tamil Nadu", 
-            "Telangana", "Andhra Pradesh", "Kerala", "Madhya Pradesh", "Chhattisgarh", 
-            "Goa", "Uttarakhand", "Himachal Pradesh", "Jammu and Kashmir", "Jharkhand", 
-            "Manipur", "Meghalaya", "Tripura", "Sikkim", "Nagaland", "Arunachal Pradesh", "Mizoram"
+
+        bengal_districts = [
+            "Darjeeling", "Siliguri", "Howrah", "Hooghly", "Asansol", "Durgapur",
+            "Sundarbans", "Malda", "Murshidabad", "Nadia", "Birbhum", "Bankura",
+            "Purulia", "Jalpaiguri", "Cooch Behar", "Kalimpong", "Alipurduar",
+            "Medinipur", "Jhargram"
         ]
-        for st in states:
-            if re.search(rf"\b{st}\b", full_text, re.IGNORECASE):
-                state_tag = st.upper()
+        for dist in bengal_districts:
+            if re.search(rf"\b{dist}\b", full_text, re.IGNORECASE):
+                state_tag = f"BENGAL: {dist.upper()}"
                 break
+
+        if not state_tag:
+            northeast_states = [
+                "Assam", "Tripura", "Manipur", "Meghalaya", "Nagaland", "Mizoram",
+                "Arunachal Pradesh", "Sikkim"
+            ]
+            for ne in northeast_states:
+                if re.search(rf"\b{ne}\b", full_text, re.IGNORECASE):
+                    state_tag = f"NORTHEAST: {ne.upper()}"
+                    break
+
+        if not state_tag:
+            states = [
+                "Delhi", "Maharashtra", "Uttar Pradesh", "Bihar", "Odisha", 
+                "Punjab", "Haryana", "Rajasthan", "Gujarat", "Karnataka", "Tamil Nadu", 
+                "Telangana", "Andhra Pradesh", "Kerala", "Madhya Pradesh", "Chhattisgarh", 
+                "Goa", "Uttarakhand", "Himachal Pradesh", "Jammu and Kashmir", "Jharkhand"
+            ]
+            for st in states:
+                if re.search(rf"\b{st}\b", full_text, re.IGNORECASE):
+                    state_tag = st.upper()
+                    break
+
+        if not state_tag and ("kolkata" in full_text.lower() or region == "kolkata_wb"):
+            state_tag = "KOLKATA"
 
         return {
             "cluster_id": f"CLUST_{cluster_index:04d}_{primary.get('id', '')[:8]}",
@@ -283,6 +358,8 @@ class DeduplicatorRanker:
             "state_tag": state_tag,
             "primary_text": primary.get("text", "")[:1800],
             "score": score,
+            "importance_score": importance_score,
+            "trend_score": trend_score,
             "published_at": primary.get("published_at", datetime.now(timezone.utc).isoformat()),
             "timestamp": primary.get("timestamp", now_ts),
             "is_trend": primary.get("is_trend", False),

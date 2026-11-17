@@ -20,21 +20,32 @@
         </div>
 
         <h1 class="newspaper-title">The Daily Chronicle</h1>
-        <div class="newspaper-motto">A National &amp; Bengal Journal of Record • 24/7 Autonomous Intelligence</div>
+        <div class="newspaper-motto">Independent Digital Broadsheet • Multi-Source Wire Curation &amp; Public Records Archive</div>
 
         <div class="dateline-bottom">
             <span><strong>EDITION:</strong> {{ edition_date }}{% if edition_cycle %} • {{ edition_cycle | upper }}{% endif %}</span>
-            <span><strong>CIRCULATION:</strong> Rolling 24-Hour Verified Archive</span>
-            <span class="stat-highlight">{{ total_stories_count }} Stories • {{ total_sources_count }} Media Outlets</span>
-            <span><strong>PRICE:</strong> Free &amp; Open Access</span>
+            <span>⏱ <strong>READING TIME:</strong> {{ reading_time_mins }} Mins</span>
+            <span class="stat-highlight">{{ total_stories_count }} Curated Reports • {{ total_sources_count }} Media Outlets</span>
+            <span><strong>PRICE:</strong> Open Access</span>
         </div>
     </header>
+
+    <!-- Interactive Navigation Bar (Web Edition) -->
+    <nav class="broadsheet-nav-bar">
+        <a href="#front-page">★ Front Page</a>
+        <a href="#kolkata-bengal">❖ Kolkata &amp; Districts</a>
+        <a href="#indian-states">❖ Indian States</a>
+        <a href="#national">❖ National Affairs</a>
+        <a href="#global">❖ World Desk</a>
+        {% if good_news_story %}<a href="#good-news" style="color: #065f46; font-weight: bold;">🌱 Good News</a>{% endif %}
+        <a href="#trends">❖ Viral Trends</a>
+    </nav>
 
     <!-- ====================================================================
          SECTION 1: FRONT PAGE LEAD STORIES
          ==================================================================== -->
     {% if front_leads %}
-    <div class="broadsheet-section-header">
+    <div class="broadsheet-section-header" id="front-page">
         <span class="section-title">★ Front Page — National &amp; Global Lead Dispatches</span>
         <span class="section-story-badge">{{ front_leads | length }} Lead Clusters</span>
     </div>
@@ -43,8 +54,13 @@
     {% set hero = front_leads[0] %}
     <section class="front-page-lead-hero">
         <div class="hero-tagline">
-            {% if hero.state_or_region %}[{{ hero.state_or_region }}]{% else %}[LEAD REPORT]{% endif %}
-            • {{ hero.urgency_tag }} • {{ hero.articles_count }} Media Outlets Reporting
+            <span class="front-role-tag">{{ hero.front_page_role or 'LEAD STORY' }}</span>
+            • {% if hero.state_or_region %}[{{ hero.state_or_region }}]{% else %}[LEAD REPORT]{% endif %}
+            • <span class="story-urgency-tag {% if hero.urgency_tag == 'OFFICIAL UPDATE' %}story-urgency-official{% elif hero.urgency_tag == 'CROSS-VERIFIED' %}story-urgency-verified{% elif hero.urgency_tag == 'DEVELOPING' or hero.urgency_tag == 'BREAKING' %}story-urgency-developing{% else %}story-urgency-single{% endif %}">{{ hero.urgency_tag }}</span>
+            {% if hero.development_status and hero.development_status != 'FIRST REPORT' %}
+            <span class="story-time-tag">⟳ {{ hero.development_status }}</span>
+            {% endif %}
+            • {{ hero.articles_count }} Media Outlets Reporting
         </div>
         <h2 class="hero-headline">{{ hero.headline }}</h2>
         <div class="hero-body-grid">
@@ -53,6 +69,11 @@
                 {% if hero.key_takeaway %}
                 <div class="article-takeaway-block">
                     <strong>Editorial Takeaway:</strong> {{ hero.key_takeaway }}
+                </div>
+                {% endif %}
+                {% if hero.why_it_matters %}
+                <div class="why-it-matters-block">
+                    <strong>Why This Matters:</strong> {{ hero.why_it_matters }}
                 </div>
                 {% endif %}
                 <div class="article-footer-sources">
@@ -71,12 +92,18 @@
         {% for story in front_leads[1:] %}
         <article class="broadsheet-story-card">
             <div class="story-header-line">
+                {% if story.front_page_role %}
+                <span class="front-role-tag">{{ story.front_page_role }}</span>
+                {% endif %}
                 <span class="story-desk-tag">
                     {% if story.state_or_region %}[{{ story.state_or_region }}]{% else %}[{{ story.category }}]{% endif %}
                 </span>
-                <span class="story-urgency-tag {% if story.urgency_tag == 'BREAKING' %}story-urgency-breaking{% elif story.urgency_tag == 'TRENDING' %}story-urgency-trending{% endif %}">
+                <span class="story-urgency-tag {% if story.urgency_tag == 'OFFICIAL UPDATE' %}story-urgency-official{% elif story.urgency_tag == 'CROSS-VERIFIED' %}story-urgency-verified{% elif story.urgency_tag == 'DEVELOPING' or story.urgency_tag == 'BREAKING' %}story-urgency-developing{% else %}story-urgency-single{% endif %}">
                     {{ story.urgency_tag }}
                 </span>
+                {% if story.development_status and story.development_status != 'FIRST REPORT' %}
+                <span class="story-time-tag">⟳ {{ story.development_status }}</span>
+                {% endif %}
                 <span>{{ story.articles_count }} Sources</span>
             </div>
 
@@ -86,6 +113,11 @@
             {% if story.key_takeaway %}
             <div class="article-takeaway-block">
                 <strong>Takeaway:</strong> {{ story.key_takeaway }}
+            </div>
+            {% endif %}
+            {% if story.why_it_matters %}
+            <div class="why-it-matters-block">
+                <strong>Why This Matters:</strong> {{ story.why_it_matters }}
             </div>
             {% endif %}
 
@@ -102,10 +134,35 @@
     {% endif %}
 
     <!-- ====================================================================
+         THE GOOD NEWS CORNER (Point 11: Progress, Discoveries & Community)
+         ==================================================================== -->
+    {% if good_news_story %}
+    <div class="good-news-card" id="good-news">
+        <div class="story-header-line">
+            <span style="color: #065f46; font-weight: 800; font-size: 7.5pt; text-transform: uppercase;">🌱 THE GOOD NEWS CORNER • Breakthroughs, Conservation &amp; Community Progress</span>
+            <span class="story-urgency-tag story-urgency-verified">VERIFIED PROGRESS</span>
+        </div>
+        <h4 style="font-size: 10.5pt; font-weight: 800; margin: 3px 0 4px 0; color: #064e3b; line-height: 1.2;">{{ good_news_story.headline }}</h4>
+        <p class="article-text" style="color: #1f2937; margin-bottom: 4px;">{{ good_news_story.summary }}</p>
+        {% if good_news_story.key_takeaway %}
+        <div class="article-takeaway-block" style="background: #e6f4ea; border-left: 3px solid #059669;">
+            <strong>Positive Impact:</strong> {{ good_news_story.key_takeaway }}
+        </div>
+        {% endif %}
+        <div class="article-footer-sources">
+            <span>Sources: {{ good_news_story.sources | join(', ') | truncate(45) }}</span>
+            {% if good_news_story.urls and good_news_story.urls[0] %}
+            <a href="{{ good_news_story.urls[0] }}" target="_blank">Full Report &rarr;</a>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- ====================================================================
          SECTION 2: KOLKATA & WEST BENGAL DESK
          ==================================================================== -->
     {% if sections_data.kolkata_bengal %}
-    <div class="broadsheet-section-header">
+    <div class="broadsheet-section-header" id="kolkata-bengal">
         <span class="section-title">❖ Kolkata &amp; West Bengal Desk</span>
         <span class="section-story-badge">{{ sections_data.kolkata_bengal | length }} Verified Reports</span>
     </div>
@@ -117,9 +174,12 @@
                 <span class="story-desk-tag">
                     {% if story.state_or_region %}[{{ story.state_or_region }}]{% else %}[KOLKATA / WB]{% endif %}
                 </span>
-                <span class="story-urgency-tag {% if story.urgency_tag == 'BREAKING' %}story-urgency-breaking{% elif story.urgency_tag == 'TRENDING' %}story-urgency-trending{% endif %}">
+                <span class="story-urgency-tag {% if story.urgency_tag == 'OFFICIAL UPDATE' %}story-urgency-official{% elif story.urgency_tag == 'CROSS-VERIFIED' %}story-urgency-verified{% elif story.urgency_tag == 'DEVELOPING' or story.urgency_tag == 'BREAKING' %}story-urgency-developing{% else %}story-urgency-single{% endif %}">
                     {{ story.urgency_tag }}
                 </span>
+                {% if story.development_status and story.development_status != 'FIRST REPORT' %}
+                <span class="story-time-tag">⟳ {{ story.development_status }}</span>
+                {% endif %}
             </div>
 
             <h4 class="article-headline-secondary">{{ story.headline }}</h4>
@@ -146,7 +206,7 @@
          SECTION 3: ALL INDIAN STATES & UNION TERRITORIES
          ==================================================================== -->
     {% if sections_data.indian_states %}
-    <div class="broadsheet-section-header">
+    <div class="broadsheet-section-header" id="indian-states">
         <span class="section-title">❖ Indian States &amp; Union Territories Digest</span>
         <span class="section-story-badge">{{ sections_data.indian_states | length }} Regional Dispatches</span>
     </div>
@@ -158,9 +218,12 @@
                 <span class="story-desk-tag">
                     {% if story.state_tag %}[{{ story.state_tag }}]{% elif story.state_or_region %}[{{ story.state_or_region }}]{% else %}[STATE]{% endif %}
                 </span>
-                <span class="story-urgency-tag {% if story.urgency_tag == 'BREAKING' %}story-urgency-breaking{% elif story.urgency_tag == 'TRENDING' %}story-urgency-trending{% endif %}">
+                <span class="story-urgency-tag {% if story.urgency_tag == 'OFFICIAL UPDATE' %}story-urgency-official{% elif story.urgency_tag == 'CROSS-VERIFIED' %}story-urgency-verified{% elif story.urgency_tag == 'DEVELOPING' or story.urgency_tag == 'BREAKING' %}story-urgency-developing{% else %}story-urgency-single{% endif %}">
                     {{ story.urgency_tag }}
                 </span>
+                {% if story.development_status and story.development_status != 'FIRST REPORT' %}
+                <span class="story-time-tag">⟳ {{ story.development_status }}</span>
+                {% endif %}
             </div>
 
             <h4 class="article-headline-secondary">{{ story.headline }}</h4>
@@ -187,7 +250,7 @@
          SECTION 4: NATIONAL AFFAIRS, GOVERNANCE & ECONOMY
          ==================================================================== -->
     {% if sections_data.national %}
-    <div class="broadsheet-section-header">
+    <div class="broadsheet-section-header" id="national">
         <span class="section-title">❖ National Affairs, Governance &amp; Economy</span>
         <span class="section-story-badge">{{ sections_data.national | length }} Policy &amp; National Stories</span>
     </div>
@@ -197,9 +260,12 @@
         <article class="broadsheet-story-card">
             <div class="story-header-line">
                 <span class="story-desk-tag">[NATIONAL]</span>
-                <span class="story-urgency-tag {% if story.urgency_tag == 'BREAKING' %}story-urgency-breaking{% elif story.urgency_tag == 'TRENDING' %}story-urgency-trending{% endif %}">
+                <span class="story-urgency-tag {% if story.urgency_tag == 'OFFICIAL UPDATE' %}story-urgency-official{% elif story.urgency_tag == 'CROSS-VERIFIED' %}story-urgency-verified{% elif story.urgency_tag == 'DEVELOPING' or story.urgency_tag == 'BREAKING' %}story-urgency-developing{% else %}story-urgency-single{% endif %}">
                     {{ story.urgency_tag }}
                 </span>
+                {% if story.development_status and story.development_status != 'FIRST REPORT' %}
+                <span class="story-time-tag">⟳ {{ story.development_status }}</span>
+                {% endif %}
             </div>
 
             <h4 class="article-headline-secondary">{{ story.headline }}</h4>
@@ -226,7 +292,7 @@
          SECTION 5: WORLD & INTERNATIONAL DESK
          ==================================================================== -->
     {% if sections_data.global %}
-    <div class="broadsheet-section-header">
+    <div class="broadsheet-section-header" id="global">
         <span class="section-title">❖ World &amp; International Affairs Desk</span>
         <span class="section-story-badge">{{ sections_data.global | length }} Global Dispatches</span>
     </div>
@@ -236,9 +302,12 @@
         <article class="broadsheet-story-card">
             <div class="story-header-line">
                 <span class="story-desk-tag">[GLOBAL]</span>
-                <span class="story-urgency-tag {% if story.urgency_tag == 'BREAKING' %}story-urgency-breaking{% elif story.urgency_tag == 'TRENDING' %}story-urgency-trending{% endif %}">
+                <span class="story-urgency-tag {% if story.urgency_tag == 'OFFICIAL UPDATE' %}story-urgency-official{% elif story.urgency_tag == 'CROSS-VERIFIED' %}story-urgency-verified{% elif story.urgency_tag == 'DEVELOPING' or story.urgency_tag == 'BREAKING' %}story-urgency-developing{% else %}story-urgency-single{% endif %}">
                     {{ story.urgency_tag }}
                 </span>
+                {% if story.development_status and story.development_status != 'FIRST REPORT' %}
+                <span class="story-time-tag">⟳ {{ story.development_status }}</span>
+                {% endif %}
             </div>
 
             <h4 class="article-headline-secondary">{{ story.headline }}</h4>
@@ -265,7 +334,7 @@
          SECTION 6: VIRAL TRENDS & SOCIAL RADAR
          ==================================================================== -->
     {% if sections_data.trends %}
-    <div class="broadsheet-section-header">
+    <div class="broadsheet-section-header" id="trends">
         <span class="section-title">❖ Viral Trends &amp; Social Sentiment Radar</span>
         <span class="section-story-badge">{{ sections_data.trends | length }} Trends Monitored</span>
     </div>
@@ -274,8 +343,16 @@
         {% for story in sections_data.trends %}
         <article class="broadsheet-story-card">
             <div class="story-header-line">
-                <span class="story-desk-tag">[TRENDING]</span>
-                <span class="story-urgency-tag story-urgency-trending">VIRAL</span>
+                <span class="story-desk-tag">[{{ story.trend_subcategory or 'What\'s Trending' }}]</span>
+                <span class="story-urgency-tag {% if story.urgency_tag == 'OFFICIAL UPDATE' %}story-urgency-official{% elif story.urgency_tag == 'CROSS-VERIFIED' %}story-urgency-verified{% elif story.urgency_tag == 'DEVELOPING' or story.urgency_tag == 'BREAKING' %}story-urgency-developing{% else %}story-urgency-single{% endif %}">
+                    {{ story.urgency_tag }}
+                </span>
+                {% if story.fact_check_verdict %}
+                <span class="fact-check-badge">FACT CHECK: {{ story.fact_check_verdict }}</span>
+                {% endif %}
+                {% if story.development_status and story.development_status != 'FIRST REPORT' %}
+                <span class="story-time-tag">⟳ {{ story.development_status }}</span>
+                {% endif %}
             </div>
 
             <h4 class="article-headline-secondary">{{ story.headline }}</h4>

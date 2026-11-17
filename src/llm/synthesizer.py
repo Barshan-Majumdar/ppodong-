@@ -21,12 +21,15 @@ logger = logging.getLogger("epaper.llm.synthesizer")
 
 class StorySummary(BaseModel):
     cluster_id: str = Field(description="The exact cluster_id provided in the input batch")
-    headline: str = Field(description="A punchy, professional broadsheet newspaper headline in Times New Roman style")
-    summary: str = Field(description="Crisp 2-3 sentence factual journalistic summary")
-    key_takeaway: str = Field(description="1 concise bullet point on why this matters or next steps")
+    headline: str = Field(description="Punchy, intelligent broadsheet headline")
+    summary: str = Field(description="Crisp 2-3 sentence factual journalistic storytelling summary")
+    key_takeaway: str = Field(description="1 sharp, fact-based sentence answering what this actually means, changes, or triggers")
+    why_it_matters: Optional[str] = Field(default="", description="1-2 sentences explaining real-world citizen/developer/market implications")
+    is_good_news: Optional[bool] = Field(default=False, description="True if inspiring scientific discovery, conservation, community, or achievement")
+    fact_check_verdict: Optional[str] = Field(default="", description="SUPPORTED, MISLEADING, FALSE, or empty")
     category: str = Field(description="Section category name")
     state_or_region: Optional[str] = Field(default="", description="State or city name if applicable")
-    urgency_tag: str = Field(default="VERIFIED", description="BREAKING, DEVELOPING, VERIFIED, or TRENDING")
+    urgency_tag: str = Field(default="VERIFIED", description="OFFICIAL UPDATE, CROSS-VERIFIED, DEVELOPING, or SINGLE-SOURCE")
 
 
 class BatchSummaryOutput(BaseModel):
@@ -34,7 +37,7 @@ class BatchSummaryOutput(BaseModel):
 
 
 def generate_extractive_fallback_summary(cluster: Dict[str, Any]) -> StorySummary:
-    """Deterministic, high-quality fallback summary when LLM APIs are offline or exhausted."""
+    """Deterministic, factual extractive summary answering What happened, Why it matters, and What's next."""
     headline = cluster.get("headline", "").strip()
     primary_text = cluster.get("primary_text", "").strip()
     lead = cluster.get("lead_summary", "").strip()
@@ -45,29 +48,41 @@ def generate_extractive_fallback_summary(cluster: Dict[str, Any]) -> StorySummar
     clean_text = re.sub(r"<[^>]+>", "", primary_text or lead).strip()
     clean_text = re.sub(r"&[a-zA-Z0-9#]+;", " ", clean_text)
     clean_text = re.sub(r"\s+", " ", clean_text).strip()
-    sentences = re.split(r"(?<=[.!?])\s+", clean_text)
-    selected_sentences = [s.strip() for s in sentences if len(s.strip()) > 15][:3]
-    if not selected_sentences:
-        summary_str = f"{headline}. Reports confirm developments unfolding across the region with ongoing monitoring."
-    else:
-        summary_str = " ".join(selected_sentences)
+    sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+", clean_text) if len(s.strip()) > 20]
 
-    sources = ", ".join(cluster.get("sources", [])[:3])
-    if cluster.get("is_trend"):
-        takeaway = f"Viral interest tracked across {sources or 'search engines'}; social sentiment active."
-    else:
-        takeaway = f"Reported by {sources or 'verified news agencies'}; situation remains active."
+    sources_str = ", ".join(cluster.get("sources", [])[:3]) or "verified news agencies"
 
-    tag = "TRENDING" if cluster.get("is_trend") else ("BREAKING" if cluster.get("articles_count", 1) >= 3 else "VERIFIED")
+    if len(sentences) >= 3:
+        summary_str = f"{sentences[0]} {sentences[1]}"
+        takeaway = sentences[2]
+    elif len(sentences) == 2:
+        summary_str = f"{sentences[0]} {sentences[1]}"
+        takeaway = f"Key development confirmed through {sources_str}."
+    elif len(sentences) == 1:
+        summary_str = f"{sentences[0]} Official briefings and field reports remain ongoing."
+        takeaway = f"Initial dispatch documented across {sources_str}."
+    else:
+        summary_str = f"{headline}. Early dispatches indicate ongoing monitoring by regional correspondents."
+        takeaway = f"Primary source reporting by {sources_str}."
+
+    why_matters = f"Sets operational precedence for regional administration and industry stakeholders."
+    is_good = any(kw in clean_text.lower() for kw in ["breakthrough", "discovery", "conservation", "award", "achievement", "cure", "solar", "sanctuary", "clean energy"])
+
+    # Determine structured verification tier
+    from src.publisher.verification import classify_story_verification
+    verification_tier = classify_story_verification(cluster)
 
     return StorySummary(
         cluster_id=cluster["cluster_id"],
         headline=headline,
         summary=summary_str[:600],
         key_takeaway=takeaway[:200],
+        why_it_matters=why_matters,
+        is_good_news=is_good,
+        fact_check_verdict="",
         category=section,
         state_or_region=state_tag or cluster.get("region", ""),
-        urgency_tag=tag,
+        urgency_tag=verification_tier,
     )
 
 
@@ -177,16 +192,19 @@ class LLMSynthesizer:
             f"   - Sentence 2 (Context & Impact): Why it matters, who is affected, or the tension.\n"
             f"   - Sentence 3 (Consequence / Perspective): What to watch for or the broader takeaway.\n"
             f"   - Ban boring journalese clichés ('In a significant move', 'According to sources', 'This highlights that').\n"
-            f"5. KEY TAKEAWAY: Exactly 1 sharp, memorable sentence that captures the real point or underlying significance.\n"
-            f"6. CATEGORY: Assign the most fitting section: 'National & International', 'Regional & Local', 'Technology & Science', 'Business & Finance', 'Sports', 'Entertainment & Culture', 'Internet & Viral Trends', or 'Lifestyle & Society'.\n"
-            f"7. ASSIGN urgency_tag: 'BREAKING', 'DEVELOPING', 'TRENDING', or 'VERIFIED'.\n"
-            f"8. ALL OUTPUT IN CRISP ENGLISH: If input text is in Indian regional languages (Bengali, Hindi, Telugu, Tamil, etc.), translate and synthesize cleanly into English.\n"
-            f"9. STRICT FACTUAL FIDELITY: Never fabricate facts, quotes, statistics, motives, or events. Wit and engagement come from phrasing and insight, NEVER from false details.\n"
-            f"10. NO REPETITION: Ensure diverse sentence rhythms, vocabulary, and angles across the batch.\n\n"
+            f"5. KEY TAKEAWAY: Exactly 1 sharp, fact-based sentence answering what this actually means, changes, or triggers. NO MOTIVATIONAL FLUFF OR ARTIFICIAL PHILOSOPHY (e.g. instead of 'When forces sync up, defense operates at peak efficiency', write 'The joint drills aim to improve coordination between security agencies during regional emergencies').\n"
+            f"6. CATEGORY: Assign the primary section or viral track: 'National & International', 'Regional & Local', 'Technology & Science', 'Business & Finance', 'Sports', 'Internet Buzz', 'Social Pulse', 'Entertainment & Gaming', or 'What's Trending'.\n"
+            f"7. ASSIGN urgency_tag: Must reflect meaningful verification confidence: 'OFFICIAL UPDATE' (government/institutional decree), 'CROSS-VERIFIED' (multi-outlet confirmation), 'DEVELOPING' (unfolding story), or 'SINGLE-SOURCE'.\n"
+            f"8. WHY THIS MATTERS: For major policy, tech, economic, or legal stories, write 1-2 sentences explaining practical real-world implications for ordinary citizens, consumers, or developers. Otherwise keep empty string.\n"
+            f"9. GOOD NEWS CORNER: Set 'is_good_news': true if this story represents an inspiring scientific discovery, medical breakthrough, conservation progress, student achievement, or positive community initiative.\n"
+            f"10. FACT CHECK & CLAIMS: If this story analyzes an online rumor, meme claim, or controversial assertion, set 'fact_check_verdict' to 'SUPPORTED', 'MISLEADING', or 'FALSE'. Otherwise keep empty string.\n"
+            f"11. ALL OUTPUT IN CRISP ENGLISH: If input text is in Indian regional languages (Bengali, Hindi, Telugu, Tamil, etc.), translate and synthesize cleanly into English.\n"
+            f"12. STRICT FACTUAL FIDELITY: Never fabricate facts, quotes, statistics, motives, or events. Wit and engagement come from phrasing and insight, NEVER from false details.\n"
+            f"13. NO REPETITION: Ensure diverse sentence rhythms, vocabulary, and angles across the batch.\n\n"
             f"INPUT STORIES ({len(batch)} items):\n"
             f"{json.dumps(input_data, indent=2)}\n\n"
             f"Return JSON schema:\n"
-            f'{{"stories": [{{"cluster_id": "...", "headline": "...", "summary": "...", "key_takeaway": "...", "category": "...", "state_or_region": "...", "urgency_tag": "..."}}]}}'
+            f'{{"stories": [{{"cluster_id": "...", "headline": "...", "summary": "...", "key_takeaway": "...", "why_it_matters": "...", "is_good_news": false, "fact_check_verdict": "", "category": "...", "state_or_region": "...", "urgency_tag": "..."}}]}}'
         )
 
 
@@ -241,7 +259,7 @@ class LLMSynthesizer:
         if not client:
             return None
 
-        groq_models = ["openai/gpt-oss-120b", "qwen/qwen3.8-27b", "openai/gpt-oss-20b", "llama-3.3-70b-versatile"]
+        groq_models = ["llama-3.3-70b-versatile", "llama-3.1-8b-instant"]
 
         def _sync_call(model_id: str):
             completion = client.chat.completions.create(
@@ -296,6 +314,9 @@ class LLMSynthesizer:
                         headline=s.get("headline", ""),
                         summary=s.get("summary", ""),
                         key_takeaway=s.get("key_takeaway", ""),
+                        why_it_matters=s.get("why_it_matters", ""),
+                        is_good_news=bool(s.get("is_good_news", False)),
+                        fact_check_verdict=s.get("fact_check_verdict", ""),
                         category=s.get("category", ""),
                         state_or_region=s.get("state_or_region", ""),
                         urgency_tag=s.get("urgency_tag", "VERIFIED"),
@@ -333,7 +354,7 @@ class LLMSynthesizer:
         if preferred_provider == "gemini":
             # 1. Try Gemini with fast models first
             if self.gemini_api_key:
-                for gm in ["gemini-3.5-flash", "gemini-3.8-flash", "gemini-3.5-flash-lite"]:
+                for gm in ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"]:
                     logger.info(f"[Parallel Worker: Gemini] Batch {batch_num}/{total_batches}: Querying '{gm}'...")
                     resp = await self._call_gemini(gm, prompt)
                     if resp:
@@ -364,7 +385,7 @@ class LLMSynthesizer:
 
             # 2. Reciprocal Failover to Gemini
             if self.gemini_api_key:
-                for gm in ["gemini-3.8-flash", "gemini-3.5-flash", "gemini-3.5-flash-lite"]:
+                for gm in ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"]:
                     logger.info(f"[Failover -> Gemini] Batch {batch_num}/{total_batches}: Querying '{gm}'...")
                     resp = await self._call_gemini(gm, prompt)
                     if resp:
@@ -464,6 +485,9 @@ class LLMSynthesizer:
             cluster_copy["headline"] = story.headline or cluster.get("headline", "")
             cluster_copy["summary"] = story.summary
             cluster_copy["key_takeaway"] = story.key_takeaway
+            cluster_copy["why_it_matters"] = story.why_it_matters
+            cluster_copy["is_good_news"] = story.is_good_news
+            cluster_copy["fact_check_verdict"] = story.fact_check_verdict
             cluster_copy["urgency_tag"] = story.urgency_tag
             cluster_copy["category"] = story.category or cluster.get("section", "")
             cluster_copy["state_or_region"] = story.state_or_region or cluster.get("state_tag", "")

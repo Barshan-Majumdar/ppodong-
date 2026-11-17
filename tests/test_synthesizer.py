@@ -24,7 +24,15 @@ def test_extractive_fallback_summary():
     assert "Bengal Global Business Summit" in summary.headline
     assert len(summary.summary) > 20
     assert summary.key_takeaway != ""
-    assert summary.urgency_tag in ["BREAKING", "DEVELOPING", "VERIFIED", "TRENDING"]
+    assert summary.urgency_tag in [
+        "OFFICIAL UPDATE",
+        "CROSS-VERIFIED",
+        "DEVELOPING",
+        "SINGLE-SOURCE",
+        "BREAKING",
+        "VERIFIED",
+        "TRENDING",
+    ]
 
 
 @pytest.mark.asyncio

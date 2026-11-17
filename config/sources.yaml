@@ -64,6 +64,9 @@ sections:
       - name: "ABP Ananda - Kolkata & Bengal News"
         url: "https://bengali.abplive.com/news/kolkata/feed"
         type: "rss"
+      - name: "Google News - West Bengal Districts & North Bengal"
+        url: "https://news.google.com/rss/search?q=(Siliguri+OR+Darjeeling+OR+Howrah+OR+Hooghly+OR+Asansol+OR+Durgapur+OR+Sundarbans+OR+Malda)+when:1d&hl=en-IN&gl=IN&ceid=IN:en"
+        type: "google_news"
 
   indian_states:
     name: "Indian States & Union Territories Digest"
@@ -114,6 +117,9 @@ sections:
         type: "google_news"
       - name: "Google News - India Science & Technology"
         url: "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=en-IN&gl=IN&ceid=IN:en"
+        type: "google_news"
+      - name: "Google News - Science Breakthroughs, Innovation & Conservation"
+        url: "https://news.google.com/rss/search?q=(ISRO+OR+%22scientific+discovery%22+OR+%22conservation+initiative%22+OR+%22medical+breakthrough%22)+when:1d&hl=en-IN&gl=IN&ceid=IN:en"
         type: "google_news"
 
   global:
