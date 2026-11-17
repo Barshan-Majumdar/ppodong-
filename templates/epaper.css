@@ -245,31 +245,35 @@ html, body {
     background: #000000;
     color: #ffffff;
     padding: 0 4px;
-    font-size: 5.5pt;
+    font-size: 6pt;
     font-weight: bold;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
     display: inline-block;
 }
 
+.story-urgency-breaking,
+.story-urgency-developing {
+    background: #b91c1c;
+    color: #ffffff;
+}
+
+.story-urgency-trending,
+.story-urgency-viral {
+    background: #047857;
+    color: #ffffff;
+}
+
 .story-urgency-official {
-    background: #1e3a8a; /* Navy Blue */
+    background: #000000;
     color: #ffffff;
 }
 
 .story-urgency-verified {
-    background: #065f46; /* Deep Emerald */
-    color: #ffffff;
-}
-
-.story-urgency-developing,
-.story-urgency-breaking {
-    background: #b91c1c; /* Crimson */
+    background: #000000;
     color: #ffffff;
 }
 
 .story-urgency-single {
-    background: #475569; /* Slate */
+    background: #000000;
     color: #ffffff;
 }
 

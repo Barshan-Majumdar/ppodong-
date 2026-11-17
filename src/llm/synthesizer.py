@@ -68,9 +68,17 @@ def generate_extractive_fallback_summary(cluster: Dict[str, Any]) -> StorySummar
     why_matters = f"Sets operational precedence for regional administration and industry stakeholders."
     is_good = any(kw in clean_text.lower() for kw in ["breakthrough", "discovery", "conservation", "award", "achievement", "cure", "solar", "sanctuary", "clean energy"])
 
-    # Determine structured verification tier
+    # Determine broadsheet urgency tag and verification tier
     from src.publisher.verification import classify_story_verification
     verification_tier = classify_story_verification(cluster)
+    if cluster.get("is_trend"):
+        urgency_tag = "TRENDING"
+    elif cluster.get("articles_count", 1) >= 3 or cluster.get("urgency_tag") in ("BREAKING", "DEVELOPING"):
+        urgency_tag = "BREAKING"
+    elif verification_tier == "DEVELOPING":
+        urgency_tag = "DEVELOPING"
+    else:
+        urgency_tag = "VERIFIED"
 
     return StorySummary(
         cluster_id=cluster["cluster_id"],
@@ -82,7 +90,7 @@ def generate_extractive_fallback_summary(cluster: Dict[str, Any]) -> StorySummar
         fact_check_verdict="",
         category=section,
         state_or_region=state_tag or cluster.get("region", ""),
-        urgency_tag=verification_tier,
+        urgency_tag=urgency_tag,
     )
 
 

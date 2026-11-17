@@ -52,12 +52,8 @@
     {% set hero = front_leads[0] %}
     <section class="front-page-lead-hero">
         <div class="hero-tagline">
-            <span class="front-role-tag">{{ hero.front_page_role or 'LEAD STORY' }}</span>
-            • {% if hero.state_or_region %}[{{ hero.state_or_region }}]{% else %}[LEAD REPORT]{% endif %}
-            • <span class="story-urgency-tag {% if hero.urgency_tag == 'OFFICIAL UPDATE' %}story-urgency-official{% elif hero.urgency_tag == 'CROSS-VERIFIED' %}story-urgency-verified{% elif hero.urgency_tag == 'DEVELOPING' or hero.urgency_tag == 'BREAKING' %}story-urgency-developing{% else %}story-urgency-single{% endif %}">{{ hero.urgency_tag }}</span>
-            {% if hero.development_status and hero.development_status != 'FIRST REPORT' %}
-            <span class="story-time-tag">⟳ {{ hero.development_status }}</span>
-            {% endif %}
+            {% if hero.state_or_region %}[{{ hero.state_or_region }}]{% else %}[LEAD REPORT]{% endif %}
+            • <span class="story-urgency-tag {% if hero.urgency_tag == 'BREAKING' or hero.urgency_tag == 'DEVELOPING' %}story-urgency-breaking{% elif hero.urgency_tag == 'TRENDING' or hero.urgency_tag == 'VIRAL' %}story-urgency-trending{% endif %}">{{ hero.urgency_tag }}</span>
             • {{ hero.articles_count }} Media Outlets Reporting
         </div>
         <h2 class="hero-headline">{{ hero.headline }}</h2>
@@ -90,18 +86,12 @@
         {% for story in front_leads[1:] %}
         <article class="broadsheet-story-card">
             <div class="story-header-line">
-                {% if story.front_page_role %}
-                <span class="front-role-tag">{{ story.front_page_role }}</span>
-                {% endif %}
                 <span class="story-desk-tag">
                     {% if story.state_or_region %}[{{ story.state_or_region }}]{% else %}[{{ story.category }}]{% endif %}
                 </span>
-                <span class="story-urgency-tag {% if story.urgency_tag == 'OFFICIAL UPDATE' %}story-urgency-official{% elif story.urgency_tag == 'CROSS-VERIFIED' %}story-urgency-verified{% elif story.urgency_tag == 'DEVELOPING' or story.urgency_tag == 'BREAKING' %}story-urgency-developing{% else %}story-urgency-single{% endif %}">
+                <span class="story-urgency-tag {% if story.urgency_tag == 'BREAKING' or story.urgency_tag == 'DEVELOPING' %}story-urgency-breaking{% elif story.urgency_tag == 'TRENDING' or story.urgency_tag == 'VIRAL' %}story-urgency-trending{% endif %}">
                     {{ story.urgency_tag }}
                 </span>
-                {% if story.development_status and story.development_status != 'FIRST REPORT' %}
-                <span class="story-time-tag">⟳ {{ story.development_status }}</span>
-                {% endif %}
                 <span>{{ story.articles_count }} Sources</span>
             </div>
 
@@ -172,12 +162,9 @@
                 <span class="story-desk-tag">
                     {% if story.state_or_region %}[{{ story.state_or_region }}]{% else %}[KOLKATA / WB]{% endif %}
                 </span>
-                <span class="story-urgency-tag {% if story.urgency_tag == 'OFFICIAL UPDATE' %}story-urgency-official{% elif story.urgency_tag == 'CROSS-VERIFIED' %}story-urgency-verified{% elif story.urgency_tag == 'DEVELOPING' or story.urgency_tag == 'BREAKING' %}story-urgency-developing{% else %}story-urgency-single{% endif %}">
+                <span class="story-urgency-tag {% if story.urgency_tag == 'BREAKING' or story.urgency_tag == 'DEVELOPING' %}story-urgency-breaking{% elif story.urgency_tag == 'TRENDING' or story.urgency_tag == 'VIRAL' %}story-urgency-trending{% endif %}">
                     {{ story.urgency_tag }}
                 </span>
-                {% if story.development_status and story.development_status != 'FIRST REPORT' %}
-                <span class="story-time-tag">⟳ {{ story.development_status }}</span>
-                {% endif %}
             </div>
 
             <h4 class="article-headline-secondary">{{ story.headline }}</h4>
@@ -216,12 +203,9 @@
                 <span class="story-desk-tag">
                     {% if story.state_tag %}[{{ story.state_tag }}]{% elif story.state_or_region %}[{{ story.state_or_region }}]{% else %}[STATE]{% endif %}
                 </span>
-                <span class="story-urgency-tag {% if story.urgency_tag == 'OFFICIAL UPDATE' %}story-urgency-official{% elif story.urgency_tag == 'CROSS-VERIFIED' %}story-urgency-verified{% elif story.urgency_tag == 'DEVELOPING' or story.urgency_tag == 'BREAKING' %}story-urgency-developing{% else %}story-urgency-single{% endif %}">
+                <span class="story-urgency-tag {% if story.urgency_tag == 'BREAKING' or story.urgency_tag == 'DEVELOPING' %}story-urgency-breaking{% elif story.urgency_tag == 'TRENDING' or story.urgency_tag == 'VIRAL' %}story-urgency-trending{% endif %}">
                     {{ story.urgency_tag }}
                 </span>
-                {% if story.development_status and story.development_status != 'FIRST REPORT' %}
-                <span class="story-time-tag">⟳ {{ story.development_status }}</span>
-                {% endif %}
             </div>
 
             <h4 class="article-headline-secondary">{{ story.headline }}</h4>
@@ -258,12 +242,9 @@
         <article class="broadsheet-story-card">
             <div class="story-header-line">
                 <span class="story-desk-tag">[NATIONAL]</span>
-                <span class="story-urgency-tag {% if story.urgency_tag == 'OFFICIAL UPDATE' %}story-urgency-official{% elif story.urgency_tag == 'CROSS-VERIFIED' %}story-urgency-verified{% elif story.urgency_tag == 'DEVELOPING' or story.urgency_tag == 'BREAKING' %}story-urgency-developing{% else %}story-urgency-single{% endif %}">
+                <span class="story-urgency-tag {% if story.urgency_tag == 'BREAKING' or story.urgency_tag == 'DEVELOPING' %}story-urgency-breaking{% elif story.urgency_tag == 'TRENDING' or story.urgency_tag == 'VIRAL' %}story-urgency-trending{% endif %}">
                     {{ story.urgency_tag }}
                 </span>
-                {% if story.development_status and story.development_status != 'FIRST REPORT' %}
-                <span class="story-time-tag">⟳ {{ story.development_status }}</span>
-                {% endif %}
             </div>
 
             <h4 class="article-headline-secondary">{{ story.headline }}</h4>
@@ -300,12 +281,9 @@
         <article class="broadsheet-story-card">
             <div class="story-header-line">
                 <span class="story-desk-tag">[GLOBAL]</span>
-                <span class="story-urgency-tag {% if story.urgency_tag == 'OFFICIAL UPDATE' %}story-urgency-official{% elif story.urgency_tag == 'CROSS-VERIFIED' %}story-urgency-verified{% elif story.urgency_tag == 'DEVELOPING' or story.urgency_tag == 'BREAKING' %}story-urgency-developing{% else %}story-urgency-single{% endif %}">
+                <span class="story-urgency-tag {% if story.urgency_tag == 'BREAKING' or story.urgency_tag == 'DEVELOPING' %}story-urgency-breaking{% elif story.urgency_tag == 'TRENDING' or story.urgency_tag == 'VIRAL' %}story-urgency-trending{% endif %}">
                     {{ story.urgency_tag }}
                 </span>
-                {% if story.development_status and story.development_status != 'FIRST REPORT' %}
-                <span class="story-time-tag">⟳ {{ story.development_status }}</span>
-                {% endif %}
             </div>
 
             <h4 class="article-headline-secondary">{{ story.headline }}</h4>
@@ -341,15 +319,10 @@
         {% for story in sections_data.trends %}
         <article class="broadsheet-story-card">
             <div class="story-header-line">
-                <span class="story-desk-tag">[{{ story.trend_subcategory or 'What\'s Trending' }}]</span>
-                <span class="story-urgency-tag {% if story.urgency_tag == 'OFFICIAL UPDATE' %}story-urgency-official{% elif story.urgency_tag == 'CROSS-VERIFIED' %}story-urgency-verified{% elif story.urgency_tag == 'DEVELOPING' or story.urgency_tag == 'BREAKING' %}story-urgency-developing{% else %}story-urgency-single{% endif %}">
-                    {{ story.urgency_tag }}
-                </span>
+                <span class="story-desk-tag">[{{ story.trend_subcategory or 'TRENDING' }}]</span>
+                <span class="story-urgency-tag story-urgency-trending">VIRAL</span>
                 {% if story.fact_check_verdict %}
                 <span class="fact-check-badge">FACT CHECK: {{ story.fact_check_verdict }}</span>
-                {% endif %}
-                {% if story.development_status and story.development_status != 'FIRST REPORT' %}
-                <span class="story-time-tag">⟳ {{ story.development_status }}</span>
                 {% endif %}
             </div>
 

@@ -123,10 +123,20 @@ class EPaperBuilder:
 
         # Annotate verification tier & trends subcategories
         for story in stories:
-            if not story.get("verification_tier") or story.get("urgency_tag") in ("VERIFIED", "TRENDING"):
-                v_tier = classify_story_verification(story)
-                story["verification_tier"] = v_tier
-                story["urgency_tag"] = v_tier
+            v_tier = classify_story_verification(story)
+            story["verification_tier"] = v_tier
+
+            # Map to vivid traditional broadsheet tags (VERIFIED, BREAKING, TRENDING, DEVELOPING)
+            existing_tag = story.get("urgency_tag", "")
+            if story.get("section") == "trends" or story.get("is_trend"):
+                story["urgency_tag"] = "TRENDING"
+            elif existing_tag in ("BREAKING", "DEVELOPING"):
+                story["urgency_tag"] = existing_tag
+            elif v_tier in ("DEVELOPING", "BREAKING"):
+                story["urgency_tag"] = "DEVELOPING"
+            else:
+                story["urgency_tag"] = "VERIFIED"
+
             if story.get("section") == "trends" or story.get("is_trend"):
                 story["trend_subcategory"] = classify_trend_subcategory(story)
 
