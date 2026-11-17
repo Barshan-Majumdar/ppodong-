@@ -180,6 +180,26 @@ class TrendsCollector:
                             if not title:
                                 continue
 
+                            # Filter out non-newsworthy routine social noise: classifieds, buy/sell, room searches, megathreads
+                            lower_title = title.lower()
+                            if any(
+                                kw in lower_title
+                                for kw in [
+                                    "classifieds",
+                                    "buy/sell",
+                                    "megathread",
+                                    "weekly discussion",
+                                    "monthly discussion",
+                                    "flatmate",
+                                    "looking for flat",
+                                    "roommate",
+                                    "rent in",
+                                    "selling my",
+                                    "buying a",
+                                ]
+                            ):
+                                continue
+
                             score = post.get("score", 0)
                             num_comments = post.get("num_comments", 0)
                             selftext = post.get("selftext", "").strip()
@@ -233,6 +253,22 @@ class TrendsCollector:
                             title = entry.get("title", "").strip()
                             link = entry.get("link", "").strip()
                             if not title or not link:
+                                continue
+
+                            # Filter out routine social noise: classifieds, buy/sell, megathreads
+                            lower_title = title.lower()
+                            if any(
+                                kw in lower_title
+                                for kw in [
+                                    "classifieds",
+                                    "buy/sell",
+                                    "megathread",
+                                    "weekly discussion",
+                                    "monthly discussion",
+                                    "flatmate",
+                                    "roommate",
+                                ]
+                            ):
                                 continue
 
                             summary = entry.get("summary", "") or entry.get("content", [{}])[0].get("value", "")
