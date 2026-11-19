@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-18T11:33:14.251402+00:00",
+  "last_updated": "2026-11-19T00:33:26.418793+00:00",
   "stories": {
     "CLUST_0000_85a5604d": {
       "headline": "Porsche India Opens Country's Largest Aftersales Facility in Kolkata",
@@ -2126,14 +2126,15 @@
       "section": "national"
     },
     "CLUST_0042_e3f5552c": {
-      "headline": "Pakistani man sentenced to 27 years for Iran-backed plot to kill Trump",
+      "headline": "Pakistani man gets 27 years in US jail for Iran-backed plot to kill Trump",
       "normalized_headline": "pakistani man sentenced years for iranbacked plot kill trump",
       "first_reported_at": "2026-11-18T02:29:52+00:00",
-      "last_updated_at": "2026-11-18T02:29:52+00:00",
-      "last_cycle": "Evening",
-      "update_count": 1,
+      "last_updated_at": "2026-11-18T01:30:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 2,
       "urls": [
-        "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5lcVdrLXpHUmFObFpMRUlNVkNJZ0J5VF9STS1PdmJGVXZvMVZsa2g0dkNueUxTRHJEOW5wWGhEYmtWMV9OQ1dyZkVsa0ZNLVVLWDFzQm5QWDZiNms?oc=5"
+        "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5lcVdrLXpHUmFObFpMRUlNVkNJZ0J5VF9STS1PdmJGVXZvMVZsa2g0dkNueUxTRHJEOW5wWGhEYmtWMV9OQ1dyZkVsa0ZNLVVLWDFzQm5QWDZiNms?oc=5",
+        "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOT1FndWVDa1VDZDBZejlnbzBkbmhsaVZOWjhoejE2cHhMMlFoQkdjUGhkcHY0UlpiYzJTVXNJTF90SEJmS1FQVW84WVRSVER4ZElUYVk2Q1BzdDcwUTVFUmxKX3ZGa1hZZ09PeE9fT2FnTlV0bkdzUHFJX19uY2Q0Rnp2QUpxX3ZvajJ2SXptNHRYSWtwR2pHM25GVGRNU3lUdWlpUDlRUktVVXRsY2FTUUh0enJ0aGxvZmxnclV2VS1jRk40enlhQlJCdjJBZXM1LWViU0hzMDAwbUk4?oc=5"
       ],
       "section": "national"
     },
@@ -2806,6 +2807,1114 @@
       "update_count": 1,
       "urls": [
         "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPWXVCYTF1Si1TVlNCamRpM080UWw1OFNWbWZfbHhXaC1IZ1dzNmpYSkM2RDM3bC00WDU3ZTJleVdINHpSRUN6RkxYTEZtemNyMm9LbFlhVkN1RlJRS3RwWnVqWjA0SWFNT1g3TGJIMVctN2hoeEF6Q2NPRlQySEphcTFnMjhmbFU1dkhQN0NqQzZucFoxM0RBa0x5RExXSTVMY0FEc1hrRGl2VURSbkVLbGVENUZyVE1Va051YnM3QjZKbG1RR2d1cE9SeURBWklmeVBmZkN2ODFKQjJKVzlQTjNDT1dmZXQx0gHuAUFVX3lxTE9YYXRSaGU2dHhIN0VpaldJajRCYUJURjU0YlJna3pxeHVmMFVzUExqUDNUUUo0c2xHWVlVd2NrZkxjU1FLcU9vN3RwSXpWMTZqbl9XSDYtRDhFMTk4UHQwaFhZT2RaakgzbFgxOHlaZGI0TGJFZFc0aGlEM3M4Nll4NzdLVk5XeWEzUnBpaFhQWnczaXU4V2IwTDNsa1Z3SlJJYk9aTy1jTFl4WG03QWpyYmxtYkJGZnpSdnd1cERlM0puX0xKUy1OTmt6UE5UV2RQNkNFVDk3dUx2NFY2V2tHcEdqWHNpNW1RUGJ1Qnc?oc=5"
+      ],
+      "section": "global"
+    },
+    "CLUST_0002_3c5d0a2d": {
+      "headline": "SFI-ABVP clash: Student groups fight over rival bookstalls in Kolkata",
+      "normalized_headline": "sfiabvp clash student groups fight over rival bookstalls kolkata",
+      "first_reported_at": "2026-11-18T16:05:55+00:00",
+      "last_updated_at": "2026-11-18T16:05:55+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOQ2gtMEhCSm1GbE5QcHpEbDhKVTA2YkhHbkg4Znp4WlVZWUI5Rm5jLWZSQ0t1WmEzbWZ4VXRveVItbE1wb2xMWGZLNDJsSUcteE1ycGRyWjVxRDBQeHVaMmxVOHQ1V0l2VnFjbU96U0VmbUhocFZVQVRPZWVFWXp4UVFSMlozSlBYaHhHSS1GemZKeXBrTlRYNnlIVGZUdEVqSENEcUQtektRcXBsVk84eFl0WDRRVHBEem9UYm5iUkQzUWhPTDE1TXZtdkNxa2U1S3hn0gHaAUFVX3lxTE93WERrMGRvcHR0TXlrSk9QalVwN19CczZZLXZ6aFNlekVBakxhYjdXUy04Zjc5R1VIR1J1MGR3MUdtUWd6ZWlkN0JmVmc1X29ra1pGb3ZUTkJxQTNhM0ZpT05xV3hpbFAxY2tCdDlLV2N1VGZsLTc5MXBZeGw1RDFydEFSX01mY011UnRnXy1hTXBKVlEyVXRhUFpab2hzOXc0WGVZM2tPTU5iRTdEdDVJaWtGUFZISDN4bU1wZzdoWk1fZ1AxMW1qYklHMnNHX3gyWS1pSGdqV2Rn?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxQSmIxenJKOEdfQUt0VnItcklRY2JsSldweUhmWFE3bjU1U2dKMDVid2ZueE1FMy02WGxZNlZTSTJjdlRZZUtkSHJlMW1HSER3NG1zVVVXdFluajNCYWZTRGVsbGRuV09nb0poclo5VXlZMHl5cURHOFlxbHpVVndkb3lvTUdMQmNDZTU0M0pnX2RCQmpJUmVZVkVEMnkzVW1GdVBETjA1Z1B5VTByX1VrU9IBvgFBVV95cUxNRGdpS1dvWGd5ejZ2RkpPeEZoaDdWXzVoR2F1Y2dFcG1lOUhvOW9scm50eXk1Zm9STG9kSVJIb2lMVEdFSDhxSVc0US12b0tCUVktWWx0UnlLRVdkYm50TWsxVk1qRl9UVzZNSXhpV3Y3VnEwdVlWUUxHTkxVcHRncGpkdURnZnluZm9uZ3ZVWG1aLUVlTExFZ2ltdF9jbC1mQ05YTWxMSzZtTWNwMGNiMkNYdXl6VUM0SXVRYTZn?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0025_774c8f4b": {
+      "headline": "US court to Delhi courts: Help serve summons to RAW ex-chief, Doval",
+      "normalized_headline": "court delhi courts help serve summons raw exchief doval",
+      "first_reported_at": "2026-11-18T21:48:00+00:00",
+      "last_updated_at": "2026-11-18T21:48:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMizgFBVV95cUxQeTRYUF9vT1F6UDBJQVZoQUx0Y1NmWERRZEJkMXBKTzNBZDFqdHFpUmZYbG1LTWllTF9Ha3NXWUVVeUFpM2xuVk8zb2tnYV9Ib1lFVTl5bHMtMVNta2RFT3FabzlVLS1SNmoySzVFLW9DQ19tTVdsVmdSbmdxcmtydV91UTlfYm94a3JnTkdHWkZtVWJ4LVpIdVBPZms3QmJOalB5Wm9CZllqVDRMX0RVT3htQklYUHdnU3JVTk1PY29jcTJEc01TaGh1Z0N1QdIB0wFBVV95cUxOeF9YcmlRYkRwMzRTNWQwY1ZmbGhkVk5odUZEWnhMSmxXSzJfdFRJZkFQT2RqOFdMWkY5R3l0ZVkwTEJhN0ZjaXdNQUdlOWVuUklQcXU5Zjd3dzIwRTJXWDMyaUdXQm9Mdm9uRjZWSmFmc0o2RG5LQmVQd2pfMFFkRGpsd3JYN2JjVTQxR0VqZ0lhRXM1T3ZYV3lLTndMMkpVTTJXTGdaYjJLeFR6UUFTT0x4dkg4YkxYX3o0Mlh3ZERESHJCRjJhZmk0d0ZxeHZDQ0hF?oc=5",
+        "https://news.google.com/rss/articles/CBMizgFBVV95cUxQeTRYUF9vT1F6UDBJQVZoQUx0Y1NmWERRZEJkMXBKTzNBZDFqdHFpUmZYbG1LTWllTF9Ha3NXWUVVeUFpM2xuVk8zb2tnYV9Ib1lFVTl5bHMtMVNta2RFT3FabzlVLS1SNmoySzVFLW9DQ19tTVdsVmdSbmdxcmtydV91UTlfYm94a3JnTkdHWkZtVWJ4LVpIdVBPZms3QmJOalB5Wm9CZllqVDRMX0RVT3htQklYUHdnU3JVTk1PY29jcTJEc01TaGh1Z0N1QQ?oc=5"
+      ],
+      "section": "national"
+    },
+    "CLUST_0047_d9de3a7d": {
+      "headline": "India to have world's second-largest Muslim population by 2070, Hindus to remain over 75%: 10 key Pew...",
+      "normalized_headline": "india have worlds secondlargest muslim population 2070 hindus remain over key pew",
+      "first_reported_at": "2026-11-18T17:40:57+00:00",
+      "last_updated_at": "2026-11-18T17:40:57+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMigwJBVV95cUxNZ0hKblFkamtXeWpPdjNoaFh0RV9fTGJCUGZKd2d2SW5oV081a2ZHSk5TbTViWXBjMElTNmZnTWZSdTZwdTNrWmNKNEZHZWtleE15OXRPcWM3bHdCMGJvbHpZWjgzM0diNXMzbkZLNjJraFgtOGd0ZDN1WThYOVdjMEFQcjhWUDRZcW9Ib2RwOGUwaDlpSmxMNXB3NE15NVJIbzl5alkweUZxR0pCSkttYzZDekhxRGZmOWEwMEUwMjdEa3YtMkN2Mk5sakU2UU5ySm10dkNFcHF1NUwyQjVMd3MwdDYyV0s0anBudjJidGNFa1IxaVNXbUh3MnFUZ2xaZXdZ0gGIAkFVX3lxTE1TY1FxT0praUZKLS1XUDVPdjNrb3F6bF9fek1EdGgwamd3QklJYzd3NkRqUXhwQ19QU3hyNmliOVBOdE1LSHNRT3YzVUZOOTc2ZDFWYmFCbDZGQUJ6WWxvdm1VeDRIT0FxcWFhTFMwbXVmaHU5UDg5ZEE3Ynd6b1ZFeU9JdW1OT1ppRTdPMHAwYTVxNmFhTHhZY2I0aDB5Vl9yZnhzQXg2RWxwamppYzFSRklkS0hXZlNnUHNxQ0NLUWo4RnQ0ZUZsNFdfeTNfR2VFLTNsN091OTJBUkhwT3pqUVE5NGZMWEFTdV9icWNxVWFFRHQzYzFVTURoZDFhN211cFBNMGE4OA?oc=5"
+      ],
+      "section": "national"
+    },
+    "CLUST_0074_609432f8": {
+      "headline": "\u0b87\u0ba8\u0bcd\u0ba4\u0bbf\u0baf \u0b85\u0ba3\u0bbf \u0b8e\u0b99\u0bcd\u0b95\u0bc1 \u0bb5\u0bbf\u0bb3\u0bc8\u0baf\u0bbe\u0b9f\u0bbf\u0ba9\u0bbe\u0bb2\u0bc1\u0bae\u0bcd \u0b9a\u0bb5\u0bbe\u0bb2\u0bcd \u0b85\u0bb3\u0bbf\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd: \u0b9a\u0bca\u0bb2\u0bcd\u0b95\u0bbf\u0bb1\u0bbe\u0bb0\u0bcd \u0ba8\u0bbf\u0baf\u0bc2\u0bb8\u0bbf\u0bb2\u0bbe\u0ba8\u0bcd\u0ba4\u0bc1 \u0baa\u0baf\u0bbf\u0bb1\u0bcd\u0b9a\u0bbf\u0baf\u0bbe\u0bb3\u0bb0\u0bcd \u0bb0\u0bbe\u0baa\u0bcd \u0bb5\u0bbe\u0bb2\u0bcd\u0b9f\u0bb0\u0bcd",
+      "normalized_headline": "\u0b87\u0ba8\u0ba4\u0baf \u0b8e\u0b99\u0b95 \u0bb5\u0bb3\u0baf\u0b9f\u0ba9\u0bb2\u0bae \u0b9a\u0bb5\u0bb2 \u0b85\u0bb3\u0b95\u0b95\u0bae \u0b9a\u0bb2\u0b95\u0bb1\u0bb0 \u0ba8\u0baf\u0bb8\u0bb2\u0ba8\u0ba4 \u0baa\u0baf\u0bb1\u0b9a\u0baf\u0bb3\u0bb0 \u0bb5\u0bb2\u0b9f\u0bb0",
+      "first_reported_at": "2026-11-19T00:32:48.105632+00:00",
+      "last_updated_at": "2026-11-19T00:32:48.105632+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://www.google.com/search?q=\u0ba8\u0bbf\u0baf\u0bc2\u0b9a\u0bbf\u0bb2\u0bbe\u0ba8\u0bcd\u0ba4\u0bc1+-+\u0b87\u0ba8\u0bcd\u0ba4\u0bbf\u0baf\u0bbe",
+        "https://www.google.com/search?q=\u0b9a\u0bcb\u0ba9\u0bbf\u0baf\u0bbe+\u0b95\u0bbe\u0ba8\u0bcd\u0ba4\u0bbf"
+      ],
+      "section": "trends"
+    },
+    "CLUST_0088_126c4d86": {
+      "headline": "Over 300 schoolkids take part in campaign, vow to coach seniors on perils of honking",
+      "normalized_headline": "over 300 schoolkids take part campaign vow coach seniors perils honking",
+      "first_reported_at": "2026-11-18T19:00:00+00:00",
+      "last_updated_at": "2026-11-18T19:00:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQWlJJbVA0SWpleFNGR0cwUk1HTXNDVTFleFJiQkdVR1IxWllZMktSeU1wRWE3a25yZUVmaXg3YlhkMEczeE5XYjVfZ0tfMmo3MVBNT1JHbXBQQXA3dVViVlY2TmpDYWROejB4ekVBVV91Y2V0XzNldHQ0STc4Qjd6UDhwZDJTVC05OHRPN2RoZGw0c2R6eXdOSmcyNVVvLU9nYWlOY2p1TmJPc0tHcVdQeEpTa1hqaF9tcnJsSENDRm94UElPZDZBelFQVnRmR1h6YjQ0ZElrRnNUOF9fRGhnMFVlSHdsTWFoWXE1N2lHMNIB9AFBVV95cUxNT3VicnM5MTJOSm85OC1hMEhaaG9id1gxNnJuemFVQVN0YV81dFVuZC1vaVNrdVpjOTZxdS01VFl1ekR6ajFmYTRVdURlMEhYY2RZU284cWdkclI0c0gyTXlwdWpGd0tpT2dTbjlrR09xdzdfamxRa3JmSEhLNmxkRWs3Q2ZEdVJ0NGlWNWhHVW10a2dyNHdIRVkyU21KTUM1QUp2MVRzVkl4b1Z5YkpGRGdOV1pTTl9VTFc5Yy0yandQSEgzNHZDYXhmcWhBZnllN3AwUVd1ay15VHFrcjBFZGR5aS0waWpTdHhWaGhSWlVMNnFk?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0007_2b84f4cc": {
+      "headline": "Govt hospital emergencies struggle amid shortage of essentials: Doctors",
+      "normalized_headline": "govt hospital emergencies struggle amid shortage essentials doctors",
+      "first_reported_at": "2026-11-18T18:59:00+00:00",
+      "last_updated_at": "2026-11-18T18:59:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPa3Y2a3hRWDZ2RFVIMjd3RlM4LXB3Z2wxcGdzTGFETlo2d0FSZ1Jmc2NpLWs4T3NBZnFXbl9HUlVEcGVoYjZVbklfSV9tdGxCcE5iYkJITllLRHAzcExBNHhBQjcwLUdFMjI2X1hjNWE2T1Y0UFRPTVI4bHV1NzgzcVRyMVhmeFlsU2dIYTc0TnhpUEd2VElnaC1jSnpIRzBaY2hCTVFQbHp6OEItb3FXZVFSOGNTa19fVi1FOExJV2Y3bENMN2pvVnJMNlhpN2h1SFMxYWk3S3ZxaFA4ZVHSAeMBQVVfeXFMTzE3WFFmT0Z4SEtqS3RjQWtJZ1ozX2RyRktvN2RXMHpuMHIwbENGNHlHdUZTYUphajNCRFlMR1Fwal9mZm14a1l1a25iQTQ0ZWNGSGlrNkdrYVMxcXlKV0FIM2RoTjdUYmZub0l2SkRtX3NTOVVIMmwyOTlabEN2dWNGMTR0dXpsMUpTVVhjSkppVktsVGE0dXhpbUNocDR1V205QUdVYWlnVmdpcUliTGluQzQxbzAxb3hOSERnMUFDaVFnd044cEdWaWFQTjFETWJDVXV2TFRGdUlITGQ1TjNZOUE?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0091_65faa6ca": {
+      "headline": "Medical College and Hospital interns: Why Chorbagan show-cause? Services were not hit",
+      "normalized_headline": "medical college and hospital interns why chorbagan showcause services were not hit",
+      "first_reported_at": "2026-11-18T18:55:00+00:00",
+      "last_updated_at": "2026-11-18T18:55:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPT3RTdEpuWElpUzVYbkxxWG1nSkoxNFY5dkZhT1VucUUwSjNNWkJ0OHVQYWdOWXFpT3gzRkVLbVA0MVU0WVRLWUFWY2pXdktCTm5LOEQ4a09vT1hNNjhYSzFRX2dTbFlGbF9ybjlXbVRVcWNCVnUwY0R5SVhIVHZxc05KaGJyU190UGo0Unlvcjc3N202MHRhbTd2OWhqM2pkcnM5NUNYdHY3aHpyaVYzTWVfUTR0a015RVctbG1FOE5heWZ2dDdFRnA5TkpTclBRWG5Qbk9pUGNjZXM5RkhGT3VkT19aODFYOUczOTZTa9IB9AFBVV95cUxNT2JRbTdYRzV3UlBfOGdVWjAwTWcwMlFUUExlQUZJcTdPQkR5OHNJMTIxQzRQT2IxcWtPMEhjN0lzejkzVkgyYXpxYjJvN2xPMGlNcmVtNUx6ZjNuaEJxWTJ2Wi1lZ2FqZTZDQTlsbHBVRHdOLXF5Zkw3QURiaGtzcEh1RGh5UzJXOTVDRTU1UzRWZ3F4VTFJd05UaXY1MjI5czdFTGlxcWo5Q0RsS1JTbnd2X0ZjY2QxRDV3bXNqYlZiTFdUNmptWXNVTjBIWXo0YWN1T2dRNXlyaVdteHVaR3hSOWdWNDNfVjdIb0xWZktPTjRN?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0000_7e9e9547": {
+      "headline": "INS Sumedha to open doors to Kolkata visitors for Navy Day celebrations",
+      "normalized_headline": "ins sumedha open doors kolkata visitors for navy day celebrations",
+      "first_reported_at": "2026-11-18T18:53:00+00:00",
+      "last_updated_at": "2026-11-18T18:53:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQejh3d3hsZC14MzA5ZXMzWmR2YzlDNjdpWHROQUZtTjgzU0ZIblh1WVVLNXBrNTVBc04wZWNJRDZVa1dUekNRRmpqSEkwMTFkMkVEN2NKUmJ6d3hyYUE5WHlESE1NSUxKMUx6UkwycU5iVHhMemZ6RHFfUnc2YUdyWnhGeEdCTXVDR2J4ZnBTWFBPY3NxNzNkUW0xTTB6N292NFFhUDhoay1FSDJrMGUzR1RYa1JGenZPZGlNMWRQWjlBTzd5QWNXMlo5a2dORnVJZlFUV3VIS0hzTnVOd1hv0gHkAUFVX3lxTE94cFk0bTJqblUyczNrZWYyak9DbmM5T3o0aW9FRDNWNHYwVDFKd04yaWoyVGdPTzYyRVRoZnEzcm95QkVoNDllTTRWMjIyOWJSR1l6SG00Mk5hdE0xc1dCWVUtWkUzY05XdUtMZWU3ZDZCaUFuYkxwVnJKZmxYMHRrNFQyTUV4aHJWWTdhc0R0S2hIYW1HRXZ4LWZqSVdKNk1LUFFGYjlKcnM3YUtfZWh1MjV6OGZTaVE2elFaNDVZZHZOZVpFSkFER3NKWHF0ZmUzZDN0ejdOdHVWZGFkZGs5dXdzbA?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0016_fb8ffb92": {
+      "headline": "SRFTI fact-finding panel to submit Sept 27 report by Nov 27",
+      "normalized_headline": "srfti factfinding panel submit sept report nov",
+      "first_reported_at": "2026-11-18T18:51:00+00:00",
+      "last_updated_at": "2026-11-18T18:51:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMizwFBVV95cUxPNEo5bmVXNVh2Y0VSYTJDZTNNa3J0U0pneGRUNm9zR3NjX3RzWXhITzduSXloblhVS1Z5cmtUMVZObmhwN1g0VHFLdy1naERoVFZGXzJFVEFQb2hfSVhRSHhtTTlQUkhmT3VqTVQ0clJuM2dhdGFWS2Z4ZkdncnRLcmZVZzhDRHNxWjRTNFp3ZUxSeHhFdllzWGFPUl93WTl2SXA4SnIwdGVRbEFmaGNxb0I3Znk4UnNsVTBkZHV1MDM1cnAxOEYtYl9pRWU5UDDSAdQBQVVfeXFMT2sybDRQVHdPYVBqNGhNM2NjWFdhUVctMkZYRGFwODNlek9qaTdYUWkwb3dqclhvUjgwWXlUN3R5VXRjTFkyTEJOb3ZnRXh5dFZuX2dOdVJudGV5MGVUZXZhY1JnNThaaVZYT29TaDA5STBzLS1QZVRfNlg3RXdZM0R1QTZDMUZncTBHdVphSUwwSTJyX0NmZXlCVnZnNUZHcDZIUVo0THVWSjFZbTk0SFlKYlg1YWN0RnZDdVVnTk5mdlREOXc2NTlTTWZCZ0R2eC01NDc?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0012_929576ab": {
+      "headline": "MCH docs, SFI protesters face ABVP eggs and \u2018therapy\u2019",
+      "normalized_headline": "mch docs sfi protesters face abvp eggs and therapy",
+      "first_reported_at": "2026-11-18T18:50:00+00:00",
+      "last_updated_at": "2026-11-18T18:50:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNbVdWd3dmX29NX3F5Wk44VG5PdVgxRzVpeFFkeGtCcEQ5VnoxSDNxQ3gxa3gydEc3U2RDX3Z0anJqOVJtaU5zc2hHTTJMb01xMDRvVmNCaWhvLVpiOVQ5SEp6d1BMeHc5dGlDVmdJRm1LVXJKTEJkSTNtckZxbDFVODVic2ZiVThSUGsxODVNME4xVmZMN3NrU2Q2cEFacGJwQ2ZFY21GYjJGeUZ6MXZtNnhBcXAwc1Vjamo1Rmp2cjFpbkXSAcgBQVVfeXFMTXVCSU54TndVN2FqQm1yNFJlRUFZa1ViM2JzT0UxLUJEcHZzd1NpNUZpYVE3bkwxYXVoQjBBcVZSb21yeXY2dFdHT0sxVlViVXhyS3Mzbm54ZlpaNHFNanRjU2J6dGF4VmU4X3gtNU9DazJWaUd2M3JGMDZkVF9QcmFPeTVuUThhd1hXdFpVSlk3Rk5URVI3MW80ZmFXRlZXVEtQV2ljZjRVRWVhZjBmc3UzdjVMU0hXZWktMXpqT2ZiZmlhVkNCX24?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0006_326176a6": {
+      "headline": "450 CISCE schools join SHINE launch",
+      "normalized_headline": "450 cisce schools join shine launch",
+      "first_reported_at": "2026-11-18T18:45:00+00:00",
+      "last_updated_at": "2026-11-18T18:45:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxOQnpweGdSMUpsNkhhNkdidm5GcVVtY0ZLQXJGemZnWnpGRnJVVnRsdE5tMkIxSmNickVMN1JUb0E3dUVVcGd1VDhVQ1FKZkcyMXRSeVpGYzEtTGRPZkNYcGZOQmRDU1B6cy1MVkozQUdTNmlWcDB3T1VnS0R4MVN5MFFjd1dQekFlVDdhS0g1VzZsRE1INlJBTTVpSFQ5cUVsUWJlU1QyQlFEWFNLeTNJ0gG0AUFVX3lxTE5DWk1jLWgwOWxZQ0lrVWJmaWZkbTdaZzdBYlFnaVNxUXdGSkZKbld5R2w3RXUtYmJFMjNLV2hOWEZCdDVYMlhvcW9OdDk5ZWMtZ2xSZXBGTHNDNzVFWUR3RTFkczBmWFFZUTYzWWNwTFVIWXNFaTlNMmNxZmY0WG5mb2ZtZ0YwZmZYWDU5eGFwTnFHQW1na1htS1hKM09neFl5NVhrZ3ltQTlkVlZkME1GRDVMcA?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0089_2a824205": {
+      "headline": "Park Street Christmas carnival will happen at same venue, assures Bengal govt",
+      "normalized_headline": "park street christmas carnival will happen same venue assures bengal govt",
+      "first_reported_at": "2026-11-18T18:38:00+00:00",
+      "last_updated_at": "2026-11-18T18:38:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPMU9keU9zUWFxeHAwWi1rWkZKNHh4VGNaQVBPLU95NDhJbHRXR1RkNmQ5cUc5ZFZaWUMtQmpVVkFqU1pUUDN5MzNLYTZSbzN6OFdWSWdOTjVCeVpaOWd4ZFdVU01Gcjlya1IxLV9aM2ZWeFREeS04bENkeUtuNEF1MUx1WklUamZPNmFUZGRkcGFfSGxQaHlHOFJSMUlwZGpuQ2JWal9pTUctRUFsaVJiaTQtTlY5NDN4VldnNGc4eFNzenp3OURBVzRDWDFPZm5CTGhiX0t5TFc1ZFRoNVp4QmZDUFdPd9IB6wFBVV95cUxNQzVhSXlucFdsTE9ueEZqS2FyZTM5cklESklIUGU1RWhsQnhFekVpOXVyM3p6cEhWNnZqYzNydU1aMzdjYTIteEdwN25tNjN5NV9jLVo4ay1lS2xuSFVpcTI5Tmo0Z1NLTU1kbEZMbGZnb2VXbzBGeHFtVGhoMzZPa2ZLTHZpSG9JcXZrVHJBU0ZXSEg3X0lua29IeHVvNEhwa05TbTRsUk96WmNrZUt4RTNfMkZiVHRCZjZXaV9vamxPV0paYjM3QlFrR1VYLVBQZXBETHVvN1Q4dDlKNVZxUnkxTkcyVTdja1VF?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0015_042a054a": {
+      "headline": "Railways, KMC plan pipeline repair near Kolkata Stn",
+      "normalized_headline": "railways kmc plan pipeline repair near kolkata stn",
+      "first_reported_at": "2026-11-18T18:14:41+00:00",
+      "last_updated_at": "2026-11-18T18:14:41+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMimgFBVV95cUxQOHhua2poOHg4SXpRWVVmbkhNeWkzQlU0cm4zSGtiRDNGSTFVS2JPbUx0RktFSlc2d01XcVI4RGgxaWtENGNhWWF5WWFJZGdpNXkyYVBnTU5waDVmM2tvMmFtU3lLbXhXTlF1dDI5WTVKc2VFWkZ3VUNaT0xuaTFXem5hR1ZMR1Y2WGN5MUhkTDhMQXNsVl90a1dR0gGfAUFVX3lxTFB4cnpGRU5Zc3BrNTBXQVNYYTBBUUdhQmZDdmw0VXBIMEhJRWkxTHpDSVJvOXlxYmM1S0xvR2N3czY5bEM0SG5GNjhuZGNlUkdUdkQ3LWNCY0ltYWZ5RHY2MEZjdDB4eUFOUFV1LURLQVVMNjRhTWxBNEpSa0NKNUNVV2hsdEdmSGNNa0NfOVFpamxnS29vcGYzLTQwQ0VPZw?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0001_e004ac99": {
+      "headline": "COPD cases surge in Kolkata in \u2018one of worst years for respiratory diseases\u2019",
+      "normalized_headline": "copd cases surge kolkata one worst years for respiratory diseases",
+      "first_reported_at": "2026-11-18T18:10:00+00:00",
+      "last_updated_at": "2026-11-18T18:10:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOMUpYbHcyckE3Z2VJaFVSOVhTOTRRM25URW9oVVZMemJZaE9WUkNrTEliTFljYUk3bzFOcktnSXpUelRvVjgzdjI1b3Z5S2w3N1VwR3FiLTZlRkh5b1lqMTRXeEh4bk1TMlNTejZHb0dmZkRqWm9vMk0xRDVvNWJvS3lFWXRFYU1zRzllOHMwNDM5R29YSHNCOGdfdWZxZ2xwNVp0ZlE0WFE4eHlpbFVCY18yZDNDMDRpY1ZSWW1qOFpWZzI5MUZMLVBqNjFYeWN4dzItQlpGS1VIVHRZcnBZZl9qd9IB6AFBVV95cUxPUEpsYWFOOUE1WDZZZ2pzY3E1dDFlRV9UMVpraTBWWWdSQ1BubGl2Q0hxZ1ROdm4wVFJkc3lJdFJJWmNodzdxTTBCNHNaZS03YTJvRktiTUM3cGpxSzd6Vnl2SFB0REVDXzU0ZGxLNHBOa25nMlVoUmt6S2RDZWtSV2JzNXUzb0kydjJCcFhvS2lhdWFoemk0YmZjZGNkeUJaZUNySWdaX2tpYzNSODJvblR0aWllODlYdDJTekswTFNHNlAzbWpVVHR2YnFqTE45eGFQNzNPZGFTVXM0M0VveGI5T2hXakZI?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0003_6ebe5242": {
+      "headline": "Kolkata Police prosecute 115 motorists for illegal parking on tram tracks",
+      "normalized_headline": "kolkata police prosecute 115 motorists for illegal parking tram tracks",
+      "first_reported_at": "2026-11-18T18:08:00+00:00",
+      "last_updated_at": "2026-11-18T18:08:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi4gFBVV95cUxORGxLdlgzSjJQQU00UDQzamliUTk4N2Z3aTY3azdDOERsMEt2Tk12UDE0YnBmYi1zT1lWQVZJQ3hSSE96QVFoc05xUFB1bjJhOFU2RnFzNF8yWWktcVVsRXZIb1ctSDhCNEJUT29rNjhjVzR1cmJ6UE0xYW12WnVWQmNmTnZGWHF2aW15QWRrcERZVEs0SElPUWZzbGNEVkY0S0plR1hMY09DWDNnc2E4ZEJELWhSV2diU25CcmFhQzNWb2R1MUhUTV93NFkyc1RmYWZCU09JRG1xeEJRWG10SE5R0gHnAUFVX3lxTE5pRlRHTl9iZ2d6cVNldV9SUUxTNjBITzZLYmpmUm84dG1UcHA1cGt2QzhBUERubkctSGF3UHhUUFUweE5Mb2NyQmpwVGFmX2tzTjY0RFVZV3NGZ1d5dE9HSS1wQnpQc3NJenhSYk03NGU3QUVfeHdpbThQR2RIS2V1Wm1ZYm1TMzF0X0FVVjI3QW14X0QxZU5sZFU0ZWJ3cHVyVFdCNFJ2ZEhNS2Fzcm02SE9ybTYtNVdZclM4WTR3UDJDMkZ1WHFFelhLZWtYcTZ1ZGg4cF9WZXRwVS1oSnE3TlVPdkFsQQ?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0005_a1951274": {
+      "headline": "Theft by helps in Sinthee, Salt Lake",
+      "normalized_headline": "theft helps sinthee salt lake",
+      "first_reported_at": "2026-11-18T18:08:00+00:00",
+      "last_updated_at": "2026-11-18T18:08:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxQaktCY2pmVDk3VjFTQnRrdGQ1ZnE4YlBlUEJPQTdpRl9vQzhXR2lIclVHOGNSX1NNZG5mcHNTSUxySXBNX1F3NGV0UUdIdG15M0gzRXJhNHNiZmxNTVRYcldqUzdodGdSRURzbV9TTWU0eUJLZzFMODdlX290WnF3Mk1NcVNRNGNfZnAwUzE2TXBzVlpBRTlvQUJ3eXpVcEtPb3ZVeVllekc1bzFZU0p30gG0AUFVX3lxTFBQZ3VyNzdybGw4Y3l4SlVrWVNFSVUwVjJBTFhiMVFNamdoYXBSOF92TDRUMGg5VzhheGJiTUlJZWdkLUNOc0t5dlpFR2huWXViaU9yUUtCS2o4LWl5S0VuN1VmajZfYWdzeFhMMW9MVUZxVDdCbEZQLXF1QzRtT3Q5M3RRcldZTE1ETmcxWEZqN0xKNzU4cFpES0k3RnBmTmVUV1hYemQ5QmhXN0gzTmtRSFUyRw?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0009_17c17e7a": {
+      "headline": "Bus bays return but questions remain on benefits, execution",
+      "normalized_headline": "bus bays return but questions remain benefits execution",
+      "first_reported_at": "2026-11-18T18:08:00+00:00",
+      "last_updated_at": "2026-11-18T18:08:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMizgFBVV95cUxNQW12TE1YbTZlV1VrbHBiNml1c3VzTm5TSmVJMG5rbjJtcjhSeVlVT1I4cWhnbWM4RkpCZDJ0MFdZd1ljcW5qLVpRX044TTdKOVFMd2NzckhkcmFUemVRWnptOXVMM3Vnb29DSElLeE5ZNXZDNW5SaWwzejFRTm9xTFpNb0ktRmw4U3ZIZmhteThKUDR4Qk83VjdDeGxGWkxIVGs5b1BNbWRSS0xJS0hGSXhPVlZkTms1aWM0TWRQTVdmY2ZsRl9nOTVCcXFpQdIB0wFBVV95cUxNRW1DbV9sZFQxdHo3bEhHRjBGR2hIYm5NdDg4dDhiMWRHTnd0WkZNRlNPb1l6TmRqX1EyOUJTaFk0RndfSTVSWFRBQjgtS2NaNk90QlJoQzV4Y3FFcnVfSDRRNHJkWVdFcjlpU1o4aHpjTlU4QlFORFBzVzUzSlV6SjZsMjdUYjRWRl9vX3dnMzJKY3pyMy01cU0zQ2lPUDRrdlBONHg4WmdhVnR6cnd2cEtjQnNqM1lhUWtNekpRM09Ram41RV9Fa2ViMEgyOU85Umc4?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0010_abd68827": {
+      "headline": "CP inaugurates new Behala cop office",
+      "normalized_headline": "inaugurates new behala cop office",
+      "first_reported_at": "2026-11-18T18:08:00+00:00",
+      "last_updated_at": "2026-11-18T18:08:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxOMWx2bjRyTXhnYzdwLVFZWG9XaEV0aUpSTW1MbEl1bFNNcExwVkZCZUZEenVDNzg4R1Q2cHEtS3VWNjBQNDJyc1ZWTDhxaXNZZkJrU0E0Y1BuWkZVcGR0b0c5TFA5LTBOd2pRSmVrMFJkMmJYdW1FS091SG5VeHpTdVZpN2xrd1Fwd0x1NWhramFPNnRzWnpsTVBBOUg4Vm1fVjZaX1M5Tjl1Q2JYWDZ2NNIBtgFBVV95cUxQUk1oR20tN2Uwdk5MSzVvckdVUzNyRHBXQ2FndzBlNmhmLUtQNERFSVotWjhpN2xWM0VQZXRaclV5eUNtelBMcFBWUExVUGJMdHl3QXZVcmJDaVVnbS02Y2pZcWtnMWRTTXdCNGwzd2NoalR2SU14Zzd4c0pOU29EdUdoMGhNajFTMGNoYkIwb09yYkpkN0daazRSWlVkVDJzekRLWE9ncTNkQ0k5Z1NZNXQ1ajJ5QQ?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0014_4f513930": {
+      "headline": "DigiYatra glitch plaints prompt return of \u2018digi buddies\u2019 at Kol airport",
+      "normalized_headline": "digiyatra glitch plaints prompt return digi buddies kol airport",
+      "first_reported_at": "2026-11-18T18:08:00+00:00",
+      "last_updated_at": "2026-11-18T18:08:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPTU9iZ3RUMnpOREdPVGF2U2RvMzRjSDlzQjF0eHlrcjFCZnhhcmV0NmpIdVJHVzJlZ2J2Sm1WTUxoMG9zaVYwNHROLUZVZ3dHOFZjOG0yVFFtNlN4UVJ4cGNVOTlSVk9xV3UxY2E4WC1IaU5TWVh3dGd0VHhia2RmQk1LbUtka21say1ZOGxUS1hoTFJNOGE5RzBibDZ1dmcxUExMNDlqSGRKTHJzeEtPT3c3RmVyZnRLX3NNNk4teVRXX3Fyd0ttU2ZudEZGRHBlR0NVMjJ6TE9zamVM0gHiAUFVX3lxTE56a3laSGtWaENsWVo4cnczLVVlVWY4SjlEM05WeWVESGRBZTVVTjQwemRHUS1PdEUxX3cwaW1MNXhUcnlEODJtQ09TTGRjcVdUUXByZ1gtRGFVeThSMk5FR1JMTzVQZWNkN2EtNjZwLVh6YnJ2Unh4OV9LV29qeHRQTi15N0ZtMnZwaGVwOWQwYnBaWTZ6WjZ6cmw0NDZnT1lkVEJBM0JMXzRKOVpKWF9tVnYxTU0zdGNrSDF5WlZXT3FQeXRyd0N3YUljS0oxZlpJVVFFTGhnQjRvSGpJcFo4eEE?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0018_21213ad4": {
+      "headline": "Egg prices touch Rs 8 a piece in Kolkata",
+      "normalized_headline": "egg prices touch piece kolkata",
+      "first_reported_at": "2026-11-18T18:06:43+00:00",
+      "last_updated_at": "2026-11-18T18:06:43+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxNUG9EZEZHMEFoWDc0V3EyOHRmNDdUUklLUzRCc3Nzdm9uLWdzNlpwNEp6bnNFNFZLNzd5bzctbjhnT2VUT0RKN29ieXNhSTVkXzZDLUZOcE83TUhhbF9CaTZ0WDJLellXTDJyc1hWcHJwVllXTS1aMkctM2VKUm9PVXp4TXZ4cGF2V19IUdIBkgFBVV95cUxPalg3d3paZDBKQnFGVWxGVnkyTlY2U2hneEl2cEtaNTRpS1ZjQ3hiSTRJV2dyU181VHB0eFlNdXgxUlRKSEhvSlFZanRDQ3V6ZHZDVy1IbU5Vd3E2YzZSMW11bzV0Wnl6MlRJOS1nUmdzOERiY1hNNmM1Zk8td3E5NWhfTXZpQjRKVFNKUE95RmtRdw?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0011_85cc0533": {
+      "headline": "Regular KMC committee meetings to speed up approvals for buildings",
+      "normalized_headline": "regular kmc committee meetings speed approvals for buildings",
+      "first_reported_at": "2026-11-18T18:05:00+00:00",
+      "last_updated_at": "2026-11-18T18:05:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPcnp3Q3NMcUNSXzlhc1N6N045RnVLN0l2MExVTGthOGJQa0NwXy1sSEhFdUxmZ2lmWldBb2ZlSnpabGR6b1l1bm9kRU44cmlYNkJCQk9qMkwtV24yVzN4NlktOUNvbDhPV21TdDRfTDlJc2FTM01qOXZPLUFWcTVXSGo0NVJHblVMcmxjLTR6aGVBM2dSbE5TRlhsbUpBOTJaaXNZOWxoSHZXY2FoaFdOWTN1QnFvUDk2UDh5QXoyWGVJOWFBeEgxVV8wQU1ORXFPYVA0ZFlZVGvSAd4BQVVfeXFMTzF0bmRMUlQ4VXpiYzVpVVczaDViMjM2NGFla3FETU05R0JqRTFyX3R1YndrcDVmX3NIVmZWd2N4T2VkU19kUno0cm1EYXVNLVEwbXR3ajNfY2FnbmJJbXRrR1N4U2d4X3UyU09BSUo4NmdockF5RVEtTUJPSUNyTlh0dC1KN1JMeEQ4Z0NnSE9va3B1RThXZ0J0Tm9mSHpBWW9qUnJ0TkRYanZZYlFYYkFGczl0UUxrWktDdzgwd3FSbnA0MlYtNHhCdlpjd0xFSktBUWQ2RHJTOUdsZXRn?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0008_02a7ca8f": {
+      "headline": "Cops, CISF help flyer get back lost sleep-aid device",
+      "normalized_headline": "cops cisf help flyer get back lost sleepaid device",
+      "first_reported_at": "2026-11-18T18:04:00+00:00",
+      "last_updated_at": "2026-11-18T18:04:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMixAFBVV95cUxQZzlQcDJ1a1lvU2FYRmhDeDNBOEFkTWpmZ0pEb2w4Uzc4Q3ZDOVhsT3FXaVoybm05Q0R5VWhxZEV3UjlCRy1nd0tPMF90X2p5ZkRuZWxlYUJ6VGl3X0Z4MEpVcEE4V0xqbUVEY2JGRkhlb3lGTjRwNDJBRkJDZEpCN29DSVZPWmF2MGJST1JqVXZhd1VTZHFpRkpMSUFPT1BTYXZGNGRrQjFGNHZhUk1vV1RjZktRcTJNMEhLTjBmMEdZRHc00gHKAUFVX3lxTE8xNXVtX3liSDV6ODk1aWVqNHk1WEZuYzRSZ1lYbU9lNDFFdnRXOG9WUGFUM01LbjhfaW11cXhfT1d4LUI0LUdLaEJUZWNPeWViQ3B5U3JIUzlaT1JTYW9tcmJhTXFqN0FxRGRRc1VWMklWSXZVb25KRFJkaXV4Y19fWUxJU0QwcnJ4VF9EbGVTVklYYk54MTBWWUhBRDlVZVQxUEc4bmVBY0FjZjdlWlBIaUxmZ2NHSUw2SjIxODJUcDFEaGhuZTZoUnc?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0085_08d0ee41": {
+      "headline": "Mother donates son\u2019s organs after brain death, saves 4 lives",
+      "normalized_headline": "mother donates sons organs after brain death saves lives",
+      "first_reported_at": "2026-11-18T17:43:00+00:00",
+      "last_updated_at": "2026-11-18T17:43:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMizgFBVV95cUxNYmZOX21ZXy1PNjNFTDFsNi1JRWR3bTRHY1NBVGRzb0F0UHFRWWxoQk1VeW9ZVkhmRFBENDY2dUZEbllkSDZELWRqU0JfMmFJV1ZCSXBSdl9QdGtPbkRwRjZPaEZTcG1Kdm15aWNQeXY3SEtxQndISEtlTFZHYmlSV1o1dmZMMmFiODd4NUowZG1PVHhGelpFeG9mSzJXRzNSYktrbV9SNzdueXU5dDZOa2xCampCZzFaWFNxbk5wTXZnLUJqekFPU2Z1cUpPUdIB0wFBVV95cUxQaEc3X1dCd3NzaUJwMVRWSnlpelNOVlFMTGJHTkhTNy1EcXlZamVQMEdnYm9HakFsWmZzYzUwMDd2NHVDYWtMdU1WSjRBZWNVSXI5bHBjSUxMb2RFWUVrT2FuM3I1Z2M1bk9IQ3E3SjdCcEUteHNqR21DV2pkbm4tTEtTRElReG1GY3hiZk9jMmtLb190d21CaVBQU1FqM2JOSHFKcFdQQW9jWXctajEtT3VVODdDc1dKZ0lEVDNxSDZqWXZiOW95cWxIM2lqZXZDZ2FV?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0013_a696308d": {
+      "headline": "Minister Agnimitra Paul outlines plan for 4 new cities in North Bengal, Kolkata development vision to 2047",
+      "normalized_headline": "minister agnimitra paul outlines plan for new cities north bengal kolkata development vision 2047",
+      "first_reported_at": "2026-11-18T17:14:22+00:00",
+      "last_updated_at": "2026-11-18T17:14:22+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMijAJBVV95cUxQOHZqN1VwQXhQQ2JmOThDMUVwZlN5WGZEMEZBemF5TU5ZeEdBMEl4bG12QW9BRFYwWnkwNzRhTTQ3c092cURtam5uN1oxa0RnSW5GTTQ5TmNGTnRQc1ZhbWJGTDZiU3ZwRG9KV0JsX2pyeUxtbHJBQ1RCdzJ5WUxTMEQ0MEI1T2gxN3ZOei1uYWlhZUkwNEhDVTBvX2tUWl8zTnFDMTMzOTNxWW9GdGFoZ25kTW5PRWRTUURwSjZwWkFnTVhYb1Y2aC05bEFxRl9KbW4yMnJ0THJsNEV5dklNcWdSS3dJYXg2U1dET0JjZGJTUWp2U2tmLVpSWGpvYnhZN0k2cnBJbTE2NTdp0gGQAkFVX3lxTFBiYTRyVlJDS2NUeXZtaEQ4US02ZXVWbVQ3ZGc0YnhGcWROamlpempPY2tVNHRlVkEtaW1VcGVpeVlRc1NIRmJBR0swSDNoVnBWbGxMOEZXLUN4LVgzQ2Z6UWJ1QmluSzdnMlFBYWFlNnVUYnJzbWJTYzNCM3J1U3dMNUZjUW5KZzhWT1daLXpuVjFZNDJRRGl0WDM0VmpTemZfUHZfMmx6b09RbjFWV1p0QkVTemVmdV9ZRmktanh4VW9BWGVCNjdQa2lEdFE5OWxLZ0h5TjZsSVBxNEs3cVV6T3QwY2JpdXhPQnJwSTFSU0R2M0ZBYnF2ME1hTmtkdDlrcGNhQ25YWGs3TjJ2Vk5E?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0039_7de71ce5": {
+      "headline": "Xi hails Russia ties as \u2018source of stability\u2019 ahead of trilateral summit",
+      "normalized_headline": "hails russia ties source stability ahead trilateral summit",
+      "first_reported_at": "2026-11-18T13:35:22+00:00",
+      "last_updated_at": "2026-11-18T13:35:22+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMizwFBVV95cUxOOS03TlQ1dWEydEFqTVdvQjFubW81Q2lxTHZHTmRnUXpwTHRwOFIxbjZmTnp5bkVSMlFQNmViaGE5VmFCMWhzNkZCRlQtLUpURVFLUDI3RkNXMWVHY2t4emRrSjJyN1ZuSWJ4RFZDZ3RlMjByMFJUQ0Z4U1I5NnZid3pYUEJ2OEcySXhXYzRmaFAzMW5FQWlHRWRkczZlX0tqMFpnTHZoTnhBc0pFT2k3RWx1TGdlWFNGV0lacjE2dWlXNEoydGd3THFYZ1gwQUnSAdYBQVVfeXFMUDhSeVV1T0E5TWlPLXc0WjRPcXpzX3J1RDdsMGpLNVp4X2NDdUNMVDNOT3lzOFFfWDg5SEhZalE0TUp1bG85ZUhUUm5YdVk3NEwtOXJhMEpqcWFaTDRTUnlHY0doMEctLUJ2MUpUa3NHdmV5aVVMMHJ2eDkzQVVTSlJoaW85czZXZTZKTVpLS1NBTjNXY0VEZU00ZEQweHg4cHBRa1JCOFg5QWxSN2pKMmlQbUFrMi02UDc4aGZhZnRLWXdLeENLZl83cV9zMUVyVWJtbVRvUQ?oc=5"
+      ],
+      "section": "national"
+    },
+    "CLUST_0004_b0b6ed95": {
+      "headline": "kolkata knight riders",
+      "normalized_headline": "kolkata knight riders",
+      "first_reported_at": "2026-11-18T15:43:37+00:00",
+      "last_updated_at": "2026-11-18T15:43:37+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMiekFVX3lxTFAxVGhnZjFLZUlwN2dyRG51UlZZckpybUVjOXlPNmRWcFZIMWhULWdyVUdWbl9tRHBNYmcxRU9XbXNYckRkUFpLUWdvTURtRVBidDIxVzVtWVQ1RlVtMGpuQnBBRzNiTGxDZzJsY3dHYklGMkV5S1RTdEhB?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0083_99557fe5": {
+      "headline": "Air India\u2019s forgotten \u2018Baby Boeing\u2019, lying idle in Kolkata for a decade, gets new lease of life in...",
+      "normalized_headline": "air indias forgotten baby boeing lying idle kolkata for decade gets new lease life",
+      "first_reported_at": "2026-11-18T15:20:29+00:00",
+      "last_updated_at": "2026-11-18T15:20:29+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQVHZCOGNqT1hiYXVrZVFJLTRibXRYbWVSTm9uV0hycWtBWUdIaXYybFNXdEpWREZsRXRjdFRXRjFBRERtdWhGcFdhVGIwMjhkQy1DRmVEN2xNTm5qMEF1cmZUelJJV0h1ekhyRjhZdzFDR2hIMHMtZVlRQXNzdDBYR1dQOTh0ZGVQY3A1SFZUeXp5RDBKNldOZ05pYUJJR0RCRTkyTEdNY1MwOXJ5a3FUNk1FV2l2V193V05hZ2lXSTY4TEpwUEs3V2pvT3ZNS1NMMVpzdHFaNTY5eVN2U2tSaHNxMmI0d24wWkVEeVYwR3RWMnlXcmfSAfsBQVVfeXFMUGsyS3QtVlE5RDhTTW8xemg3ZFFRTDlZd1BIMk45LWpMTHQ0dXk0dlNSN1kzenNCUWlUMi1WMnlkMTBvZWh2WjhJR1FKeEZJd3J5MDgwRmVQSk04dnI2R1d3YjZCcXZnNGJQeFhKVVAwbWFreVJjRU1POXczd0tPb1lQOW42dDZqaW1GS3c5VUlxTERJX0FZMDZGN0J5Ulp0eFFrRVhSREc1WHlkWHQ0Z1NyeXJtcnRpU05GZ0NJT1lsSFhoY0ZhenB0SDQ4THdaa3gza1l0dnhXWDFEWHV0bnZXdVFjYjBuUFNmcHcxUGVwQUpTVWpTeWhpSlE?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0092_fcc2f19e": {
+      "headline": "Have no enmity towards Christian community or clergy, but forced conversions won\u2019t be allowed in Bengal:",
+      "normalized_headline": "have enmity towards christian community clergy but forced conversions wont allowed bengal",
+      "first_reported_at": "2026-11-18T15:21:00+00:00",
+      "last_updated_at": "2026-11-18T15:21:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMijwJBVV95cUxOUndYNEJjQW82TVVDcWR5bUJhckY0MExEWWk1MmZHWG0yZnVQQk5YWGFkWXVsc2RRR1pxTHROVndUTmlsaHQwVmVaVG1xODNVbmRTR0ZubkhIbk0tQ1dfelBZTy1BZ3U4TzN4UU1PRkJqNGo2RjlkNDhteHRtU1F2dGNIa3VzVUpjaFNpbnpZRUgtcVpJV3IwNlNJbGI1TlRwNk95MHNaWnlIY180aW1sZmpXTDhxWmRDaWpxOHo4RkNGVDVveDl6VWVTSnRqV3B1cDk2TkV1b21WWUw0ckNZdC1sblN6ME1rMGhydHlUUkVBVGtPS2VmZWlmN2dtQmY4ME1BbVEzaGlZMWp3dlhR0gGUAkFVX3lxTE9aNjJVTHBqWkEwcjF0M1VtU19CdHVVemVLRkpzbTNjSzh1RTJKZFcyTG5JYVNWVS1KN3c5WURDb05ubWFTUzZHTFduMi1VLTZTa3JZMmlGVnVLMUlJeENGcGVXRUw4MmJqNF9nQWNpekRaMVlfU2xMSWFBS3loeHFCX2M1cVFoMGpDbjBUTnFqeWdjV1JRV0JBTGFxOVhvSlBFcXlfNzNQQjVmVDVzVnVWMkpwbWFvczdkRUVfOFozcTRuNTQyd0hzdmM3TW01Nm5tMFJwdTVCRjkwNF9GeEdFTURRSGY2cDdPVTJ2cjFrQ3E5TDBaaXNtQnhzRzhTU05rODhxYm0wMm01RGpTNHk1MjhQeQ?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0086_7618f153": {
+      "headline": "Man killed by elephant while filming herd in Jhitka forest",
+      "normalized_headline": "man killed elephant while filming herd jhitka forest",
+      "first_reported_at": "2026-11-18T15:04:00+00:00",
+      "last_updated_at": "2026-11-18T15:04:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMizgFBVV95cUxOY0QyRmM5dkcyR1I0VEowU1ozZGx1WHJQNzRwalQzQ2dPa1pjeFVlZkoxaWhHWUhLa0lqMER5MnRfdE0wWHVKNnFYM2FKMlBrR0ZYSXVVS0tNNnByVTBfY1dtamNoX0N3QVEyMEFtVF9FRmhYbGpVUzVaSU0wMVhvSGpIcWktODllQVpqRS1SSGlTQVJhWFk4RUVnbENnYndiU1MwMmVya2VCODJFZDZiTXRtYzRiTVJHV2pzUWZQMGFrYVRTLUU0akdRdjljQdIB0wFBVV95cUxOSktTUFFUSFlDckI0UWNnUVZGWXg0eThPa043TWVXSk5PNzl5UmRFNjQ4ZUt5bUtJd0JGb2xiZ09lRVhqRGtPSVZuVmxwcXp2LUdsYWFZQU1aVnFka1o0Y3VuUE01YjltTTl0R1g2Mm5xeUtMR2loSWttMlcwYUJDczhseGl4SFYwZk5jZ01uRHIwRkY3MjZuOHZndk9EM3VmQjNXNjU5NTZMSEtiZ2ZJVzVJcXVtRlcwWm43ekxXSU00YWY0QW9uVE9KTFpkcndxc284?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0090_51f3381b": {
+      "headline": "Install CCTV cameras at critical points, Christian bodies urge Bengal churches",
+      "normalized_headline": "install cctv cameras critical points christian bodies urge bengal churches",
+      "first_reported_at": "2026-11-18T14:58:00+00:00",
+      "last_updated_at": "2026-11-18T14:58:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMitwJBVV95cUxNUTRsRW9POVUzRk5seU9Fc0F0eDEzUzZKT0wzcHhXQl81QmJHVHpmRkFzd0M5UmxVQXVxcXQtX2cwcGRlWGFOUVZCckJ4X1R4Uml1OHN4S3dUTUVSNTkxLXBaaHl3ZWFXQzVPZDEyUGpEMWRIc1o1MVpvTjUwY2hXSUxHOHNOZk1Xb2ZiRjR0NC1JbzFwaGZpd1EwU1dhOG9IeWo5Tkd4dUtQMUctZEViblZyaUZyc1NJYXl4R1lWLXF4VlI2OElKai1VQ3dBTFRuTFBiY1dNaVpWOTdxMEJ4QmZRSkxmOVk1em5nLWp4UWVqYU9NcXJIZ2xOLTVTbFUya0RvTE5UNmFfZ0Z5bF83VF9iVDBzQXc0MnFCd3BsOHNzSjhsOHBBVkFVWmJaanZKbi1sUmpVY9IB7AFBVV95cUxQS2V3UWJQSTNsS0hISFhnbDduQVlDTkYxU0l6dmE0eE03WHFIa1MtUC01MC0xTlRCMFZYbHZpM2IwZGxIa0hfVG45ZDhKMFRYM0YyTjZDdlpyaU1ua1h3eS1vNGhOWk85RGI1eW41Z0FuWWJ1U2pCV0FNc2kwVjA4S1M2OWRyRzBSa0NqeWMwU2YycS15dmt3UEd1emJfSDlFdVI1VnBHeFdLQ09rZ3hZeW8taFdEUC00eXBJcDdSQUFKQ3NZZWgtLWU1WlZzYnhKMUlGQ2JhZExTYm1WbHhDR3c2cmY0M1RQWkR4Mw?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0017_e5b3f5a3": {
+      "headline": "Bengal brings back central agencies for state projects",
+      "normalized_headline": "bengal brings back central agencies for state projects",
+      "first_reported_at": "2026-11-18T14:43:00+00:00",
+      "last_updated_at": "2026-11-18T14:43:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMiyAFBVV95cUxONVR0MHlxSzlKNkpncjIzbXhlRGZvQ2p6QTh3RTBRUXNVZ2c5UG1Wc2tmYkVZNmI0SEZ5eDRJYzFHa1QxYjJJSVhMVF91Ukk0Q1VUcUFTQlA1Y2V3OHNlSjRxOERlWDFIbWVEcUtWM25HSEJQOE81dzBPUXpCU0cyd1p4Nm12ektHQS1CVDFOQnNmVjhsVzh4RlV2REhQUktTVnJCSmRpcEtlbUc3RTExRS0xaEdyOTRPSlZRV2lxRkROeVdKS08xTdIBzgFBVV95cUxQejUxSUN5anlsbk9pb19BenhuZW40STRGTWpIcU9FeWFIZVVXdHhqVk84RnRWZkd2QlgtbW9WaXA4b2hYUml4VDUyNjlwdExFMXptaGgzOUg4blkwZWQ5cFdXTWRSUXllMVl6VGZETkpfcE13QThOZWZka0s0cjBnMTVTM2xnamVSQXZhSWlFQ3JKTUJraDZiVXR6dWNIQzJrRUFTcGY4dmxyZWliSUN6ckFYOVhKc3Zrbk5jakNaS0RSM19PZ2h4OXJ6SjdqUQ?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0084_9602352f": {
+      "headline": "Trenches to shield Junglemahal villages from elephants",
+      "normalized_headline": "trenches shield junglemahal villages from elephants",
+      "first_reported_at": "2026-11-18T14:13:00+00:00",
+      "last_updated_at": "2026-11-18T14:13:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNclJGeWxrYTBPSDdsdjgwQzVOVDdCaUxHeEhlckJUdy1TbEF2X3VMWmh6UzVlOUcwVHV5OXlyTFloT2VSMUlhd2Y4MGhkREQwSU9vNThoWElpbUgybzJERS1rZ3paQnNFbk1jTXc0SDdvTVlwU2p6YW1CQUc4anc1eC1UYXgwalJvNTlRM3BWZUxJYU1uYmEtdWlYX1psdE1GVEFhVENCR18tb3YxLThNcnlvYXUxWS1EaVpzNUU2RDZfTUljUUlxVtIBzgFBVV95cUxPazhhSTN2Y2tvWGFHSXZzUFIzZEc5amxXSXRYM2d4dF9hYmt6QTFvMEkxMkJzTlJ4SUdCQk9LTWY0UVJ0d195UTFuMk01NVJWODEzRUt6M3VxVk1uX2Q1RkxzZk50OW5Ed3R6WUZJSWZ5anRWMUNEVW1ncGJ1S0dMSlEzV0tXdThiS2NtakRGVDdEQzhPNi1XaTZOS29OY3JUVXlOcDlXSzdZenowa0pWS1ViYzJXV0xUZWs0YW9BZjh0NU1fU3RTcG9GbGtWQQ?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0087_1bd65479": {
+      "headline": "Bengal govt working to amend \u2018restrictive\u2019 land reform policies",
+      "normalized_headline": "bengal govt working amend restrictive land reform policies",
+      "first_reported_at": "2026-11-18T13:51:00+00:00",
+      "last_updated_at": "2026-11-18T13:51:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPalNnSF8zYzg5TmNJOGZ6Zk1NaDJoSmpxVzdfeHNpYy0wc2xab25RVi1KelVnbll2VVoxZUNET3lMTDQyZGtfTFlqbDZGQXZIbENNM3BTMHB0T3ptTzhEa0YxRVN4STI0VEEzOERLaEIydDIxbVBqSTlSMV9vcmZtU2pvVXYtYkJ1bHItTnpLY0RiR0lkVjFLNFFfWkQ0SV9tNlFGcWtrUmJYdVZiT0lqMHR4ek1ycVJtUEVwZGs1Q1hvWXVTa2hvUmJib1pGUU1sQXfSAdcBQVVfeXFMTlpmQmtKR2g0LWpMOGV4NjRDWURKd3F3R1RyUWdZbmoydERFMTNRanlyRk4ycVFaMFNKeFpleFgxVXBmTm1PWURSSXdFTXdUbEd6Ym9ybWRCOUl6VUhDSllBSVVGanJFQXFqZW5UOXBGSlNzMmQ1MVMxN3dETDIzc3hoRHVWWGctbjFwZDlpcl9WM0FSSFA0alpfSXV5cGRENUw5UXQyM3R4LVEwTVdlVHBja3dLU0g2eHZPRzJLbnRyd1NvaW9kUUF3QkhxOUp1anhCSFd3ZXM?oc=5"
+      ],
+      "section": "kolkata_bengal"
+    },
+    "CLUST_0048_c0dfc732": {
+      "headline": "Bancroft: 'I did not give a complete and truthful account'",
+      "normalized_headline": "bancroft did not give complete and truthful account",
+      "first_reported_at": "2026-11-18T09:40:43+00:00",
+      "last_updated_at": "2026-11-18T09:40:43+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMijwFBVV95cUxNelhhWF9kMGNyZEZqTVU2TklraEh3Rm9udnMzVkUzd2J0VjZXSTRqQTRoek9ibmtSTVFESk5ab1lJcVJOZ09iZi1Cc2NaZ3l1QlJTeFplbmNKbldPazNPSlltWGNvOXl4a0RIN2txZGlJOXN5SmtqVTBpNUdTS04wZUZfR1AtRVhDWVFFdHU1bw?oc=5"
+      ],
+      "section": "national"
+    },
+    "CLUST_0019_2a86597d": {
+      "headline": "13 Delhi railway stations set for upgrade: CM Rekha Gupta",
+      "normalized_headline": "delhi railway stations set for upgrade rekha gupta",
+      "first_reported_at": "2026-11-18T23:45:00+00:00",
+      "last_updated_at": "2026-11-18T23:45:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxNOXpnc2wxeFpkbXM0NEtveEVjRWhHWF91WFJXSThrZkVnMGlkNVhCM2NFN1BfemkwbnhmWlEwQl9uU0ZEeDNiOEF0ejlFcjVpeURUREN6N0lRYUY0M3Z5MWdXYlh1S2dfWTFGQWFHVlZ3TmNObjdHM0RpQXloaWJ4SE9HS0t0OElOQ3U0anZzOWtvdmtoUDhrNmk1aVlHOTVlOXlRM3pzV3VBcDhqQmdTTk5EX01WOTDSAb4BQVVfeXFMTjdkc0c5VkFHX3FBc2I4aHhLdmcyYXBuSDU3ME9fNTZrQ0dsYXBvOHl4R21XemRJakhJbGJuZHVlRGkwdm1jYlRkUE12Q2xPV09ETGQyQ084anc1SVRrbGZ1bHBVTkJDWWg1Tlg3VlFCRG1yZ0lTdFR0TXphbWVlQThuUHVIcllEc01MbFhoN1dNNzhUUUYyeEE4bVhxLUlkLWIyWlFjRnRVMFd5TmMtMmJRZjZtUnlOUHI0OXNZUQ?oc=5"
+      ],
+      "section": "indian_states"
+    },
+    "CLUST_0020_f9446357": {
+      "headline": "Delhi CM reviews pollution measures, says November air quality best in a decade",
+      "normalized_headline": "delhi reviews pollution measures says november air quality best decade",
+      "first_reported_at": "2026-11-19T00:05:00+00:00",
+      "last_updated_at": "2026-11-19T00:05:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNVWZST2Yyc1MtUG52eGlKSTVmQ0NwQm55ZnhzWDU3aDlhTG9NeE44Ql9pMlR1cmEtVTlQN1QyWXlJTzVYX016UEJFZTQxNUtDTFYyX0V4bVZWLWsxUkRUZzd0UmdBd2JEbi0zblMwNHBlelhVTkZxVms1RVVqSWo1aGVEYzJNb2JidDJuZEFGUjlWd2Q2dWhxQUh6YlF2aXZYdWpJczRIQkdXRWtoZTZ4MXA4U0hWWnRLb3VpUWh4YkM0YmhDRW9OaFFHamZua2RKTnktaUJTT1rSAd8BQVVfeXFMTVM1NEdjVlplcGYyUEZsaEZJRzBPZ1RvVGJJRjlTeTE5WVRzdXI2aFhwWmdWcG9OeXNHZ2N0c3hUNHhlb3RXWWYxbXIyOUFBYUtGRWlhYUk1WTFRdnhOY3FWNlV0Y1NRdmhYaHlVWkcwLXY5cV91VkdjT0dvS0RpSTJYenB1T3pOaF9tR2JYeGxPeUNPMHJreTZES0lIZU1mQ2tpNndEU3I3NDRYdjZWcE9RbGxJUVh5TlZlX1BMVjNWWHIwRzExRTVrdTdwYkZfUkp3aGJZRWJZUzdsRUZWWQ?oc=5"
+      ],
+      "section": "indian_states"
+    },
+    "CLUST_0023_aaf7ee61": {
+      "headline": "Man arrested for desecrating Guru Granth Sahib at gurdwara in Delhi\u2019s Tilak Nagar",
+      "normalized_headline": "man arrested for desecrating guru granth sahib gurdwara delhis tilak nagar",
+      "first_reported_at": "2026-11-18T22:34:00+00:00",
+      "last_updated_at": "2026-11-18T22:34:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi2wFBVV95cUxObFR5NXBORjZqT29GSUNJcWF3WEtOc2thN01WbHM1MVhjVTZIS0NSYVVObXI4Sjh6WE9lRlhNYkRRdEpFMWMyZnB4MG11b2ZSZEFJTEFsRTE0eEhDb3M2bjhfM2ZMV0pRVVY3VzZuRlBxbWNqalhCTzFrY0dKR3JuT2R5ZUtkeGNlM2E1UzN3NjM0X3Z2cGlHTEtaZU5zMzNuUkpXMkwzUnZ2WWlTV3Fpem5Eem9fTXdlVktlaDhrYy1melpRYl96emFpX1V5M3FfXzZXQVhBeV9fWGfSAeIBQVVfeXFMT3JnTGRPM3FUSnNmV2k3R0RqQTY3UVYteHhEenhUX0Nmb1RaMFdsWUVkc3FIMFNxZ3h3Zk5xNGNOUTlURGNnR2w0NXR6Z3FUb1FERXVJQXNsNWhOWFU0ZjdJU1ZHU2NWTVlpYjV6NUJxSlFuYlQ2MWRLZk5vSEpPUGxiT2NGOGdUTFI5WWRKQjdQTEtoSG5VbnhOMzY3cndlWk56WktXUkZiNkx3eWQ4ZzlSSmwxeDRYMURSdXAtTEgxY3VqRFJuaHpmd013d3lFRW5mN2IyUnotMnM1blJ5VEc3dw?oc=5"
+      ],
+      "section": "indian_states"
+    },
+    "CLUST_0032_b54a4782": {
+      "headline": "Delhi\u2019s air cleaner, but government braces for second pollution spell this month, CM Rekha Gupta says step up checks",
+      "normalized_headline": "delhis air cleaner but government braces for second pollution spell this month rekha gupta says step checks",
+      "first_reported_at": "2026-11-18T23:30:09+00:00",
+      "last_updated_at": "2026-11-18T23:30:09+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMixwFBVV95cUxPX3RRVHVpdHZlbnc5aFdxY0pVOEdoUEpaenVoSUdxbEQ2c01TN2lPUjVCejcxNnZRbzJZTHdoMW1kbWw0MGw1WmpDUnU3WDcwYWdJdUZMNlJoWXlBQkFmYmNmLU51Z2ZkSm9oZ3ZsNzhVT3JGZ1JfRThMQ2V5a0NNM0Z5RTgwcDdhOFdlNW83TGM4WHVMSTRVOERPcEJRbDFUWEt3TTdRT09Yc21KMGdSa3lRLXlNUVVtdE9VcW1yc2E4UVN5TWsw0gHOAUFVX3lxTFBKRGVUbkZjc29mMGhCdmpNQWsxWWppeVZRNmMzOTlCOWwxNDczOG4yb3ZUUWwtZ0wxeDNiVmdUTEZKNnB6NTVGRzZYS3FpYWNKd3VyMW4wOXRkVHZHaGtPeGQ1QkxjUzNyQkRiNW9mMk4zX19zaWJyMllBR1cyZGI4cWo3cG56Y1M4OXdNc0JTeUViUXRlcUlCOXdwYjBUN2ZabEtpSjhYMXlGdllGSC1sVDZmYkhHUDFPRXFjMXRZaFRCaVRPVi1yMVg2dFln?oc=5"
+      ],
+      "section": "indian_states"
+    },
+    "CLUST_0033_b2dad672": {
+      "headline": "Delhi mental health & well-being policy: 1 counsellor per 500 school students, 100 college students",
+      "normalized_headline": "delhi mental health wellbeing policy counsellor per 500 school students 100 college students",
+      "first_reported_at": "2026-11-18T23:50:28+00:00",
+      "last_updated_at": "2026-11-18T23:50:28+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZFR6UG1YTXBhTTZnNE50aHFPenc0VWpVRTNDdkFjVXh4Vnp0TnZBTTFqa3VJZlNRbGE2SW1pLTlWdDN2VVFSMXRDeUlXYUlmdE0zc3NxTDFybXg5VDAwNGFNZndRd0ZHM0FRbm5kQlZOVGw2OVJ0YUNGcTNLa200YU5OdzlabW5ORnJxTUpMMHFJalpLa2otRmtJMzJueDBpS0dMSdIBqwFBVV95cUxQVi1FekZkalFsOE15b25yZHBnRENsS0E5MWk1YkpiTmVJZnlEajNMQmQ4OXNPS1FxVDI5UlVUSXNlQk4tYkxyY1c0MFVtWjlIT0E1OWFQTWE5OGxOczFYUTA0YUtMWENHVGFqZFdMQm5EMk9YU3o5SzBhaTNSVV9GcEJXb1BUMzBKblcxdkVkb2xkdlNMdU92My1YNDhacFZGSG0tSFJ0VUhwX3c?oc=5"
+      ],
+      "section": "indian_states"
+    },
+    "CLUST_0037_bc59121b": {
+      "headline": "Delhi sets up panel to review criminal cases against foreigners for deportation",
+      "normalized_headline": "delhi sets panel review criminal cases against foreigners for deportation",
+      "first_reported_at": "2026-11-18T23:40:11+00:00",
+      "last_updated_at": "2026-11-18T23:40:11+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOOEMwa2J1bkE5X1ZsU2xtbnJFMy10SDlmUnM3LVF5c1R0cEk0aHNjbk1hRHZORHVfWjNlcTlSNFl6amZ4ZzRWSHd6TzZ1RzRoWFJlaUxkUGJDc2JpSjNDd0VHMXNKTWFUaFQ3UC1rbHNkRkhXRUxRUnZyTV9hakQyVVZOS2JqeW9jNUlnZ2I3ZlM4b002b0N4QWFFSUNUalhKWGYxbUZkNW9ZQ0tKenJTXzdmamtFRTNK0gG_AUFVX3lxTE9JVDhwRVdzWUI4cjNOZl9hNnNkb1p3czloVUhYNmRNMnNiSGo4eXVNVV9ZSmVicUU3QjlJSzZRQXdxd0pJZDR4cWUwa0gtTmdLV21WdTlrb0xMamVtczdSYXFZYWVBN1l3UGwtYXBLazhJc0VvU3h0dUZoeGhxWFpOeWZhcHAzd2lWajZMYmhqZUxMbTBzRWc4dXFBdk1GbDJfc2RpUDNGVGEtUXQwbHJ0YnhsWFQ0UUMtMlRYeENv?oc=5"
+      ],
+      "section": "indian_states"
+    },
+    "CLUST_0022_19249384": {
+      "headline": "Delhi High Court asks Centre to look into objectionable content posted by police officials against lawyers",
+      "normalized_headline": "delhi high court asks centre look into objectionable content posted police officials against lawyers",
+      "first_reported_at": "2026-11-18T22:10:00+00:00",
+      "last_updated_at": "2026-11-18T22:10:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi_gFBVV95cUxPdzFIbWNRbXhmRVVPSGI2RkFzQVZKb2c2RGVqcmxQeDlmVzJ4NkdORVB0NlU2Yk8ybFB1clBzYUt3b09mc2dacnU2eG1pN2xQTmpPWHRYZnN3OVVyODU3RGxJOE9rNkdVTy01UnlTeWltaERNT1VScWRIbFpBa2NsZ05hMFZsRndHMXVnUW9WX3RtZ003Y0RzRVNPN1IzYVBEWmpuSTY1YWtuNWE4QkUwdDZWVS1WbG1YNEZTOVdGQUxDTmpNTEdxZGR3b0VrZHNiSm1LZ0NIcDl2NFdwY0toWnBYTnNCb0VTTFRvN2g5UXZ6djA1TEZYOVJRaTY4UdIBhAJBVV95cUxPZXpEX0dLVnc5TlFXTk9jTnYyUVhWMUQ3SUdqcU1UVFpYSFh0MU9ieW5rVzZsVGFxUnREUWJlYkdkSDVzZVU2aUJxUGtTVFZPUEZ6SE5sVmJOZ3ZBVXZPdHgwckZGUm1xSWdfWE5KcUZSM0h0b2QzVlo0R1hwUjFGa3BDOUlaSUNkc1B0N0tFMExGODRQalIwN0FTLUVodW1aRUdIeXVxX1pDdmxuTEF1UjhtRVJyQWtwZ09kU0hIbXZaZkFOY2Nad0hMNDdtWmFtdU94OGdQclRGSm9OSDdCanpJZW9URWExdzB4aEJrSS1kVkNSekVSMjRMM3RmVEJGOHpCVg?oc=5"
+      ],
+      "section": "indian_states"
+    },
+    "CLUST_0052_aefb5efc": {
+      "headline": "Nvidia halts its H200 chip sales to China - GSMArena.com news",
+      "normalized_headline": "nvidia halts its h200 chip sales china gsmarenacom news",
+      "first_reported_at": "2026-11-18T21:31:01+00:00",
+      "last_updated_at": "2026-11-18T21:31:01+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMiigFBVV95cUxPcHFUMjdXZEFiZ1EtdXExZ0lWQmZUQjQ4SzhLUW45MExrMUVZR2xrUWdEWEsySXpITFgyVVR2bDN2REtvdm55ekJLaFNLakFneFZpcWZJVktJVklWUF9LNHdaQ1ZHWDczal9KczNQX0RRZEdwRFNlVkZsdHlNNS16Z0l6b1JBUllCdlHSAYYBQVVfeXFMTmF3VjNEQUMzMnFlVHZvQXNETEZJaXdYN092SFk1SzN0SGhONHB4Qk5sbVg4M3JSYlNjcEkycC1ONXV0Vm5BTmVDZHRDUGx2NThEYms1Q1RzZW9NUy1SNW5PZnBxSjlSQnZjZXBMRHoyWFlQdFloUDcxdDEzeFQxRU9IaldSd2c?oc=5"
+      ],
+      "section": "national"
+    },
+    "CLUST_0051_bfa0fc7e": {
+      "headline": "EXCLUSIVE: India to charge bulk Scotch imports 162.5% duty and tax amid UK pact standoff",
+      "normalized_headline": "exclusive india charge bulk scotch imports 1625 duty and tax amid pact standoff",
+      "first_reported_at": "2026-11-18T20:58:10+00:00",
+      "last_updated_at": "2026-11-18T20:58:10+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxNbVo4R08zb1NLcnBSUHZjUEl2NV9jZGZ1SG1oTXZNakY3MXliTVZIcDIzUHo1U0pwdElJSGQ3aUR2MHc1cUdJUURGQ3RCSzVJM0owUWE3SmEwMHNERXhVMEt0VVFFQVlGMDA1VXBURl9jX1JRVGpKYTBJUTViRm1yenJEM2FyN01TZ2ZseVdsSEVrWVI5RGRUb3MzVEtQemN1MUdoa1B2VHdPRjNPMXhPbmZla2FkTFE?oc=5"
+      ],
+      "section": "national"
+    },
+    "CLUST_0054_6c8b56e1": {
+      "headline": "Leaks Point to Curved Titanium iPhone 20 Pro and a Cautious Foldable Sequel",
+      "normalized_headline": "leaks point curved titanium iphone pro and cautious foldable sequel",
+      "first_reported_at": "2026-11-18T20:25:00+00:00",
+      "last_updated_at": "2026-11-18T20:25:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMidkFVX3lxTFAzLU1TYS1zZk9lMmFtSXAyUk1lbWE5X0N5TktmV1Z3R3Q0OXFlMmF5NDhkV0c4MGthbjhlU2Q0OF9NM2tWZW9RN2xSakVOZ2R2WEhIdzVSa3ppZG5WVTVLY0NEdG4zbDdjZVpKU2VTVm40dmU3Rnc?oc=5"
+      ],
+      "section": "national"
+    },
+    "CLUST_0021_fb7ef026": {
+      "headline": "SMAT 2026: Dhull's blazing ton in vain as Bihar stun Delhi",
+      "normalized_headline": "smat 2026 dhulls blazing ton vain bihar stun delhi",
+      "first_reported_at": "2026-11-18T19:51:50+00:00",
+      "last_updated_at": "2026-11-18T19:51:50+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxQTDJ6YU5jcmo5R2RvSE9BN0hzVEhEVHU4U25ITW9VNG5UcXNLWkd4TXBtS3JlVlJXanpxTUpyN2RXOWZMWHIzR2pSdDhJcEdiNXBWRVFTM2Y2VHpFS2s3cWNmbUJkMXQ4MG1Pam03Z3Y1TmhLU1dQV2ZsVlBLa21TYW52QjdxRWw0NHpPNEhhdUFzOE80U004cGhMR2VpMGQtWTJkZEN5cXc4b2xVWVc4eS1vUQ?oc=5"
+      ],
+      "section": "indian_states"
+    },
+    "CLUST_0031_96138703": {
+      "headline": "Video: CISF Detains Man For Forcibly Entering Delhi Airport",
+      "normalized_headline": "video cisf detains man for forcibly entering delhi airport",
+      "first_reported_at": "2026-11-18T19:51:13+00:00",
+      "last_updated_at": "2026-11-18T19:51:13+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMimAFBVV95cUxPcEhNbU9ZaDlkZi1jZGQ3NXo3MER4QUZkUjJraDZ6ODQxcXM0OTFhVm9HQ0lrUFIzLTNGcDJRQVBqLS1udmNCZnI3c2xYM1JEaHNTVF9IVkNqdkdJNHdBT0tKRkRDQW0zNWNKV1BBc0YyZmk1OW9rNlFPRjlOWmk3VE5ITmFKREVUdFZjYjE4SVhqemVNUmRXdw?oc=5"
+      ],
+      "section": "indian_states"
+    },
+    "CLUST_0050_776e36d4": {
+      "headline": "Gold prices remain under pressure as Fed minutes show central bank committed to cooling inflation",
+      "normalized_headline": "gold prices remain under pressure fed minutes show central bank committed cooling inflation",
+      "first_reported_at": "2026-11-18T19:43:05+00:00",
+      "last_updated_at": "2026-11-18T19:43:05+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPNE43b3JrcGdsOTVjUndOSjM0NWdzWmQyQ3dibWNBM1h4NVA5N0FlTzBTWGFXMURsUTR5RzVqbktoRVJlM2IzZEd3NVMzV0xFWnlCYU1IVDB1bkcxTzVaYW1ZYzYtem9lQUdmaVF5U0dlcXRicW93c0F3TXJiWHBsbkQtT19kTTg0d3d4aTNIdGJqd3FBUXVQb1ZZNmNOTFNINmJjaDlzUUZKZWdMdWhDYWdLT0lCMDVGNnFz?oc=5"
+      ],
+      "section": "national"
+    },
+    "CLUST_0053_315759b9": {
+      "headline": "\u201cGrand Theft Auto VI\u201d may mark the end of an era in gaming",
+      "normalized_headline": "grand theft auto may mark the end era gaming",
+      "first_reported_at": "2026-11-18T19:16:31+00:00",
+      "last_updated_at": "2026-11-18T19:16:31+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxNWlI3cG1TZ2poQ1NkUEZiY09tcExRZzlKOGhtRDFZRHMxanZINjU3bTBEb1JhelU3N055WmxSek1kLVVxdXMtTzdMenUxVTZLcTRPNGstYkJSLU9BWHFiTlRoaHlDaUlndkZMT3Y2MFFDTms3SWxzZWg3b1RrQjV1WV9MVUwxMHdHUExETUxxN29wMjBPZjlGWHRRbFpBSWk5RExn?oc=5"
+      ],
+      "section": "national"
+    },
+    "CLUST_0030_22d6e8e0": {
+      "headline": "Woman's Body Found In Garbage Pile In Uttarakhand: Cops",
+      "normalized_headline": "womans body found garbage pile uttarakhand cops",
+      "first_reported_at": "2026-11-18T19:04:18+00:00",
+      "last_updated_at": "2026-11-18T19:04:18+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPRHp3U0s5NVNkZGVVMTg0ZmM1NnljU1ctakZmWnEzSk1kWnJKRTUxODVWSGYtZnhfa2U0TkdhOTk1NjcyVnZ6N3pVMVU0NlRXaEV0TUxKcFpLUTJ4M3JLNVk2RDRDazNEVng2QW0yUTFLeWZ5azYxbmcwdlpGSTRiWXM3RFIzVC1ueWZlZVpMNjhWbXU4S0YxSmFkZmhIclZrMEZRWWp1Y9IBrwFBVV95cUxQR0JUellHMGlNVDd4d2hhR1ExSEtHLW03dWcxd2lwV0RsYVItdF95blR0bUVvbUxvdGZqTnFpTkV2UEFfU1VGNDRtZXJ3WlBmMzFMcUFNV2JjMk9KLTF3emFyaDNTdmt1RXdVanMxdE41bUR1ejRIN2IwVkZoNmwzQkVMS2NiRFdld3E5NlRRN0NfMjdiRl9KYmZNNGJPY1lTQkp2MERCbThjc1R4Tm5v?oc=5"
+      ],
+      "section": "indian_states"
+    },
+    "CLUST_0035_d0111a1d": {
+      "headline": "Delhi fines 25,610 vehicles for no PUC, turns back 30,742 non-BS-VI vehicles",
+      "normalized_headline": "delhi fines 25610 vehicles for puc turns back 30742 nonbsvi vehicles",
+      "first_reported_at": "2026-11-18T18:27:33+00:00",
+      "last_updated_at": "2026-11-18T18:27:33+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMiywFBVV95cUxONVpQUjE1QXBMNHN1Mm50WVN2OEhWZDR0U0FNcXNneG5wSlEzdGhwZE83NVVybERSVlV1TXNXRkJ2NGxVcTBEd1BCc3RYOW1wejhPWmxURG5QVi03SnpYUHZFdnJSaHJVZVM2ZFRoQkxPX1lfa203S2JNVFZIZEt0Z0ZfVDZ6UkdFWjRBQ3ZxUnBERkFhSDFxMktGRFB3clFLcUd2YlpiS2ItSHdWMktYSG1OLWIyb2E5RFpPcFdUa1U1bGhvSDZ5TG5LTdIB0AFBVV95cUxORXZaN0lvclJkTG1jd3pZa3A0VElFUEhGMnFuV3ZwY0wwU1hnejN5cUNxT1ZXLUNWbURLMmlCeFJpbEhYU2t4c0lKSmVBcUZhU3J4cFJLZGZHajF5N0JIaEdGOW53R1NCc0lzaHdiNnFGOGtvcE5BVEhMQ1B1VUk1Q2lfcVRJU3FyRTloZGhFM1VNYm9VeE9CMDFnYjZhOXFwc29qMGVxVy1oS2J0bHctUzZhb3p0b212eUJKS0xrZmxnRDZDVlpXc25jM1BFeWNC?oc=5"
+      ],
+      "section": "indian_states"
+    },
+    "CLUST_0034_6e5e4982": {
+      "headline": "3 Parties, 3 Wounds: Bhagwant Mann Turns Punjab's Past Into Poll Weapon",
+      "normalized_headline": "parties wounds bhagwant mann turns punjabs past into poll weapon",
+      "first_reported_at": "2026-11-18T18:20:47+00:00",
+      "last_updated_at": "2026-11-18T18:20:47+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMirgFBVV95cUxQX2I0SFo0TzZrazFrQl8xaFJoX21haW5HZ29OM3RydjJJSHJiSXpJUG9vdXhqUDRVTGxoNEJwQTJNZTBWandEWWI2ZGNtQWtiQ0tERm5KbUotWHZoNXEtby1NU19TSkVqOXVoYXd3SW9qX01zTUlPenczNjdHaFhjVVdSRUZoWHpVSDZFRXFaLXgyTUVES1ZDeTFJazJvLUVWLTllRmNXUG1saUVNdkHSAbYBQVVfeXFMT2UzRTdIQ1BqSWlyNmtQd1FUcHFBVUsyLTloRnVuZ1ppSXVESWtxeVNLSDFKb296czhCYlpkblpLLWM5Sl9kcDJZQ05BZ2p2Z3FtTjV3Y2FpdG51UFd4Wmg3Ui1DbTBDZjNBcTY0QjNoVEZSMzJ2X1Nsai03ajA0VXN4eWxRSW5ldDZWSFpPZVFOd3ZOUDA1dDFZcTRCQzFOSHNpbTliUjhWdVZEeEtlbzBrdEhQVVE?oc=5"
+      ],
+      "section": "indian_states"
+    },
+    "CLUST_0045_53d4763e": {
+      "headline": "Indian missing, 2 injured after attack on vessel in Hormuz",
+      "normalized_headline": "indian missing injured after attack vessel hormuz",
+      "first_reported_at": "2026-11-18T03:36:24+00:00",
+      "last_updated_at": "2026-11-18T03:36:24+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNeFJXejZKNHZHYTdiN0pTNXl0Wm94al9JeHJ0SGxleFhUWGtBTjlRQXhQUzRzZXlWWlduTE5oV2NOeTNtTnhnSG16NERLTklqaWlONUN0QllXZWdBdmtfdm1qaUZuMjVaYnFqR1NGMHh2UEZwU0tiaDhkUGhBMTk2ZXRnUVlnc2NRUEFOMUlPRm1SWVY1M2tKTXAxUFpVR21TbGllWGJKa23SAasBQVVfeXFMTy1FaEQ2eEloUVBPX3hpaDctVk5DM0xWc0J1bmlVdEFvVklJUlhVcUFXcHk3VDdlRTlTaXFYcUVmemhYODBZTjFBVW9hYVFJcE9Xbk93eVRBbmxUNVloSlJBSXNteVZBdEkweWZadjk3cWNNdDlSUzNuaUdKNE8zR24tNTBCMWl1R2doYmNZUDd0VDNtTmY3Skk2X1BmekJEWVdLX0xNNW5ud3Jn?oc=5",
+        "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPRHdrZWdRYWpIVUFsUE9DaDl0TGJnN21wRmY1eEFYa3hmWHM3QWllVTVBbjhUalNQdlhoVkc2Yk5TX2xHQ2JGX05IbVNiSlNEb2pQOE1VZFkwUlFPdlRSY1MyazRra2pHbm1uYXlSQklUcGl3THd5UFdQS2ZGd3dPT2ZXM2lpQjNHaUxoRHEtd3plSnZhUEp3elZnZmYzRnZ6TGNBNi1yM3loODcwbGcwOEVPX1FBRkZtWUhjUl9FWXk5MlB5YTJ5dWRGOEhyYnBCMjJF0gHaAUFVX3lxTE9IdzlIbUlvcGlFNEYtVmRVTWZnNVkxYWx5c1loQUhJdW52SlpBWXliSkxYTGd0RlBsellDLVdDVVdfdERRS0JqZWY0M2MwOUxVN0dPdWduamdaQnl0VldJemU5VVM1anZKSGNabC1OWmdlaHFXYjBBZ19PcDdCT3g2VEEzNjFER3VGb1V3Tm9waWs3S1hITEtldmN4djZuNDMyN3lXQy1Gd0NKd2cxOFpuRmdJNEJLTllpLUZQclROLTk1aXpySXBoRTN3U0FrbVpQdkhwTnFac2V3?oc=5"
+      ],
+      "section": "national"
+    },
+    "CLUST_0026_5f4ae196": {
+      "headline": "BJP National President Shri Nitin Nabin flags off #SamrastaSankalpYatra in Jalandhar, Punjab.",
+      "normalized_headline": "bjp national president shri nitin nabin flags off samrastasankalpyatra jalandhar punjab",
+      "first_reported_at": "2026-11-18T17:52:34+00:00",
+      "last_updated_at": "2026-11-18T17:52:34+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOT3lvQVR3MkktLVFSNEVJdU1sOWs1ZDBhVkl1NFk1Y3YxWHVWQnJ3QjVKMEhJUlVxRHNPOEZpb3AtVWlxZW5qQ05JdURrSkdhX0RYMWpPWTk0cXE3UGIzUWd5SUFvejloeVc2dWJla1FZWldOc3dQVVpfZElWYTRTRkVISzhuM19NbmJENmMtbHpFX2xKZWhadWhjTXl6Tnp3c2t3QjVBeUd4dnRZdjV1ODNLRkUySFlo?oc=5"
+      ],
+      "section": "indian_states"
+    },
+    "CLUST_0027_5a443864": {
+      "headline": "Bharatiya Janata Party",
+      "normalized_headline": "bharatiya janata party",
+      "first_reported_at": "2026-11-18T17:34:34+00:00",
+      "last_updated_at": "2026-11-18T17:34:34+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPUjItVW1EQ0FuWlJGYVExbEMxSlVlT1NmYlFkU2NWUnZWb1JYbUxGc1UyVjBPR1pqY2RpT2swS1NfWTEwc2dKdVRybjI1N0drQV9sTmxNTkJ4NEJRZ2hmejl5Vmp6WmZDR21qWS1ROW5FcjF5RzVNd2tuckVFcUpFa04xdW9GZnAxLVNCRlhGekdlaG9RYXpsVkFMTmwxYno5Qy0ycFlxYVRKX0RvQlpzZTh3eFRvMV8wSHR3RTFBbjNZV1dnLVMtOV9ONGJPV1hDdHNB?oc=5"
+      ],
+      "section": "indian_states"
+    },
+    "CLUST_0075_6f404b29": {
+      "headline": "\u0d30\u0d2e\u0d4d\u0d2f \u0d15\u0d43\u0d37\u0d4d\u0d23\u0d28\u0d47\u0d15\u0d4d\u0d15\u0d3e\u0d7e \u0d0e\u0d1f\u0d4d\u0d1f\u0d4d \u0d35\u0d2f\u0d38\u0d4d\u0d38\u0d4d \u0d15\u0d42\u0d1f\u0d41\u0d24\u0d7d, \u0d35\u0d3f\u0d35\u0d3e\u0d39\u0d2e\u0d4b\u0d1a\u0d28\u0d24\u0d4d\u0d24\u0d3f\u0d32\u0d47\u0d15\u0d4d\u0d15\u0d4d \u0d2a\u0d4b\u0d15\u0d47\u0d23\u0d4d\u0d1f\u0d3f\u0d2f\u0d3f\u0d30\u0d41\u0d28\u0d4d\u0d28 \u0d2c\u0d28\u0d4d\u0d27\u0d02; \u0d05\u0d2a\u0d42\u0d30\u0d4d\u200d\u0d35 \u0d26\u0d3e\u0d2e\u0d4d\u0d2a\u0d24\u0d4d\u0d2f\u0d24\u0d4d\u0d24\u0d3f\u0d28\u0d4d\u0d31\u0d46 \u0d15\u0d25",
+      "normalized_headline": "\u0d30\u0d2e\u0d2f \u0d15\u0d37\u0d23\u0d28\u0d15\u0d15\u0d7e \u0d0e\u0d1f\u0d1f \u0d35\u0d2f\u0d38\u0d38 \u0d15\u0d1f\u0d24\u0d7d \u0d35\u0d35\u0d39\u0d2e\u0d1a\u0d28\u0d24\u0d24\u0d32\u0d15\u0d15 \u0d2a\u0d15\u0d23\u0d1f\u0d2f\u0d30\u0d28\u0d28 \u0d2c\u0d28\u0d27 \u0d05\u0d2a\u0d30\u0d35 \u0d26\u0d2e\u0d2a\u0d24\u0d2f\u0d24\u0d24\u0d28\u0d31",
+      "first_reported_at": "2026-11-19T00:32:48.105632+00:00",
+      "last_updated_at": "2026-11-19T00:32:48.105632+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://www.google.com/search?q=\u0d30\u0d2e\u0d4d\u0d2f+\u0d15\u0d43\u0d37\u0d4d\u0d23\u0d28\u0d4d"
+      ],
+      "section": "trends"
+    },
+    "CLUST_0076_04a91335": {
+      "headline": "8th Pay Commission: 8\u0935\u0947\u0902 \u0935\u0947\u0924\u0928 \u0906\u092f\u094b\u0917 \u0938\u0947 \u092a\u0939\u0932\u0947 \u0930\u093f\u091f\u093e\u092f\u0930 \u0939\u094b\u0928\u0947 \u0935\u093e\u0932\u0947 \u0915\u0930\u094d\u092e\u091a\u093e\u0930\u093f\u092f\u094b\u0902 \u0915\u093e \u0915\u094d\u092f\u093e? \u091c\u093e\u0928\u0947\u0902 \u090f\u0930\u093f\u092f\u0930 \u0914\u0930 \u092a\u0947\u0902\u0936\u0928 \u0915\u093e \u0939\u093f\u0938\u093e\u092c",
+      "normalized_headline": "8th pay commission \u0935\u0924\u0928 \u0906\u092f\u0917 \u092a\u0939\u0932 \u0930\u091f\u092f\u0930 \u0915\u0930\u092e\u091a\u0930\u092f \u090f\u0930\u092f\u0930 \u092a\u0936\u0928 \u0939\u0938\u092c",
+      "first_reported_at": "2026-11-19T00:32:48.105632+00:00",
+      "last_updated_at": "2026-11-19T00:32:48.105632+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://www.google.com/search?q=pay+commission"
+      ],
+      "section": "trends"
+    },
+    "CLUST_0077_857ac2c9": {
+      "headline": "\u292e!+@\u292e[[HOJE>>>]] Coritiba x Santos ao vivo gr\u00e1tis 18 de novembro de 2026",
+      "normalized_headline": "hoje coritiba santos vivo gr\u00e1tis novembro 2026",
+      "first_reported_at": "2026-11-19T00:32:48.105632+00:00",
+      "last_updated_at": "2026-11-19T00:32:48.105632+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://www.google.com/search?q=santos+fc"
+      ],
+      "section": "trends"
+    },
+    "CLUST_0078_1d8f1499": {
+      "headline": "OPPO \u0915\u0947 2 \u0928\u090f \u092b\u094b\u0928 \u0932\u0949\u0928\u094d\u091a! 200MP \u0915\u0948\u092e\u0930\u093e, 8000mAh \u092c\u0948\u091f\u0930\u0940 \u0914\u0930 \u0927\u093e\u0902\u0938\u0942 \u092b\u0940\u091a\u0930\u094d\u0938, \u091c\u093e\u0928\u0947\u0902 \u0915\u0940\u092e\u0924",
+      "normalized_headline": "oppo \u0932\u0928\u091a 200mp \u0915\u092e\u0930 8000mah \u092c\u091f\u0930 \u092b\u091a\u0930\u0938 \u0915\u092e\u0924",
+      "first_reported_at": "2026-11-19T00:32:48.105632+00:00",
+      "last_updated_at": "2026-11-19T00:32:48.105632+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://www.google.com/search?q=\u0913\u092a\u094d\u092a\u094b+\u0930\u0947\u0928\u094b"
+      ],
+      "section": "trends"
+    },
+    "CLUST_0079_36b51c1a": {
+      "headline": "\u0c2c\u0c40\u0c2a\u0c40, \u0c37\u0c41\u0c17\u0c30\u0c4d\u0c32\u0c41 \u0c2a\u0c48\u0c2a\u0c48\u0c15\u0c3f!",
+      "normalized_headline": "\u0c37\u0c17\u0c30\u0c32 \u0c2a\u0c2a\u0c15",
+      "first_reported_at": "2026-11-19T00:32:48.105632+00:00",
+      "last_updated_at": "2026-11-19T00:32:48.105632+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://www.google.com/search?q=\u0c06\u0c02\u0c27\u0c4d\u0c30+\u0c2a\u0c4d\u0c30\u0c26\u0c47\u0c36\u0c4d"
+      ],
+      "section": "trends"
+    },
+    "CLUST_0080_17a896fa": {
+      "headline": "\u0939\u0930\u094d\u0937\u0932 \u092a\u091f\u0947\u0932 \u0938\u0947 SRH \u0928\u0947 \u0924\u094b\u0921\u093c\u093e \u0928\u093e\u0924\u093e, 4 \u0915\u0930\u094b\u0921\u093c \u0915\u093e \u0939\u0941\u0906 \u0918\u093e\u091f\u093e, \u0905\u092c IPL 2027 \u092e\u0947\u0902 \u0907\u0938 \u091f\u0940\u092e \u0915\u0947 \u0932\u093f\u090f \u0916\u0947\u0932\u0947\u0902\u0917\u0947",
+      "normalized_headline": "\u0939\u0930\u0937\u0932 \u092a\u091f\u0932 srh \u0915\u0930\u0921 ipl 2027 \u0916\u0932\u0917",
+      "first_reported_at": "2026-11-19T00:32:48.105632+00:00",
+      "last_updated_at": "2026-11-19T00:32:48.105632+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://www.google.com/search?q=\u0917\u0941\u091c\u0930\u093e\u0924+\u091f\u093e\u0907\u091f\u0928\u094d\u0938"
+      ],
+      "section": "trends"
+    },
+    "CLUST_0081_36e71917": {
+      "headline": "2035 \u0924\u0915 \u0926\u0941\u0928\u093f\u092f\u093e \u0915\u093e \u0938\u092c\u0938\u0947 \u092c\u0921\u093c\u093e \u0927\u0930\u094d\u092e \u092c\u0928 \u091c\u093e\u090f\u0917\u093e \u0907\u0938\u094d\u0932\u093e\u092e, \u0924\u0947\u091c\u0940 \u092c\u0922\u093c\u0947\u0917\u0940 \u092e\u0941\u0938\u094d\u0932\u093f\u092e \u0906\u092c\u093e\u0926\u0940; \u0939\u093f\u0902\u0926\u0941\u0913\u0902 \u0915\u094b \u0939\u094b\u0917\u093e \u0928\u0941\u0915\u0938\u093e\u0928?",
+      "normalized_headline": "2035 \u0926\u0928\u092f \u0938\u092c\u0938 \u0927\u0930\u092e \u091c\u090f\u0917 \u0907\u0938\u0932\u092e \u092c\u0922\u0917 \u092e\u0938\u0932\u092e \u0906\u092c\u0926 \u0939\u0926\u0913 \u0928\u0915\u0938\u0928",
+      "first_reported_at": "2026-11-19T00:32:48.105632+00:00",
+      "last_updated_at": "2026-11-19T00:32:48.105632+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://www.google.com/search?q=\u092e\u0941\u0938\u094d\u0932\u093f\u092e+\u091c\u0928\u0938\u0902\u0916\u094d\u092f\u093e+\u0935\u0943\u0926\u094d\u0927\u093f"
+      ],
+      "section": "trends"
+    },
+    "CLUST_0082_be9ff6d9": {
+      "headline": "\u0ba4\u0bae\u0bbf\u0bb4\u0b95\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bcd\u0b95\u0bc1 \u0baa\u0bb2\u0ba4\u0bcd\u0ba4 \u0bae\u0bb4\u0bc8 \u0b8e\u0b9a\u0bcd\u0b9a\u0bb0\u0bbf\u0b95\u0bcd\u0b95\u0bc8 \u0bb5\u0bbe\u0baa\u0bb8\u0bcd",
+      "normalized_headline": "\u0ba4\u0bae\u0bb4\u0b95\u0ba4\u0ba4\u0b95\u0b95 \u0baa\u0bb2\u0ba4\u0ba4 \u0b8e\u0b9a\u0b9a\u0bb0\u0b95\u0b95 \u0bb5\u0baa\u0bb8",
+      "first_reported_at": "2026-11-19T00:32:48.105632+00:00",
+      "last_updated_at": "2026-11-19T00:32:48.105632+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://www.google.com/search?q=\u0ba4\u0bae\u0bbf\u0bb4\u0bcd+\u0ba8\u0bbe\u0b9f\u0bc1"
+      ],
+      "section": "trends"
+    },
+    "CLUST_0029_8f428c39": {
+      "headline": "NIA arrests another accused in railway blast in Punjab this April",
+      "normalized_headline": "nia arrests another accused railway blast punjab this april",
+      "first_reported_at": "2026-11-18T16:06:27+00:00",
+      "last_updated_at": "2026-11-18T16:06:27+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxNSDNaOUR6OE9pNGVMTTZUNVpkVktROVNZc1otNHh0TV81M1dnY2xjLXR0aTdrSTlkWTlSY293RHJkdTRxTDFkNmV0VTZzcjJac1pfYlVKTTNkQjRZVTNCTjBnbmJrTkFOYW1OemVXQXlhUk04bl9OSVBscVRpRUExZEh3ZVNURUttb2kzNmNxN2FTQkJjbXc?oc=5"
+      ],
+      "section": "indian_states"
+    },
+    "CLUST_0024_914f0f4d": {
+      "headline": "Delhi Premier League 2026 Points Table",
+      "normalized_headline": "delhi premier league 2026 points table",
+      "first_reported_at": "2026-11-18T15:50:56+00:00",
+      "last_updated_at": "2026-11-18T15:50:56+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxONWpYMXBObnZwd2lNZHp2dFpwSjNkaTVVQWRWYm1zWTRQWWdJNlRTSmlJTTh3NW9PSDFyTDZSRDlTbVk0SUVYLWlRdndVZ044Tms3NUhaMElsMm1UZ0xTenktVGZsTTFNWklxaW13aXdzb0RTVnk3X0tiQU1HbVY0NHVYbVpRUXNxZ1VfeQ?oc=5"
+      ],
+      "section": "indian_states"
+    },
+    "CLUST_0036_aaca4cdc": {
+      "headline": "Delhi: Air quality stands in poor category with 242 AQI",
+      "normalized_headline": "delhi air quality stands poor category with 242 aqi",
+      "first_reported_at": "2026-11-18T14:40:04+00:00",
+      "last_updated_at": "2026-11-18T14:40:04+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMihwFBVV95cUxQNVhfRlNJMUJmM0JuVWlZWGdud0hJNHpTbDNNaDUtT2ZWVGk3NFpuWUJVZ0hodWRIRXNOVmNnUmhJTGpmTkVoNUIwWWUtNzZYVVhUbl9FVXVkZlduMVB6Mnk1VEhNTld0c1RsbTUxRnFkVXY1OU1zU09NQzNqaGpxMTJaUmpWWW8?oc=5"
+      ],
+      "section": "indian_states"
+    },
+    "CLUST_0043_d409bcf5": {
+      "headline": "PM Modi chairs council of ministers meet; end of Naxalism, world bank report on poverty discussed",
+      "normalized_headline": "modi chairs council ministers meet end naxalism world bank report poverty discussed",
+      "first_reported_at": "2026-11-18T14:14:00+00:00",
+      "last_updated_at": "2026-11-18T14:14:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQS2NJWkg0YVFHYml1b24xVTc3dWRvVHhxQzIzZDZ3aUtrWmNmY3NvZHdjVlplNUdmRm9CMUxNNl9laFp3YVZqbk9QQ0IzUVBWbzFseXV2MFd1SkpSRldZMFlxdTFXMFY1TGd6U1lwNDJjY1A2akFKajlXZk93SDJBMEl5d2tIU0pfMEZqbENpVWJveWstVko4SjJadnpKRmhkUGtpbUFvVmwyU1FCNTl5b1hielV2MkxlM1dQVFpQRlFEWm44bHNDazBrZkJfbU9xdWtpLWVFeXhPTkhicjkyMldJVmVqanlTY0lGeDQzQ2NFYnBQWnc?oc=5"
+      ],
+      "section": "national"
+    },
+    "CLUST_0038_f8dc7412": {
+      "headline": "Brought local terrorist recruitment in Jammu and Kashmir to almost zero: DGP after killing of LeT's Lateef Bhat",
+      "normalized_headline": "brought local terrorist recruitment jammu and kashmir almost zero dgp after killing lets lateef bhat",
+      "first_reported_at": "2026-11-18T13:37:43+00:00",
+      "last_updated_at": "2026-11-18T13:37:43+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMilAJBVV95cUxNcUQ3UG5GMy1tSmNQVjJIeXZZNE9scFBYMkRnSGs3RlpmbFpEWlAzTmhIbDRRQnZadnEwd1NiaHFZUzZSdUNhdkhNUnczWnJ1NWR3NTdSRENrWUdUUzBGTk9meGU4eTFHNWNBQWFGMnY3bUIwcVcyRzFVM25OcWhITmVqVHBKYUxfS1FVZktCeW5oR2lsWFRwbUNubXYzLTlQY0FDWnQtSk91cGRNOUpFUllSc09WOVRmbVVpd3RCdUwxUWM3b21IekZyMjRKWkJoV1dJSWpMbHRhdzh5a0lzMzFsS3VXVTk2czJSRnFMbVdYcXp0M3JieEVGd2xKZG1YUFI1SjU1YzBLX3RCb1lrR05ldkXSAZsCQVVfeXFMUGwyakZDdmtQNXpSU0wycnZManZjLTd0cVNuc0NabzhtazJ6YllSa29mTldTUnhvZXYxZ0dSaFdLZk1XU2VQZGtUWndNSFpqZFc2UUZxZDI4M0ZSYWE5TDN3bEdFOGQ2b1VIOHp2blNGQ3FHWHh0Q1hWTi1wMHhuOWl0dHlfdUtWdVFhalhrOW9DQVlYMS1WeG1WR0ZsVWFRbGc2RFdxXzE2MEVlMGdMNUlfeGVBM2E2dFJMT0JLMEZncThkakV4bENRS1A4QjhHU0FnNUszLXBSSkRWb0NGRmVtVVhWRjAzYzVhOU1OeHRVRzJzRnlJSnFWaXB4a3JRWlljbWI0a0dQQ2hyLWU4UFVYZUpPYk5YY1FwTQ?oc=5"
+      ],
+      "section": "indian_states"
+    },
+    "CLUST_0042_2feee603": {
+      "headline": "GTA 6: Everything you need to know about the highly anticipated game",
+      "normalized_headline": "gta everything you need know about the highly anticipated game",
+      "first_reported_at": "2026-11-18T13:09:13+00:00",
+      "last_updated_at": "2026-11-18T13:09:13+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMisgFBVV95cUxOd2VqQjVlSDhlRmd0TWpGQ1JhTkxjNjQybzkyV0l5cHhxaUtrSVlaMFc2VmthNWlsQkNGTTRkVTVPSEJEVllVTlVVcGllQllJa0p2enBoWmF0XzNyOTUzOXAxYWhRRmxTWFN1ZnpDQzFubWtUeS1vaFhrUXpjZlYwbFNDUGNVamVFTU9fV096ZVhBeDhXT1VwNWVBUUdaeDI1NlR1X0NrcGZyc01HV3BSLVp30gG3AUFVX3lxTFBnRlBaUHdOaGdmU0x4bE5XMERuS2M1OGdfZmR5a3VsYlBMNTNzQWhkeWtkdmFydEF2aERTVE5iTHV5a1p2c25PMVhidzM4U0RRQTNrN2tCN1g5bmFCV2hRcVhwRkNBSWNwMGVQbnEweHhHd2dGTWM4aGdSUUJNNF9LTmFVNEhTVEk5WGNVVXFGSlIwdXpqTVQ3NzVXdTROYmVMVmx4VnNGc2UzaEhpRUJaUElmUzNaRQ?oc=5"
+      ],
+      "section": "national"
+    },
+    "CLUST_0044_4b1297c9": {
+      "headline": "India inks Rs 1,976-crore contract with Israel Aerospace Industries to upgrade Navy's Barak missiles",
+      "normalized_headline": "india inks 1976crore contract with israel aerospace industries upgrade navys barak missiles",
+      "first_reported_at": "2026-11-18T12:59:40+00:00",
+      "last_updated_at": "2026-11-18T12:59:40+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQcnp5ODdZbmF3NElvX19XRGxjUDJxUkxISkRYYUZEWU5CTVE0YWxFM1l2WDdBQUpIcFNhRWo2X1RoQklXX1lPc1VTRlUzVTNnbnp5QWZTcExvd0hEaGY5QUZkblFzVTJWS3FlTm5zREkzYTlid2taa1VOVGlrb2xoS0trQ3p0LUR6ZVFhSVpsLW5uVlVySVEyUlYwWnBobnFjYm96UDNwb2wyNnVrXzhZaDg1Nzl1VHRFbGZHNFlJN0hwSk4yZ3FBcjk1U2ttbnJIOHhiS1ctYkFDWHpwdzhHRVJkdzR3YW5lblJBcEhPRTY?oc=5"
+      ],
+      "section": "national"
+    },
+    "CLUST_0049_4e1726c7": {
+      "headline": "Anthropic filing reveals how much company stake Amazon and Google will own",
+      "normalized_headline": "anthropic filing reveals how much company stake amazon and google will own",
+      "first_reported_at": "2026-11-18T12:59:00+00:00",
+      "last_updated_at": "2026-11-18T12:59:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQb3huVVB3dlItX1AwS0dNU2xRRlhGSFA2Y1dvQmRnOWJwTzVIbjh1SlhQUk5aamROcklzcTl0SF9xZkRZYTFHdmVoUW5KMDhjNGFIU3pXZEtwZU15SkFKOFdCY0ZnZTNISDZyTVhGRW1xeEVfRWhYOU9BdHZvUUlnNjVFbnk3TjFrcnBIRDVSMGRtbHlObVNDZFNPMXo5UnFwSU9GaFBtUks4VmNCSzBYMnFZaXE5NkFGVDVYRktSaml2SVpLS0JVcVc3UlRRUVdfTW80ZmQtOXZQUHFHYjh4eXlBZHMwQ3NxcFdsVUR30gHzAUFVX3lxTE9Sd3VXak5JRGFWazNqMWlQUzN1eUhhcWZ5a3lDeDlnOS1wV0Q4WkZDcTVPNUtaZ3J1eVNhLWg4Vm84ckpITXZEMHNvU0UxdnhqdDhNbFItS3UweGlLWWhBYV9EYUxtNjRzcjg4UkhjQWl2ZHpKY20tSEZWTHd2eEpCWnpZYWtSSU9iT2U0cENXbk1GN0gyWDVJU3J4SWZPSFhFWXJJdVhlbHE1OEpEdnd5UmZxYVl4bzR0X1hFbzdPbTgxMFc4NDdIYTJwNXdLWVdTc3ptOGtpSXVOMWFoWWgyTDZRaGVsUkVhNWFyNEl5NV9kOA?oc=5"
+      ],
+      "section": "national"
+    },
+    "CLUST_0056_3baa9c09": {
+      "headline": "BGMI 4.7 with Arctic Chronicles update: Giant serpent and frozen battlegrounds - Check new features",
+      "normalized_headline": "bgmi with arctic chronicles update giant serpent and frozen battlegrounds check new features",
+      "first_reported_at": "2026-11-18T12:54:15+00:00",
+      "last_updated_at": "2026-11-18T12:54:15+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPc0FRd01qUlIyMnk4Rzk5US10Unhza1hxeWZkdTEzTW9DOWJZcEU5ckFqdGlWUFdxLWZLZkE0VVpCckhzR05XcU9JSlZDVEU0SVZ2OXhadkk2Mjdrd21qelI4V1dnTkJid21zb0JjOERhMW9iR2JSNHdaYnhOdEc1Rk1zdmdtYzFqNzh0amJHTnhJNGlmdmNjcHNGX3Q1bnYtYXRxak1IYjZ0TDZ5eWNIWGc4STQ4VFlMbzl4emhjb0JydU5LYjE0QmdDQi02QzBLSmQ1cHhiQWZWZWg1aC1jRk8xdGtjZTTSAewBQVVfeXFMTVU2SHZPRXRpdTlUZDcxUWVxanMtU0twNkk5dS1Eb1JCVGRDR3NMeHRkcjRXUFQ2YVZRbU9DX0J2eDlTVkhLb3gyV2hwUDhkejhtMWVSVE9MQ2RjVGxUMWRSTVJNYVZ3NThaalpqNElaMHNjY0Z2ZHBxcW9aYUwtR1paTTZKbHRWXzhjdjg5aktHcE1FRHFqZUhjNWFPRm5CWmUxaWtoeXRGS0c0elVmQU1wenJ4SGxsZWNoaHpfa0h5dE9hLURhc2Z6Tmw2c05tLWZVR1BIZ2hFRUZENW90cl9Jb002bjRMU0xUbE4?oc=5"
+      ],
+      "section": "national"
+    },
+    "CLUST_0028_cfcbcdcd": {
+      "headline": "Whose rights take precedence? SC to consider traders\u2019 challenge to Delhi protests",
+      "normalized_headline": "whose rights take precedence consider traders challenge delhi protests",
+      "first_reported_at": "2026-11-18T12:06:11+00:00",
+      "last_updated_at": "2026-11-18T12:06:11+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxOcUpEaF90bnNlQ3JXZmgxOGFCTkttTTVkcWx5WklXdzBVTTdhRF9iZC1ZeUptbjBuZTRmcnBpWHJJdFoxcS1ESDNxSjlZeF9yV1dGX2ZTTnoyaFZWRjFzZDJWYUVTbHRSbl83Z1VhbXhheHNGVk84WEo4VnZoSEVFaWVqUWxndERyTnE5dlFDMG1HZW5IT2pjNVpJam9RSzFLMVkySXUta0o1RTJDWnN1b2lpeEM?oc=5"
+      ],
+      "section": "indian_states"
+    },
+    "CLUST_0062_b184507e": {
+      "headline": "Historic first: Democrats nominate Hakeem Jeffries, set to be first Black US House Speaker",
+      "normalized_headline": "historic first democrats nominate hakeem jeffries set first black house speaker",
+      "first_reported_at": "2026-11-18T17:55:00+00:00",
+      "last_updated_at": "2026-11-18T17:55:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQQ1hVZkhWV1BkSnUtRjJDYWw2Z1FPbDVnTjBScWVYVjFFc2pzNXFtaXJmVTkxM3FWQVF4UEwtNDhxcHhYekR6dEx2eVcxa1J2NmtKWnI0a1JuZ0ZxUlQ3NXpxOWNBM3dUaGZxVTJ2anZJc2xQWDIzdXI4WFg3WGNQMC1Tb2tZUEw4SkNxYjZlUUl5Y3N3Y1lKYmd2VV9KeTdLekMzbDM0Mk9Jc05SR3RYdUZza0hzWU1YckpVT3VjdldsRGxua0FwNmpXSmV2dzNSWFNMek8xMEVIRHp3OGVVRko3VGt1Q1cybjNwT1NydHY?oc=5"
+      ],
+      "section": "global"
+    },
+    "CLUST_0046_9ab98df2": {
+      "headline": "India Weighs Tax Tweaks to Boost Stock Trading, Curb Derivatives",
+      "normalized_headline": "india weighs tax tweaks boost stock trading curb derivatives",
+      "first_reported_at": "2026-11-18T11:18:11+00:00",
+      "last_updated_at": "2026-11-18T11:18:11+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxNSUNnWFZ5VkRNSnpmX3pGRVh0UmZSLVA1Mm82T3V5b1hlRXRkaG9EY0pId2NOX1R2ODlZSDB5Z1FtSUMzTWxUTnRlNmNva3pxWlRwTUQ2OHBZeF9KQ04wN2VDTDBtN1NHRmNzQzk1eDE2bmFQT3pFR1VhWlZvNGtMTFZIakhUcnhPUnRJalVYbklnRFAxU2ZwclUwZkJYT29ZcEVpdlRkX1RTaVlfQjlFYzNlVXg?oc=5"
+      ],
+      "section": "national"
+    },
+    "CLUST_0073_4b3136f8": {
+      "headline": "Israeli spy agency Mossad chief Roman Gofman pushed for joint strikes on Iran during US visit: Report",
+      "normalized_headline": "israeli spy agency mossad chief roman gofman pushed for joint strikes iran during visit report",
+      "first_reported_at": "2026-11-18T16:15:36+00:00",
+      "last_updated_at": "2026-11-18T16:15:36+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOcmRray1IZHlsaTktZ1d6Ylc0WFJWYkt0QUpmX0VHelB0eGpqOVpONWVfZmlDQmZfOXZvMXVzWDU3RlgxWDlnRG9NRDFDd3YtY3pnc0tObUlFblZ0VXhFNExWSzQxX1FDcnd4NzVpdnd2YUNWQVE2YlJqNnpvMDAtM24ydmZzdFhsZzVsbGY3cnh5QlExVmN4Yms4d3FMeTUyVkJuZ0h5UFZkT3JFTkVNVWwyRjhPMWRVUFhjcHdRemMwcW5MbnY0Mk1WT0JJRE9s?oc=5"
+      ],
+      "section": "global"
+    },
+    "CLUST_0055_01522456": {
+      "headline": "Xiaomi 18 Pro and Xiaomi 18 Pro Max launched with a back display",
+      "normalized_headline": "xiaomi pro and xiaomi pro max launched with back display",
+      "first_reported_at": "2026-11-18T10:02:07+00:00",
+      "last_updated_at": "2026-11-18T10:02:07+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPa0x6ajJFVi1ZUlk3RTREMkMyZWl4ZHlRa1QweTdpaWxuYTBXc3E3U2tHa3Axc1VkYl93Q1kxcTBkZTYwN1RnWjVLX3R4SXhpU1U4M0dBM2g3THJET3J0MVo0MzdDb0dZd0daSzVDNXZnUllDM3RtMkZIUlZrNnh5dW80VHJwLWI1Q2tSMFhoUV9Rd1NYRWdBSnhVdnNoNHBiSncyVDQ3b2FHT1daaVJCWUVPTVJWUlJKRFNXc0hQbVlEODVMSEZiWk1XSWFna2dxTXJn?oc=5"
+      ],
+      "section": "national"
+    },
+    "CLUST_0063_fbd18e35": {
+      "headline": "EU proposes \u20ac45 billion Ukraine loan, to be repaid after Russia pays reparations",
+      "normalized_headline": "proposes billion ukraine loan repaid after russia pays reparations",
+      "first_reported_at": "2026-11-18T14:52:22+00:00",
+      "last_updated_at": "2026-11-18T14:52:22+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOaFhjUFo4SHBqb20yY1dQWmZZNlZhV2VvZjRQLTFoQjlYeFItaHNXX0FZVmhuazRYODFqcEk5RThWZUNpX2lPOFJrZ0M5U0hEODBZZFNndnE3U18xNWRtVGhlYmRXU3V1My16RTUybkdaSXRvc3NIOWpNdllIWG1GMjE4Z2N1bm1naUZjNXF6bVBPSF9lalVpeHdNN1FQeWRtZDBfaTh3ZXBaQQ?oc=5"
+      ],
+      "section": "global"
+    },
+    "CLUST_0057_78baeb4d": {
+      "headline": "Avengers: Doomsday Final Trailer Expected Today, Nov. 18: Release Time and What to Expect",
+      "normalized_headline": "avengers doomsday final trailer expected today nov release time and what expect",
+      "first_reported_at": "2026-11-18T08:50:00+00:00",
+      "last_updated_at": "2026-11-18T08:50:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxOdlZ3SFozRGgtbHR0XzZCdHRrdFpKV015NDhudUhfOTV5RkRTc0tPWnJWRzdzYVBoYnBWRWhIcW4wN3dUZHFQRUhQRTVDckRRUG11YTFfc1BTSFBVakRJQng0UlhXaVo2aDN5d2VSMlcyUWVCMmhfUXBsTW5WRXpmNzVJXzY1bUdOZ1VhbFhNbmRiQVNJc2thRGo3ak95UXBwZTNBVElWZ25KYW9PQzR5Nk9YT3FmZ2c?oc=5"
+      ],
+      "section": "national"
+    },
+    "CLUST_0058_d1f2e11a": {
+      "headline": "IndiGo joins Air India, Akasa in suspending Saudi flights until November 30",
+      "normalized_headline": "indigo joins air india akasa suspending saudi flights until november",
+      "first_reported_at": "2026-11-18T13:24:00+00:00",
+      "last_updated_at": "2026-11-18T13:24:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQZ1g0SjZVWGdGR1RSTnRXZkp4MElwQ3JXVzJUUUx1NUNlRDRwbUVkNTNYYm15TzVhVWZ0Q0wyTmxYb2liVVpqZFl4ekxvT2JCckJsZms4UEtTdEdMY2tleEJGUVJYTHpwaFY1RzFsS2JEMXZ4SW1nMmpYUnNGQ1g3bWFUTWVZenhveWQzSFlYaGF0bm43QXVwMVg0eTAycXZFbVJsYmp5RWJ5azg2NmxhUlRVX2ZSWUNLUnBGNnpkaGM0VzRMaThrZEtweXBaQ2c1TlR1YmI5cEIwc0FnTlBPSkhKMUhQNjBCWmV3WjRmRHAxZw?oc=5"
+      ],
+      "section": "global"
+    },
+    "CLUST_0065_3baacd41": {
+      "headline": "Meet Futa: The World\u2019s Oldest Living Red Panda In Captivity",
+      "normalized_headline": "meet futa the worlds oldest living red panda captivity",
+      "first_reported_at": "2026-11-18T13:00:37+00:00",
+      "last_updated_at": "2026-11-18T13:00:37+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxQOUZuLUFubWNkRS1PSzBMSUcyT1loNWVzWklteTJEQ1ZrZEpndmFQMG51bzEtOWo1MXhYXzJReF9LTHZKUGZUU18tWUxrUmFWMGVfeUJ1U2hSanBqaGpKZXlMcTI5Q2ZaVVZ0WjY0VjBRZWtRMFhVTlNhZmdYb3ZncDc2a0tEX29YRHNYQXVUc2laLUdBMmN5WUxXVVluRzZfQTREUnZ2QzZZR2VvZUNxQTZEdDBzQUs0V2fSAb8BQVVfeXFMTUoxQUNWc0lXWC1JTjMwMm95YnR1dDB1UTBaQzRsYUp2V3RPajhNUmw5Qy1OTm5NUUx5bWlYbWVmYXZrV2JzRWZiOUlnN3hta252RXpDamUyX0hCVFV5V2xfczNwU2dqMGp6cjZ1bjcyYVo3QUhLVU9sd194alVBdXRtMF83MlZLU3JNcWd5Um4zb3lYZ2FFVWNIei01dGo2YlRSQ0VDREJxRHhhMENRX1lJMVd1eS1OQk0yb0xBVEU?oc=5"
+      ],
+      "section": "global"
+    },
+    "CLUST_0061_05062030": {
+      "headline": "US court halts restrictions on internships for foreign students; CPT relief for universities",
+      "normalized_headline": "court halts restrictions internships for foreign students cpt relief for universities",
+      "first_reported_at": "2026-11-18T12:57:00+00:00",
+      "last_updated_at": "2026-11-18T12:57:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQcW42OFMxajVYbE43OVFoS3hRR3RNQzVvQmZoNnNuM3dOVGpGVThibEVUbW9fdEhFVnVlSzBOdmZlM05RRzhsR3Q0MHJCd0doRWl4UFduVDllOGFTNi1Pa3JMbktXci1Gd2J0ZFBjUkpBbUhFMkRsZEZwY2hTb2c3M2daS2JYSU1MdzVZcTZZQnZ3LWNzZlYwMVJscUZyVWZ3MlRRaExzRlZKVWpCZTVwYlUzbzM2WWxpdW41VVFUWUdMMUtUU3Ric3RlSFNfckZNWVZBNTExODMzWE5qM1ZCYVVTRnhVVkpMWkQ3TGxsYVM3WWZ3?oc=5"
+      ],
+      "section": "global"
+    },
+    "CLUST_0059_a19b43c1": {
+      "headline": "ICJ to rule on Rohingya genocide case: What to expect",
+      "normalized_headline": "icj rule rohingya genocide case what expect",
+      "first_reported_at": "2026-11-18T12:37:36+00:00",
+      "last_updated_at": "2026-11-18T12:37:36+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMimgFBVV95cUxOZkdvWE42U2V4aVk1UG5uSDNOVnptaDE4eHdnaURobVNtb3BSVHM4OTdUeUloU0RLWXkwMkpEOUg2SkVxbVI2OHRPOGE1TzB3X3BJSlR0U3RyaEdCcFVUb0lKVVJVWXJ1ajVDMF8wdVdoTWRscndJSjR2YWdGWUNfZHVqaWJnUWxlbnA4cTZ3X3NvY1EwQy1KN1NB0gGfAUFVX3lxTE16eDFDTllJZ2MxcDFtbWluUUxOVlR3Qk5CXzdXekFiZy1wa3pGN3g4UHdJenVhRTBSOVdMR1h5bDNoMlU3VG5XNUVHbGlKRy1RczBCa0ZOSU01MUdaU2FRTzFUTFYzNHZPbTJZck5LNGtuNXFob200NkJpTE1xZThoUjhkdnhxY3ZwZDQyOWF0VEFpWVlUclVjZHFPbUkxZw?oc=5"
+      ],
+      "section": "global"
+    },
+    "CLUST_0070_bea7d7f7": {
+      "headline": "Russian 'Bears' return to Vietnam after 12 years: Why Moscow's Tu-95 deployment matters",
+      "normalized_headline": "russian bears return vietnam after years why moscows tu95 deployment matters",
+      "first_reported_at": "2026-11-18T12:17:00+00:00",
+      "last_updated_at": "2026-11-18T12:17:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOSmpORE00WG9DVUQ4TVUzOFFhYjljSDd0Ql9Za3dEMUJERWhvRHl5ZTBpNGFmSkVybG5DUll0NWpQSDVtck84SlA3ZWRDdnlXZjluSjR2azMtYkQzVjNRTVZfd3B0d2hCd0Y0UW9xV1hTbk54a0JTNlVIaHNHVkw4S0ltWVZYZExyYnR2dzlQVjFZbE1VOEpONUp2S2UwMHVRUGV4eGNUTUg3RFNYQ3U1QTBjanFobGZHbEdPRGZGckRabHN4NzltN3B1SktPd1I4VGdDbC0tbVVQQk5zaEVaYmxLMEJWZDQxREJrYXNRc3c1SnZPTWhoLdIB_gFBVV95cUxQR2dURlVscUdhNGFyRG9wbDI4cFdZMEp3VnlKVG44ZlFrVUdpZU5hV0hPdjJMdFRncGdkYWI1dlZyYjgtUmdlOXhqTGU4Z0xfYmRrSFZONmRkcEFZTmExeWFaQ3J1cmQybGpsSE01ckt2dXVzekx1Z0UyTzFPWHMxbFlHZllxLTZFVll4ZG1DMFg2Sm9yMmVVNW1QMzJKdGU0R2JuQ2VreEJjVzRjbm9TcTI1TFhfNldhdzF6VWV3ZjBLMzJxT0p0TGhZYnh2NUs2NmhOZ25rcDZVRTlyNWJPU2hqa3NpeXdQRlpRNU1WY1JsdnZ1MFVHNXVBa05XZw?oc=5"
+      ],
+      "section": "global"
+    },
+    "CLUST_0069_9899cbc7": {
+      "headline": "Saudi coalition hits 60 Houthi military sites; Taiz sees \u2018fierce battles\u2019",
+      "normalized_headline": "saudi coalition hits houthi military sites taiz sees fierce battles",
+      "first_reported_at": "2026-11-18T12:10:24+00:00",
+      "last_updated_at": "2026-11-18T12:10:24+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPcTkxOG1MNU1FMVlyTHV2Mjg1Sl9ENU5XbFRNZnQweGp4T0JPenBCMkFSVlREU1JRRGVsc24zTmRkOXhtNXZ2dW9sS2ZOb2RNSXlUUVQ3eHJtN05ZRkY4eEVLeVdudjJpXzlrWWpQQWk5UkQxdWdVOTc0OUlqdWFwSU5mSXZ2TWhkMjdYTjM2ZnczdmVHQWpOUE5xdG1nb3VJaTVzN3Mxd3Y0bU3SAbABQVVfeXFMT1hQbEM3U0VQTEY3Nmp3QXdhb21kMldLUjk4SVF6VDdtaVB5bmRPWWZxTUN1dEppYVppbkpxSUNmNGpXVkVtNFlwYXc1aFlKcGMzYXp0MlRzTjZHTzdLLVlfOFBwcFFFbFc2TWplSlI0YnhTbGtYQ0J2d3VWS0hDblFVaFNGV3gyc1h0anliVGdfRVF1WVVPSDdDOEN6cXYzX2xibVhZckEyZ1lSVjlxa3U?oc=5"
+      ],
+      "section": "global"
+    },
+    "CLUST_0041_dd0ca81d": {
+      "headline": "Lateef Bhatt dead: How forces tracked down LeT commander who built youth recruitment network in Kulgam",
+      "normalized_headline": "lateef bhatt dead how forces tracked down let commander who built youth recruitment network kulgam",
+      "first_reported_at": "2026-11-18T05:36:29+00:00",
+      "last_updated_at": "2026-11-18T05:36:29+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQV3d5SXhsQUVwdUFINnNIU0Q3Z2k1ODRhRUozUUZaYzMtTmI1YU1aSlJHSTU1QWtMcndpaEFoYUxnTzEwRExpMVNNUHc2NzF0bVFfektPOHg1ZW5nWUNSVlFTbW1iZnZlZFhSN3lUTU02TXltM3pldGdNcHIwNzRZMXk3WU91WGotYXdoTl9Hb2JEX3hQYWtVeUMxbnRNdjBEcFVQMV91Rk9iOFlVeF9RWm13RmliczFFbkdBS2RQdmk4QVF5VnVqTVZQY1UxRndkMnfSAdcBQVVfeXFMUEphMW1GaVZ3RDZIU21kelY0ZzZwYlF6Q25nbUxlelZfTFktd1F6M0x5ZjV5dlZKTHV2UUxnM3dNZHd5OWlYSUlra2gzT1dnUVVHR2ExdHJZQ0Y2SXhNSGQzU08xSVBqUVMyb0JsWVdIR09zSC1VVU9Pd2FNSkpTRVN6T0lscU11V3FENGZvWnNYanNYeUdYX3ZaNmx2bnBMOVRRYUVHV0JSLU1id0s0Zm8zekZwSzhhb3BRZnVLX2NhM2t1WTV6cVlOMURNaV9YVUp0WHR2Sm8?oc=5"
+      ],
+      "section": "national"
+    },
+    "CLUST_0071_2bb5d293": {
+      "headline": "Bangladesh deploys paramilitary as unrest grows over Hasina's return",
+      "normalized_headline": "bangladesh deploys paramilitary unrest grows over hasinas return",
+      "first_reported_at": "2026-11-18T10:53:43+00:00",
+      "last_updated_at": "2026-11-18T10:53:43+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQR1dVRWRwQ1k1VHhrUmpzX1pIdEpZcXdpLTFpUktTSzRHTFNZcUJ0X0pfMlVBd2NVWDRWM04yZ21IaUhwV2cwVi1DaERxU2w0TkVwemVSMzFhYlhBcXpjc3Y3YlJMdGd1SDJPcHpBXzdwS2ZrYVR6dERHejNSMzBmdkVSblBVUkxYTkk2U0h4T2FvbU1Pb2ctWDlJRS02SUQ4NjE5QWUxMzRXc0ZKaC1YRGdaN0VKUmhFcUxJ?oc=5"
+      ],
+      "section": "global"
+    },
+    "CLUST_0064_a6d2f3b8": {
+      "headline": "'Support free and open trade': Xi and Putin's tough stance against trade curbs ahead of Trump meet | World News",
+      "normalized_headline": "support free and open trade and putins tough stance against trade curbs ahead trump meet world news",
+      "first_reported_at": "2026-11-18T09:58:23+00:00",
+      "last_updated_at": "2026-11-18T09:58:23+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMiswJBVV95cUxNZF9ZbWs5VE4yRUxWTkVjZWIwbmhHUXBWU0FpRnViMTBEbC0wRUNVRnJkY2VKX3R1a2tCSzZTRmZDaDlOOWdIdmRpc2MxR0RrdjZVY0NYVGVITDR1RWlYVURoR0FnSnppaWM3RGxJQkFCd2Mta2ZyV0J5S0tadXJUakN2d1MzUXRfOE9iSnQzNjI1N0VXRGtydG44VkZkVVJLX1NWWXc4VEFNTzZocVo1d2hLcnRlUVM5STBnclF2YnVoUU1TTVRGZk5kNWNobDZRM2JZVlpidVFKZnNja2Zteld0ZUhlSEV3X2NDdmZIaDNfUTNLbW1DdnE4Q3dlY21SSm9hamoxakxwTWM3TEs1QkZLYVljUmRYNF9TZGNpNDhuaHhDTzkyNUJpZy1nREdJWlpF0gG4AkFVX3lxTFBrRmdsNWg0WDhCU0xnVnFlOEU3dVVDSFB4eUhmdnBnVktWUV9feTlBYnpmNkpVd01PYkg1SjRqVGVmOGRiUFpUREFBT05sYnRuZVhSMGdlSTJIQkplV2R6cVpCZm5hOGVZbVlSRUcyY2NGNHlybTBfeFFobTVMaFBaYWRxMThkSWxoRExMRXl3UXdvYlB0UGs5SmpPZUlqMjBxWndLMnBZTU1ZOEdrZHRWMktxa25uZFAxQUk5ZC1wZzVNcjVTSG9HOXJKVnpTdW1KS2thTjBHR1Y3VXp0WTF4R2UtRHFmLVAxNG1INFBLdEQzckFGbjdYWWtPU0hIdzBLTlVHQ0tVRm1KWmZ1Sm82ejd5SVBXZnpZNmJCbmtoVXRaNmgtUVBCVm84RFdXLWZOcGpycm1mYg?oc=5"
+      ],
+      "section": "global"
+    },
+    "CLUST_0040_4322b31c": {
+      "headline": "PM Modi returns to New Delhi after a successful two-day visit to Philippines",
+      "normalized_headline": "modi returns new delhi after successful twoday visit philippines",
+      "first_reported_at": "2026-11-18T03:51:33+00:00",
+      "last_updated_at": "2026-11-18T03:51:33+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMipAFBVV95cUxOWGxpWlE5OGwzTVN6VDRuM0ctMW9Tbm01cWFNU3QtRjdkR0ZycGdON2xWcFhiZjQ1Wmp3RUg0R2V6TDhZMlJPU3pDQ3lhT3BGZDY5VUtCRzEtV3lHQlNndktHU3VBUXJXcGxBWUVkU00tYkhiYUwtQUNZTGg2Mk1qRmFLQXpVbGM3eFEtZUw3ZmtjcHJZdmpaXzFCWUZpRHE5akpDRQ?oc=5"
+      ],
+      "section": "national"
+    },
+    "CLUST_0060_49927ebd": {
+      "headline": "U.S. proposes tougher rules for employment-based green cards, longer hiring process",
+      "normalized_headline": "proposes tougher rules for employmentbased green cards longer hiring process",
+      "first_reported_at": "2026-11-18T09:38:29+00:00",
+      "last_updated_at": "2026-11-18T09:38:29+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQMV9KV3Mtb2I5UXo4UnNWQmpuRlhHdWpwRG1JMHFJaEY3TE5Ra2F2alpxTHpwRDBlUXc4XzUwZENUSUdCdHN1M3RrSXhVWVJWMko1bEx2eUIwa05CVWZZcW5jbUktTW9jd1RKRUxwMjVJU1pnRVpTVlFyM1dWTWF1eWpxN3RiZTZCYnM5ZUxoc1N3SURZaXMzOUZwbWE2OENReWJNOHlNTDhHcTZ4M2tUcmlLR0pkNVp4OE5WUXJKNUF5UzlTYzdMQzNSUUhFTW55NkltRm8tYzVsZ2RS?oc=5"
+      ],
+      "section": "global"
+    },
+    "CLUST_0068_d43a4bf3": {
+      "headline": "Rafael Grossi is eyeing the UN\u2019s top job. Will US support nuke his chances?",
+      "normalized_headline": "rafael grossi eyeing the uns top job will support nuke his chances",
+      "first_reported_at": "2026-11-18T08:57:28+00:00",
+      "last_updated_at": "2026-11-18T08:57:28+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxPNFZwRWd4dTNtcUhaTGFCZGpjVElpN3J1clE1S1phUF8zQjlDbDhRM2w4RFJha1FsLUFGN3FtdGxtOFRhNWZmNHdnUWp2aEpJb3l6TUZSWm5nZzBCMGZ3T0o4akJIdUNZd0dFZm5BVDB3dzVsbldaWC1kdlA4MDd5aThwLW9FRERTcnJEQ0Y4NGR0dENXX2dGazB2eTlnSjNxSjJjZmZwSjZfZ3ZBNmN5Sk5zc9IBuAFBVV95cUxOTVVkRUdLXzZnN3gxbTUzcF81NWZLVHVZSE1kOUk4NldCRVpmVVI0ZS1UMW1sUXZVbEtYNWRpVEUtVS05anl1eFduTjV4VXBTaWNPcXpqaXdzRFRWNHRkQ2R6a0d4dndlM3RJT3FkMnhYUThpODFtak40V2dvQzFFVl9uT3JZMUpsSE5sVHVXdUlKZHdZZEZsQ01YWnFfTzM5TFFyWmU3SUk2TGRGUXZNcGZwYTROczJw?oc=5"
+      ],
+      "section": "global"
+    },
+    "CLUST_0072_6ef0af83": {
+      "headline": "How much revenge? Bilawal Bhutto slams own govt for keeping Imran Khan jailed",
+      "normalized_headline": "how much revenge bilawal bhutto slams own govt for keeping imran khan jailed",
+      "first_reported_at": "2026-11-18T08:22:58+00:00",
+      "last_updated_at": "2026-11-18T08:22:58+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQQllZako4ZTlsM0EyUzZzRU9nd3JTOWwycGNlMGZydWdzeWxXZlBzUk5fYUxPT2FpTDliaU91MUducFNOdUMzQWZKVi1taEU1eVZNUmZ1RzNzZUp3N0hHM0E2TFVTUXZEN3RQR2lkT1dRMU9SZXVRbm1ldkIyUmJ4M0tjMjZhVFlDeFdLOTFxdk1FZUVxY0NteU1KUlRpaHJKZWllWno1RnVIYi1TRzVaVFc4VmxWNmMxdTUxTmtfZU1renFjcTV2dnlQNEY2cC02WTUzX2REaU92T2Uyd19TN1l1T2tiUdIB6wFBVV95cUxPWUhsaEpIdGdJaWw2c09aOW1pNWZKMGRrWnpjcEpRMUtnQVpLZDRLQV9QSkVPUF9kZzJVX2Nucjh1Rmt4TmtzdFdkdDlidHRzaHY4b2NtdTNtZTlTdjZTVmFCYm4tSXFmWlVOaGo3emtxTTJOVE1ITmtUSllIVVYtRGJhRmlqREtVcGdQQkdrV3BrZGxaMm9zRERDZHh2TXhjUUJ1UmlvcGJ1bEZfSkpDNlI1dWFWWlhldWJYNlVxVHBHdHROdDNhVlNTemhERGxHUHFlWVJwblQ5M3BYc3htd3NRR3ZWUkh1ZVRR?oc=5"
+      ],
+      "section": "global"
+    },
+    "CLUST_0066_f277cd08": {
+      "headline": "After years on ice, Canada seeks trade-based reset with China, minister says",
+      "normalized_headline": "after years ice canada seeks tradebased reset with china minister says",
+      "first_reported_at": "2026-11-18T05:21:00+00:00",
+      "last_updated_at": "2026-11-18T05:21:00+00:00",
+      "last_cycle": "Morning",
+      "update_count": 1,
+      "urls": [
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxPcXducGZ4U2x6Qk1QdGVXckdCZDNGbE84S0VtRXhFelZmVW1IZXpCRzFpc21JdEpqdzdvUjk4MzN1dnN5N3VpRXpWbjN6MmNVZjRvQ1Itck1nZ1J2bXBvR1FoMk5JY0QwX1dKNzY0THVza09xUWU4TVJzSS1NUVgxQW1KOE5mc1N1OVQyYVVISkxZRnJwbC1EbG5STy15VGg2TWVMZm1kWk5BWWtzaEUxVlFmRQ?oc=5"
       ],
       "section": "global"
     }
